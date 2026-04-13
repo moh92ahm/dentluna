@@ -8,11 +8,13 @@ import { WhyUsHome } from '@/components/whyUsHome'
 import { HomeBeforeAfter } from '@/components/beforeAfterHomeBlock'
 import { TestimonialHome } from '@/components/testimonialHome'
 import { CtaHome } from '@/components/ctaHome'
+import { HeroCarousel } from '@/components/heroCarousel'
 
 export default async function HomePage() {
   return (
     <main>
-      <HomeHero />
+      {/* <HomeHero /> */}
+      <HeroCarousel />
       <ServicesHome />
       <HowItWorks />
       <WhyUsHome />

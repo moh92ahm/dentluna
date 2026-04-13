@@ -1,5 +1,7 @@
 'use client'
 
+import { useEffect, useState } from 'react'
+
 import { cn } from '@/lib/utils'
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider'
 
@@ -23,6 +25,12 @@ interface HomeBeforeAfterProps {
 }
 
 const HomeBeforeAfter = ({ className }: HomeBeforeAfterProps) => {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   return (
     <section className={cn('py-32 flex justify-center', className)}>
       <div className="container">
@@ -32,23 +40,34 @@ const HomeBeforeAfter = ({ className }: HomeBeforeAfterProps) => {
         </h1>
         <div className="flex flex-col justify-center gap-28 lg:flex-row">
           {comparisons.map((item, index) => (
-            <div key={index} className="w-full max-w-2xl overflow-hidden rounded-2xl aspect-[4/3]">
-              <ReactCompareSlider
-                itemOne={
-                  <ReactCompareSliderImage
-                    src={item.beforeImage}
-                    alt="Before image"
-                    style={{ objectFit: 'cover' }}
-                  />
-                }
-                itemTwo={
-                  <ReactCompareSliderImage
-                    src={item.afterImage}
-                    alt="After image"
-                    style={{ objectFit: 'cover' }}
-                  />
-                }
-              />
+            <div
+              key={index}
+              className="relative w-full max-w-2xl overflow-hidden rounded-2xl aspect-[4/3]"
+            >
+              {mounted ? (
+                <ReactCompareSlider
+                  itemOne={
+                    <ReactCompareSliderImage
+                      src={item.beforeImage}
+                      alt="Before image"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  }
+                  itemTwo={
+                    <ReactCompareSliderImage
+                      src={item.afterImage}
+                      alt="After image"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  }
+                />
+              ) : (
+                <img
+                  src={item.beforeImage}
+                  alt="Before image"
+                  className="h-full w-full object-cover"
+                />
+              )}
             </div>
           ))}
         </div>
