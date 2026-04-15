@@ -9,21 +9,16 @@ interface ArchiveServiceProps {
 
 const ArchiveService = ({ className }: ArchiveServiceProps) => {
   return (
-    <section className={cn("py-32", className)}>
+    <section className={cn("py-32 flex justify-center", className)}>
       <div className="container">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
-          <Badge variant="outline">Articles</Badge>
+          <Badge variant="outline">Services</Badge>
           <h1 className="text-4xl font-semibold text-balance">
-            Discover the latest trends
+            Discover our range of services
           </h1>
           <p className="text-muted-foreground">
-            Explore our blog for insightful articles, personal reflections and
-            ideas that inspire action on the topics you care about.
+            Explore our comprehensive dental services designed to meet all your oral health needs. From routine check-ups to advanced cosmetic procedures, we offer personalized care for a healthy and beautiful smile.
           </p>
-          <a href="#" className="flex items-center gap-1 text-sm font-semibold">
-            View All Blogs
-            <ChevronRight className="h-full w-4" />
-          </a>
         </div>
         <div className="mt-20 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <div className="flex flex-col">
@@ -44,11 +39,10 @@ const ArchiveService = ({ className }: ArchiveServiceProps) => {
               <h2 className="mb-5 text-xl font-semibold">
                 How to build a successful brand and business
               </h2>
+              <p className="mb-5 text-sm text-muted-foreground">
+                Building a successful brand and business requires a combination of strategic planning, effective marketing, and a deep understanding of your target audience. By creating a strong brand identity, delivering exceptional products or services, and fostering meaningful connections with customers, you can establish a thriving business that stands out in the competitive market.
+              </p>
               <div className="flex justify-between gap-6 text-sm">
-                <span className="flex items-center gap-1 text-muted-foreground">
-                  <Calendar className="h-4 w-4" />
-                  September, 23, 2024
-                </span>
                 <a href="#" className="flex items-center gap-1">
                   Read more
                   <ChevronRight className="h-full w-3" />
@@ -74,11 +68,10 @@ const ArchiveService = ({ className }: ArchiveServiceProps) => {
               <h2 className="mb-5 text-xl font-semibold">
                 The difference between UI and UX
               </h2>
+              <p className="mb-5 text-sm text-muted-foreground">
+                UI (User Interface) and UX (User Experience) are two distinct but closely related concepts in design. UI focuses on the visual and interactive elements of a product, such as buttons, icons, and layout, while UX encompasses the overall experience a user has when interacting with a product, including usability, accessibility, and satisfaction. Both UI and UX are essential for creating successful products that meet user needs and expectations.
+              </p>
               <div className="flex justify-between gap-6 text-sm">
-                <span className="flex items-center gap-1 text-muted-foreground">
-                  <Calendar className="h-4 w-4" />
-                  April, 07, 2024
-                </span>
                 <a href="#" className="flex items-center gap-1">
                   Read more
                   <ChevronRight className="h-full w-3" />
@@ -104,11 +97,10 @@ const ArchiveService = ({ className }: ArchiveServiceProps) => {
               <h2 className="mb-5 text-xl font-semibold">
                 Optimizing your website for SEO and getting more traffic
               </h2>
+              <p className="mb-5 text-sm text-muted-foreground">
+                SEO (Search Engine Optimization) is crucial for increasing your website's visibility and attracting more visitors. By optimizing your website's content, structure, and performance, you can improve your search engine rankings and drive more organic traffic. Effective SEO strategies include keyword research, on-page optimization, link building, and regular performance analysis.
+              </p>
               <div className="flex justify-between gap-6 text-sm">
-                <span className="flex items-center gap-1 text-muted-foreground">
-                  <Calendar className="h-4 w-4" />
-                  August, 31, 2024
-                </span>
                 <a href="#" className="flex items-center gap-1">
                   Read more
                   <ChevronRight className="h-full w-3" />

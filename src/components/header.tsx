@@ -25,6 +25,7 @@ const NAV_ITEMS = [
   { name: 'About', link: '/about' },
   { name: 'Contact', link: '/contact' },
   { name: 'Services', link: '/service' },
+  { name: 'Blog', link: '/blog' },
   { name: 'FAQs', link: '/faq' },
 ]
 

@@ -70,7 +70,7 @@ interface ArchiveBlogProps {
 
 const ArchiveBlog = ({ className }: ArchiveBlogProps) => {
   return (
-    <section className={cn("py-32", className)}>
+    <section className={cn("py-32 flex justify-center", className)}>
       <div className="container">
         <h1 className="mb-12 text-center text-4xl font-medium md:text-7xl">
           Latest Tech Blog
