@@ -7,20 +7,20 @@ import { cn } from '@/lib/utils'
 
 const galleryImages = [
   [
-    'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/bw1.jpeg',
-    'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/bw2.jpeg',
-    'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/bw3.jpeg',
-    'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/bw4.jpeg',
-    'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/bw5.jpeg',
-    'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/bw6.jpeg',
+    './static/home/01.jpg',
+    './static/home/02.jpg',
+    './static/home/03.jpg',
+    './static/home/04.jpg',
+    './static/home/05.jpg',
+    './static/home/06.jpg',
   ],
   [
-    'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/bw7.jpeg',
-    'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/bw8.jpeg',
-    'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/bw9.jpeg',
-    'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/bw10.jpeg',
-    'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/bw11.jpeg',
-    'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/bw12.jpeg',
+    './static/home/07.jpg',
+    './static/home/08.jpg',
+    './static/home/09.jpg',
+    './static/home/10.jpg',
+    './static/home/11.jpg',
+    './static/home/12.jpg',
   ],
 ]
 

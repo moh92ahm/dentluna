@@ -1,7 +1,6 @@
 import React from 'react'
 
 import './globals.css'
-import { HomeHero } from '@/components/homeHero'
 import { ServicesHome } from '@/components/servicesHome'
 import { HowItWorks } from '@/components/howItWorks'
 import { WhyUsHome } from '@/components/whyUsHome'
@@ -13,7 +12,6 @@ import { HeroCarousel } from '@/components/heroCarousel'
 export default async function HomePage() {
   return (
     <main>
-      {/* <HomeHero /> */}
       <HeroCarousel />
       <ServicesHome />
       <HowItWorks />

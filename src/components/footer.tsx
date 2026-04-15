@@ -86,7 +86,7 @@ const Footer = ({
   className,
 }: FooterProps) => {
   return (
-    <section className={cn('flex justify-center', className)}>
+    <section className={cn('flex justify-center mt-15', className)}>
       <div className="container">
         <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">
           <div className="flex w-full flex-col justify-between gap-6 lg:items-start">
