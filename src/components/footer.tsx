@@ -41,10 +41,9 @@ const defaultSections = [
   {
     title: 'Company',
     links: [
-      { name: 'About', href: '#' },
-      { name: 'Contact', href: '#' },
-      { name: 'FAQs', href: '#' },
-      { name: 'Doctors', href: '#' },
+      { name: 'About', href: '/about' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'FAQs', href: '/faq' },
     ],
   },
   // {
@@ -87,7 +86,7 @@ const Footer = ({
 }: FooterProps) => {
   return (
     <section className={cn('flex justify-center mt-15', className)}>
-      <div className="container">
+      <div className="container px-4">
         <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">
           <div className="flex w-full flex-col justify-between gap-6 lg:items-start">
             {/* Logo */}
@@ -123,9 +122,9 @@ const Footer = ({
             ))}
           </div>
         </div>
-        <div className="mt-8 flex flex-col justify-between gap-4 border-t py-8 text-xs font-medium text-muted-foreground md:flex-row md:items-center md:text-left">
+        <div className="mt-8 flex flex-col justify-between items-center gap-4 border-t py-8 text-xs font-medium text-muted-foreground md:flex-row md:items-center md:text-left">
           <p className="order-2 lg:order-1 ">{copyright}</p>
-          <ul className="order-1 flex flex-col gap-2 md:order-2 md:flex-row">
+          <ul className="order-1 flex gap-2 md:order-2 flex-row">
             {legalLinks.map((link, idx) => (
               <li key={idx} className="hover:text-primary">
                 <a href={link.href}> {link.name}</a>
