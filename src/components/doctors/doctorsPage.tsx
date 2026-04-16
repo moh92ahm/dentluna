@@ -8,11 +8,11 @@ import {
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
-interface Feature115Props {
+interface DoctorsPageProps {
   className?: string;
 }
 
-const Feature115 = ({ className }: Feature115Props) => {
+const DoctorsPage = ({ className }: DoctorsPageProps) => {
   // Define features data for mapping
   const features = [
     {
@@ -101,4 +101,4 @@ const Feature115 = ({ className }: Feature115Props) => {
   );
 };
 
-export { Feature115 };
+export { DoctorsPage };

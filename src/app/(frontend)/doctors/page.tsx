@@ -1,9 +1,9 @@
-import { Feature115 } from "@/components/doctors/doctorPage";
+import { DoctorsPage } from "@/components/doctors/doctorsPage";
 
-export default function DoctorsPage() {
+export default function DoctorPage() {
   return (
     <main>
-      <Feature115 />
+      <DoctorsPage />
     </main>
   );
 }
