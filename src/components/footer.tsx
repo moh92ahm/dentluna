@@ -30,6 +30,22 @@ interface FooterProps {
 
 const defaultSections = [
   {
+    title: 'Quick Links',
+    links: [
+      { name: 'About', href: '/about' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'Doctors', href: '/doctors' },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      { name: "Blog", href: "/blog" },
+      { name: "FAQs", href: "/faq" },
+      { name: "Gallery", href: "/gallery" },
+    ],
+  },
+  {
     title: 'Services',
     links: [
       { name: 'Hollywood Smile', href: '#' },
@@ -38,23 +54,6 @@ const defaultSections = [
       { name: 'Crowns', href: '#' },
     ],
   },
-  {
-    title: 'Company',
-    links: [
-      { name: 'About', href: '/about' },
-      { name: 'Contact', href: '/contact' },
-      { name: 'FAQs', href: '/faq' },
-    ],
-  },
-  // {
-  //   title: "Resources",
-  //   links: [
-  //     { name: "Help", href: "#" },
-  //     { name: "Sales", href: "#" },
-  //     { name: "Advertise", href: "#" },
-  //     { name: "Privacy", href: "#" },
-  //   ],
-  // },
 ]
 
 const defaultSocialLinks = [
@@ -107,7 +106,7 @@ const Footer = ({
               ))}
             </ul>
           </div>
-          <div className="grid w-full gap-6 md:grid-cols-2 lg:gap-10">
+          <div className="grid w-full gap-6 md:grid-cols-3 lg:gap-10">
             {sections.map((section, sectionIdx) => (
               <div key={sectionIdx}>
                 <h3 className="mb-4 font-bold">{section.title}</h3>

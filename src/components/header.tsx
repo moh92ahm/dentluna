@@ -25,8 +25,8 @@ const NAV_ITEMS = [
   { name: 'About', link: '/about' },
   { name: 'Contact', link: '/contact' },
   { name: 'Services', link: '/service' },
-  { name: 'Blog', link: '/blog' },
-  { name: 'FAQs', link: '/faq' },
+  { name: 'Gallery', link: '/gallery' },
+  { name: 'Doctors', link: '/doctors' },
 ]
 
 interface HeaderProps {
