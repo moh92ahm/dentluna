@@ -24,7 +24,7 @@ const NAV_ITEMS = [
   { name: 'Home', link: '/' },
   { name: 'About', link: '/about' },
   { name: 'Contact', link: '/contact' },
-  { name: 'Services', link: '/service' },
+  { name: 'Treatments', link: '/treatments' },
   { name: 'Gallery', link: '/gallery' },
   { name: 'Doctors', link: '/doctors' },
 ]
