@@ -1,13 +1,13 @@
 import React from 'react'
 
 import './globals.css'
-import { ServicesHome } from '@/components/servicesHome'
-import { HowItWorks } from '@/components/howItWorks'
-import { WhyUsHome } from '@/components/whyUsHome'
-import { HomeBeforeAfter } from '@/components/beforeAfterHomeBlock'
-import { TestimonialHome } from '@/components/testimonialHome'
-import { CtaHome } from '@/components/ctaHome'
-import { HeroCarousel } from '@/components/heroCarousel'
+import { ServicesHome } from '@/components/pages/servicesHome'
+import { HowItWorks } from '@/components/pages/howItWorks'
+import { WhyUsHome } from '@/components/pages/whyUsHome'
+import { HomeBeforeAfter } from '@/components/pages/beforeAfterHomeBlock'
+import { TestimonialHome } from '@/components/pages/testimonialHome'
+import { CtaHome } from '@/components/pages/ctaHome'
+import { HeroCarousel } from '@/components/pages/heroCarousel'
 
 export default async function HomePage() {
   return (

@@ -1,4 +1,4 @@
-import { BeforeAfterGallery } from "@/components/beforeAfterGallery";
+import { BeforeAfterGallery } from "@/components/gallery/beforeAfterGallery";
 
 export default function GalleryPage() {
   return (
