@@ -72,7 +72,7 @@ const Footer = ({
     url: '/',
   },
   sections = defaultSections,
-  description = 'A collection of components for your startup business or side project.',
+  description = 'At Dent Luna, we are committed to providing exceptional dental care with a personal touch. Our experienced team of dentists and staff work together to create a welcoming environment where your smile can thrive.',
   socialLinks = defaultSocialLinks,
   copyright = `© ${currentYear} Dent Luna. All rights reserved.`,
   legalLinks = defaultLegalLinks,
