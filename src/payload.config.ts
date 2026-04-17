@@ -14,8 +14,8 @@ import { Doctors } from './collections/Doctors'
 import { Categories } from './collections/Posts/Categories'
 import { Gallery } from './collections/Gallery'
 import { GalleryCategory } from './collections/Gallery/GalleryCategory'
-import { Faqs } from './collections/Faqs'
-import { FaqCategories } from './collections/FaqCategories'
+import { Faqs } from './collections/FAQs/Faqs'
+import { FaqCategories } from './collections/FAQs/FaqCategories'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -28,16 +28,16 @@ export default buildConfig({
     },
   },
   collections: [
-    Users,
-    Media,
     Treatments,
-    Posts,
     Doctors,
+    Posts,
     Categories,
     Gallery,
     GalleryCategory,
     Faqs,
     FaqCategories,
+    Users,
+    Media,
   ],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
