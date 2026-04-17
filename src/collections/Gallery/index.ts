@@ -24,6 +24,7 @@ export const Gallery: CollectionConfig = {
       name: 'title',
       type: 'text',
       required: true,
+      localized: true,
     },
     slugField({
       position: 'sidebar',

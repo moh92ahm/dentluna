@@ -28,11 +28,13 @@ export const Doctors: CollectionConfig = {
       name: 'name',
       type: 'text',
       required: true,
+      localized: true,
     },
     {
       name: 'specialty',
       type: 'text',
       required: true,
+      localized: true,
     },
     {
       name: 'profileImage',
@@ -43,6 +45,7 @@ export const Doctors: CollectionConfig = {
     {
       name: 'biography',
       type: 'richText',
+      localized: true,
       label: 'Bio',
       required: true,
       editor: lexicalEditor({

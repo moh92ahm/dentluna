@@ -5,6 +5,7 @@ import { LoaderIcon, Mail, MapPin, Phone } from 'lucide-react'
 import { useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import { z } from 'zod'
+import { useTranslations } from 'next-intl'
 
 import { Button } from '@/components/ui/button'
 import { Field, FieldError, FieldGroup, FieldLabel } from '@/components/ui/field'
@@ -12,18 +13,14 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { cn } from '@/lib/utils'
 
-const contactFormSchema = z.object({
-  name: z.string().min(1, 'Name is required'),
-  email: z.string().min(1, 'Email is required').email('Please enter a valid email'),
-  phone: z.string().optional(),
-  message: z.string().min(1, 'Message is required'),
-})
-
-type ContactFormData = z.infer<typeof contactFormSchema>
+type ContactFormData = {
+  name: string
+  email: string
+  phone?: string
+  message: string
+}
 
 interface Contact30Props {
-  title?: string
-  subtitle?: string
   email?: string
   phone?: string
   address?: string
@@ -32,18 +29,24 @@ interface Contact30Props {
 }
 
 const Contact30 = ({
-  title = "Let's Talk",
-  subtitle = 'Have a project in mind? We would love to hear from you.',
-  email = 'hello@company.com',
-  phone = '+1 (555) 123-4567',
-  address = '123 Innovation Drive, San Francisco, CA 94102',
+  email = 'info@dentluna.com',
+  phone = '+90 (232) 000-0000',
+  address = 'Izmir, Turkey',
   className,
   onSubmit,
 }: Contact30Props) => {
+  const t = useTranslations('contact')
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
   const mapSrc =
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24987.91486637383!2d27.056095374316403!3d38.476348699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd94762f08ae3%3A0xf059aff61fe11577!2zRGVudCBMdW5hIEHEn8SxeiB2ZSBEacWfIFNhxJ9sxLHEn8SxIFBvbGlrbGluacSfaQ!5e0!3m2!1sen!2str!4v1776253175024!5m2!1sen!2str'
+
+  const contactFormSchema = z.object({
+    name: z.string().min(1, t('nameRequired')),
+    email: z.string().min(1, t('emailRequired')).email(t('emailInvalid')),
+    phone: z.string().optional(),
+    message: z.string().min(1, t('messageRequired')),
+  })
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
@@ -72,7 +75,7 @@ const Contact30 = ({
       setTimeout(() => setIsSubmitted(false), 5000)
     } catch {
       form.setError('root', {
-        message: 'Something went wrong. Please try again.',
+        message: t('errorMsg'),
       })
     }
   }
@@ -83,9 +86,9 @@ const Contact30 = ({
         <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
           <div className="flex flex-col justify-center">
             <h1 className="mb-6 text-5xl font-medium tracking-tight md:text-6xl lg:text-7xl">
-              {title}
+              {t('title')}
             </h1>
-            <p className="mb-12 text-xl text-muted-foreground md:text-2xl">{subtitle}</p>
+            <p className="mb-12 text-xl text-muted-foreground md:text-2xl">{t('subtitle')}</p>
 
             <div className="space-y-6">
               <a href={`mailto:${email}`} className="group flex items-center gap-4 text-lg">
@@ -114,7 +117,7 @@ const Contact30 = ({
               onSubmit={form.handleSubmit(handleFormSubmit)}
               className="w-full rounded-2xl bg-background p-8 shadow-lg md:p-10"
             >
-              <h2 className="mb-8 text-2xl font-semibold">Send a Message</h2>
+              <h2 className="mb-8 text-2xl font-semibold">{t('sendMessage')}</h2>
 
               {isSubmitted && (
                 <div
@@ -124,7 +127,7 @@ const Contact30 = ({
                   )}
                 >
                   <p className="text-sm font-medium text-green-600 dark:text-green-400">
-                    Thank you! Your message has been sent.
+                    {t('success')}
                   </p>
                 </div>
               )}
@@ -137,13 +140,13 @@ const Contact30 = ({
                     render={({ field, fieldState }) => (
                       <Field data-invalid={fieldState.invalid}>
                         <FieldLabel htmlFor={field.name}>
-                          Name <span className="text-destructive">*</span>
+                          {t('nameLabel')} <span className="text-destructive">*</span>
                         </FieldLabel>
                         <Input
                           {...field}
                           id={field.name}
                           aria-invalid={fieldState.invalid}
-                          placeholder="Your name"
+                          placeholder={t('namePlaceholder')}
                         />
                         {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
                       </Field>
@@ -156,14 +159,14 @@ const Contact30 = ({
                     render={({ field, fieldState }) => (
                       <Field data-invalid={fieldState.invalid}>
                         <FieldLabel htmlFor={field.name}>
-                          Email <span className="text-destructive">*</span>
+                          {t('emailLabel')} <span className="text-destructive">*</span>
                         </FieldLabel>
                         <Input
                           {...field}
                           id={field.name}
                           type="email"
                           aria-invalid={fieldState.invalid}
-                          placeholder="you@example.com"
+                          placeholder={t('emailPlaceholder')}
                         />
                         {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
                       </Field>
@@ -176,12 +179,12 @@ const Contact30 = ({
                   name="phone"
                   render={({ field }) => (
                     <Field>
-                      <FieldLabel htmlFor={field.name}>Phone</FieldLabel>
+                      <FieldLabel htmlFor={field.name}>{t('phoneLabel')}</FieldLabel>
                       <Input
                         {...field}
                         id={field.name}
                         type="tel"
-                        placeholder="+1 (555) 000-0000"
+                        placeholder={t('phonePlaceholder')}
                       />
                     </Field>
                   )}
@@ -193,13 +196,13 @@ const Contact30 = ({
                   render={({ field, fieldState }) => (
                     <Field data-invalid={fieldState.invalid}>
                       <FieldLabel htmlFor={field.name}>
-                        Message <span className="text-destructive">*</span>
+                        {t('messageLabel')} <span className="text-destructive">*</span>
                       </FieldLabel>
                       <Textarea
                         {...field}
                         id={field.name}
                         aria-invalid={fieldState.invalid}
-                        placeholder="Tell us about your project..."
+                        placeholder={t('messagePlaceholder')}
                         rows={5}
                       />
                       {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
@@ -215,10 +218,10 @@ const Contact30 = ({
                   {form.formState.isSubmitting ? (
                     <>
                       <LoaderIcon className="mr-2 size-4 animate-spin" />
-                      Sending...
+                      {t('sendingBtn')}
                     </>
                   ) : (
-                    'Send Message'
+                    t('sendBtn')
                   )}
                 </Button>
               </FieldGroup>

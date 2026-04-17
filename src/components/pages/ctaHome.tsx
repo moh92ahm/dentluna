@@ -1,26 +1,24 @@
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { getTranslations } from 'next-intl/server'
+import { Button } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 
 interface CtaHomeProps {
-  className?: string;
+  className?: string
 }
 
-const CtaHome = ({ className }: CtaHomeProps) => {
+const CtaHome = async ({ className }: CtaHomeProps) => {
+  const t = await getTranslations('ctaHome')
   return (
-    <section className={cn("py-32 flex justify-center", className)}>
+    <section className={cn('py-32 flex justify-center', className)}>
       <div className="container">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-20 overflow-hidden rounded-2xl border bg-[radial-gradient(ellipse_30%_60%_at_100%_80%,var(--color-gray-200),transparent)] pt-20 sm:pl-16 lg:flex-row lg:bg-[radial-gradient(ellipse_50%_80%_at_40%_120%,var(--color-gray-200),transparent)] lg:pl-20">
           <div className="lg:texlf mx-auto max-w-md px-4 text-center md:px-0 lg:mx-0 lg:pb-20 lg:text-left">
-            <p className="mb-6 font-medium">Ready to get started?</p>
-            <h2 className="mb-6 text-4xl font-bold md:text-5xl">
-              Start Your Smile Transformation Today
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Get your free consultation and discover the best treatment option for you.
-            </p>
+            <p className="mb-6 font-medium">{t('tagline')}</p>
+            <h2 className="mb-6 text-4xl font-bold md:text-5xl">{t('heading')}</h2>
+            <p className="text-lg text-muted-foreground">{t('description')}</p>
             <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
-              <Button>Get Started</Button>
-              <Button variant="outline">Learn More</Button>
+              <Button>{t('ctaBtn')}</Button>
+              <Button variant="outline">{t('learnMore')}</Button>
             </div>
           </div>
           <div className="relative w-full pl-4 sm:pl-0">
@@ -34,7 +32,7 @@ const CtaHome = ({ className }: CtaHomeProps) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export { CtaHome };
+export { CtaHome }

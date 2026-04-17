@@ -1,15 +1,17 @@
 import { cn } from '@/lib/utils'
 import { getCachedDocuments } from '@/utilities/getDocument'
 import { getMediaUrl } from '@/utilities/getMediaUrl'
+import { Link } from '@/i18n/navigation'
 import type { Doctor } from '@/payload-types'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
 interface DoctorsPageProps {
   className?: string
+  locale?: string
 }
 
-const DoctorsPage = async ({ className }: DoctorsPageProps) => {
-  const cachedGetDoctors = getCachedDocuments('doctors', 12, 1)
+const DoctorsPage = async ({ className, locale = 'en' }: DoctorsPageProps) => {
+  const cachedGetDoctors = getCachedDocuments('doctors', 12, 1, locale)
   const doctors = (await cachedGetDoctors()) as Doctor[]
 
   if (!doctors || doctors.length === 0) {
@@ -30,7 +32,7 @@ const DoctorsPage = async ({ className }: DoctorsPageProps) => {
   return (
     <div className={cn('mx-auto max-w-7xl grid gap-7 md:grid-cols-2 lg:grid-cols-3', className)}>
       {doctors.map((doctor) => (
-        <a key={doctor.id} href={`/doctors/${doctor.slug}`}>
+        <Link key={doctor.id} href={`/doctors/${doctor.slug}` as any}>
           <Card className="border-none bg-muted/60 transition-all hover:shadow-lg">
             <CardHeader className="text-center">
               <CardTitle className="text-lg font-semibold md:text-2xl">{doctor.name}</CardTitle>
@@ -46,7 +48,7 @@ const DoctorsPage = async ({ className }: DoctorsPageProps) => {
               />
             </CardContent>
           </Card>
-        </a>
+        </Link>
       ))}
     </div>
   )

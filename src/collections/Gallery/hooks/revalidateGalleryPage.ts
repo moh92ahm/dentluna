@@ -5,8 +5,12 @@ import { revalidatePath } from 'next/cache'
 const GALLERY_PATH = '/gallery'
 
 const revalidateGalleryPath = (log: (message: string) => void) => {
-  log(`Revalidating gallery page at path: ${GALLERY_PATH}`)
-  revalidatePath(GALLERY_PATH)
+  try {
+    log(`Revalidating gallery page at path: ${GALLERY_PATH}`)
+    revalidatePath(GALLERY_PATH)
+  } catch (_err) {
+    // revalidatePath cannot be called during SSR
+  }
 }
 
 export const revalidateGalleryPageAfterChange: CollectionAfterChangeHook = ({

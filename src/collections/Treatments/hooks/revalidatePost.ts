@@ -12,25 +12,29 @@ export const revalidatePost: CollectionAfterChangeHook<Treatment> = ({
   req: { payload, context },
 }) => {
   if (!context.disableRevalidate) {
-    revalidatePath(TREATMENTS_LIST_PATH)
+    try {
+      revalidatePath(TREATMENTS_LIST_PATH)
 
-    if (doc._status === 'published') {
-      const path = `/treatments/${doc.slug}`
+      if (doc._status === 'published') {
+        const path = `/treatments/${doc.slug}`
 
-      payload.logger.info(`Revalidating treatment at path: ${path}`)
+        payload.logger.info(`Revalidating treatment at path: ${path}`)
 
-      revalidatePath(path)
-      revalidateTag('treatments-sitemap', 'max')
-    }
+        revalidatePath(path)
+        revalidateTag('treatments-sitemap', 'max')
+      }
 
-    // If the treatment was previously published, we need to revalidate the old path
-    if (previousDoc._status === 'published' && doc._status !== 'published') {
-      const oldPath = `/treatments/${previousDoc.slug}`
+      // If the treatment was previously published, we need to revalidate the old path
+      if (previousDoc._status === 'published' && doc._status !== 'published') {
+        const oldPath = `/treatments/${previousDoc.slug}`
 
-      payload.logger.info(`Revalidating old treatment at path: ${oldPath}`)
+        payload.logger.info(`Revalidating old treatment at path: ${oldPath}`)
 
-      revalidatePath(oldPath)
-      revalidateTag('treatments-sitemap', 'max')
+        revalidatePath(oldPath)
+        revalidateTag('treatments-sitemap', 'max')
+      }
+    } catch (_err) {
+      // revalidatePath cannot be called during SSR (e.g. autosave on Create page)
     }
   }
   return doc

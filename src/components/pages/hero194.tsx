@@ -1,6 +1,7 @@
 'use client'
 import AutoScroll from 'embla-carousel-auto-scroll'
 import { Command } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 import { Button } from '@/components/ui/button'
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
@@ -127,6 +128,7 @@ interface Hero194Props {
 }
 
 const Hero194 = ({ className }: Hero194Props) => {
+  const t = useTranslations('aboutHero')
   return (
     <section
       className={cn('container max-w-[1536px] py-10 flex justify-center mx-auto', className)}
@@ -134,18 +136,15 @@ const Hero194 = ({ className }: Hero194Props) => {
       <div className="relative overflow-hidden rounded-2xl bg-card">
         <div className="grid h-full w-full grid-cols-1 lg:max-h-[37.5rem] lg:grid-cols-2">
           <div className="flex w-full max-w-[90%] flex-col justify-center gap-5 py-16 pr-10 pl-20 md:max-w-[70%] lg:max-w-full lg:py-0">
-            <h6 className="text-sm font-medium uppercase tracking-wide text-primary">About DentLuna</h6>
+            <h6 className="text-sm font-medium uppercase tracking-wide text-primary">
+              {t('label')}
+            </h6>
             <h1 className="text-4xl leading-[1.1] text-foreground md:text-5xl lg:text-4xl xl:text-5xl">
-              Premium Dental Care in Izmir for International Patients
+              {t('heading')}
             </h1>
-            <p className="text-sm text-slate-600 md:text-base">
-              We help you achieve a healthy, natural smile through expert treatment and a carefully organized experience from start to finish.
-            </p>
-
+            <p className="text-sm text-slate-600 md:text-base">{t('description')}</p>
             <div className="flex gap-4">
-              <Button variant="secondary">
-                Contact Us
-              </Button>
+              <Button variant="secondary">{t('ctaBtn')}</Button>
             </div>
           </div>
           <div className="absolute left-1/2 z-10 hidden h-full w-[500px] bg-linear-to-r from-card via-card/95 to-transparent lg:block"></div>

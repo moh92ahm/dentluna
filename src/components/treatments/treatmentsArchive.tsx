@@ -1,16 +1,18 @@
 import { cn } from '@/lib/utils'
 import { getCachedDocuments } from '@/utilities/getDocument'
 import { getMediaUrl } from '@/utilities/getMediaUrl'
+import { Link } from '@/i18n/navigation'
 import type { Treatment } from '@/payload-types'
 import { ChevronRight } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 
 interface TreatmentsArchiveProps {
   className?: string
+  locale?: string
 }
 
-const TreatmentsArchive = async ({ className }: TreatmentsArchiveProps) => {
-  const cachedGetTreatments = getCachedDocuments('treatments', 9)
+const TreatmentsArchive = async ({ className, locale = 'en' }: TreatmentsArchiveProps) => {
+  const cachedGetTreatments = getCachedDocuments('treatments', 9, 0, locale)
   const treatments = (await cachedGetTreatments()) as Treatment[]
 
   if (!treatments || treatments.length === 0) {
@@ -51,10 +53,13 @@ const TreatmentsArchive = async ({ className }: TreatmentsArchiveProps) => {
               {treatment.meta?.description || 'Discover this treatment option'}
             </p>
             <div className="flex justify-between gap-6 text-sm">
-              <a href={`/treatments/${treatment.slug}`} className="flex items-center gap-1">
+              <Link
+                href={`/treatments/${treatment.slug}` as any}
+                className="flex items-center gap-1"
+              >
                 Read more
                 <ChevronRight className="h-full w-3" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

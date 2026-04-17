@@ -1,6 +1,7 @@
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
+import { seoPlugin } from '@payloadcms/plugin-seo'
 import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
@@ -27,6 +28,15 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
+  localization: {
+    locales: [
+      { code: 'en', label: 'English' },
+      { code: 'de', label: 'Deutsch' },
+      { code: 'fr', label: 'Français' },
+    ],
+    defaultLocale: 'en',
+    fallback: true,
+  },
   collections: [
     Treatments,
     Doctors,
@@ -51,6 +61,10 @@ export default buildConfig({
   }),
   sharp,
   plugins: [
+    seoPlugin({
+      generateTitle: ({ doc }) => `${doc?.title ?? ''} – Dent Luna`,
+      generateDescription: ({ doc }) => doc?.excerpt ?? '',
+    }),
     vercelBlobStorage({
       enabled: Boolean(process.env.BLOB_READ_WRITE_TOKEN),
       token: process.env.BLOB_READ_WRITE_TOKEN,

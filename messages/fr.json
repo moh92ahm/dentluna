@@ -1,0 +1,245 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact",
+    "treatments": "Traitements",
+    "gallery": "Galerie",
+    "doctors": "Médecins",
+    "blog": "Blog",
+    "faq": "FAQ"
+  },
+  "common": {
+    "readMore": "Lire la suite",
+    "viewAll": "Voir tout",
+    "notFound": "Non trouvé",
+    "backToHome": "Retour à l'accueil"
+  },
+  "home": {
+    "title": "Dent Luna – Votre partenaire dentaire de confiance",
+    "description": "Votre partenaire de soins dentaires de confiance"
+  },
+  "treatments": {
+    "badge": "Services",
+    "heading": "Découvrez notre gamme de services",
+    "description": "Explorez nos services dentaires complets conçus pour répondre à tous vos besoins en santé bucco-dentaire. Des examens de routine aux procédures cosmétiques avancées, nous offrons des soins personnalisés pour un sourire sain et beau.",
+    "metaTitle": "Traitements dentaires – Dent Luna",
+    "metaDesc": "Découvrez nos traitements dentaires complets : facettes, implants, couronnes et plus. Réservez votre consultation gratuite à Izmir."
+  },
+  "blog": {
+    "heading": "Derniers articles",
+    "metaTitle": "Blog dentaire – Dent Luna",
+    "metaDesc": "Lisez des articles d'experts sur les soins dentaires, les conseils en dentisterie esthétique et les témoignages de patients de l'équipe Dent Luna."
+  },
+  "gallery": {
+    "badge": "Galerie",
+    "heading": "Vrais résultats. Vraies transformations.",
+    "description": "Parcourez les transformations de nos patients par catégorie de traitement.",
+    "metaTitle": "Galerie avant & après – Dent Luna",
+    "metaDesc": "Découvrez de vraies transformations de patients. Parcourez les photos avant et après de nos traitements dentaires à Izmir."
+  },
+  "doctors": {
+    "badge": "Nos Médecins",
+    "heading": "Rencontrez nos médecins",
+    "description": "Notre équipe de dentistes expérimentés se consacre à fournir des soins exceptionnels et des plans de traitement personnalisés pour votre santé bucco-dentaire et un sourire assuré.",
+    "metaTitle": "Nos médecins – Dent Luna",
+    "metaDesc": "Rencontrez les spécialistes dentaires expérimentés de Dent Luna. Des professionnels qualifiés dédiés à votre sourire."
+  },
+  "faq": {
+    "general": "Général",
+    "metaTitle": "Foire aux questions – Dent Luna",
+    "metaDesc": "Réponses à vos questions les plus fréquentes sur le traitement dentaire à l'étranger, les coûts, les procédures et ce à quoi s'attendre chez Dent Luna."
+  },
+  "notFound": {
+    "treatment": "Traitement non trouvé",
+    "post": "Article non trouvé",
+    "doctor": "Médecin non trouvé",
+    "heading": "Page introuvable",
+    "message": "Désolé, la page que vous recherchez n'existe pas ou a été déplacée.",
+    "backHome": "Retour à l'accueil"
+  },
+  "about": {
+    "metaTitle": "À propos de Dent Luna – Soins dentaires premium à Izmir",
+    "metaDesc": "Découvrez la mission de Dent Luna, notre équipe expérimentée et pourquoi les patients internationaux nous font confiance pour leurs soins dentaires en Turquie."
+  },
+  "contactPage": {
+    "metaTitle": "Contactez-nous – Dent Luna",
+    "metaDesc": "Contactez Dent Luna. Réservez une consultation gratuite ou posez-nous toutes vos questions sur les traitements dentaires à Izmir, Turquie."
+  },
+  "heroCarousel": {
+    "line1": "Soins",
+    "line2": "Dentaires",
+    "line3": "Premium"
+  },
+  "servicesHome": {
+    "heading": "Nos Traitements",
+    "subheading": "Des solutions dentaires avancées conçues pour vous",
+    "description": "Des nettoyages de routine aux restaurations complexes, nos services dentaires complets sont adaptés à vos besoins uniques pour un sourire sain et radieux.",
+    "exploreBtn": "Explorer tous les services",
+    "veneersTitle": "Facettes & Smile Design",
+    "veneersDesc": "Obtenez un sourire plus lumineux et confiant",
+    "fullMouthTitle": "Restauration complète",
+    "fullMouthDesc": "Solutions complètes pour les cas dentaires complexes",
+    "implantsTitle": "Implants dentaires",
+    "implantsDesc": "Solution permanente et fiable pour les dents manquantes",
+    "zirconiumTitle": "Couronnes en zirconium",
+    "zirconiumDesc": "Restaurations solides, esthétiques et naturelles"
+  },
+  "howItWorks": {
+    "badge": "Comment ça marche",
+    "heading": "Un processus simple, rapide et organisé",
+    "description": "Notre plateforme intuitive simplifie votre flux de travail en gardant tout organisé et accessible en un seul endroit.",
+    "step1Title": "Envoyez vos photos ou radios",
+    "step1Desc": "Téléchargez facilement vos photos dentaires ou radios sur notre plateforme sécurisée. Notre équipe les examinera pour vous fournir un plan de traitement personnalisé.",
+    "step2Title": "Recevez votre plan de traitement",
+    "step2Desc": "Recevez un plan de traitement détaillé adapté à vos besoins, avec des instructions étape par étape et une estimation claire des coûts.",
+    "step3Title": "Planifiez votre voyage",
+    "step3Desc": "Coordonnez facilement vos préparatifs de voyage. Notre plateforme vous aide à planifier votre séjour efficacement.",
+    "step4Title": "Recevez votre traitement",
+    "step4Desc": "Recevez votre traitement guidé par notre équipe d'experts pour un processus fluide et efficace.",
+    "step5Title": "Suivi post-traitement",
+    "step5Desc": "Bénéficiez d'un soutien et d'un suivi continus pour garantir le succès à long terme de votre traitement."
+  },
+  "whyUsHome": {
+    "heading": "Plus qu'un simple traitement — Une expérience complète",
+    "description": "Chez Dent Luna, nous allons au-delà des soins dentaires traditionnels. Nous offrons une expérience complète incluant des plans de traitement personnalisés, des conseils d'experts et un suivi continu.",
+    "feature1": "Dentistes experts",
+    "feature2": "Matériaux premium",
+    "feature3": "Soins personnalisés",
+    "feature4": "Support dédié",
+    "feature5": "Planification efficace",
+    "feature6": "Suivi continu"
+  },
+  "beforeAfterHome": {
+    "label": "Avant & Après",
+    "heading": "Résultats réels. Transformations réelles."
+  },
+  "testimonialHome": {
+    "label": "Témoignages",
+    "heading": "Ce que disent nos patients",
+    "award1Title": "Meilleur design",
+    "award1Year": "Reconnaissance 2023",
+    "award2Title": "Meilleure créativité",
+    "award2Year": "Reconnaissance 2022",
+    "t1Name": "Alex Johnson",
+    "t1Content": "Je suis venu de Londres pour des facettes et je ne pourrais pas être plus heureux. Tout le processus s'est déroulé sans accroc du début à la fin.",
+    "t2Name": "Maria Garcia",
+    "t2Content": "DentLuna a tout organisé pour moi — hôtel, transferts, rendez-vous. Le résultat a dépassé toutes mes attentes.",
+    "t3Name": "Chris Lee",
+    "t3Content": "J'ai fait mes implants ici après des années de recherche. La qualité et le prix par rapport à la France sont incroyables.",
+    "t4Name": "Emily Carter",
+    "t4Content": "Les dentistes étaient incroyablement professionnels et parlaient un anglais parfait. Je me suis senti complètement à l'aise tout au long du traitement.",
+    "t5Name": "David Kim",
+    "t5Content": "Mon sourire a été complètement transformé. Je reçois des compliments chaque jour et je suis si heureux d'avoir choisi DentLuna.",
+    "t6Name": "Sophia Martinez",
+    "t6Content": "De la première consultation au dernier suivi, la communication a été excellente. Je recommande vivement."
+  },
+  "ctaHome": {
+    "tagline": "Prêt à commencer ?",
+    "heading": "Commencez votre transformation du sourire aujourd'hui",
+    "description": "Obtenez votre consultation gratuite et découvrez la meilleure option de traitement pour vous.",
+    "ctaBtn": "Commencer",
+    "learnMore": "En savoir plus"
+  },
+  "aboutHero": {
+    "label": "À propos de DentLuna",
+    "heading": "Soins dentaires premium à Izmir pour les patients internationaux",
+    "description": "Nous vous aidons à obtenir un sourire sain et naturel grâce à un traitement expert et une expérience soigneusement organisée du début à la fin.",
+    "ctaBtn": "Nous contacter"
+  },
+  "aboutContent": {
+    "whoWeAre": "QUI SOMMES-NOUS",
+    "intro1": "Dent Luna est un prestataire spécialisé dans les traitements dentaires avancés pour les patients internationaux.",
+    "intro2": "Basés à Izmir, nous travaillons avec des dentistes expérimentés et des cliniques modernes pour offrir des résultats de haute qualité, fiables et esthétiques.",
+    "mission": "Rendre votre traitement dentaire à l'étranger clair, sûr et sans stress.",
+    "ourApproach": "NOTRE APPROCHE",
+    "approachText": "Nous croyons que de bons résultats proviennent d'une planification adéquate et d'une communication honnête.",
+    "processLabel": "Chaque patient suit un processus structuré :",
+    "process1": "Évaluation basée sur vos photos ou radios",
+    "process2": "Plan de traitement personnalisé préparé par des dentistes",
+    "process3": "Explication claire des procédures, du calendrier et des tarifs",
+    "process4": "Planification efficace pour minimiser votre séjour",
+    "process5": "Suivi après votre traitement",
+    "processOutro": "Cette approche garantit des résultats prévisibles et une expérience fluide."
+  },
+  "qualityMaterials": {
+    "heading": "QUALITÉ & MATÉRIAUX",
+    "text1": "Nous utilisons uniquement des matériaux de haute qualité provenant de fabricants reconnus internationalement, tous conformes aux normes européennes et mondiales strictes.",
+    "text2": "Nous travaillons avec les grandes marques dentaires d'Allemagne, de Suisse, des États-Unis et de Corée du Sud, ce qui nous permet de choisir l'option la plus appropriée pour chaque patient.",
+    "text3": "Chaque matériau est <bold>entièrement traçable</bold>, garantissant sécurité, cohérence et succès à long terme."
+  },
+  "whyIzmir": {
+    "heading": "POURQUOI IZMIR ?",
+    "intro": "Izmir est l'une des villes les plus prisées pour les traitements dentaires, offrant :",
+    "item1": "Des cliniques dentaires de classe mondiale avec une technologie de pointe.",
+    "item2": "Des dentistes hautement qualifiés avec une expérience internationale.",
+    "item3": "Des options de traitement abordables sans compromettre la qualité.",
+    "item4": "Une ville animée avec une culture riche et des vues côtières magnifiques.",
+    "outro": "Découvrez des soins dentaires de premier ordre dans une ville qui allie l'excellence médicale à une expérience de voyage inoubliable."
+  },
+  "whyChooseUs": {
+    "heading": "POURQUOI NOS PATIENTS NOUS CHOISISSENT",
+    "description": "Chez DentLuna, nous nous engageons à fournir des soins dentaires exceptionnels combinant technologie avancée, plans de traitement personnalisés et approche bienveillante.",
+    "getStarted": "Commencer",
+    "sat": "85%",
+    "satLabel": "Satisfaction des patients",
+    "patients": "15k+",
+    "patientsLabel": "Patients satisfaits",
+    "feature1Title": "Équipe d'experts",
+    "feature1Desc": "Notre équipe de professionnels dentaires est hautement qualifiée et expérimentée.",
+    "feature2Title": "Technologie de pointe",
+    "feature2Desc": "Nous utilisons les dernières technologies dentaires pour prodiguer les meilleurs soins.",
+    "feature3Title": "Environnement confortable",
+    "feature3Desc": "Nos cliniques sont conçues pour mettre les patients à l'aise.",
+    "feature4Title": "Soins personnalisés",
+    "feature4Desc": "Nous fournissons des plans de traitement individualisés pour chaque patient.",
+    "feature5Title": "Rapide & Efficace",
+    "feature5Desc": "Nous fournissons des traitements dentaires opportuns et efficaces.",
+    "feature6Title": "Sûr & Fiable",
+    "feature6Desc": "Nous priorisons la sécurité des patients et adhérons aux normes les plus élevées.",
+    "feature7Title": "Support durable",
+    "feature7Desc": "Nous offrons des soins post-traitement complets pour la santé dentaire à long terme.",
+    "feature8Title": "Support linguistique",
+    "feature8Desc": "Nous offrons un support multilingue pour les patients de divers horizons."
+  },
+  "contact": {
+    "title": "Parlons-nous",
+    "subtitle": "Vous avez un projet en tête ? Nous serions ravis de vous entendre.",
+    "sendMessage": "Envoyer un message",
+    "success": "Merci ! Votre message a été envoyé.",
+    "nameLabel": "Nom",
+    "nameRequired": "Le nom est requis",
+    "namePlaceholder": "Votre nom",
+    "emailLabel": "E-mail",
+    "emailRequired": "L'e-mail est requis",
+    "emailInvalid": "Veuillez entrer un e-mail valide",
+    "emailPlaceholder": "vous@exemple.fr",
+    "phoneLabel": "Téléphone",
+    "phonePlaceholder": "+33 (0) 000 000-000",
+    "messageLabel": "Message",
+    "messageRequired": "Le message est requis",
+    "messagePlaceholder": "Parlez-nous de votre projet...",
+    "sendBtn": "Envoyer le message",
+    "sendingBtn": "Envoi en cours...",
+    "errorMsg": "Une erreur s'est produite. Veuillez réessayer."
+  },
+  "footer": {
+    "description": "Chez Dent Luna, nous nous engageons à fournir des soins dentaires exceptionnels avec une touche personnelle. Notre équipe expérimentée de dentistes et de personnel travaille ensemble pour créer un environnement accueillant où votre sourire peut s'épanouir.",
+    "quickLinks": "Liens rapides",
+    "about": "À propos",
+    "contact": "Contact",
+    "doctors": "Médecins",
+    "resources": "Ressources",
+    "blog": "Blog",
+    "faqs": "FAQ",
+    "gallery": "Galerie",
+    "services": "Services",
+    "hollywoodSmile": "Hollywood Smile",
+    "allOns": "All-on-4 / All-on-6",
+    "dentalImplants": "Implants dentaires",
+    "crowns": "Couronnes dentaires",
+    "termsAndConditions": "Conditions générales",
+    "privacyPolicy": "Politique de confidentialité",
+    "copyright": "\u00a9 {year} Dent Luna. Tous droits réservés."
+  }
+}

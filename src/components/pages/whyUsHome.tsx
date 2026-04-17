@@ -1,4 +1,5 @@
 import { CircleCheckBig } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 
 import { cn } from '@/lib/utils'
 
@@ -6,45 +7,24 @@ interface WhyUsHomeProps {
   className?: string
 }
 
-const WhyUsHome = ({ className }: WhyUsHomeProps) => {
+const WhyUsHome = async ({ className }: WhyUsHomeProps) => {
+  const t = await getTranslations('whyUsHome')
   return (
     <section className={cn('py-32 flex justify-center', className)}>
       <div className="container">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
-            <h2 className="mb-5 text-5xl font-medium text-balance lg:text-7xl">
-              More Than Just Treatment — A Complete Experience
-            </h2>
-            <p className="mb-12 text-lg text-muted-foreground">
-              At Dent Luna, we go beyond traditional dental care. We offer a comprehensive
-              experience that includes personalized treatment plans, expert guidance, and ongoing
-              support to ensure your smile transformation is not just successful but also enjoyable.
-            </p>
+            <h2 className="mb-5 text-5xl font-medium text-balance lg:text-7xl">{t('heading')}</h2>
+            <p className="mb-12 text-lg text-muted-foreground">{t('description')}</p>
             <ul className="grid max-w-xl gap-5 sm:grid-cols-2">
-              <li className="flex items-center gap-1.5">
-                <CircleCheckBig className="size-5 shrink-0" />
-                <p className="text-sm font-medium">Expert dentists</p>
-              </li>
-              <li className="flex items-center gap-1.5">
-                <CircleCheckBig className="size-5 shrink-0" />
-                <p className="text-sm font-medium">Premium materials</p>
-              </li>
-              <li className="flex items-center gap-1.5">
-                <CircleCheckBig className="size-5 shrink-0" />
-                <p className="text-sm font-medium">Personalized care</p>
-              </li>
-              <li className="flex items-center gap-1.5">
-                <CircleCheckBig className="size-5 shrink-0" />
-                <p className="text-sm font-medium">Dedicated support</p>
-              </li>
-              <li className="flex items-center gap-1.5">
-                <CircleCheckBig className="size-5 shrink-0" />
-                <p className="text-sm font-medium">Efficient scheduling</p>
-              </li>
-              <li className="flex items-center gap-1.5">
-                <CircleCheckBig className="size-5 shrink-0" />
-                <p className="text-sm font-medium">Ongoing follow-up</p>
-              </li>
+              {(
+                ['feature1', 'feature2', 'feature3', 'feature4', 'feature5', 'feature6'] as const
+              ).map((key) => (
+                <li key={key} className="flex items-center gap-1.5">
+                  <CircleCheckBig className="size-5 shrink-0" />
+                  <p className="text-sm font-medium">{t(key)}</p>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="relative">

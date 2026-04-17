@@ -38,7 +38,6 @@ export const Treatments: CollectionConfig<'treatments'> = {
     title: true,
     slug: true,
     meta: {
-      image: true,
       description: true,
     },
   },
@@ -65,6 +64,7 @@ export const Treatments: CollectionConfig<'treatments'> = {
       name: 'title',
       type: 'text',
       required: true,
+      localized: true,
     },
     {
       type: 'tabs',
@@ -79,6 +79,7 @@ export const Treatments: CollectionConfig<'treatments'> = {
             {
               name: 'content',
               type: 'richText',
+              localized: true,
               editor: lexicalEditor({
                 features: ({ rootFeatures }) => {
                   return [

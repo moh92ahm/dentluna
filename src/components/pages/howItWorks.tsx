@@ -1,74 +1,71 @@
-"use client";
+'use client'
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { Cpu, LayoutList, LocateFixed, Rocket, Users } from "lucide-react";
-import { useRef } from "react";
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { Cpu, LayoutList, LocateFixed, Rocket, Users } from 'lucide-react'
+import { useRef } from 'react'
+import { useTranslations } from 'next-intl'
 
-import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
-
-const DATA = [
-  {
-    title: "Send Your Photos or X-ray",
-    description:
-      "Easily upload your dental photos or X-rays through our secure platform. Our team will review them to provide you with a personalized treatment plan and accurate cost estimate.",
-    icon: LayoutList,
-    image: {
-      src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
-      alt: "Send Your Photos or X-ray",
-    },
-  },
-  {
-    title: "Get Your Treatment Plan",
-    description:
-      "Receive a detailed treatment plan tailored to your needs, including step-by-step instructions and a clear cost estimate.",
-    icon: LocateFixed,
-    image: {
-      src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-2.svg",
-      alt: "Get Your Treatment Plan",
-    },
-    reverse: true,
-  },
-  {
-    title: "Plan Your Trip",
-    description:
-      "Coordinate your travel arrangements with ease. Our platform helps you plan your trip efficiently, ensuring a smooth experience from start to finish.",
-    icon: Users,
-    image: {
-      src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-3.svg",
-      alt: "Plan Your Trip",
-    },
-  },
-  {
-    title: "Receive Your Treatment",
-    description:
-      "Receive your treatment with the guidance of our expert team, ensuring a smooth and effective process.",
-    icon: Cpu,
-    image: {
-      src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-4.svg",
-      alt: "Receive Your Treatment",
-    },
-    reverse: true,
-  },
-  {
-    title: "Follow-Up Support",
-    description:
-      "Receive ongoing support and guidance to ensure the long-term success of your treatment.",
-    icon: Cpu,
-    image: {
-      src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-5.svg",
-      alt: "Follow-Up Support",
-    },
-  },
-];
+import { Badge } from '@/components/ui/badge'
+import { cn } from '@/lib/utils'
 
 const HowItWorks = () => {
-  const ref = useRef<HTMLDivElement>(null);
+  const t = useTranslations('howItWorks')
+  const ref = useRef<HTMLDivElement>(null)
+
+  const DATA = [
+    {
+      title: t('step1Title'),
+      description: t('step1Desc'),
+      icon: LayoutList,
+      image: {
+        src: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg',
+        alt: t('step1Title'),
+      },
+    },
+    {
+      title: t('step2Title'),
+      description: t('step2Desc'),
+      icon: LocateFixed,
+      image: {
+        src: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-2.svg',
+        alt: t('step2Title'),
+      },
+      reverse: true,
+    },
+    {
+      title: t('step3Title'),
+      description: t('step3Desc'),
+      icon: Users,
+      image: {
+        src: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-3.svg',
+        alt: t('step3Title'),
+      },
+    },
+    {
+      title: t('step4Title'),
+      description: t('step4Desc'),
+      icon: Cpu,
+      image: {
+        src: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-4.svg',
+        alt: t('step4Title'),
+      },
+      reverse: true,
+    },
+    {
+      title: t('step5Title'),
+      description: t('step5Desc'),
+      icon: Cpu,
+      image: {
+        src: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-5.svg',
+        alt: t('step5Title'),
+      },
+    },
+  ]
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start center", "end center"],
-  });
-  const height = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+    offset: ['start center', 'end center'],
+  })
+  const height = useTransform(scrollYProgress, [0, 1], ['0%', '100%'])
 
   return (
     <section className="py-32 flex flex-col items-center">
@@ -76,14 +73,14 @@ const HowItWorks = () => {
         <div className="container flex flex-col gap-6 py-4 lg:py-8">
           <h6>
             <Badge variant="outline" className="text-sm">
-              How It Works
+              {t('badge')}
             </Badge>
           </h6>
           <h2 className="text-3xl leading-tight tracking-tight md:text-4xl lg:text-6xl">
-            Simple, Fast, and Organized Process
+            {t('heading')}
           </h2>
           <p className="max-w-[600px] tracking-[-0.32px] text-muted-foreground">
-            Our intuitive platform streamlines your workflow, keeping everything organized and accessible in one place. Experience the ease of managing your projects with our simple, fast, and efficient process.
+            {t('description')}
           </p>
         </div>
       </div>
@@ -104,12 +101,12 @@ const HowItWorks = () => {
         {DATA.map((item, index) => (
           <div key={index} className="relative flex">
             <div
-              className={`flex w-full justify-center px-1 py-10 text-end md:gap-6 lg:gap-10 ${item?.reverse ? "lg:flex-row-reverse lg:text-start" : ""} `}
+              className={`flex w-full justify-center px-1 py-10 text-end md:gap-6 lg:gap-10 ${item?.reverse ? 'lg:flex-row-reverse lg:text-start' : ''} `}
             >
               <div className="flex-1 max-lg:hidden">
                 <h3 className="text-2xl tracking-[-0.96px]">{item.title}</h3>
                 <p
-                  className={`mt-2.5 max-w-[300px] tracking-[-0.32px] text-balance text-muted-foreground ${item?.reverse ? "" : "ml-auto"}`}
+                  className={`mt-2.5 max-w-[300px] tracking-[-0.32px] text-balance text-muted-foreground ${item?.reverse ? '' : 'ml-auto'}`}
                 >
                   {item.description}
                 </p>
@@ -129,7 +126,7 @@ const HowItWorks = () => {
                   </p>
                 </div>
                 <div className="flex items-start justify-start">
-                  <div className={` ${item?.reverse ? "lg:ml-auto" : ""}`}>
+                  <div className={` ${item?.reverse ? 'lg:ml-auto' : ''}`}>
                     <div className="px-6 lg:px-10">
                       <DiagonalPattern className="h-6 lg:h-10" />
                     </div>
@@ -159,28 +156,28 @@ const HowItWorks = () => {
         <div className="container h-full w-full"></div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export { HowItWorks };
+export { HowItWorks }
 
 const DiagonalPattern = ({
   className,
-  patternColor = "hsl(var(--foreground))",
+  patternColor = 'hsl(var(--foreground))',
   patternOpacity = 0.15,
 }: {
-  className?: string;
-  patternColor?: string;
-  patternOpacity?: number;
+  className?: string
+  patternColor?: string
+  patternOpacity?: number
 }) => {
-  const svgPattern = `url("data:image/svg+xml,%3Csvg width='7' height='7' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23${patternColor}' fill-opacity='${patternOpacity}' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E")`;
+  const svgPattern = `url("data:image/svg+xml,%3Csvg width='7' height='7' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23${patternColor}' fill-opacity='${patternOpacity}' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E")`
 
   return (
     <div
-      className={cn("h-full w-full border-2 border-dashed", className)}
+      className={cn('h-full w-full border-2 border-dashed', className)}
       style={{
         backgroundImage: svgPattern,
       }}
     />
-  );
-};
+  )
+}

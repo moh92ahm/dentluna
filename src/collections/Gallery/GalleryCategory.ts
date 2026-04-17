@@ -24,6 +24,7 @@ export const GalleryCategory: CollectionConfig = {
       name: 'title',
       type: 'text',
       required: true,
+      localized: true,
     },
     slugField({
       position: undefined,

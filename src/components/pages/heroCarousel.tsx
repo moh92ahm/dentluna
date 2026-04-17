@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ArrowBigDown } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 import { cn } from '@/lib/utils'
 
@@ -29,6 +30,7 @@ interface HeroCarouselProps {
 }
 
 const HeroCarousel = ({ className }: HeroCarouselProps) => {
+  const t = useTranslations('heroCarousel')
   return (
     <section className={cn('relative min-h-screen overflow-hidden bg-background', className)}>
       <div className="absolute inset-0 flex flex-col justify-center gap-4">
@@ -86,9 +88,9 @@ const HeroCarousel = ({ className }: HeroCarouselProps) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            Premium <br />
-            Dental <br />
-            Treatments
+            {t('line1')} <br />
+            {t('line2')} <br />
+            {t('line3')}
           </motion.h1>
 
           <motion.div

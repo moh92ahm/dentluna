@@ -1,0 +1,29 @@
+                                         Table "public.payload_jobs"
+    Column    |            Type             | Collation | Nullable |                 Default                  
+--------------+-----------------------------+-----------+----------+------------------------------------------
+ id           | integer                     |           | not null | nextval('payload_jobs_id_seq'::regclass)
+ input        | jsonb                       |           |          | 
+ completed_at | timestamp(3) with time zone |           |          | 
+ total_tried  | numeric                     |           |          | 0
+ has_error    | boolean                     |           |          | false
+ error        | jsonb                       |           |          | 
+ task_slug    | enum_payload_jobs_task_slug |           |          | 
+ queue        | character varying           |           |          | 'default'::character varying
+ wait_until   | timestamp(3) with time zone |           |          | 
+ processing   | boolean                     |           |          | false
+ updated_at   | timestamp(3) with time zone |           | not null | now()
+ created_at   | timestamp(3) with time zone |           | not null | now()
+Indexes:
+    "payload_jobs_pkey" PRIMARY KEY, btree (id)
+    "payload_jobs_completed_at_idx" btree (completed_at)
+    "payload_jobs_created_at_idx" btree (created_at)
+    "payload_jobs_has_error_idx" btree (has_error)
+    "payload_jobs_processing_idx" btree (processing)
+    "payload_jobs_queue_idx" btree (queue)
+    "payload_jobs_task_slug_idx" btree (task_slug)
+    "payload_jobs_total_tried_idx" btree (total_tried)
+    "payload_jobs_updated_at_idx" btree (updated_at)
+    "payload_jobs_wait_until_idx" btree (wait_until)
+Referenced by:
+    TABLE "payload_jobs_log" CONSTRAINT "payload_jobs_log_parent_id_fk" FOREIGN KEY (_parent_id) REFERENCES payload_jobs(id) ON DELETE CASCADE
+

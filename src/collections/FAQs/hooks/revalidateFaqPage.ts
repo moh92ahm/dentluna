@@ -5,8 +5,12 @@ import { revalidatePath } from 'next/cache'
 const FAQ_PATH = '/faq'
 
 const revalidateFaqPath = (log: (message: string) => void) => {
-  log(`Revalidating FAQ page at path: ${FAQ_PATH}`)
-  revalidatePath(FAQ_PATH)
+  try {
+    log(`Revalidating FAQ page at path: ${FAQ_PATH}`)
+    revalidatePath(FAQ_PATH)
+  } catch (_err) {
+    // revalidatePath cannot be called during SSR
+  }
 }
 
 export const revalidateFaqPageAfterChange: CollectionAfterChangeHook = ({

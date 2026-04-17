@@ -1,6 +1,7 @@
 'use client'
 
 import { useSyncExternalStore } from 'react'
+import { useTranslations } from 'next-intl'
 
 import { cn } from '@/lib/utils'
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider'
@@ -25,6 +26,7 @@ interface HomeBeforeAfterProps {
 }
 
 const HomeBeforeAfter = ({ className }: HomeBeforeAfterProps) => {
+  const t = useTranslations('beforeAfterHome')
   const mounted = useSyncExternalStore(
     () => () => {},
     () => true,
@@ -34,9 +36,9 @@ const HomeBeforeAfter = ({ className }: HomeBeforeAfterProps) => {
   return (
     <section className={cn('py-32 flex justify-center', className)}>
       <div className="container">
-        <h4 className="mb-4 text-center text-muted-foreground/50">Before & After</h4>
+        <h4 className="mb-4 text-center text-muted-foreground/50">{t('label')}</h4>
         <h1 className="mx-auto mb-12 max-w-3xl text-center text-4xl font-semibold sm:text-5xl lg:text-[56px]">
-          Real Results. Real Transformations.
+          {t('heading')}
         </h1>
         <div className="flex flex-col justify-center gap-28 lg:flex-row">
           {comparisons.map((item, index) => (

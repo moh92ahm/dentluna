@@ -25,6 +25,7 @@ export const FaqCategories: CollectionConfig = {
       name: 'title',
       type: 'text',
       required: true,
+      localized: true,
     },
     slugField({
       position: undefined,

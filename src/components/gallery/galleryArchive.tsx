@@ -7,9 +7,10 @@ import type { ComparisonItem, GalleryTabCategory } from './beforeAfterGallery'
 
 interface GalleryArchiveProps {
   className?: string
+  locale?: string
 }
 
-export const GalleryArchive = async ({ className }: GalleryArchiveProps) => {
+export const GalleryArchive = async ({ className, locale = 'en' }: GalleryArchiveProps) => {
   const payload = await getPayload({ config: configPromise })
 
   // Fetch all gallery items and categories
@@ -20,12 +21,14 @@ export const GalleryArchive = async ({ className }: GalleryArchiveProps) => {
       limit: 100,
       overrideAccess: false,
       sort: 'createdAt',
+      locale: locale as any,
     }),
     payload.find({
       collection: 'gallery-category',
       limit: 100,
       overrideAccess: false,
       sort: 'createdAt',
+      locale: locale as any,
     }),
   ])
 

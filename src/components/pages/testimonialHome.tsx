@@ -3,6 +3,7 @@
 import { useSyncExternalStore } from 'react'
 import { Star } from 'lucide-react'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
+import { useTranslations } from 'next-intl'
 
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
 import { Card } from '@/components/ui/card'
@@ -14,47 +15,6 @@ interface DataItem {
   content: string
   margin?: string
 }
-
-const DATA: DataItem[] = [
-  {
-    name: 'Alex Johnson',
-    avatar: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-1.webp',
-    content:
-      'This tool has completely transformed my workflow. The features are intuitive, and it’s made collaboration with my team so much easier.',
-    margin: 'mt-6',
-  },
-  {
-    name: 'Maria Garcia',
-    avatar: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-2.webp',
-    content:
-      'The design templates are a lifesaver. They’ve helped me deliver projects faster without compromising on quality.',
-  },
-  {
-    name: 'Chris Lee',
-    avatar: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-3.webp',
-    content:
-      'Our team’s productivity has skyrocketed since we started using this platform. It’s a must-have for any creative team.',
-    margin: 'mt-4',
-  },
-  {
-    name: 'Emily Carter',
-    avatar: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-4.webp',
-    content:
-      'The analytics dashboard is incredible. It gives us the insights we need to make data-driven decisions.',
-  },
-  {
-    name: 'David Kim',
-    avatar: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-5.webp',
-    content:
-      'Integration with our existing tools was seamless. The API documentation is thorough and easy to follow.',
-  },
-  {
-    name: 'Sophia Martinez',
-    avatar: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-6.webp',
-    content:
-      'The platform has made it so much easier to manage creative projects and keep everyone on the same page.',
-  },
-]
 
 interface RewardCardProps {
   icon: string
@@ -81,33 +41,67 @@ interface TestimonialHomeProps {
 }
 
 const TestimonialHome = ({ className }: TestimonialHomeProps) => {
+  const t = useTranslations('testimonialHome')
   const mounted = useSyncExternalStore(
     () => () => {},
     () => true,
     () => false,
   )
 
+  const DATA: DataItem[] = [
+    {
+      name: t('t1Name'),
+      avatar: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-1.webp',
+      content: t('t1Content'),
+      margin: 'mt-6',
+    },
+    {
+      name: t('t2Name'),
+      avatar: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-2.webp',
+      content: t('t2Content'),
+    },
+    {
+      name: t('t3Name'),
+      avatar: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-3.webp',
+      content: t('t3Content'),
+      margin: 'mt-4',
+    },
+    {
+      name: t('t4Name'),
+      avatar: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-4.webp',
+      content: t('t4Content'),
+    },
+    {
+      name: t('t5Name'),
+      avatar: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-5.webp',
+      content: t('t5Content'),
+    },
+    {
+      name: t('t6Name'),
+      avatar: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-6.webp',
+      content: t('t6Content'),
+    },
+  ]
+
   return (
     <section className={cn('py-32 flex justify-center', className)}>
       <div className="container">
         <div className="flex flex-col items-center gap-6 px-4 sm:px-8">
           <h6 className="text-center text-sm font-medium uppercase tracking-wide text-primary">
-            Testimonials
+            {t('label')}
           </h6>
-          <h2 className="mb-2 text-center text-3xl font-semibold lg:text-5xl">
-            What Our Patients Say
-          </h2>
+          <h2 className="mb-2 text-center text-3xl font-semibold lg:text-5xl">{t('heading')}</h2>
 
           <div className="mt-4 flex flex-col items-center gap-4 sm:flex-row">
             <RewardCard
               icon="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/block-1.svg"
-              title="Best for Design"
-              subtitle="2023 Recognition"
+              title={t('award1Title')}
+              subtitle={t('award1Year')}
             />
             <RewardCard
               icon="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/block-2.svg"
-              title="Best for Creativity"
-              subtitle="2022 Recognition"
+              title={t('award2Title')}
+              subtitle={t('award2Year')}
             />
           </div>
         </div>

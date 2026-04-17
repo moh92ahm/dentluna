@@ -12,22 +12,26 @@ export const revalidateDoctor: CollectionAfterChangeHook<Doctor> = ({
   req: { payload, context },
 }) => {
   if (!context.disableRevalidate) {
-    revalidatePath(DOCTORS_LIST_PATH)
+    try {
+      revalidatePath(DOCTORS_LIST_PATH)
 
-    if (doc._status === 'published') {
-      const path = `/doctors/${doc.slug}`
+      if (doc._status === 'published') {
+        const path = `/doctors/${doc.slug}`
 
-      payload.logger.info(`Revalidating doctor at path: ${path}`)
+        payload.logger.info(`Revalidating doctor at path: ${path}`)
 
-      revalidatePath(path)
-    }
+        revalidatePath(path)
+      }
 
-    if (previousDoc?._status === 'published' && doc._status !== 'published') {
-      const oldPath = `/doctors/${previousDoc.slug}`
+      if (previousDoc?._status === 'published' && doc._status !== 'published') {
+        const oldPath = `/doctors/${previousDoc.slug}`
 
-      payload.logger.info(`Revalidating old doctor at path: ${oldPath}`)
+        payload.logger.info(`Revalidating old doctor at path: ${oldPath}`)
 
-      revalidatePath(oldPath)
+        revalidatePath(oldPath)
+      }
+    } catch (_err) {
+      // revalidatePath cannot be called during SSR (e.g. autosave on Create page)
     }
   }
 

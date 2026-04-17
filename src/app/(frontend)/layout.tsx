@@ -1,43 +1,36 @@
-
-import type { Metadata } from "next";
-import { Montserrat, Poppins } from "next/font/google";
-import "./globals.css";
-import { Header } from "@/components/global/header";
-import { Footer } from "@/components/global/footer";
+import type { Metadata } from 'next'
+import { Montserrat, Poppins } from 'next/font/google'
+import { getLocale } from 'next-intl/server'
+import './globals.css'
 
 const fontSans = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+  subsets: ['latin'],
+  variable: '--font-sans',
+})
 
 const fontSerif = Poppins({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-serif",
-});
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-serif',
+})
 
 export const metadata: Metadata = {
-  title: "Dent Luna",
-  description: "Your trusted dental care",
-};
+  title: 'Dent Luna',
+  description: 'Your trusted dental care',
+}
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
+  const locale = await getLocale()
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <meta name="apple-mobile-web-app-title" content="Dent Luna" />
       </head>
-      <body className={`${fontSans.variable} ${fontSerif.variable} antialiased`}>
-        <Header />
-        <main className="container mx-auto mt-8 px-4">
-          {children}
-        </main>
-        <Footer />
-      </body>
+      <body className={`${fontSans.variable} ${fontSerif.variable} antialiased`}>{children}</body>
     </html>
-  );
+  )
 }

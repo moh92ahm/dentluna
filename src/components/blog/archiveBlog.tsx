@@ -1,10 +1,12 @@
 import { cn } from '@/lib/utils'
 import { getCachedDocuments } from '@/utilities/getDocument'
 import { getMediaUrl } from '@/utilities/getMediaUrl'
+import { Link } from '@/i18n/navigation'
 import type { Post } from '@/payload-types'
 
 interface ArchiveBlogProps {
   className?: string
+  locale?: string
 }
 
 const formatDate = (dateString: string | undefined) => {
@@ -21,8 +23,8 @@ const getAuthorNames = (populatedAuthors: any[] | undefined) => {
   return populatedAuthors.map((a) => a.name).join(', ')
 }
 
-const ArchiveBlog = async ({ className }: ArchiveBlogProps) => {
-  const cachedGetPosts = getCachedDocuments('posts', 10, 1)
+const ArchiveBlog = async ({ className, locale = 'en' }: ArchiveBlogProps) => {
+  const cachedGetPosts = getCachedDocuments('posts', 10, 1, locale)
   const posts = (await cachedGetPosts()) as Post[]
 
   if (!posts || posts.length === 0) {
@@ -42,7 +44,10 @@ const ArchiveBlog = async ({ className }: ArchiveBlogProps) => {
   return (
     <div className={cn('xs:grid-cols-1 grid gap-4 sm:grid-cols-2 lg:grid-cols-4', className)}>
       <div className="relative md:row-span-2 lg:col-span-2">
-        <a href={`/blog/${firstPost.slug}`} className="block h-fit rounded-lg p-3 md:top-0">
+        <Link
+          href={`/blog/${firstPost.slug}` as any}
+          className="block h-fit rounded-lg p-3 md:top-0"
+        >
           <img
             src={getImage(firstPost)}
             alt={firstPost.title}
@@ -58,10 +63,10 @@ const ArchiveBlog = async ({ className }: ArchiveBlogProps) => {
               {firstPost.meta?.description || 'Read more...'}
             </p>
           </div>
-        </a>
+        </Link>
       </div>
       {restPosts.map((post) => (
-        <a key={post.id} href={`/blog/${post.slug}`} className="rounded-lg p-3">
+        <Link key={post.id} href={`/blog/${post.slug}` as any} className="rounded-lg p-3">
           <img
             src={getImage(post)}
             alt={post.title}
@@ -74,7 +79,7 @@ const ArchiveBlog = async ({ className }: ArchiveBlogProps) => {
             </div>
             <h3 className="text-lg">{post.title}</h3>
           </div>
-        </a>
+        </Link>
       ))}
     </div>
   )
