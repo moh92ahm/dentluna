@@ -3,71 +3,71 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { cn } from "@/lib/utils";
+} from '@/components/ui/accordion'
+import { cn } from '@/lib/utils'
 
 const categories = [
   {
-    title: "Support",
+    title: 'Support',
     questions: [
       {
-        question: "How do I update my account without breaking my laptop?",
+        question: 'How do I update my account without breaking my laptop?',
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.',
       },
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: 'Is support free, or do I need to Google everything?',
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.',
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: 'Are you going to be subsumed by AI?',
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.',
       },
     ],
   },
   {
-    title: "Your account",
+    title: 'Your account',
     questions: [
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: 'Is support free, or do I need to Google everything?',
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.',
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: 'Are you going to be subsumed by AI?',
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.',
       },
     ],
   },
   {
-    title: "Other questions",
+    title: 'Other questions',
     questions: [
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: 'Is support free, or do I need to Google everything?',
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.',
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: 'Are you going to be subsumed by AI?',
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.',
       },
     ],
   },
-];
+]
 
 interface Faq11Props {
-  className?: string;
+  className?: string
 }
 
 const Faq11 = ({ className }: Faq11Props) => {
   return (
     <section
       className={cn(
-        "relative flex justify-center mx-2.5 mt-2.5 rounded-t-2xl rounded-b-[36px] bg-linear-to-b from-background via-background to-slate-100 lg:mx-4 dark:to-slate-900",
+        'relative flex justify-center mx-2.5 mt-2.5 rounded-t-2xl rounded-b-[36px] bg-linear-to-b from-background via-background to-slate-100 lg:mx-4 dark:to-slate-900',
         className,
       )}
     >
@@ -79,7 +79,7 @@ const Faq11 = ({ className }: Faq11Props) => {
             </h2>
 
             <p className="max-w-md leading-snug font-medium text-muted-foreground lg:mx-auto">
-              If you can't find what you're looking for,{" "}
+              If you can&apos;t find what you&apos;re looking for,{' '}
               <a href="/contact" className="underline underline-offset-4">
                 get in touch
               </a>
@@ -96,9 +96,7 @@ const Faq11 = ({ className }: Faq11Props) => {
                 <Accordion type="single" collapsible className="w-full">
                   {category.questions.map((item, i) => (
                     <AccordionItem key={i} value={`${categoryIndex}-${i}`}>
-                      <AccordionTrigger className="text-start">
-                        {item.question}
-                      </AccordionTrigger>
+                      <AccordionTrigger className="text-start">{item.question}</AccordionTrigger>
                       <AccordionContent className="text-muted-foreground">
                         {item.answer}
                       </AccordionContent>
@@ -111,7 +109,7 @@ const Faq11 = ({ className }: Faq11Props) => {
         </div>
       </section>
     </section>
-  );
-};
+  )
+}
 
-export { Faq11 };
+export { Faq11 }

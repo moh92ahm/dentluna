@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useSyncExternalStore } from 'react'
 
 import { cn } from '@/lib/utils'
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider'
@@ -68,11 +68,11 @@ export const BeforeAfterGalleryClient = ({
   categories,
   className,
 }: BeforeAfterGalleryClientProps) => {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  )
 
   if (!categories || categories.length === 0) {
     return <p className="text-center text-muted-foreground">No gallery items available yet.</p>

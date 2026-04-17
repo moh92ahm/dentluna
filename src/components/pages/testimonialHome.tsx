@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useSyncExternalStore } from 'react'
 import { Star } from 'lucide-react'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
@@ -81,11 +81,11 @@ interface TestimonialHomeProps {
 }
 
 const TestimonialHome = ({ className }: TestimonialHomeProps) => {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  )
 
   return (
     <section className={cn('py-32 flex justify-center', className)}>
