@@ -6,64 +6,23 @@ import {
 } from '@/components/ui/accordion'
 import { cn } from '@/lib/utils'
 
-const categories = [
-  {
-    title: 'Support',
-    questions: [
-      {
-        question: 'How do I update my account without breaking my laptop?',
-        answer:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.',
-      },
-      {
-        question: 'Is support free, or do I need to Google everything?',
-        answer:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.',
-      },
-      {
-        question: 'Are you going to be subsumed by AI?',
-        answer:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.',
-      },
-    ],
-  },
-  {
-    title: 'Your account',
-    questions: [
-      {
-        question: 'Is support free, or do I need to Google everything?',
-        answer:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.',
-      },
-      {
-        question: 'Are you going to be subsumed by AI?',
-        answer:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.',
-      },
-    ],
-  },
-  {
-    title: 'Other questions',
-    questions: [
-      {
-        question: 'Is support free, or do I need to Google everything?',
-        answer:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.',
-      },
-      {
-        question: 'Are you going to be subsumed by AI?',
-        answer:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.',
-      },
-    ],
-  },
-]
+export interface Faq11Question {
+  id: string
+  question: string
+  answer: string
+}
+
+export interface Faq11Category {
+  title: string
+  questions: Faq11Question[]
+}
 
 interface Faq11Props {
   className?: string
+  categories?: Faq11Category[]
 }
 
-const Faq11 = ({ className }: Faq11Props) => {
+const Faq11 = ({ className, categories = [] }: Faq11Props) => {
   return (
     <section
       className={cn(
@@ -88,6 +47,12 @@ const Faq11 = ({ className }: Faq11Props) => {
           </div>
 
           <div className="grid gap-6 text-start">
+            {categories.length === 0 && (
+              <p className="text-muted-foreground">
+                No FAQs available right now. Please check back soon.
+              </p>
+            )}
+
             {categories.map((category, categoryIndex) => (
               <div key={category.title} className="">
                 <h3 className="border-b py-4 font-medium text-muted-foreground">
@@ -95,7 +60,7 @@ const Faq11 = ({ className }: Faq11Props) => {
                 </h3>
                 <Accordion type="single" collapsible className="w-full">
                   {category.questions.map((item, i) => (
-                    <AccordionItem key={i} value={`${categoryIndex}-${i}`}>
+                    <AccordionItem key={item.id} value={`${categoryIndex}-${i}`}>
                       <AccordionTrigger className="text-start">{item.question}</AccordionTrigger>
                       <AccordionContent className="text-muted-foreground">
                         {item.answer}

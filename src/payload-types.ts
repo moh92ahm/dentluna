@@ -75,6 +75,8 @@ export interface Config {
     categories: Category;
     gallery: Gallery;
     'gallery-category': GalleryCategory;
+    faqs: Faq;
+    'faq-categories': FaqCategory;
     'payload-kv': PayloadKv;
     'payload-jobs': PayloadJob;
     'payload-folders': FolderInterface;
@@ -96,6 +98,8 @@ export interface Config {
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
     gallery: GallerySelect<false> | GallerySelect<true>;
     'gallery-category': GalleryCategorySelect<false> | GalleryCategorySelect<true>;
+    faqs: FaqsSelect<false> | FaqsSelect<true>;
+    'faq-categories': FaqCategoriesSelect<false> | FaqCategoriesSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-jobs': PayloadJobsSelect<false> | PayloadJobsSelect<true>;
     'payload-folders': PayloadFoldersSelect<false> | PayloadFoldersSelect<true>;
@@ -473,6 +477,37 @@ export interface GalleryCategory {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "faqs".
+ */
+export interface Faq {
+  id: number;
+  question: string;
+  answer: string;
+  category?: (number | null) | FaqCategory;
+  /**
+   * Lower numbers appear first on the FAQ page.
+   */
+  order?: number | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "faq-categories".
+ */
+export interface FaqCategory {
+  id: number;
+  title: string;
+  /**
+   * When enabled, the slug will auto-generate from the title field on save and autosave.
+   */
+  generateSlug?: boolean | null;
+  slug: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -618,6 +653,14 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'gallery-category';
         value: number | GalleryCategory;
+      } | null)
+    | ({
+        relationTo: 'faqs';
+        value: number | Faq;
+      } | null)
+    | ({
+        relationTo: 'faq-categories';
+        value: number | FaqCategory;
       } | null)
     | ({
         relationTo: 'payload-folders';
@@ -888,6 +931,29 @@ export interface GallerySelect<T extends boolean = true> {
  * via the `definition` "gallery-category_select".
  */
 export interface GalleryCategorySelect<T extends boolean = true> {
+  title?: T;
+  generateSlug?: T;
+  slug?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "faqs_select".
+ */
+export interface FaqsSelect<T extends boolean = true> {
+  question?: T;
+  answer?: T;
+  category?: T;
+  order?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "faq-categories_select".
+ */
+export interface FaqCategoriesSelect<T extends boolean = true> {
   title?: T;
   generateSlug?: T;
   slug?: T;
