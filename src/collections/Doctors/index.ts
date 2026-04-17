@@ -9,6 +9,7 @@ import {
 
 import { authenticated } from '@/access/authenticated'
 import { authenticatedOrPublished } from '@/access/authenticatedOrPublished'
+import { revalidateDoctor, revalidateDoctorDelete } from './hooks/revalidateDoctor'
 
 export const Doctors: CollectionConfig = {
   slug: 'doctors',
@@ -80,6 +81,10 @@ export const Doctors: CollectionConfig = {
       },
     },
   ],
+  hooks: {
+    afterChange: [revalidateDoctor],
+    afterDelete: [revalidateDoctorDelete],
+  },
   timestamps: true,
   versions: {
     drafts: {

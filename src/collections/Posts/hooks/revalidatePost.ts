@@ -4,12 +4,16 @@ import { revalidatePath, revalidateTag } from 'next/cache'
 
 import type { Post } from '../../../payload-types'
 
+const BLOG_LIST_PATH = '/blog'
+
 export const revalidatePost: CollectionAfterChangeHook<Post> = ({
   doc,
   previousDoc,
   req: { payload, context },
 }) => {
   if (!context.disableRevalidate) {
+    revalidatePath(BLOG_LIST_PATH)
+
     if (doc._status === 'published') {
       const path = `/posts/${doc.slug}`
 
@@ -36,6 +40,7 @@ export const revalidateDelete: CollectionAfterDeleteHook<Post> = ({ doc, req: { 
   if (!context.disableRevalidate) {
     const path = `/posts/${doc?.slug}`
 
+    revalidatePath(BLOG_LIST_PATH)
     revalidatePath(path)
     revalidateTag('posts-sitemap', 'max')
   }

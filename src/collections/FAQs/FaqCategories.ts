@@ -3,6 +3,10 @@ import type { CollectionConfig } from 'payload'
 import { anyone } from '@/access/anyone'
 import { authenticated } from '@/access/authenticated'
 import { slugField } from 'payload'
+import {
+  revalidateFaqPageAfterChange,
+  revalidateFaqPageAfterDelete,
+} from './hooks/revalidateFaqPage'
 
 export const FaqCategories: CollectionConfig = {
   slug: 'faq-categories',
@@ -26,4 +30,8 @@ export const FaqCategories: CollectionConfig = {
       position: undefined,
     }),
   ],
+  hooks: {
+    afterChange: [revalidateFaqPageAfterChange],
+    afterDelete: [revalidateFaqPageAfterDelete],
+  },
 }

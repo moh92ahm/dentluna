@@ -2,6 +2,10 @@ import type { CollectionConfig } from 'payload'
 
 import { anyone } from '@/access/anyone'
 import { authenticated } from '@/access/authenticated'
+import {
+  revalidateFaqPageAfterChange,
+  revalidateFaqPageAfterDelete,
+} from './hooks/revalidateFaqPage'
 
 export const Faqs: CollectionConfig = {
   slug: 'faqs',
@@ -46,5 +50,9 @@ export const Faqs: CollectionConfig = {
       },
     },
   ],
+  hooks: {
+    afterChange: [revalidateFaqPageAfterChange],
+    afterDelete: [revalidateFaqPageAfterDelete],
+  },
   timestamps: true,
 }

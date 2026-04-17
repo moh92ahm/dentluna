@@ -4,12 +4,16 @@ import { revalidatePath, revalidateTag } from 'next/cache'
 
 import type { Treatment } from '../../../payload-types'
 
+const TREATMENTS_LIST_PATH = '/treatments'
+
 export const revalidatePost: CollectionAfterChangeHook<Treatment> = ({
   doc,
   previousDoc,
   req: { payload, context },
 }) => {
   if (!context.disableRevalidate) {
+    revalidatePath(TREATMENTS_LIST_PATH)
+
     if (doc._status === 'published') {
       const path = `/treatments/${doc.slug}`
 
@@ -32,10 +36,14 @@ export const revalidatePost: CollectionAfterChangeHook<Treatment> = ({
   return doc
 }
 
-export const revalidateDelete: CollectionAfterDeleteHook<Treatment> = ({ doc, req: { context } }) => {
+export const revalidateDelete: CollectionAfterDeleteHook<Treatment> = ({
+  doc,
+  req: { context },
+}) => {
   if (!context.disableRevalidate) {
     const path = `/treatments/${doc?.slug}`
 
+    revalidatePath(TREATMENTS_LIST_PATH)
     revalidatePath(path)
     revalidateTag('treatments-sitemap', 'max')
   }

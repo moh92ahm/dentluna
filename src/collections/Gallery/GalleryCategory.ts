@@ -3,6 +3,10 @@ import type { CollectionConfig } from 'payload'
 import { anyone } from '@/access/anyone'
 import { authenticated } from '@/access/authenticated'
 import { slugField } from 'payload'
+import {
+  revalidateGalleryPageAfterChange,
+  revalidateGalleryPageAfterDelete,
+} from './hooks/revalidateGalleryPage'
 
 export const GalleryCategory: CollectionConfig = {
   slug: 'gallery-category',
@@ -25,4 +29,8 @@ export const GalleryCategory: CollectionConfig = {
       position: undefined,
     }),
   ],
+  hooks: {
+    afterChange: [revalidateGalleryPageAfterChange],
+    afterDelete: [revalidateGalleryPageAfterDelete],
+  },
 }
