@@ -17,12 +17,12 @@ export const Logo = (props: Props) => {
     <img
       alt="Dentluna Logo"
       width={193}
-      height={34}
+      height={91}
       loading={loading}
       fetchPriority={priority}
       decoding="async"
-      className={clsx('max-w-[9.375rem] w-full h-[34px]', className)}
-      src="/dentluna-logo.svg"
+      className={clsx('max-w-[9.375rem] w-full h-auto', className)}
+      src="/dentluna-logo.png"
     />
   )
 }

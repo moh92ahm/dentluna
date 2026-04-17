@@ -1,14 +1,12 @@
 import React from 'react'
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
+import { Logo } from '@/components/global/logo'
 import { cn } from '@/lib/utils'
 
 interface FooterProps {
   logo?: {
-    url: string
-    src: string
-    alt: string
-    title: string
+    url?: string
   }
   className?: string
   sections?: Array<{
@@ -38,11 +36,11 @@ const defaultSections = [
     ],
   },
   {
-    title: "Resources",
+    title: 'Resources',
     links: [
-      { name: "Blog", href: "/blog" },
-      { name: "FAQs", href: "/faq" },
-      { name: "Gallery", href: "/gallery" },
+      { name: 'Blog', href: '/blog' },
+      { name: 'FAQs', href: '/faq' },
+      { name: 'Gallery', href: '/gallery' },
     ],
   },
   {
@@ -71,10 +69,7 @@ const currentYear = new Date().getFullYear()
 
 const Footer = ({
   logo = {
-    url: 'https://www.dentluna.com',
-    src: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/dentluna-icon.svg',
-    alt: 'logo',
-    title: 'Dent Luna',
+    url: '/',
   },
   sections = defaultSections,
   description = 'A collection of components for your startup business or side project.',
@@ -91,9 +86,8 @@ const Footer = ({
             {/* Logo */}
             <div className="flex items-center gap-2 lg:justify-start">
               <a href={logo.url}>
-                <img src={logo.src} alt={logo.alt} title={logo.title} className="h-8" />
+                <Logo loading="lazy" priority="low" className="w-[9.375rem]" />
               </a>
-              <h2 className="text-xl font-semibold">{logo.title}</h2>
             </div>
             <p className="max-w-[70%] text-sm text-muted-foreground">{description}</p>
             <ul className="flex items-center space-x-6 text-muted-foreground">

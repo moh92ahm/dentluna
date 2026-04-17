@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useRef, useState } from 'react'
 
+import { Logo } from '@/components/global/logo'
 import { Button } from '@/components/ui/button'
 import {
   NavigationMenu,
@@ -15,10 +16,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { cn } from '@/lib/utils'
 
 const NAV_LOGO = {
-  url: 'https://www.shadcnblocks.com',
-  src: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg',
-  alt: 'logo',
-  title: 'Shadcnblocks.com',
+  url: '/',
 }
 const NAV_ITEMS = [
   { name: 'Home', link: '/' },
@@ -70,8 +68,7 @@ const Header = ({ className }: HeaderProps) => {
         <div className="hidden items-center gap-8 lg:flex">
           {/* Logo */}
           <a href={NAV_LOGO.url} className="flex items-center gap-2">
-            <img src={NAV_LOGO.src} className="max-h-8 w-8" alt={NAV_LOGO.alt} />
-            <span className="text-lg font-semibold tracking-tighter">{NAV_LOGO.title}</span>
+            <Logo loading="eager" priority="high" className="w-[9.375rem]" />
           </a>
 
           {/* Navigation Menu */}
@@ -115,8 +112,7 @@ const Header = ({ className }: HeaderProps) => {
         {/* Mobile: Logo + Menu Button */}
         <div className="flex w-full items-center justify-between lg:hidden">
           <a href={NAV_LOGO.url} className="flex items-center gap-2">
-            <img src={NAV_LOGO.src} className="max-h-8 w-8" alt={NAV_LOGO.alt} />
-            <span className="text-lg font-semibold tracking-tighter">{NAV_LOGO.title}</span>
+            <Logo loading="eager" priority="high" className="w-[9.375rem]" />
           </a>
           <MobileNav activeItem={activeItem} setActiveItem={setActiveItem} />
         </div>
