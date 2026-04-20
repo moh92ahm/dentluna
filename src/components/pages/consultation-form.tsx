@@ -1,7 +1,7 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
-import { ChevronDown, LoaderIcon } from 'lucide-react'
+import { LoaderIcon } from 'lucide-react'
 import { useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import { z } from 'zod'
@@ -17,16 +17,14 @@ type ConsultationFormData = {
   name: string
   phone: string
   email?: string
-  category?: string
   promoCode?: string
 }
 
 interface ConsultationFormProps {
-  treatments?: { title: string; slug: string }[]
   className?: string
 }
 
-const ConsultationForm = ({ treatments = [], className }: ConsultationFormProps) => {
+const ConsultationForm = ({ className }: ConsultationFormProps) => {
   const t = useTranslations('consultationForm')
   const locale = useLocale()
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -36,7 +34,6 @@ const ConsultationForm = ({ treatments = [], className }: ConsultationFormProps)
     name: z.string().min(1, t('nameRequired')),
     phone: z.string().min(1, t('phoneRequired')),
     email: z.string().email(t('emailInvalid')).optional().or(z.literal('')),
-    category: z.string().optional(),
     promoCode: z.string().optional(),
   })
 
@@ -48,7 +45,6 @@ const ConsultationForm = ({ treatments = [], className }: ConsultationFormProps)
       name: '',
       phone: '',
       email: '',
-      category: '',
       promoCode: '',
     },
   })
@@ -62,7 +58,7 @@ const ConsultationForm = ({ treatments = [], className }: ConsultationFormProps)
           name: data.name,
           phone: data.phone,
           email: data.email || undefined,
-          category: data.category || undefined,
+          category: 'Dental Treatment',
           promoCode: data.promoCode || undefined,
           lang: locale,
         }),
@@ -162,43 +158,16 @@ const ConsultationForm = ({ treatments = [], className }: ConsultationFormProps)
           )}
         />
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          <Controller
-            control={form.control}
-            name="category"
-            render={({ field }) => (
-              <Field>
-                <FieldLabel htmlFor={field.name}>{t('categoryLabel')}</FieldLabel>
-                <div className="relative">
-                  <select
-                    {...field}
-                    id={field.name}
-                    className="flex h-10 w-full appearance-none rounded-md border border-input bg-background px-3 py-2 pr-8 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-                  >
-                    <option value="">{t('categoryPlaceholder')}</option>
-                    {treatments.map((treatment) => (
-                      <option key={treatment.slug} value={treatment.title}>
-                        {treatment.title}
-                      </option>
-                    ))}
-                  </select>
-                  <ChevronDown className="pointer-events-none absolute right-2 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
-                </div>
-              </Field>
-            )}
-          />
-
-          <Controller
-            control={form.control}
-            name="promoCode"
-            render={({ field }) => (
-              <Field>
-                <FieldLabel htmlFor={field.name}>{t('promoLabel')}</FieldLabel>
-                <Input {...field} id={field.name} placeholder={t('promoPlaceholder')} />
-              </Field>
-            )}
-          />
-        </div>
+        <Controller
+          control={form.control}
+          name="promoCode"
+          render={({ field }) => (
+            <Field>
+              <FieldLabel htmlFor={field.name}>{t('promoLabel')}</FieldLabel>
+              <Input {...field} id={field.name} placeholder={t('promoPlaceholder')} />
+            </Field>
+          )}
+        />
 
         {form.formState.errors.root && (
           <p className="text-sm text-destructive">{form.formState.errors.root.message}</p>

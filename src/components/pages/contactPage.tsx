@@ -11,7 +11,6 @@ interface ContactProps {
   phone?: string
   address?: string
   className?: string
-  treatments?: { title: string; slug: string }[]
 }
 
 const Contact = ({
@@ -19,7 +18,6 @@ const Contact = ({
   phone = '+0542 635 41 20',
   address = 'Şemikler, Ordu Blv Şenler Forum Sitesi D:240/B, Karşıyaka/İzmir, Turkey',
   className,
-  treatments = [],
 }: ContactProps) => {
   const t = useTranslations('contact')
   const mapSrc =
@@ -58,7 +56,7 @@ const Contact = ({
           </div>
 
           <div className="flex items-center">
-            <ConsultationForm treatments={treatments} />
+            <ConsultationForm />
           </div>
         </div>
 
