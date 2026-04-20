@@ -3,6 +3,7 @@ import { getCachedDocuments } from '@/utilities/getDocument'
 import { getMediaUrl } from '@/utilities/getMediaUrl'
 import { Link } from '@/i18n/navigation'
 import type { Post } from '@/payload-types'
+import { defaultLocale } from '@/i18n/locales'
 
 interface ArchiveBlogProps {
   className?: string
@@ -23,7 +24,7 @@ const getAuthorNames = (populatedAuthors: any[] | undefined) => {
   return populatedAuthors.map((a) => a.name).join(', ')
 }
 
-const ArchiveBlog = async ({ className, locale = 'en' }: ArchiveBlogProps) => {
+const ArchiveBlog = async ({ className, locale = defaultLocale }: ArchiveBlogProps) => {
   const cachedGetPosts = getCachedDocuments('posts', 10, 1, locale)
   const posts = (await cachedGetPosts()) as Post[]
 

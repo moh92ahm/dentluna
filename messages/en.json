@@ -147,7 +147,7 @@
     "learnMore": "Learn More"
   },
   "aboutHero": {
-    "label": "About DentLuna",
+    "label": "About Dent Luna",
     "heading": "Premium Dental Care in Izmir for International Patients",
     "description": "We help you achieve a healthy, natural smile through expert treatment and a carefully organized experience from start to finish.",
     "ctaBtn": "Contact Us"
@@ -226,6 +226,27 @@
     "messagePlaceholder": "Tell us about your project...",
     "sendBtn": "Send Message",
     "sendingBtn": "Sending...",
+    "errorMsg": "Something went wrong. Please try again."
+  },
+  "consultationForm": {
+    "heading": "Fill the form to get a free consultation",
+    "subheading": "Our team will get back to you within 24 hours.",
+    "success": "Thank you! We will contact you shortly.",
+    "nameLabel": "Enter Your Full Name",
+    "nameRequired": "Full name is required",
+    "namePlaceholder": "James Harber",
+    "phoneLabel": "Enter Your Phone Number (With Country Code)",
+    "phoneRequired": "Phone number is required",
+    "phonePlaceholder": "+1 (123) 456 78 90",
+    "emailLabel": "Enter Your Email",
+    "emailInvalid": "Please enter a valid email",
+    "emailPlaceholder": "jamesharber@domain.com",
+    "categoryLabel": "Choose Your Category",
+    "categoryPlaceholder": "Select",
+    "promoLabel": "Your Promo Code",
+    "promoPlaceholder": "",
+    "submitBtn": "Submit",
+    "sendingBtn": "Submitting...",
     "errorMsg": "Something went wrong. Please try again."
   },
   "footer": {

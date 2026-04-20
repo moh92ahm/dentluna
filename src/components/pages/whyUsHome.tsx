@@ -31,7 +31,7 @@ const WhyUsHome = async ({ className }: WhyUsHomeProps) => {
           </div>
           <div className="relative">
             <img
-              src="./static/why_choose_us.jpg"
+              src="./static/home/why_choose_us.jpg"
               alt="Why Choose Us"
               className="max-h-[500px] w-full rounded-2xl border border-border object-cover lg:max-h-none"
             />

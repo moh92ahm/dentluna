@@ -3,11 +3,17 @@ import type { Config } from 'src/payload-types'
 import configPromise from '@payload-config'
 import { getPayload } from 'payload'
 import { unstable_cache } from 'next/cache'
+import { defaultLocale } from '@/i18n/locales'
 
 type Collection = keyof Config['collections']
 type LocaleCode = Config['locale'] | 'all'
 
-async function getDocument(collection: Collection, slug: string, depth = 0, locale = 'en') {
+async function getDocument(
+  collection: Collection,
+  slug: string,
+  depth = 0,
+  locale = defaultLocale,
+) {
   const payload = await getPayload({ config: configPromise })
 
   const page = await payload.find({
@@ -33,7 +39,7 @@ export const getCachedDocument = (
   collection: Collection,
   slug: string,
   depth = 0,
-  locale = 'en',
+  locale = defaultLocale,
 ) => {
   if (process.env.NODE_ENV === 'development') {
     return () => getDocument(collection, slug, depth, locale)
@@ -52,7 +58,7 @@ export const getCachedDocument = (
  * Access control is enforced via overrideAccess: false — the collection's
  * own access function handles published-only filtering for unauthenticated requests.
  */
-async function getDocuments(collection: Collection, limit = 10, depth = 0, locale = 'en') {
+async function getDocuments(collection: Collection, limit = 10, depth = 0, locale = defaultLocale) {
   const payload = await getPayload({ config: configPromise })
 
   const docs = await payload.find({
@@ -75,7 +81,7 @@ export const getCachedDocuments = (
   collection: Collection,
   limit = 10,
   depth = 0,
-  locale = 'en',
+  locale = defaultLocale,
 ) => {
   if (process.env.NODE_ENV === 'development') {
     return () => getDocuments(collection, limit, depth, locale)

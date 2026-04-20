@@ -24,7 +24,7 @@ const CtaHome = async ({ className }: CtaHomeProps) => {
           <div className="relative w-full pl-4 sm:pl-0">
             <div className="absolute -bottom-8 -left-8 -z-10 h-4/5 w-4/5 rounded-tl-2xl rounded-br-2xl bg-stone-900/20 blur-2xl"></div>
             <img
-              src="./static/cta_image.jpg"
+              src="./static/home/cta_image.jpg"
               alt="placeholder"
               className="relative z-10 h-full max-h-[400px] w-full rounded-tl-2xl rounded-br-2xl object-cover"
             />

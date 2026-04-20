@@ -60,8 +60,8 @@ const TestimonialHome = ({ className }: TestimonialHomeProps) => {
           <h2 className="mb-2 text-center text-3xl font-semibold lg:text-5xl">{t('heading')}</h2>
 
           <div className="mt-4 flex flex-col items-center gap-4 sm:flex-row">
-            <RewardCard icon="/static/trustpilot.png" title="Trustpilot Reviews" />
-            <RewardCard icon="/static/google.png" title="Google Reviews" />
+            <RewardCard icon="/static/home/trustpilot.png" title="Trustpilot Reviews" />
+            <RewardCard icon="/static/home/google.png" title="Google Reviews" />
           </div>
         </div>
 

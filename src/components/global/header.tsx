@@ -3,10 +3,10 @@
 import { Menu, X } from 'lucide-react'
 import React, { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { useRouter, usePathname, Link } from '@/i18n/navigation'
-import { routing } from '@/i18n/routing'
+import { usePathname, Link } from '@/i18n/navigation'
 
 import { Logo } from '@/components/global/logo'
+import { LanguageSwitcher } from '@/components/global/language-switcher'
 import { Button } from '@/components/ui/button'
 import {
   NavigationMenu,
@@ -15,19 +15,7 @@ import {
   NavigationMenuList,
 } from '@/components/ui/navigation-menu'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
 import { cn } from '@/lib/utils'
-
-const LOCALE_LABELS: Record<string, string> = {
-  en: 'EN',
-  de: 'DE',
-  fr: 'FR',
-}
 
 interface HeaderProps {
   className?: string
@@ -37,7 +25,6 @@ interface HeaderProps {
 const Header = ({ className, locale }: HeaderProps) => {
   const t = useTranslations('nav')
   const pathname = usePathname()
-  const router = useRouter()
 
   const NAV_ITEMS = [
     { name: t('home'), link: '/' as const },
@@ -119,12 +106,12 @@ const Header = ({ className, locale }: HeaderProps) => {
           </NavigationMenu>
 
           {/* Language Switcher */}
-          <LanguageSwitcher locale={locale} router={router} pathname={pathname} />
+          <LanguageSwitcher locale={locale} />
 
           {/* Get a Quote Button */}
-          <Button variant="outline" size="sm" className="h-10 py-2.5 text-sm font-normal">
+          {/* <Button variant="outline" size="sm" className="h-10 py-2.5 text-sm font-normal">
             {t('contact')}
-          </Button>
+          </Button> */}
         </div>
 
         {/* Mobile */}
@@ -133,7 +120,7 @@ const Header = ({ className, locale }: HeaderProps) => {
             <Logo loading="eager" priority="high" className="w-[9.375rem]" />
           </Link>
           <div className="flex items-center gap-2">
-            <LanguageSwitcher locale={locale} router={router} pathname={pathname} />
+            <LanguageSwitcher locale={locale} />
             <MobileNav activeItem={activeItem} setActiveItem={setActiveItem} navItems={NAV_ITEMS} />
           </div>
         </div>
@@ -143,40 +130,6 @@ const Header = ({ className, locale }: HeaderProps) => {
 }
 
 export { Header }
-
-// ─── Language Switcher ────────────────────────────────────────────────────────
-
-const LanguageSwitcher = ({
-  locale,
-  router,
-  pathname,
-}: {
-  locale: string
-  router: ReturnType<typeof useRouter>
-  pathname: string
-}) => {
-  return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="h-8 px-2 font-mono text-xs font-semibold">
-          {LOCALE_LABELS[locale] ?? locale.toUpperCase()}
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        {routing.locales.map((loc) => (
-          <DropdownMenuItem
-            key={loc}
-            disabled={loc === locale}
-            onClick={() => router.replace(pathname, { locale: loc })}
-            className="cursor-pointer"
-          >
-            {LOCALE_LABELS[loc]}
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
-  )
-}
 
 // ─── Animated Hamburger ───────────────────────────────────────────────────────
 
@@ -242,9 +195,9 @@ const MobileNav = ({
                 </Link>
               </li>
             ))}
-            <li className="flex flex-col px-7 py-2">
+            {/* <li className="flex flex-col px-7 py-2">
               <Button variant="outline">{t('contact')}</Button>
-            </li>
+            </li> */}
           </ul>
         </PopoverContent>
       </Popover>

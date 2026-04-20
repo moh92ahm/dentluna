@@ -4,13 +4,14 @@ import { getMediaUrl } from '@/utilities/getMediaUrl'
 import { Link } from '@/i18n/navigation'
 import type { Doctor } from '@/payload-types'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { defaultLocale } from '@/i18n/locales'
 
 interface DoctorsPageProps {
   className?: string
   locale?: string
 }
 
-const DoctorsPage = async ({ className, locale = 'en' }: DoctorsPageProps) => {
+const DoctorsPage = async ({ className, locale = defaultLocale }: DoctorsPageProps) => {
   const cachedGetDoctors = getCachedDocuments('doctors', 12, 1, locale)
   const doctors = (await cachedGetDoctors()) as Doctor[]
 

@@ -147,7 +147,7 @@
     "learnMore": "Mehr erfahren"
   },
   "aboutHero": {
-    "label": "Über DentLuna",
+    "label": "Über Dent Luna",
     "heading": "Premium-Zahnpflege in Izmir für internationale Patienten",
     "description": "Wir helfen Ihnen, ein gesundes, natürliches Lächeln durch Expertenbehandlung und ein sorgfältig organisiertes Erlebnis von Anfang bis Ende zu erreichen.",
     "ctaBtn": "Kontakt aufnehmen"
@@ -225,6 +225,27 @@
     "messageRequired": "Nachricht ist erforderlich",
     "messagePlaceholder": "Erzählen Sie uns von Ihrem Anliegen...",
     "sendBtn": "Nachricht senden",
+    "sendingBtn": "Wird gesendet...",
+    "errorMsg": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+  },
+  "consultationForm": {
+    "heading": "Füllen Sie das Formular aus und erhalten Sie eine kostenlose Beratung",
+    "subheading": "Unser Team wird sich innerhalb von 24 Stunden bei Ihnen melden.",
+    "success": "Vielen Dank! Wir werden uns in Kürze bei Ihnen melden.",
+    "nameLabel": "Geben Sie Ihren vollständigen Namen ein",
+    "nameRequired": "Vollständiger Name ist erforderlich",
+    "namePlaceholder": "Max Mustermann",
+    "phoneLabel": "Geben Sie Ihre Telefonnummer ein (mit Ländervorwahl)",
+    "phoneRequired": "Telefonnummer ist erforderlich",
+    "phonePlaceholder": "+49 (0) 123 456 78 90",
+    "emailLabel": "Geben Sie Ihre E-Mail-Adresse ein",
+    "emailInvalid": "Bitte geben Sie eine gültige E-Mail ein",
+    "emailPlaceholder": "max@beispiel.de",
+    "categoryLabel": "Kategorie wählen",
+    "categoryPlaceholder": "Auswählen",
+    "promoLabel": "Ihr Promo-Code",
+    "promoPlaceholder": "",
+    "submitBtn": "Absenden",
     "sendingBtn": "Wird gesendet...",
     "errorMsg": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
   },

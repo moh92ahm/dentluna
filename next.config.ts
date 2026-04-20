@@ -3,6 +3,7 @@ import createNextIntlPlugin from 'next-intl/plugin'
 import type { NextConfig } from 'next'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { defaultLocale } from './src/i18n/locales'
 
 const __filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(__filename)
@@ -14,17 +15,25 @@ const nextConfig: NextConfig = {
     const staticPages = ['about', 'contact', 'treatments', 'blog', 'doctors', 'gallery', 'faq']
     return [
       // Root redirect
-      { source: '/', destination: '/en', permanent: false },
+      { source: '/', destination: `/${defaultLocale}`, permanent: false },
       // Static page redirects
       ...staticPages.map((page) => ({
         source: `/${page}`,
-        destination: `/en/${page}`,
+        destination: `/${defaultLocale}/${page}`,
         permanent: false,
       })),
       // Dynamic slug redirects
-      { source: '/blog/:slug', destination: '/en/blog/:slug', permanent: false },
-      { source: '/treatments/:slug', destination: '/en/treatments/:slug', permanent: false },
-      { source: '/doctors/:slug', destination: '/en/doctors/:slug', permanent: false },
+      { source: '/blog/:slug', destination: `/${defaultLocale}/blog/:slug`, permanent: false },
+      {
+        source: '/treatments/:slug',
+        destination: `/${defaultLocale}/treatments/:slug`,
+        permanent: false,
+      },
+      {
+        source: '/doctors/:slug',
+        destination: `/${defaultLocale}/doctors/:slug`,
+        permanent: false,
+      },
     ]
   },
   images: {

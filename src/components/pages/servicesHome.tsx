@@ -12,13 +12,6 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 
-type ServiceProps = {
-  title: string
-  description: string
-  image: string
-  url: string
-}
-
 interface ServicesHomeProps {
   className?: string
 }
@@ -30,25 +23,25 @@ const ServicesHome = ({ className }: ServicesHomeProps) => {
     {
       title: t('veneersTitle'),
       description: t('veneersDesc'),
-      image: './static/smile_design.jpg',
+      image: './static/home/smile_design.jpg',
       url: '',
     },
     {
       title: t('fullMouthTitle'),
       description: t('fullMouthDesc'),
-      image: './static/full_restoration.jpg',
+      image: './static/home/full_restoration.jpg',
       url: '',
     },
     {
       title: t('implantsTitle'),
       description: t('implantsDesc'),
-      image: './static/dental_implants.jpg',
+      image: './static/home/dental_implants.jpg',
       url: '',
     },
     {
       title: t('zirconiumTitle'),
       description: t('zirconiumDesc'),
-      image: './static/zirconium.jpg',
+      image: './static/home/zirconium.jpg',
       url: '',
     },
   ]

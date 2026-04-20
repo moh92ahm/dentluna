@@ -147,7 +147,7 @@
     "learnMore": "En savoir plus"
   },
   "aboutHero": {
-    "label": "À propos de DentLuna",
+    "label": "À propos de Dent Luna",
     "heading": "Soins dentaires premium à Izmir pour les patients internationaux",
     "description": "Nous vous aidons à obtenir un sourire sain et naturel grâce à un traitement expert et une expérience soigneusement organisée du début à la fin.",
     "ctaBtn": "Nous contacter"
@@ -225,6 +225,27 @@
     "messageRequired": "Le message est requis",
     "messagePlaceholder": "Parlez-nous de votre projet...",
     "sendBtn": "Envoyer le message",
+    "sendingBtn": "Envoi en cours...",
+    "errorMsg": "Une erreur s'est produite. Veuillez réessayer."
+  },
+  "consultationForm": {
+    "heading": "Remplissez le formulaire pour obtenir une consultation gratuite",
+    "subheading": "Notre équipe vous contactera dans les 24 heures.",
+    "success": "Merci ! Nous vous contacterons sous peu.",
+    "nameLabel": "Entrez votre nom complet",
+    "nameRequired": "Le nom complet est requis",
+    "namePlaceholder": "Jean Dupont",
+    "phoneLabel": "Entrez votre numéro de téléphone (avec indicatif pays)",
+    "phoneRequired": "Le numéro de téléphone est requis",
+    "phonePlaceholder": "+33 (0) 123 456 789",
+    "emailLabel": "Entrez votre e-mail",
+    "emailInvalid": "Veuillez entrer un e-mail valide",
+    "emailPlaceholder": "jean@exemple.fr",
+    "categoryLabel": "Choisissez votre catégorie",
+    "categoryPlaceholder": "Sélectionner",
+    "promoLabel": "Votre code promo",
+    "promoPlaceholder": "",
+    "submitBtn": "Soumettre",
     "sendingBtn": "Envoi en cours...",
     "errorMsg": "Une erreur s'est produite. Veuillez réessayer."
   },

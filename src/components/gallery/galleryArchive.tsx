@@ -4,13 +4,17 @@ import { getMediaUrl } from '@/utilities/getMediaUrl'
 import type { Gallery, GalleryCategory } from '@/payload-types'
 import { BeforeAfterGallery } from './beforeAfterGallery'
 import type { ComparisonItem, GalleryTabCategory } from './beforeAfterGallery'
+import { defaultLocale } from '@/i18n/locales'
 
 interface GalleryArchiveProps {
   className?: string
   locale?: string
 }
 
-export const GalleryArchive = async ({ className, locale = 'en' }: GalleryArchiveProps) => {
+export const GalleryArchive = async ({
+  className,
+  locale = defaultLocale,
+}: GalleryArchiveProps) => {
   const payload = await getPayload({ config: configPromise })
 
   // Fetch all gallery items and categories

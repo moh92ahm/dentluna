@@ -17,6 +17,9 @@ import { Gallery } from './collections/Gallery'
 import { GalleryCategory } from './collections/Gallery/GalleryCategory'
 import { Faqs } from './collections/FAQs/Faqs'
 import { FaqCategories } from './collections/FAQs/FaqCategories'
+import { FormSubmissions } from './collections/FormSubmissions'
+import { payloadLocales, defaultLocale } from './i18n/locales'
+import { CrmSettings } from './globals/CrmSettings'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -29,12 +32,8 @@ export default buildConfig({
     },
   },
   localization: {
-    locales: [
-      { code: 'en', label: 'English' },
-      { code: 'de', label: 'Deutsch' },
-      { code: 'fr', label: 'Français' },
-    ],
-    defaultLocale: 'en',
+    locales: payloadLocales,
+    defaultLocale,
     fallback: true,
   },
   collections: [
@@ -46,9 +45,11 @@ export default buildConfig({
     GalleryCategory,
     Faqs,
     FaqCategories,
+    FormSubmissions,
     Users,
     Media,
   ],
+  globals: [CrmSettings],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

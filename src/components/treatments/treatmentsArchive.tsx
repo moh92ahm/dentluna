@@ -5,13 +5,14 @@ import { Link } from '@/i18n/navigation'
 import type { Treatment } from '@/payload-types'
 import { ChevronRight } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
+import { defaultLocale } from '@/i18n/locales'
 
 interface TreatmentsArchiveProps {
   className?: string
   locale?: string
 }
 
-const TreatmentsArchive = async ({ className, locale = 'en' }: TreatmentsArchiveProps) => {
+const TreatmentsArchive = async ({ className, locale = defaultLocale }: TreatmentsArchiveProps) => {
   const cachedGetTreatments = getCachedDocuments('treatments', 9, 0, locale)
   const treatments = (await cachedGetTreatments()) as Treatment[]
 
@@ -40,12 +41,6 @@ const TreatmentsArchive = async ({ className, locale = 'en' }: TreatmentsArchive
               alt={treatment.title}
               className="aspect-video w-full rounded-lg object-cover"
             />
-            <Badge
-              variant="secondary"
-              className="absolute top-4 right-4 bg-background/70 px-3 py-1 text-sm backdrop-blur-sm"
-            >
-              Service
-            </Badge>
           </div>
           <div className="flex h-full flex-col justify-between p-4">
             <h2 className="mb-5 text-xl font-semibold">{treatment.title}</h2>

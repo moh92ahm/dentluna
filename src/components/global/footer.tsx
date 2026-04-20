@@ -1,8 +1,9 @@
 import React from 'react'
-import { getTranslations } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 import { Logo } from '@/components/global/logo'
+import { LanguageSwitcher } from '@/components/global/language-switcher'
 import { Link } from '@/i18n/navigation'
 import { cn } from '@/lib/utils'
 
@@ -15,6 +16,7 @@ interface FooterProps {
 
 const Footer = async ({ logo = { url: '/' }, className }: FooterProps) => {
   const t = await getTranslations('footer')
+  const locale = await getLocale()
   const currentYear = new Date().getFullYear()
 
   const sections = [
@@ -95,13 +97,16 @@ const Footer = async ({ logo = { url: '/' }, className }: FooterProps) => {
         </div>
         <div className="mt-8 flex flex-col justify-between items-center gap-4 border-t py-8 text-xs font-medium text-muted-foreground md:flex-row md:items-center md:text-left">
           <p className="order-2 lg:order-1">{t('copyright', { year: currentYear })}</p>
-          <ul className="order-1 flex gap-2 md:order-2 flex-row">
-            {legalLinks.map((link, idx) => (
-              <li key={idx} className="hover:text-primary">
-                <Link href={link.href as any}> {link.name}</Link>
-              </li>
-            ))}
-          </ul>
+          <div className="order-1 flex items-center gap-4 md:order-2">
+            <LanguageSwitcher locale={locale} />
+            <ul className="flex gap-2 flex-row">
+              {legalLinks.map((link, idx) => (
+                <li key={idx} className="hover:text-primary">
+                  <Link href={link.href as any}> {link.name}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>

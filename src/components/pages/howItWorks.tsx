@@ -18,7 +18,7 @@ const HowItWorks = () => {
       description: t('step1Desc'),
       icon: Image,
       image: {
-        src: './static/x_ray.jpg',
+        src: './static/home/x_ray.jpg',
         alt: t('step1Title'),
       },
     },
@@ -27,7 +27,7 @@ const HowItWorks = () => {
       description: t('step2Desc'),
       icon: LocateFixed,
       image: {
-        src: './static/treatment_plan.jpg',
+        src: './static/home/treatment_plan.jpg',
         alt: t('step2Title'),
       },
       reverse: true,
@@ -37,7 +37,7 @@ const HowItWorks = () => {
       description: t('step3Desc'),
       icon: Rocket,
       image: {
-        src: './static/plan_trip.jpg',
+        src: './static/home/plan_trip.jpg',
         alt: t('step3Title'),
       },
     },
@@ -46,7 +46,7 @@ const HowItWorks = () => {
       description: t('step4Desc'),
       icon: UserRoundPlus,
       image: {
-        src: './static/receive_treatment.jpg',
+        src: './static/home/receive_treatment.jpg',
         alt: t('step4Title'),
       },
       reverse: true,
@@ -56,7 +56,7 @@ const HowItWorks = () => {
       description: t('step5Desc'),
       icon: Phone,
       image: {
-        src: './static/follow_up.jpeg',
+        src: './static/home/follow_up.jpeg',
         alt: t('step5Title'),
       },
     },

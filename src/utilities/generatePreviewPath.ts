@@ -1,4 +1,5 @@
 import { PayloadRequest, CollectionSlug } from 'payload'
+import { defaultLocale } from '@/i18n/locales'
 
 const collectionPrefixMap: Partial<Record<CollectionSlug, string>> = {
   posts: '/blog',
@@ -21,7 +22,7 @@ export const generatePreviewPath = ({ collection, slug, req }: Props) => {
   const encodedSlug = encodeURIComponent(slug)
 
   // Read locale from the Payload request context (set when admin switches locale)
-  const locale = typeof req.locale === 'string' ? req.locale : 'en'
+  const locale = typeof req.locale === 'string' ? req.locale : defaultLocale
 
   const encodedParams = new URLSearchParams({
     slug: encodedSlug,

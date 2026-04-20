@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 
-import { About6 } from '@/components/pages/about6'
-import { Feature114 } from '@/components/pages/feature114'
-import { Feature220b } from '@/components/pages/feature220b'
-import { Feature61 } from '@/components/pages/feature61'
-import { Hero194 } from '@/components/pages/hero194'
+import { WhoWeAre } from '@/components/pages/whoWeAre'
+import { WhyChooseUs } from '@/components/pages/aboutWhyChooseUs'
+import { WhyIzmir } from '@/components/pages/whyIzmir'
+import { AboutQuality } from '@/components/pages/aboutQuality'
+import { HeroAbout } from '@/components/pages/heroAbout'
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -23,11 +23,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default function AboutPage() {
   return (
     <main >
-      <Hero194 />
-      <About6 />
-      <Feature61 />
-      <Feature220b />
-      <Feature114 />
+      <HeroAbout />
+      <WhoWeAre />
+      <AboutQuality />
+      <WhyIzmir />
+      <WhyChooseUs />
     </main>
   )
 }

@@ -75,6 +75,7 @@ export interface Config {
     'gallery-category': GalleryCategory;
     faqs: Faq;
     'faq-categories': FaqCategory;
+    'form-submissions': FormSubmission;
     users: User;
     media: Media;
     'payload-kv': PayloadKv;
@@ -98,6 +99,7 @@ export interface Config {
     'gallery-category': GalleryCategorySelect<false> | GalleryCategorySelect<true>;
     faqs: FaqsSelect<false> | FaqsSelect<true>;
     'faq-categories': FaqCategoriesSelect<false> | FaqCategoriesSelect<true>;
+    'form-submissions': FormSubmissionsSelect<false> | FormSubmissionsSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
@@ -111,8 +113,12 @@ export interface Config {
     defaultIDType: number;
   };
   fallbackLocale: ('false' | 'none' | 'null') | false | null | ('en' | 'de' | 'fr') | ('en' | 'de' | 'fr')[];
-  globals: {};
-  globalsSelect: {};
+  globals: {
+    'crm-settings': CrmSetting;
+  };
+  globalsSelect: {
+    'crm-settings': CrmSettingsSelect<false> | CrmSettingsSelect<true>;
+  };
   locale: 'en' | 'de' | 'fr';
   widgets: {
     collections: CollectionsWidget;
@@ -508,6 +514,32 @@ export interface FaqCategory {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "form-submissions".
+ */
+export interface FormSubmission {
+  id: number;
+  name: string;
+  phone: string;
+  email?: string | null;
+  category?: string | null;
+  promoCode?: string | null;
+  /**
+   * Language code of the visitor when they submitted the form
+   */
+  lang?: string | null;
+  /**
+   * Whether this submission was successfully forwarded to the CRM
+   */
+  crmSent?: boolean | null;
+  /**
+   * Error details if CRM forwarding failed
+   */
+  crmError?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -653,6 +685,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'faq-categories';
         value: number | FaqCategory;
+      } | null)
+    | ({
+        relationTo: 'form-submissions';
+        value: number | FormSubmission;
       } | null)
     | ({
         relationTo: 'users';
@@ -839,6 +875,22 @@ export interface FaqCategoriesSelect<T extends boolean = true> {
   title?: T;
   generateSlug?: T;
   slug?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "form-submissions_select".
+ */
+export interface FormSubmissionsSelect<T extends boolean = true> {
+  name?: T;
+  phone?: T;
+  email?: T;
+  category?: T;
+  promoCode?: T;
+  lang?: T;
+  crmSent?: T;
+  crmError?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -1042,6 +1094,39 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   batch?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "crm-settings".
+ */
+export interface CrmSetting {
+  id: number;
+  /**
+   * The URL to send form submissions to (e.g. https://api.elaramedical.com/api/v1/site/webhook/)
+   */
+  webhookUrl: string;
+  /**
+   * Value sent as "from website" field to the CRM
+   */
+  fromWebsite?: string | null;
+  /**
+   * Toggle CRM webhook forwarding on/off
+   */
+  enabled?: boolean | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "crm-settings_select".
+ */
+export interface CrmSettingsSelect<T extends boolean = true> {
+  webhookUrl?: T;
+  fromWebsite?: T;
+  enabled?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
