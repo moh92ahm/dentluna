@@ -75,7 +75,7 @@
     "heading": "Our Treatments",
     "subheading": "Advanced Dental Solutions Designed for You",
     "description": "From routine cleanings to complex restorations, our comprehensive dental services are tailored to meet your unique needs and ensure a healthy, radiant smile.",
-    "exploreBtn": "Explore All Services",
+    "exploreBtn": "Explore All Treatments",
     "veneersTitle": "Veneers & Smile Design",
     "veneersDesc": "Achieve a brighter, more confident smile",
     "fullMouthTitle": "Full Mouth Restoration",
@@ -101,6 +101,7 @@
     "step5Desc": "Receive ongoing support and guidance to ensure the long-term success of your treatment."
   },
   "whyUsHome": {
+    "badge": "Why Choose Us",
     "heading": "More Than Just Treatment — A Complete Experience",
     "description": "At Dent Luna, we go beyond traditional dental care. We offer a comprehensive experience that includes personalized treatment plans, expert guidance, and ongoing support to ensure your smile transformation is not just successful but also enjoyable.",
     "feature1": "Expert dentists",
@@ -112,15 +113,13 @@
   },
   "beforeAfterHome": {
     "label": "Before & After",
-    "heading": "Real Results. Real Transformations."
+    "heading": "Real Results. Real Transformations.",
+    "viewAllBtn": "View All Transformations"
   },
   "testimonialHome": {
     "label": "Testimonials",
     "heading": "What Our Patients Say",
-    "award1Title": "Best for Design",
-    "award1Year": "2023 Recognition",
-    "award2Title": "Best for Creativity",
-    "award2Year": "2022 Recognition",
+
     "t1Name": "Alex Johnson",
     "t1Content": "I came from London for veneers and couldn't be happier. The whole process was seamless from start to finish.",
     "t2Name": "Maria Garcia",
@@ -132,7 +131,13 @@
     "t5Name": "David Kim",
     "t5Content": "My smile has been completely transformed. I get compliments every day and I'm so glad I chose DentLuna.",
     "t6Name": "Sophia Martinez",
-    "t6Content": "From the first consultation to the last follow-up, the communication was excellent. Highly recommend."
+    "t6Content": "From the first consultation to the last follow-up, the communication was excellent. Highly recommend.",
+    "t7Name": "James Wilson",
+    "t7Content": "I was nervous about travelling abroad for dental work but DentLuna made everything so easy. The results are stunning.",
+    "t8Name": "Laura Müller",
+    "t8Content": "Absolutely world-class service. The clinic is spotless, the staff are warm and the results speak for themselves.",
+    "t9Name": "Ahmed Hassan",
+    "t9Content": "I had a full smile makeover and saved thousands compared to back home. I wish I had done this sooner."
   },
   "ctaHome": {
     "tagline": "Ready to get started?",

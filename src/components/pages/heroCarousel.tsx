@@ -32,7 +32,7 @@ interface HeroCarouselProps {
 const HeroCarousel = ({ className }: HeroCarouselProps) => {
   const t = useTranslations('heroCarousel')
   return (
-    <section className={cn('relative min-h-screen overflow-hidden bg-background', className)}>
+    <section className={cn('relative h-screen overflow-hidden -ml-[calc(50vw-50%)] w-screen', className)}>
       <div className="absolute inset-0 flex flex-col justify-center gap-4">
         {galleryImages.map((row, rowIndex) => (
           <motion.div
@@ -70,14 +70,14 @@ const HeroCarousel = ({ className }: HeroCarouselProps) => {
       </div>
 
       {/* Left side masks */}
-      <div className="absolute top-0 left-0 z-10 h-full w-[160px] bg-gradient-to-r from-background to-transparent md:w-[200px]" />
+      <div className="absolute top-0 left-0 z-10 h-full bg-gradient-to-r from-background to-transparent md:w-[200px]" />
 
       {/* Right side masks */}
-      <div className="absolute top-0 right-0 z-10 h-full w-[160px] bg-gradient-to-l from-background to-transparent md:w-[200px]" />
+      <div className="absolute top-0 right-0 z-10 h-full bg-gradient-to-l from-background to-transparent md:w-[200px]" />
 
-      <div className="relative z-20 flex min-h-screen items-center justify-center">
+      <div className="z-20 flex min-h-screen items-center justify-center">
         <motion.div
-          className="rounded-lg bg/60 p-8 backdrop-blur-md md:p-12"
+          className="rounded-lg bg-white/60 p-8 backdrop-blur-md md:p-12"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}

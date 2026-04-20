@@ -178,6 +178,7 @@
     @apply bg-background text-foreground;
     font-family: var(--font-sans);
     letter-spacing: var(--tracking-normal);
+    overflow-x: hidden;
   }
 
   h1,

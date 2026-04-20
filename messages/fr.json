@@ -74,8 +74,8 @@
   "servicesHome": {
     "heading": "Nos Traitements",
     "subheading": "Des solutions dentaires avancées conçues pour vous",
-    "description": "Des nettoyages de routine aux restaurations complexes, nos services dentaires complets sont adaptés à vos besoins uniques pour un sourire sain et radieux.",
-    "exploreBtn": "Explorer tous les services",
+    "description": "Des nettoyages de routine aux restaurations complexes, nos traitements dentaires complets sont adaptés à vos besoins uniques pour un sourire sain et radieux.",
+    "exploreBtn": "Explorer tous les traitements",
     "veneersTitle": "Facettes & Smile Design",
     "veneersDesc": "Obtenez un sourire plus lumineux et confiant",
     "fullMouthTitle": "Restauration complète",
@@ -101,6 +101,7 @@
     "step5Desc": "Bénéficiez d'un soutien et d'un suivi continus pour garantir le succès à long terme de votre traitement."
   },
   "whyUsHome": {
+    "badge": "Pourquoi nous choisir",
     "heading": "Plus qu'un simple traitement — Une expérience complète",
     "description": "Chez Dent Luna, nous allons au-delà des soins dentaires traditionnels. Nous offrons une expérience complète incluant des plans de traitement personnalisés, des conseils d'experts et un suivi continu.",
     "feature1": "Dentistes experts",
@@ -112,15 +113,13 @@
   },
   "beforeAfterHome": {
     "label": "Avant & Après",
-    "heading": "Résultats réels. Transformations réelles."
+    "heading": "Résultats réels. Transformations réelles.",
+    "viewAllBtn": "Voir toutes les transformations"
   },
   "testimonialHome": {
     "label": "Témoignages",
     "heading": "Ce que disent nos patients",
-    "award1Title": "Meilleur design",
-    "award1Year": "Reconnaissance 2023",
-    "award2Title": "Meilleure créativité",
-    "award2Year": "Reconnaissance 2022",
+
     "t1Name": "Alex Johnson",
     "t1Content": "Je suis venu de Londres pour des facettes et je ne pourrais pas être plus heureux. Tout le processus s'est déroulé sans accroc du début à la fin.",
     "t2Name": "Maria Garcia",
@@ -132,7 +131,13 @@
     "t5Name": "David Kim",
     "t5Content": "Mon sourire a été complètement transformé. Je reçois des compliments chaque jour et je suis si heureux d'avoir choisi DentLuna.",
     "t6Name": "Sophia Martinez",
-    "t6Content": "De la première consultation au dernier suivi, la communication a été excellente. Je recommande vivement."
+    "t6Content": "De la première consultation au dernier suivi, la communication a été excellente. Je recommande vivement.",
+    "t7Name": "James Wilson",
+    "t7Content": "J'avais peur de voyager à l'étranger pour des soins dentaires, mais DentLuna a tout rendu si simple. Les résultats sont époustouflants.",
+    "t8Name": "Laura Müller",
+    "t8Content": "Un service de classe mondiale. La clinique est impeccable, le personnel est chaleureux et les résultats parlent d'eux-mêmes.",
+    "t9Name": "Ahmed Hassan",
+    "t9Content": "J'ai eu une transformation complète du sourire et j'ai économisé des milliers par rapport à mon pays. J'aurais dû le faire bien plus tôt."
   },
   "ctaHome": {
     "tagline": "Prêt à commencer ?",

@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default function AboutPage() {
   return (
-    <main>
+    <main >
       <Hero194 />
       <About6 />
       <Feature61 />

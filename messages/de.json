@@ -75,7 +75,7 @@
     "heading": "Unsere Behandlungen",
     "subheading": "Fortschrittliche Zahnlösungen für Sie",
     "description": "Von Routinereinigungen bis zu komplexen Restaurierungen bieten unsere umfassenden Zahnarztleistungen maßgeschneiderte Lösungen für Ihre individuellen Bedürfnisse.",
-    "exploreBtn": "Alle Leistungen entdecken",
+    "exploreBtn": "Entdecken Sie alle Behandlungen",
     "veneersTitle": "Veneers & Smile Design",
     "veneersDesc": "Erreichen Sie ein helleres, selbstbewussteres Lächeln",
     "fullMouthTitle": "Vollmund-Restaurierung",
@@ -101,6 +101,7 @@
     "step5Desc": "Erhalten Sie laufende Unterstützung und Anleitung für den langfristigen Erfolg Ihrer Behandlung."
   },
   "whyUsHome": {
+    "badge": "Warum uns wählen",
     "heading": "Mehr als nur Behandlung — Ein vollständiges Erlebnis",
     "description": "Bei Dent Luna gehen wir über die traditionelle Zahnpflege hinaus. Wir bieten ein umfassendes Erlebnis mit personalisierten Behandlungsplänen, Expertenberatung und laufender Unterstützung.",
     "feature1": "Experten-Zahnärzte",
@@ -112,15 +113,13 @@
   },
   "beforeAfterHome": {
     "label": "Vorher & Nachher",
-    "heading": "Echte Ergebnisse. Echte Verwandlungen."
+    "heading": "Echte Ergebnisse. Echte Verwandlungen.",
+    "viewAllBtn": "Alle Transformationen ansehen"
   },
   "testimonialHome": {
     "label": "Erfahrungsberichte",
     "heading": "Was unsere Patienten sagen",
-    "award1Title": "Bestes Design",
-    "award1Year": "Auszeichnung 2023",
-    "award2Title": "Beste Kreativität",
-    "award2Year": "Auszeichnung 2022",
+
     "t1Name": "Alex Johnson",
     "t1Content": "Ich bin aus London für Veneers gekommen und kann nicht glücklicher sein. Der gesamte Prozess verlief von Anfang bis Ende reibungslos.",
     "t2Name": "Maria Garcia",
@@ -132,7 +131,13 @@
     "t5Name": "David Kim",
     "t5Content": "Mein Lächeln wurde vollständig verwandelt. Ich bekomme jeden Tag Komplimente und bin so froh, dass ich DentLuna gewählt habe.",
     "t6Name": "Sophia Martinez",
-    "t6Content": "Von der ersten Beratung bis zur letzten Nachsorge war die Kommunikation ausgezeichnet. Sehr empfehlenswert."
+    "t6Content": "Von der ersten Beratung bis zur letzten Nachsorge war die Kommunikation ausgezeichnet. Sehr empfehlenswert.",
+    "t7Name": "James Wilson",
+    "t7Content": "Ich war nervös wegen einer Zahnbehandlung im Ausland, aber DentLuna hat alles so einfach gemacht. Die Ergebnisse sind atemberaubend.",
+    "t8Name": "Laura Müller",
+    "t8Content": "Absolut erstklassiger Service. Die Klinik ist makellos, das Personal ist herzlich und die Ergebnisse sprechen für sich.",
+    "t9Name": "Ahmed Hassan",
+    "t9Content": "Ich hatte eine komplette Lächeln-Verwandlung und habe im Vergleich zu zu Hause Tausende gespart. Ich wünschte, ich hätte das früher gemacht."
   },
   "ctaHome": {
     "tagline": "Bereit anzufangen?",

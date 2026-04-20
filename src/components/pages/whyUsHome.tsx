@@ -2,6 +2,7 @@ import { CircleCheckBig } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
 
 import { cn } from '@/lib/utils'
+import { Badge } from '../ui/badge'
 
 interface WhyUsHomeProps {
   className?: string
@@ -14,7 +15,8 @@ const WhyUsHome = async ({ className }: WhyUsHomeProps) => {
       <div className="container">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
-            <h2 className="mb-5 text-5xl font-medium text-balance lg:text-7xl">{t('heading')}</h2>
+            <Badge variant="outline" className='mb-4'>{t('badge')}</Badge>
+            <h2 className="mb-5 text-3xl font-medium text-balance lg:text-6xl">{t('heading')}</h2>
             <p className="mb-12 text-lg text-muted-foreground">{t('description')}</p>
             <ul className="grid max-w-xl gap-5 sm:grid-cols-2">
               {(
@@ -28,11 +30,9 @@ const WhyUsHome = async ({ className }: WhyUsHomeProps) => {
             </ul>
           </div>
           <div className="relative">
-            <div className="absolute inset-0 bg-linear-to-t from-background to-transparent to-30%" />
-            <div className="absolute inset-0 bg-linear-to-l from-background to-transparent to-30%" />
             <img
-              src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg"
-              alt="placeholder"
+              src="./static/why_choose_us.jpg"
+              alt="Why Choose Us"
               className="max-h-[500px] w-full rounded-2xl border border-border object-cover lg:max-h-none"
             />
           </div>

@@ -1,24 +1,17 @@
 'use client'
 
-import { useSyncExternalStore } from 'react'
 import { useTranslations } from 'next-intl'
 
 import { cn } from '@/lib/utils'
-import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider'
+import { Badge } from '../ui/badge'
+import { Button } from '../ui/button'
+import { Link } from '@/i18n/navigation'
+import { ArrowUpRight } from 'lucide-react'
+import { CompareSlider } from '../ui/CompareSlider'
 
 const comparisons = [
-  {
-    beforeImage:
-      'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/simone-hutsch-9jsQcDsxyqA-unsplash.jpg',
-    afterImage:
-      'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/simone-hutsch-9__Q24sJqKg-unsplash.jpg',
-  },
-  {
-    beforeImage:
-      'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/simone-hutsch-uR__S5GX8Io-unsplash.jpg',
-    afterImage:
-      'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/simone-hutsch-gDmVqxZt1hg-unsplash.jpg',
-  },
+  { beforeImage: './static/before_1.jpg', afterImage: './static/after_1.jpg' },
+  { beforeImage: './static/before_2.jpg', afterImage: './static/after_2.jpg' },
 ]
 
 interface HomeBeforeAfterProps {
@@ -27,51 +20,34 @@ interface HomeBeforeAfterProps {
 
 const HomeBeforeAfter = ({ className }: HomeBeforeAfterProps) => {
   const t = useTranslations('beforeAfterHome')
-  const mounted = useSyncExternalStore(
-    () => () => {},
-    () => true,
-    () => false,
-  )
 
   return (
     <section className={cn('py-32 flex justify-center', className)}>
       <div className="container">
-        <h4 className="mb-4 text-center text-muted-foreground/50">{t('label')}</h4>
+        <div className="flex justify-center mb-4">
+          <Badge variant="outline">{t('label')}</Badge>
+        </div>
         <h1 className="mx-auto mb-12 max-w-3xl text-center text-4xl font-semibold sm:text-5xl lg:text-[56px]">
           {t('heading')}
         </h1>
         <div className="flex flex-col justify-center gap-28 lg:flex-row">
           {comparisons.map((item, index) => (
-            <div
+            <CompareSlider
               key={index}
-              className="relative w-full max-w-2xl overflow-hidden rounded-2xl aspect-[4/3]"
-            >
-              {mounted ? (
-                <ReactCompareSlider
-                  itemOne={
-                    <ReactCompareSliderImage
-                      src={item.beforeImage}
-                      alt="Before image"
-                      style={{ objectFit: 'cover' }}
-                    />
-                  }
-                  itemTwo={
-                    <ReactCompareSliderImage
-                      src={item.afterImage}
-                      alt="After image"
-                      style={{ objectFit: 'cover' }}
-                    />
-                  }
-                />
-              ) : (
-                <img
-                  src={item.beforeImage}
-                  alt="Before image"
-                  className="h-full w-full object-cover"
-                />
-              )}
-            </div>
+              beforeImage={item.beforeImage}
+              afterImage={item.afterImage}
+              beforeAlt="Before image"
+              afterAlt="After image"
+              className="max-w-2xl"
+            />
           ))}
+        </div>
+        <div className="mt-12 flex justify-center">
+          <Button variant="outline" asChild>
+            <Link href="/gallery">
+              {t('viewAllBtn')} <ArrowUpRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

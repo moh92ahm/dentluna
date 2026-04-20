@@ -39,7 +39,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <NextIntlClientProvider>
       <Header locale={locale} />
-      <main className="container mx-auto mt-8 px-4">{children}</main>
+      <main className="container mx-auto px-4">{children}</main>
       <Footer />
     </NextIntlClientProvider>
   )

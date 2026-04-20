@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { Cpu, LayoutList, LocateFixed, Rocket, Users } from 'lucide-react'
+import { Image, LocateFixed, Phone, Rocket, UserRoundPlus } from 'lucide-react'
 import { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 
@@ -16,9 +16,9 @@ const HowItWorks = () => {
     {
       title: t('step1Title'),
       description: t('step1Desc'),
-      icon: LayoutList,
+      icon: Image,
       image: {
-        src: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg',
+        src: './static/x_ray.jpg',
         alt: t('step1Title'),
       },
     },
@@ -27,7 +27,7 @@ const HowItWorks = () => {
       description: t('step2Desc'),
       icon: LocateFixed,
       image: {
-        src: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-2.svg',
+        src: './static/treatment_plan.jpg',
         alt: t('step2Title'),
       },
       reverse: true,
@@ -35,18 +35,18 @@ const HowItWorks = () => {
     {
       title: t('step3Title'),
       description: t('step3Desc'),
-      icon: Users,
+      icon: Rocket,
       image: {
-        src: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-3.svg',
+        src: './static/plan_trip.jpg',
         alt: t('step3Title'),
       },
     },
     {
       title: t('step4Title'),
       description: t('step4Desc'),
-      icon: Cpu,
+      icon: UserRoundPlus,
       image: {
-        src: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-4.svg',
+        src: './static/receive_treatment.jpg',
         alt: t('step4Title'),
       },
       reverse: true,
@@ -54,9 +54,9 @@ const HowItWorks = () => {
     {
       title: t('step5Title'),
       description: t('step5Desc'),
-      icon: Cpu,
+      icon: Phone,
       image: {
-        src: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-5.svg',
+        src: './static/follow_up.jpeg',
         alt: t('step5Title'),
       },
     },
@@ -70,7 +70,7 @@ const HowItWorks = () => {
   return (
     <section className="py-32 flex flex-col items-center">
       <div>
-        <div className="container flex flex-col gap-6 py-4 lg:py-8">
+        <div className="container flex flex-col gap-4 py-4">
           <h6>
             <Badge variant="outline" className="text-sm">
               {t('badge')}
