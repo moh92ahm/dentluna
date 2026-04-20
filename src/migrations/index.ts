@@ -19,5 +19,4 @@ export const migrations = [
     name: '20260417_133043_localized',
   },
 ]
-  },
-];
+
