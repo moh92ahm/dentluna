@@ -93,7 +93,7 @@ const HeroCarousel = ({ className }: HeroCarouselProps) => {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <motion.h1
-            className="text-3xl font-bold leading-tight text-foreground text-center md:text-5xl lg:text-6xl"
+            className="text-3xl font-semibold leading-tight text-foreground text-center md:text-4xl lg:text-5xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
