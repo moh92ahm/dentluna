@@ -87,13 +87,13 @@ const HeroCarousel = ({ className }: HeroCarouselProps) => {
 
       <div className="z-20 flex min-h-screen items-center justify-center">
         <motion.div
-          className="rounded-lg bg-white/60 p-8 backdrop-blur-md md:p-12"
+          className="rounded-lg bg-background/60 p-8 backdrop-blur-md md:p-12"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <motion.h1
-            className="text-3xl font-bold leading-tight text-white text-center md:text-5xl lg:text-6xl"
+            className="text-3xl font-bold leading-tight text-foreground text-center md:text-5xl lg:text-6xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
@@ -117,7 +117,7 @@ const HeroCarousel = ({ className }: HeroCarouselProps) => {
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.2 }}
             >
-              <ArrowBigDown className="size-10 text-white hover:text-white" />
+              <ArrowBigDown className="size-10 text-foreground hover:text-foreground" />
             </motion.div>
           </motion.div>
         </motion.div>

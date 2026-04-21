@@ -29,22 +29,24 @@ export const LanguageSwitcher = ({ locale }: LanguageSwitcherProps) => {
           className="size-9 cursor-pointer text-foreground hover:text-primary"
           aria-label="Select language"
         >
-          <Languages className="size-5" />
+          <span className="text-xl" aria-hidden="true">
+            {localeFlags[locale]}
+          </span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="min-w-40">
-        {routing.locales.map((loc) => (
-          <DropdownMenuItem
-            key={loc}
-            disabled={loc === locale}
-            onClick={() => router.replace(pathname, { locale: loc })}
-            className="cursor-pointer gap-2"
-          >
-            <span className="text-base leading-none">{localeFlags[loc]}</span>
-            <span>{localeFullLabels[loc]}</span>
-            {loc === locale && <span className="ml-auto text-xs text-muted-foreground">●</span>}
-          </DropdownMenuItem>
-        ))}
+        {routing.locales
+          .filter((loc) => loc !== locale)
+          .map((loc) => (
+            <DropdownMenuItem
+              key={loc}
+              onClick={() => router.replace(pathname, { locale: loc })}
+              className="cursor-pointer gap-2"
+            >
+              <span className="text-base leading-none">{localeFlags[loc]}</span>
+              <span>{localeFullLabels[loc]}</span>
+            </DropdownMenuItem>
+          ))}
       </DropdownMenuContent>
     </DropdownMenu>
   )

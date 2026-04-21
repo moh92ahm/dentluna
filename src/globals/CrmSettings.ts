@@ -20,7 +20,7 @@ export const CrmSettings: GlobalConfig = {
       label: 'CRM Webhook URL',
       admin: {
         description:
-          'The URL to send form submissions to (e.g. https://api.elaramedical.com/api/v1/site/webhook/)',
+          'The URL to send form submissions to',
       },
     },
     {
