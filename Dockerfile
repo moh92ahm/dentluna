@@ -43,6 +43,9 @@ RUN adduser --system --uid 1001 nextjs
 # Remove this line if you do not have this folder
 COPY --from=builder /app/public ./public
 
+# Include full dependencies so Payload CLI can run migrations at startup.
+COPY --from=deps /app/node_modules ./node_modules
+
 # Set the correct permission for prerender cache
 RUN mkdir -p .next public/media
 RUN chown -R nextjs:nodejs .next public/media
@@ -60,4 +63,4 @@ ENV PORT 3000
 
 # server.js is created by next build from the standalone output
 # https://nextjs.org/docs/pages/api-reference/next-config-js/output
-CMD HOSTNAME="0.0.0.0" node server.js
+CMD ["sh", "-c", "node node_modules/payload/dist/bin/index.js migrate && HOSTNAME=0.0.0.0 node server.js"]

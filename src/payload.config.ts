@@ -24,6 +24,12 @@ import { CrmSettings } from './globals/CrmSettings'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
+const smtpSecure = ['1', 'true', 'ssl', 'yes'].includes(
+  String(process.env.SMTP_SECURE || '').toLowerCase(),
+)
+const smtpSkipVerify = ['1', 'true', 'yes'].includes(
+  String(process.env.SMTP_SKIP_VERIFY || 'true').toLowerCase(),
+)
 const isBuildPhase = process.env.DISABLE_EMAIL_ADAPTER === 'true'
 
 export default buildConfig({
@@ -67,10 +73,11 @@ export default buildConfig({
       ? nodemailerAdapter({
           defaultFromAddress: process.env.EMAIL_FROM_ADDRESS || 'no-reply@dentluna.com',
           defaultFromName: process.env.EMAIL_FROM_NAME || 'Dentluna No-Reply',
+          skipVerify: smtpSkipVerify,
           transportOptions: {
             host: process.env.SMTP_HOST,
             port: Number(process.env.SMTP_PORT || 587),
-            secure: process.env.SMTP_SECURE === 'true',
+            secure: smtpSecure,
             auth: {
               user: process.env.SMTP_USER,
               pass: process.env.SMTP_PASS,
