@@ -63,6 +63,9 @@ EXPOSE 3000
 
 ENV PORT 3000
 
+HEALTHCHECK --interval=15s --timeout=10s --start-period=90s --retries=5 \
+  CMD curl -f http://localhost:3000/api/health || exit 1
+
 # server.js is created by next build from the standalone output
 # https://nextjs.org/docs/pages/api-reference/next-config-js/output
 CMD ["sh", "-c", "node node_modules/payload/dist/bin/index.js migrate && HOSTNAME=0.0.0.0 node server.js"]
