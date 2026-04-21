@@ -58,8 +58,13 @@ const HeroCarousel = ({ className }: HeroCarouselProps) => {
                   width: rowIndex === 1 ? '280px' : '240px',
                   height: rowIndex === 1 ? '350px' : '300px',
                 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
+                transition={{
+                  opacity: { duration: 0.6, delay: (imageIndex % row.length) * 0.06 },
+                  scale: { duration: 0.3 },
+                }}
               >
                 <Image
                   src={image}

@@ -94,5 +94,36 @@ export async function POST(request: Request) {
     },
   })
 
+  // Send notification email if configured
+  try {
+    const notifyTo = process.env.FORM_NOTIFICATION_TO
+
+    if (notifyTo) {
+      await payload.sendEmail({
+        to: notifyTo,
+        subject: `New consultation request: ${name.trim()}`,
+        text: [
+          'A new consultation form was submitted.',
+          '',
+          `Name: ${name.trim()}`,
+          `Phone: ${phone.trim()}`,
+          `Email: ${email?.trim() || '-'}`,
+          `Category: ${category?.trim() || '-'}`,
+          `Promo Code: ${promoCode?.trim() || '-'}`,
+          `Language: ${lang?.trim() || '-'}`,
+          `Submission ID: ${submission.id}`,
+          `CRM Sent: ${crmSent ? 'Yes' : 'No'}`,
+          `CRM Error: ${crmError || '-'}`,
+        ].join('\n'),
+      })
+    }
+  } catch (err) {
+    payload.logger.error({
+      err,
+      msg: 'Failed to send form notification email',
+      submissionId: submission.id,
+    })
+  }
+
   return Response.json({ success: true, id: submission.id })
 }

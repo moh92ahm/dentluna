@@ -17,6 +17,9 @@ importers:
       '@payloadcms/db-postgres':
         specifier: 3.82.1
         version: 3.82.1(payload@3.82.1(graphql@16.13.2)(typescript@5.7.3))
+      '@payloadcms/email-nodemailer':
+        specifier: 3.82.1
+        version: 3.82.1(payload@3.82.1(graphql@16.13.2)(typescript@5.7.3))
       '@payloadcms/live-preview-react':
         specifier: 3.82.1
         version: 3.82.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -1526,6 +1529,12 @@ packages:
 
   '@payloadcms/drizzle@3.82.1':
     resolution: {integrity: sha512-eSr6bTcgElibqLvmRRwVmSwqvL9Lkr/EdbaUFuoZmsqDfXq4nxXbtuIlN8jT4rx9m/weP6LYl/u80Od9BuITDg==}
+    peerDependencies:
+      payload: 3.82.1
+
+  '@payloadcms/email-nodemailer@3.82.1':
+    resolution: {integrity: sha512-642u1yd0OyPClPP19kImE8icPiE5USf22xOpgtUsD11sdVd/5RkpIKn5lQFOEG/HtXyCJVgk4774aSAHGasr5w==}
+    engines: {node: ^18.20.2 || >=20.9.0}
     peerDependencies:
       payload: 3.82.1
 
@@ -4313,6 +4322,10 @@ packages:
   node-releases@2.0.37:
     resolution: {integrity: sha512-1h5gKZCF+pO/o3Iqt5Jp7wc9rH3eJJ0+nh/CIoiRwjRxde/hAHyLPXYN4V3CqKAbiZPSeJFSWHmJsbkicta0Eg==}
 
+  nodemailer@7.0.12:
+    resolution: {integrity: sha512-H+rnK5bX2Pi/6ms3sN4/jRQvYSMltV6vqup/0SFOrxYYY/qoNvhXPlYq3e+Pm9RFJRwrMGbMIwi81M4dxpomhA==}
+    engines: {node: '>=6.0.0'}
+
   normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
@@ -6636,6 +6649,11 @@ snapshots:
       - prisma
       - sql.js
       - sqlite3
+
+  '@payloadcms/email-nodemailer@3.82.1(payload@3.82.1(graphql@16.13.2)(typescript@5.7.3))':
+    dependencies:
+      nodemailer: 7.0.12
+      payload: 3.82.1(graphql@16.13.2)(typescript@5.7.3)
 
   '@payloadcms/graphql@3.82.1(graphql@16.13.2)(payload@3.82.1(graphql@16.13.2)(typescript@5.7.3))(typescript@5.7.3)':
     dependencies:
@@ -9682,6 +9700,8 @@ snapshots:
       semver: 6.3.1
 
   node-releases@2.0.37: {}
+
+  nodemailer@7.0.12: {}
 
   normalize-path@3.0.0: {}
 
