@@ -1,5 +1,6 @@
 import { CircleCheckBig } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
+import Image from 'next/image'
 
 import { cn } from '@/lib/utils'
 import { Badge } from '../ui/badge'
@@ -29,11 +30,13 @@ const WhyUsHome = async ({ className }: WhyUsHomeProps) => {
               ))}
             </ul>
           </div>
-          <div className="relative">
-            <img
-              src="./static/home/why_choose_us.jpg"
+          <div className="relative max-h-[500px] overflow-hidden rounded-2xl border border-border lg:max-h-none lg:min-h-[32rem]">
+            <Image
+              src="/static/home/why_choose_us.jpg"
               alt="Why Choose Us"
-              className="max-h-[500px] w-full rounded-2xl border border-border object-cover lg:max-h-none"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
         </div>

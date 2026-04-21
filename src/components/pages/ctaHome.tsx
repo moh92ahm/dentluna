@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
@@ -21,12 +22,14 @@ const CtaHome = async ({ className }: CtaHomeProps) => {
               <Button variant="outline">{t('learnMore')}</Button>
             </div>
           </div>
-          <div className="relative w-full pl-4 sm:pl-0">
+          <div className="relative w-full overflow-hidden rounded-tl-2xl rounded-br-2xl pl-4 sm:pl-0">
             <div className="absolute -bottom-8 -left-8 -z-10 h-4/5 w-4/5 rounded-tl-2xl rounded-br-2xl bg-stone-900/20 blur-2xl"></div>
-            <img
-              src="./static/home/cta_image.jpg"
+            <Image
+              src="/static/home/cta_image.jpg"
               alt="placeholder"
-              className="relative z-10 h-full max-h-[400px] w-full rounded-tl-2xl rounded-br-2xl object-cover"
+              width={1200}
+              height={800}
+              className="relative z-10 h-full max-h-[400px] w-full object-cover"
             />
           </div>
         </div>

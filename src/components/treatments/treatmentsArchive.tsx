@@ -3,6 +3,7 @@ import { getCachedDocuments } from '@/utilities/getDocument'
 import { getMediaUrl } from '@/utilities/getMediaUrl'
 import { Link } from '@/i18n/navigation'
 import type { Treatment } from '@/payload-types'
+import Image from 'next/image'
 import { ChevronRight } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { defaultLocale } from '@/i18n/locales'
@@ -35,11 +36,13 @@ const TreatmentsArchive = async ({ className, locale = defaultLocale }: Treatmen
     <div className={cn('grid gap-6 md:grid-cols-2 lg:grid-cols-3', className)}>
       {treatments.map((treatment) => (
         <div key={treatment.id} className="flex flex-col">
-          <div className="relative">
-            <img
+          <div className="relative aspect-video overflow-hidden rounded-lg">
+            <Image
               src={getImage(treatment)}
               alt={treatment.title}
-              className="aspect-video w-full rounded-lg object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
           </div>
           <div className="flex h-full flex-col justify-between p-4">

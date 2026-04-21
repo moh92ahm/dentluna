@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import Image from 'next/image'
 
 interface Props {
   className?: string
@@ -10,16 +11,16 @@ export const Logo = (props: Props) => {
   const { loading: loadingFromProps, priority: priorityFromProps, className } = props
 
   const loading = loadingFromProps || 'lazy'
-  const priority = priorityFromProps || 'low'
+  const priority = priorityFromProps === 'high'
 
   return (
-    /* eslint-disable @next/next/no-img-element */
-    <img
+    <Image
       alt="Dentluna Logo"
       width={193}
       height={91}
       loading={loading}
-      fetchPriority={priority}
+      priority={priority}
+      fetchPriority={priorityFromProps || 'low'}
       decoding="async"
       className={clsx('max-w-[9.375rem] w-full h-auto', className)}
       src="/dentluna-logo.png"

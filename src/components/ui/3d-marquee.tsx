@@ -37,12 +37,12 @@ export const ThreeDMarquee = ({ images, className }: { images: string[]; classNa
                   <div className="relative" key={imageIndex + image}>
                     <GridLineHorizontal className="-top-4" offset="20px" />
                     <motion.img
-                      whileHover={{
-                        y: -10,
-                      }}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      whileHover={{ y: -10 }}
                       transition={{
-                        duration: 0.3,
-                        ease: 'easeInOut',
+                        opacity: { duration: 0.6, delay: (colIndex * 2 + imageIndex) * 0.05 },
+                        y: { duration: 0.3, ease: 'easeInOut' },
                       }}
                       key={imageIndex + image}
                       src={image}

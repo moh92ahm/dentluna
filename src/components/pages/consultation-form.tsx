@@ -84,7 +84,7 @@ const ConsultationForm = ({ className }: ConsultationFormProps) => {
   return (
     <form
       onSubmit={form.handleSubmit(handleFormSubmit)}
-      className={cn('w-full rounded-2xl bg-background p-8 shadow-lg md:p-10', className)}
+      className={cn('w-full rounded-2xl bg-background p-8 shadow-lg md:p-10 border', className)}
     >
       <h2 className="mb-2 text-2xl font-semibold md:text-3xl">{t('heading')}</h2>
       <p className="mb-8 text-muted-foreground">{t('subheading')}</p>
@@ -120,69 +120,71 @@ const ConsultationForm = ({ className }: ConsultationFormProps) => {
           )}
         />
 
-        <Controller
-          control={form.control}
-          name="phone"
-          render={({ field, fieldState }) => (
-            <Field data-invalid={fieldState.invalid}>
-              <FieldLabel htmlFor={field.name}>
-                {t('phoneLabel')} <span className="text-destructive">*</span>
-              </FieldLabel>
-              <Input
-                {...field}
-                id={field.name}
-                type="tel"
-                aria-invalid={fieldState.invalid}
-                placeholder={t('phonePlaceholder')}
-              />
-              {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
-            </Field>
-          )}
-        />
+        <div className="flex gap-4 items-end">
+          <Controller
+            control={form.control}
+            name="phone"
+            render={({ field, fieldState }) => (
+              <Field className="flex-1" data-invalid={fieldState.invalid}>
+                <FieldLabel htmlFor={field.name}>
+                  {t('phoneLabel')} <span className="text-destructive">*</span>
+                </FieldLabel>
+                <Input
+                  {...field}
+                  id={field.name}
+                  type="tel"
+                  aria-invalid={fieldState.invalid}
+                  placeholder={t('phonePlaceholder')}
+                />
+                {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
+              </Field>
+            )}
+          />
 
-        <Controller
-          control={form.control}
-          name="email"
-          render={({ field, fieldState }) => (
-            <Field data-invalid={fieldState.invalid}>
-              <FieldLabel htmlFor={field.name}>{t('emailLabel')}</FieldLabel>
-              <Input
-                {...field}
-                id={field.name}
-                type="email"
-                aria-invalid={fieldState.invalid}
-                placeholder={t('emailPlaceholder')}
-              />
-              {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
-            </Field>
-          )}
-        />
+          <Controller
+            control={form.control}
+            name="email"
+            render={({ field, fieldState }) => (
+              <Field className="flex-1" data-invalid={fieldState.invalid}>
+                <FieldLabel htmlFor={field.name}>{t('emailLabel')}</FieldLabel>
+                <Input
+                  {...field}
+                  id={field.name}
+                  type="email"
+                  aria-invalid={fieldState.invalid}
+                  placeholder={t('emailPlaceholder')}
+                />
+                {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
+              </Field>
+            )}
+          />
+        </div>
 
-        <Controller
-          control={form.control}
-          name="promoCode"
-          render={({ field }) => (
-            <Field>
-              <FieldLabel htmlFor={field.name}>{t('promoLabel')}</FieldLabel>
-              <Input {...field} id={field.name} placeholder={t('promoPlaceholder')} />
-            </Field>
-          )}
-        />
+          <Controller
+            control={form.control}
+            name="promoCode"
+            render={({ field }) => (
+              <Field className="w-1/3">
+                <FieldLabel htmlFor={field.name}>{t('promoLabel')}</FieldLabel>
+                <Input {...field} id={field.name} placeholder={t('promoPlaceholder')} />
+              </Field>
+            )}
+          />
 
-        {form.formState.errors.root && (
-          <p className="text-sm text-destructive">{form.formState.errors.root.message}</p>
-        )}
-
-        <Button size="lg" className="w-full" disabled={form.formState.isSubmitting}>
-          {form.formState.isSubmitting ? (
-            <>
-              <LoaderIcon className="mr-2 size-4 animate-spin" />
-              {t('sendingBtn')}
-            </>
-          ) : (
-            t('submitBtn')
+          {form.formState.errors.root && (
+            <p className="text-sm text-destructive">{form.formState.errors.root.message}</p>
           )}
-        </Button>
+
+          <Button size="default" className="flex-1" disabled={form.formState.isSubmitting}>
+            {form.formState.isSubmitting ? (
+              <>
+                <LoaderIcon className="mr-2 size-4 animate-spin" />
+                {t('sendingBtn')}
+              </>
+            ) : (
+              t('submitBtn')
+            )}
+          </Button>
       </FieldGroup>
     </form>
   )

@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server'
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 interface AboutQualityProps {
@@ -13,9 +14,11 @@ const AboutQuality = async ({ className }: AboutQualityProps) => {
         <div className="flex-row-reverse lg:flex">
           <div className="lg:w-1/2">
             <div className="mb-6 md:mb-8 lg:mb-0">
-              <img
+              <Image
                 src="/static/about/dental_quality.jpg"
                 alt="placeholder hero"
+                width={1200}
+                height={900}
                 className="aspect-4/3 w-full rounded-md border border-border object-cover"
               />
             </div>

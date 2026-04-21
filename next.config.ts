@@ -41,6 +41,31 @@ const nextConfig: NextConfig = {
       {
         pathname: '/api/media/file/**',
       },
+      {
+        pathname: '/static/**',
+      },
+      {
+        pathname: '/*.png',
+      },
+      {
+        pathname: '/*.jpg',
+      },
+      {
+        pathname: '/*.jpeg',
+      },
+      {
+        pathname: '/*.svg',
+      },
+      {
+        pathname: '/*.webp',
+      },
+    ],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'deifkwefumgah.cloudfront.net',
+        pathname: '/**',
+      },
     ],
   },
   webpack: (webpackConfig) => {

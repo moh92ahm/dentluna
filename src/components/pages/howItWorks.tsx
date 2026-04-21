@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Image, LocateFixed, Phone, Rocket, UserRoundPlus } from 'lucide-react'
+import NextImage from 'next/image'
 import { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 
@@ -18,7 +19,7 @@ const HowItWorks = () => {
       description: t('step1Desc'),
       icon: Image,
       image: {
-        src: './static/home/x_ray.jpg',
+        src: '/static/home/x_ray.jpg',
         alt: t('step1Title'),
       },
     },
@@ -27,7 +28,7 @@ const HowItWorks = () => {
       description: t('step2Desc'),
       icon: LocateFixed,
       image: {
-        src: './static/home/treatment_plan.jpg',
+        src: '/static/home/treatment_plan.jpg',
         alt: t('step2Title'),
       },
       reverse: true,
@@ -37,7 +38,7 @@ const HowItWorks = () => {
       description: t('step3Desc'),
       icon: Rocket,
       image: {
-        src: './static/home/plan_trip.jpg',
+        src: '/static/home/plan_trip.jpg',
         alt: t('step3Title'),
       },
     },
@@ -46,7 +47,7 @@ const HowItWorks = () => {
       description: t('step4Desc'),
       icon: UserRoundPlus,
       image: {
-        src: './static/home/receive_treatment.jpg',
+        src: '/static/home/receive_treatment.jpg',
         alt: t('step4Title'),
       },
       reverse: true,
@@ -56,7 +57,7 @@ const HowItWorks = () => {
       description: t('step5Desc'),
       icon: Phone,
       image: {
-        src: './static/home/follow_up.jpeg',
+        src: '/static/home/follow_up.jpeg',
         alt: t('step5Title'),
       },
     },
@@ -132,12 +133,14 @@ const HowItWorks = () => {
                     </div>
                     <div className="relative grid grid-cols-[auto_1fr_auto] items-stretch">
                       <DiagonalPattern className="h-full w-6 lg:w-10" />
-                      <img
+                      <NextImage
                         src={item.image.src}
                         width={400}
                         height={500}
                         alt={item.image.alt}
                         className="object-contain dark:invert"
+                        style={{ width: '100%', height: 'auto' }}
+                        sizes="(max-width: 1024px) 100vw, 400px"
                       />
                       <DiagonalPattern className="w-6 lg:w-10" />
                     </div>

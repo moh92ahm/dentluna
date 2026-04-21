@@ -1,5 +1,6 @@
 'use client'
 import AutoScroll from 'embla-carousel-auto-scroll'
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
@@ -76,8 +77,17 @@ const TeamCarousel = () => {
             <CarouselContent className="h-full max-h-[40.625rem] w-fit">
               {rotatedTeamImages.map((t, i) => (
                 <CarouselItem key={`team-image-${i}`} className="-mt-2">
-                  <div className="h-[9rem] w-[7.875rem] overflow-hidden rounded-lg">
-                    <img src={t.src} alt={t.alt} className="size-full object-cover object-center" />
+                  <div className="relative h-[9rem] w-[7.875rem] overflow-hidden rounded-lg">
+                    <Image
+                      src={t.src}
+                      alt={t.alt}
+                      fill
+                      className="object-cover object-center opacity-0 transition-opacity duration-500"
+                      sizes="126px"
+                      onLoad={(event) => {
+                        event.currentTarget.style.opacity = '1'
+                      }}
+                    />
                   </div>
                 </CarouselItem>
               ))}
@@ -107,11 +117,16 @@ const TeamCarousel = () => {
                   key={`team-image-${i}`}
                   className="h-[9rem] w-full max-w-[7.875rem] pl-2.5"
                 >
-                  <div className="size-full overflow-hidden rounded-lg">
-                    <img
+                  <div className="relative size-full overflow-hidden rounded-lg">
+                    <Image
                       src={t.src}
                       alt={t.alt}
-                      className="block size-full object-cover object-center"
+                      fill
+                      className="block object-cover object-center opacity-0 transition-opacity duration-500"
+                      sizes="126px"
+                      onLoad={(event) => {
+                        event.currentTarget.style.opacity = '1'
+                      }}
                     />
                   </div>
                 </CarouselItem>
@@ -145,7 +160,9 @@ const HeroAbout = ({ className }: HeroAboutProps) => {
             </h1>
             <p className="text-sm text-slate-600 md:text-base">{t('description')}</p>
             <Button className="flex gap-4 w-full max-w-max mt-8" variant="default" asChild>
-              <Link href="/contact" className="btn btn-secondary">{t('ctaBtn')}</Link>
+              <Link href="/contact" className="btn btn-secondary">
+                {t('ctaBtn')}
+              </Link>
             </Button>
           </div>
           <div className="absolute left-1/2 z-10 hidden h-full w-[500px] bg-linear-to-r from-card via-card/95 to-transparent lg:block"></div>

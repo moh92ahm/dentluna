@@ -3,6 +3,7 @@ import { getCachedDocuments } from '@/utilities/getDocument'
 import { getMediaUrl } from '@/utilities/getMediaUrl'
 import { Link } from '@/i18n/navigation'
 import type { Doctor } from '@/payload-types'
+import Image from 'next/image'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { defaultLocale } from '@/i18n/locales'
 
@@ -42,11 +43,15 @@ const DoctorsPage = async ({ className, locale = defaultLocale }: DoctorsPagePro
               </CardDescription>
             </CardHeader>
             <CardContent className="px-7 pb-7">
-              <img
-                src={getImage(doctor)}
-                alt={doctor.name}
-                className="w-full rounded-xl object-cover"
-              />
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl">
+                <Image
+                  src={getImage(doctor)}
+                  alt={doctor.name}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              </div>
             </CardContent>
           </Card>
         </Link>

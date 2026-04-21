@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
 import { Badge } from '@/components/ui/badge'
@@ -23,25 +24,25 @@ const ServicesHome = ({ className }: ServicesHomeProps) => {
     {
       title: t('veneersTitle'),
       description: t('veneersDesc'),
-      image: './static/home/smile_design.jpg',
+      image: '/static/home/smile_design.jpg',
       url: '',
     },
     {
       title: t('fullMouthTitle'),
       description: t('fullMouthDesc'),
-      image: './static/home/full_restoration.jpg',
+      image: '/static/home/full_restoration.jpg',
       url: '',
     },
     {
       title: t('implantsTitle'),
       description: t('implantsDesc'),
-      image: './static/home/dental_implants.jpg',
+      image: '/static/home/dental_implants.jpg',
       url: '',
     },
     {
       title: t('zirconiumTitle'),
       description: t('zirconiumDesc'),
-      image: './static/home/zirconium.jpg',
+      image: '/static/home/zirconium.jpg',
       url: '',
     },
   ]
@@ -77,10 +78,12 @@ const ServicesHome = ({ className }: ServicesHomeProps) => {
               className="group block overflow-hidden rounded-lg"
             >
               <Card className="relative aspect-square overflow-hidden p-0">
-                <img
+                <Image
                   src={service.image}
                   alt={service.title}
-                  className="absolute inset-0 h-full w-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-secondary/10 to-transparent" />
                 <CardContent className="absolute inset-0 flex flex-col justify-end p-4">

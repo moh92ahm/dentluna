@@ -1,17 +1,18 @@
-import { CreditCard, Layout, Menu, Pointer, Zap } from "lucide-react";
+import { CreditCard, Layout, Menu, Pointer, Zap } from 'lucide-react'
+import Image from 'next/image'
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { cn } from "@/lib/utils";
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { cn } from '@/lib/utils'
 
 interface Feature113Props {
-  className?: string;
+  className?: string
 }
 
 const Feature113 = ({ className }: Feature113Props) => {
   return (
-    <section className={cn("py-32", className)}>
+    <section className={cn('py-32', className)}>
       <div>
         <div className="container flex flex-col items-center gap-4 text-center">
           <Badge variant="outline">Top-notch Craft</Badge>
@@ -60,10 +61,13 @@ const Feature113 = ({ className }: Feature113Props) => {
                     <CreditCard className="h-auto w-4" />
                   </Button>
                 </div>
-                <img
+                <Image
                   src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg"
                   alt="placeholder"
+                  width={768}
+                  height={576}
                   className="max-h-96 rounded-xl"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </TabsContent>
               <TabsContent
@@ -87,10 +91,13 @@ const Feature113 = ({ className }: Feature113Props) => {
                     <Menu className="h-auto w-4" />
                   </Button>
                 </div>
-                <img
+                <Image
                   src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-2.svg"
                   alt="placeholder"
+                  width={768}
+                  height={576}
                   className="max-h-96 rounded-xl"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </TabsContent>
               <TabsContent
@@ -114,10 +121,13 @@ const Feature113 = ({ className }: Feature113Props) => {
                     <Zap className="h-auto w-4" />
                   </Button>
                 </div>
-                <img
+                <Image
                   src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-3.svg"
                   alt="placeholder"
+                  width={768}
+                  height={576}
                   className="max-h-96 rounded-xl"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </TabsContent>
             </div>
@@ -125,7 +135,7 @@ const Feature113 = ({ className }: Feature113Props) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export { Feature113 };
+export { Feature113 }

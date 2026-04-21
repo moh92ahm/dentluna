@@ -3,6 +3,7 @@ import { getCachedDocuments } from '@/utilities/getDocument'
 import { getMediaUrl } from '@/utilities/getMediaUrl'
 import { Link } from '@/i18n/navigation'
 import type { Post } from '@/payload-types'
+import Image from 'next/image'
 import { defaultLocale } from '@/i18n/locales'
 
 interface ArchiveBlogProps {
@@ -49,11 +50,15 @@ const ArchiveBlog = async ({ className, locale = defaultLocale }: ArchiveBlogPro
           href={`/blog/${firstPost.slug}` as any}
           className="block h-fit rounded-lg p-3 md:top-0"
         >
-          <img
-            src={getImage(firstPost)}
-            alt={firstPost.title}
-            className="h-48 w-full rounded-lg object-cover hover:opacity-80 md:h-80 lg:h-96"
-          />
+          <div className="relative h-48 w-full overflow-hidden rounded-lg md:h-80 lg:h-96">
+            <Image
+              src={getImage(firstPost)}
+              alt={firstPost.title}
+              fill
+              className="object-cover hover:opacity-80"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
           <div className="mt-5">
             <div className="mb-2.5 flex items-center gap-1 text-sm text-muted-foreground">
               <time>{formatDate(firstPost.publishedAt as string)}</time>·
@@ -68,11 +73,15 @@ const ArchiveBlog = async ({ className, locale = defaultLocale }: ArchiveBlogPro
       </div>
       {restPosts.map((post) => (
         <Link key={post.id} href={`/blog/${post.slug}` as any} className="rounded-lg p-3">
-          <img
-            src={getImage(post)}
-            alt={post.title}
-            className="h-48 w-full rounded-lg object-cover hover:opacity-80"
-          />
+          <div className="relative h-48 w-full overflow-hidden rounded-lg">
+            <Image
+              src={getImage(post)}
+              alt={post.title}
+              fill
+              className="object-cover hover:opacity-80"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            />
+          </div>
           <div className="mt-5">
             <div className="mb-2.5 flex items-center gap-1 text-sm text-muted-foreground">
               <time>{formatDate(post.publishedAt as string)}</time>·

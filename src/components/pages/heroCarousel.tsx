@@ -2,26 +2,27 @@
 
 import { motion } from 'framer-motion'
 import { ArrowBigDown } from 'lucide-react'
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
 import { cn } from '@/lib/utils'
 
 const galleryImages = [
   [
-    './static/home/01.jpg',
-    './static/home/02.jpg',
-    './static/home/03.jpg',
-    './static/home/04.jpg',
-    './static/home/05.jpg',
-    './static/home/06.jpg',
+    '/static/home/01.jpg',
+    '/static/home/02.jpg',
+    '/static/home/03.jpg',
+    '/static/home/04.jpg',
+    '/static/home/05.jpg',
+    '/static/home/06.jpg',
   ],
   [
-    './static/home/07.jpg',
-    './static/home/08.jpg',
-    './static/home/09.jpg',
-    './static/home/10.jpg',
-    './static/home/11.jpg',
-    './static/home/12.jpg',
+    '/static/home/07.jpg',
+    '/static/home/08.jpg',
+    '/static/home/09.jpg',
+    '/static/home/10.jpg',
+    '/static/home/11.jpg',
+    '/static/home/12.jpg',
   ],
 ]
 
@@ -32,7 +33,9 @@ interface HeroCarouselProps {
 const HeroCarousel = ({ className }: HeroCarouselProps) => {
   const t = useTranslations('heroCarousel')
   return (
-    <section className={cn('relative h-screen overflow-hidden -ml-[calc(50vw-50%)] w-screen', className)}>
+    <section
+      className={cn('relative h-screen overflow-hidden -ml-[calc(50vw-50%)] w-screen', className)}
+    >
       <div className="absolute inset-0 flex flex-col justify-center gap-4">
         {galleryImages.map((row, rowIndex) => (
           <motion.div
@@ -58,10 +61,12 @@ const HeroCarousel = ({ className }: HeroCarouselProps) => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <img
+                <Image
                   src={image}
                   alt={`Gallery image ${imageIndex + 1}`}
-                  className="h-full w-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes={rowIndex === 1 ? '280px' : '240px'}
                 />
               </motion.div>
             ))}

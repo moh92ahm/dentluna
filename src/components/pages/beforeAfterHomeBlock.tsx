@@ -10,8 +10,8 @@ import { ArrowUpRight } from 'lucide-react'
 import { CompareSlider } from '../ui/CompareSlider'
 
 const comparisons = [
-  { beforeImage: './static/home/before_1.jpg', afterImage: './static/home/after_1.jpg' },
-  { beforeImage: './static/home/before_2.jpg', afterImage: './static/home/after_2.jpg' },
+  { beforeImage: '/static/home/before_1.jpg', afterImage: '/static/home/after_1.jpg' },
+  { beforeImage: '/static/home/before_2.jpg', afterImage: '/static/home/after_2.jpg' },
 ]
 
 interface HomeBeforeAfterProps {

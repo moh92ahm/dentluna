@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server'
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 interface WhoWeAreProps {
@@ -21,20 +22,26 @@ const WhoWeAre = async ({ className }: WhoWeAreProps) => {
               <p className="mb-9 text-muted-foreground font-semibold lg:text-xl">{t('mission')}</p>
             </div>
             <div className="flex flex-col items-center justify-center gap-6 md:flex-row">
-              <img
+              <Image
                 src="/static/about/001.jpg"
                 alt="about 1"
+                width={900}
+                height={1286}
                 className="aspect-[0.7] w-full rounded-lg object-cover md:w-1/2"
               />
               <div className="flex w-full flex-col items-center justify-center gap-6 md:w-1/2">
-                <img
+                <Image
                   src="/static/about/002.jpg"
                   alt="about 2"
+                  width={900}
+                  height={818}
                   className="aspect-[1.1] rounded-lg object-cover"
                 />
-                <img
+                <Image
                   src="/static/about/003.jpg"
                   alt="about 3"
+                  width={900}
+                  height={1286}
                   className="aspect-[0.7] rounded-lg object-cover"
                 />
               </div>
@@ -42,15 +49,19 @@ const WhoWeAre = async ({ className }: WhoWeAreProps) => {
           </div>
           <div className="flex w-full flex-col items-center justify-center gap-12 pt-12 lg:w-1/2 lg:pt-48">
             <div className="flex flex-col items-center justify-center gap-6 md:flex-row">
-              <img
+              <Image
                 src="/static/about/004.jpg"
                 alt="about 4"
+                width={900}
+                height={1000}
                 className="aspect-[0.9] w-full rounded-lg object-cover md:w-1/2"
               />
               <div className="flex w-full flex-col items-center justify-center gap-6 md:w-1/2">
-                <img
+                <Image
                   src="/static/about/005.jpg"
                   alt="about 5"
+                  width={900}
+                  height={1125}
                   className="aspect-[0.8] rounded-lg object-cover"
                 />
               </div>

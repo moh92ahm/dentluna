@@ -2,6 +2,7 @@
 
 import { useSyncExternalStore } from 'react'
 import { Star } from 'lucide-react'
+import Image from 'next/image'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 import { useTranslations } from 'next-intl'
 
@@ -22,7 +23,14 @@ interface RewardCardProps {
 
 const RewardCard = ({ icon, title }: RewardCardProps) => (
   <div className="flex items-center justify-center rounded-xl bg-muted px-8 py-4 shadow-sm">
-    <img src={icon} alt={title} className="h-14 w-auto object-contain" />
+    <Image
+      src={icon}
+      alt={title}
+      width={160}
+      height={56}
+      className="object-contain"
+      style={{ width: 'auto', height: '56px' }}
+    />
   </div>
 )
 

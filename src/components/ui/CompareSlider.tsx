@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useSyncExternalStore } from 'react'
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider'
 import { cn } from '@/lib/utils'
@@ -46,7 +47,13 @@ const CompareSlider = ({
           }
         />
       ) : (
-        <img src={beforeImage} alt={beforeAlt} className="h-full w-full object-cover" />
+        <Image
+          src={beforeImage}
+          alt={beforeAlt}
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
       )}
     </div>
   )
