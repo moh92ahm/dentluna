@@ -1,7 +1,6 @@
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
-import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import { seoPlugin } from '@payloadcms/plugin-seo'
 import path from 'path'
 import { buildConfig } from 'payload'
@@ -92,15 +91,6 @@ export default buildConfig({
     seoPlugin({
       generateTitle: ({ doc }) => `${doc?.title ?? ''} – Dent Luna`,
       generateDescription: ({ doc }) => doc?.excerpt ?? '',
-    }),
-    vercelBlobStorage({
-      enabled: Boolean(process.env.BLOB_READ_WRITE_TOKEN),
-      token: process.env.BLOB_READ_WRITE_TOKEN,
-      clientUploads: true,
-      alwaysInsertFields: true,
-      collections: {
-        [Media.slug]: true,
-      },
     }),
   ],
 })
