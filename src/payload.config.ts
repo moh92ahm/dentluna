@@ -21,6 +21,7 @@ import { FaqCategories } from './collections/FAQs/FaqCategories'
 import { FormSubmissions } from './collections/FormSubmissions'
 import { payloadLocales, defaultLocale } from './i18n/locales'
 import { CrmSettings } from './globals/CrmSettings'
+import { migrations } from './migrations'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -67,6 +68,7 @@ export default buildConfig({
     pool: {
       connectionString: process.env.DATABASE_URL || '',
     },
+    prodMigrations: migrations,
   }),
   email:
     !isBuildPhase && process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS
