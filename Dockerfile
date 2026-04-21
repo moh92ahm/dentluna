@@ -17,6 +17,8 @@ RUN corepack enable pnpm && pnpm i --frozen-lockfile
 # Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
+ENV SKIP_SITEMAP_DB=true
+ENV DISABLE_EMAIL_ADAPTER=true
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 

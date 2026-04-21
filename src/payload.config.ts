@@ -24,6 +24,7 @@ import { CrmSettings } from './globals/CrmSettings'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
+const isBuildPhase = process.env.DISABLE_EMAIL_ADAPTER === 'true'
 
 export default buildConfig({
   admin: {
@@ -62,7 +63,7 @@ export default buildConfig({
     },
   }),
   email:
-    process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS
+    !isBuildPhase && process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS
       ? nodemailerAdapter({
           defaultFromAddress: process.env.EMAIL_FROM_ADDRESS || 'no-reply@dentluna.com',
           defaultFromName: process.env.EMAIL_FROM_NAME || 'Dentluna No-Reply',

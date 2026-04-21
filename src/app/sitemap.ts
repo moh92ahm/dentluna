@@ -1,6 +1,4 @@
 import type { MetadataRoute } from 'next'
-import { getPayload } from 'payload'
-import configPromise from '@payload-config'
 import { getServerSideURL } from '@/utilities/getURL'
 import { routing } from '@/i18n/routing'
 
@@ -17,7 +15,6 @@ const staticRoutes = [
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = getServerSideURL()
-  const payload = await getPayload({ config: configPromise })
 
   const entries: MetadataRoute.Sitemap = []
 
@@ -35,6 +32,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       })
     }
   }
+
+  if (process.env.SKIP_SITEMAP_DB === 'true') {
+    return entries
+  }
+
+  const [{ getPayload }, { default: configPromise }] = await Promise.all([
+    import('payload'),
+    import('@payload-config'),
+  ])
+  const payload = await getPayload({ config: configPromise })
 
   // Dynamic: blog posts
   const posts = await payload.find({ collection: 'posts', limit: 1000, depth: 0 })
