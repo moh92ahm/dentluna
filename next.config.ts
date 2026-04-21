@@ -11,6 +11,7 @@ const dirname = path.dirname(__filename)
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts')
 
 const nextConfig: NextConfig = {
+  output: 'standalone',
   async redirects() {
     const staticPages = ['about', 'contact', 'treatments', 'blog', 'doctors', 'gallery', 'faq']
     return [

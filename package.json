@@ -15,6 +15,7 @@
     "lint": "cross-env NODE_OPTIONS=--no-deprecation eslint .",
     "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
+    "start:coolify": "cross-env NODE_OPTIONS=--no-deprecation pnpm payload migrate && cross-env NODE_OPTIONS=--no-deprecation next start",
     "test": "pnpm run test:int && pnpm run test:e2e",
     "test:e2e": "cross-env NODE_OPTIONS=\"--no-deprecation --import=tsx/esm\" playwright test --config=playwright.config.ts",
     "test:int": "cross-env NODE_OPTIONS=--no-deprecation vitest run --config ./vitest.config.mts"
@@ -26,7 +27,7 @@
     "@payloadcms/email-nodemailer": "3.82.1",
     "@payloadcms/live-preview-react": "3.82.1",
     "@payloadcms/next": "3.82.1",
-    "@payloadcms/plugin-seo": "^3.82.1",
+    "@payloadcms/plugin-seo": "3.82.1",
     "@payloadcms/richtext-lexical": "3.82.1",
     "@payloadcms/storage-vercel-blob": "3.82.1",
     "@payloadcms/ui": "3.82.1",
