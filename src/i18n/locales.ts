@@ -19,16 +19,29 @@ export interface LocaleEntry {
   flag: string
 }
 
+export interface ExternalLocaleEntry extends LocaleEntry {
+  href: string
+}
+
 export const locales = [
   { code: 'en', label: 'English', shortLabel: 'EN', flag: '🇬🇧' },
   { code: 'de', label: 'Deutsch', shortLabel: 'DE', flag: '🇩🇪' },
   { code: 'fr', label: 'Français', shortLabel: 'FR', flag: '🇫🇷' },
-  { code: 'tr', label: 'Türkçe', shortLabel: 'TR', flag: '🇹🇷' },
   { code: 'ro', label: 'Română', shortLabel: 'RO', flag: '🇷🇴' },
   { code: 'ru', label: 'Русский', shortLabel: 'RU', flag: '🇷🇺' },
   { code: 'uk', label: 'Українська', shortLabel: 'UK', flag: '🇺🇦' },
   { code: 'pl', label: 'Polski', shortLabel: 'PL', flag: '🇵🇱' },
 ] as const satisfies readonly LocaleEntry[]
+
+export const externalLocales = [
+  {
+    code: 'tr',
+    label: 'Türkçe',
+    shortLabel: 'TR',
+    flag: '🇹🇷',
+    href: 'https://tr.dentluna.com',
+  },
+] as const satisfies readonly ExternalLocaleEntry[]
 
 /** Just the codes, e.g. ['en', 'de', 'fr'] */
 export const localeCodes = locales.map((l) => l.code) as unknown as [string, ...string[]]
@@ -38,17 +51,17 @@ export const defaultLocale = 'en' satisfies (typeof locales)[number]['code']
 
 /** Map of code → short label, e.g. { en: 'EN', de: 'DE', fr: 'FR' } */
 export const localeLabels: Record<string, string> = Object.fromEntries(
-  locales.map((l) => [l.code, l.shortLabel]),
+  [...locales, ...externalLocales].map((l) => [l.code, l.shortLabel]),
 )
 
 /** Map of code → flag emoji */
 export const localeFlags: Record<string, string> = Object.fromEntries(
-  locales.map((l) => [l.code, l.flag]),
+  [...locales, ...externalLocales].map((l) => [l.code, l.flag]),
 )
 
 /** Map of code → full label (e.g. 'English') */
 export const localeFullLabels: Record<string, string> = Object.fromEntries(
-  locales.map((l) => [l.code, l.label]),
+  [...locales, ...externalLocales].map((l) => [l.code, l.label]),
 )
 
 /** Payload-compatible locale objects */

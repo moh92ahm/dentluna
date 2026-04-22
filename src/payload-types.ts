@@ -116,15 +116,15 @@ export interface Config {
     | ('false' | 'none' | 'null')
     | false
     | null
-    | ('en' | 'de' | 'fr' | 'tr' | 'ro' | 'ru' | 'uk' | 'pl')
-    | ('en' | 'de' | 'fr' | 'tr' | 'ro' | 'ru' | 'uk' | 'pl')[];
+    | ('en' | 'de' | 'fr' | 'ro' | 'ru' | 'uk' | 'pl')
+    | ('en' | 'de' | 'fr' | 'ro' | 'ru' | 'uk' | 'pl')[];
   globals: {
     'crm-settings': CrmSetting;
   };
   globalsSelect: {
     'crm-settings': CrmSettingsSelect<false> | CrmSettingsSelect<true>;
   };
-  locale: 'en' | 'de' | 'fr' | 'tr' | 'ro' | 'ru' | 'uk' | 'pl';
+  locale: 'en' | 'de' | 'fr' | 'ro' | 'ru' | 'uk' | 'pl';
   widgets: {
     collections: CollectionsWidget;
   };

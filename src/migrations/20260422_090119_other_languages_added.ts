@@ -2,22 +2,18 @@ import { MigrateUpArgs, MigrateDownArgs, sql } from '@payloadcms/db-postgres'
 
 export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   await db.execute(sql`
-   ALTER TYPE "public"."_locales" ADD VALUE 'tr';
-  ALTER TYPE "public"."_locales" ADD VALUE 'ro';
+   ALTER TYPE "public"."_locales" ADD VALUE 'ro';
   ALTER TYPE "public"."_locales" ADD VALUE 'ru';
   ALTER TYPE "public"."_locales" ADD VALUE 'uk';
   ALTER TYPE "public"."_locales" ADD VALUE 'pl';
-  ALTER TYPE "public"."enum__treatments_v_published_locale" ADD VALUE 'tr';
   ALTER TYPE "public"."enum__treatments_v_published_locale" ADD VALUE 'ro';
   ALTER TYPE "public"."enum__treatments_v_published_locale" ADD VALUE 'ru';
   ALTER TYPE "public"."enum__treatments_v_published_locale" ADD VALUE 'uk';
   ALTER TYPE "public"."enum__treatments_v_published_locale" ADD VALUE 'pl';
-  ALTER TYPE "public"."enum__doctors_v_published_locale" ADD VALUE 'tr';
   ALTER TYPE "public"."enum__doctors_v_published_locale" ADD VALUE 'ro';
   ALTER TYPE "public"."enum__doctors_v_published_locale" ADD VALUE 'ru';
   ALTER TYPE "public"."enum__doctors_v_published_locale" ADD VALUE 'uk';
   ALTER TYPE "public"."enum__doctors_v_published_locale" ADD VALUE 'pl';
-  ALTER TYPE "public"."enum__posts_v_published_locale" ADD VALUE 'tr';
   ALTER TYPE "public"."enum__posts_v_published_locale" ADD VALUE 'ro';
   ALTER TYPE "public"."enum__posts_v_published_locale" ADD VALUE 'ru';
   ALTER TYPE "public"."enum__posts_v_published_locale" ADD VALUE 'uk';
