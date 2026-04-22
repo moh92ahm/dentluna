@@ -1,0 +1,270 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "about": "O nas",
+    "contact": "Kontakt",
+    "treatments": "Leczenie",
+    "gallery": "Galeria",
+    "doctors": "Lekarze",
+    "blog": "Blog",
+    "faq": "FAQ"
+  },
+  "common": {
+    "readMore": "Czytaj więcej",
+    "viewAll": "Zobacz wszystko",
+    "notFound": "Nie znaleziono",
+    "backToHome": "Powrót do strony głównej"
+  },
+  "home": {
+    "title": "Dent Luna - Twój zaufany partner w stomatologii",
+    "description": "Twój zaufany partner w stomatologii"
+  },
+  "treatments": {
+    "badge": "Usługi",
+    "heading": "Poznaj naszą ofertę usług",
+    "description": "Poznaj nasze kompleksowe usługi stomatologiczne zaprojektowane z myślą o wszystkich potrzebach związanych ze zdrowiem jamy ustnej. Od rutynowych kontroli po zaawansowane zabiegi estetyczne - oferujemy spersonalizowaną opiekę dla zdrowego i pięknego uśmiechu.",
+    "metaTitle": "Leczenie stomatologiczne - Dent Luna",
+    "metaDesc": "Poznaj nasze kompleksowe zabiegi stomatologiczne: licówki, implanty, korony i wiele więcej. Umów bezpłatną konsultację w Izmirze."
+  },
+  "blog": {
+    "heading": "Najnowsze wpisy",
+    "metaTitle": "Blog stomatologiczny - Dent Luna",
+    "metaDesc": "Czytaj eksperckie artykuły o pielęgnacji zębów, wskazówki z zakresu stomatologii estetycznej i historie pacjentów od zespołu Dent Luna."
+  },
+  "gallery": {
+    "badge": "Galeria",
+    "heading": "Prawdziwe efekty. Prawdziwe metamorfozy.",
+    "description": "Przeglądaj metamorfozy naszych pacjentów według kategorii leczenia.",
+    "metaTitle": "Galeria przed i po - Dent Luna",
+    "metaDesc": "Zobacz prawdziwe metamorfozy pacjentów. Przeglądaj zdjęcia przed i po naszych zabiegach stomatologicznych w Izmirze."
+  },
+  "doctors": {
+    "badge": "Nasi lekarze",
+    "heading": "Poznaj naszych lekarzy",
+    "description": "Nasz zespół doświadczonych dentystów jest zaangażowany w zapewnianie wyjątkowej opieki i indywidualnych planów leczenia, aby wspierać zdrowie jamy ustnej i pewny uśmiech.",
+    "metaTitle": "Nasi lekarze - Dent Luna",
+    "metaDesc": "Poznaj doświadczonych specjalistów stomatologicznych Dent Luna. Wykwalifikowani profesjonaliści oddani Twojemu uśmiechowi."
+  },
+  "faq": {
+    "general": "Ogólne",
+    "metaTitle": "Najczęściej zadawane pytania - Dent Luna",
+    "metaDesc": "Odpowiedzi na najczęstsze pytania dotyczące leczenia stomatologicznego za granicą, kosztów, procedur i tego, czego możesz spodziewać się w Dent Luna."
+  },
+  "notFound": {
+    "treatment": "Nie znaleziono leczenia",
+    "post": "Nie znaleziono wpisu",
+    "doctor": "Nie znaleziono lekarza",
+    "heading": "Nie znaleziono strony",
+    "message": "Niestety, strona, której szukasz, nie istnieje lub została przeniesiona.",
+    "backHome": "Powrót do strony głównej"
+  },
+  "about": {
+    "metaTitle": "O Dent Luna - Premium stomatologia w Izmirze",
+    "metaDesc": "Poznaj misję Dent Luna, nasz doświadczony zespół i dowiedz się, dlaczego pacjenci międzynarodowi ufają nam w kwestii leczenia stomatologicznego w Turcji."
+  },
+  "contactPage": {
+    "metaTitle": "Skontaktuj się z nami - Dent Luna",
+    "metaDesc": "Skontaktuj się z Dent Luna. Umów bezpłatną konsultację lub zapytaj o wszystko, co dotyczy leczenia stomatologicznego w Izmirze w Turcji."
+  },
+  "heroCarousel": {
+    "line1": "Premium",
+    "line2": "Leczenie",
+    "line3": "Stomatologiczne"
+  },
+  "servicesHome": {
+    "heading": "Nasze zabiegi",
+    "subheading": "Zaawansowane rozwiązania stomatologiczne stworzone dla Ciebie",
+    "description": "Od rutynowego czyszczenia po złożone odbudowy - nasze kompleksowe usługi stomatologiczne są dopasowane do Twoich indywidualnych potrzeb, aby zapewnić zdrowy i promienny uśmiech.",
+    "exploreBtn": "Poznaj wszystkie zabiegi",
+    "veneersTitle": "Licówki i projektowanie uśmiechu",
+    "veneersDesc": "Uzyskaj jaśniejszy i bardziej pewny siebie uśmiech",
+    "fullMouthTitle": "Kompleksowa odbudowa całego uzębienia",
+    "fullMouthDesc": "Kompleksowe rozwiązania dla złożonych przypadków stomatologicznych",
+    "implantsTitle": "Implanty dentystyczne",
+    "implantsDesc": "Trwałe i niezawodne rozwiązanie przy brakach zębowych",
+    "zirconiumTitle": "Korony cyrkonowe",
+    "zirconiumDesc": "Mocne, estetyczne i naturalnie wyglądające odbudowy"
+  },
+  "howItWorks": {
+    "badge": "Jak to działa",
+    "heading": "Prosty, szybki i uporządkowany proces",
+    "description": "Nasza intuicyjna platforma usprawnia cały proces, utrzymując wszystko w porządku i w jednym miejscu. Odkryj wygodę prostego, szybkiego i efektywnego procesu.",
+    "step1Title": "Wyślij swoje zdjęcia lub RTG",
+    "step1Desc": "Łatwo prześlij zdjęcia zębów lub zdjęcia RTG przez naszą bezpieczną platformę. Nasz zespół je przeanalizuje, aby przygotować spersonalizowany plan leczenia i dokładną wycenę.",
+    "step2Title": "Otrzymaj plan leczenia",
+    "step2Desc": "Otrzymaj szczegółowy plan leczenia dopasowany do Twoich potrzeb, zawierający jasne instrukcje krok po kroku i przejrzystą wycenę.",
+    "step3Title": "Zaplanuj podróż",
+    "step3Desc": "Zorganizuj podróż bez stresu. Nasza platforma pomaga sprawnie zaplanować wyjazd i zapewnia płynne doświadczenie od początku do końca.",
+    "step4Title": "Przejdź leczenie",
+    "step4Desc": "Skorzystaj z leczenia pod opieką naszego ekspertnego zespołu, który zadba o komfortowy i skuteczny przebieg całego procesu.",
+    "step5Title": "Wsparcie po leczeniu",
+    "step5Desc": "Otrzymuj stałe wsparcie i wskazówki, aby zapewnić długoterminowy sukces leczenia."
+  },
+  "whyUsHome": {
+    "badge": "Dlaczego my",
+    "heading": "To więcej niż leczenie - to kompletne doświadczenie",
+    "description": "W Dent Luna oferujemy więcej niż tradycyjną opiekę stomatologiczną. Zapewniamy kompleksowe doświadczenie, które obejmuje spersonalizowane plany leczenia, eksperckie doradztwo i stałe wsparcie, dzięki czemu metamorfoza Twojego uśmiechu jest nie tylko skuteczna, ale też komfortowa.",
+    "feature1": "Doświadczeni dentyści",
+    "feature2": "Materiały premium",
+    "feature3": "Spersonalizowana opieka",
+    "feature4": "Dedykowane wsparcie",
+    "feature5": "Sprawna organizacja",
+    "feature6": "Stała opieka kontrolna"
+  },
+  "beforeAfterHome": {
+    "label": "Przed i po",
+    "heading": "Prawdziwe efekty. Prawdziwe metamorfozy.",
+    "viewAllBtn": "Zobacz wszystkie metamorfozy"
+  },
+  "testimonialHome": {
+    "label": "Opinie",
+    "heading": "Co mówią nasi pacjenci",
+    "t1Name": "Alex Johnson",
+    "t1Content": "Przyjechałem z Londynu na licówki i nie mógłbym być bardziej zadowolony. Cały proces przebiegł bezproblemowo od początku do końca.",
+    "t2Name": "Maria Garcia",
+    "t2Content": "DentLuna zorganizowała dla mnie wszystko - hotel, transfery, wizyty. Efekt przerósł wszystkie moje oczekiwania.",
+    "t3Name": "Chris Lee",
+    "t3Content": "Zrobiłem tu implanty po latach poszukiwań. Jakość i cena w porównaniu z Wielką Brytanią są niesamowite.",
+    "t4Name": "Emily Carter",
+    "t4Content": "Dentyści byli niezwykle profesjonalni i mówili perfekcyjnie po angielsku. Czułam się całkowicie swobodnie przez cały czas.",
+    "t5Name": "David Kim",
+    "t5Content": "Mój uśmiech całkowicie się zmienił. Codziennie dostaję komplementy i bardzo się cieszę, że wybrałem DentLuna.",
+    "t6Name": "Sophia Martinez",
+    "t6Content": "Od pierwszej konsultacji do ostatniej kontroli komunikacja była doskonała. Gorąco polecam.",
+    "t7Name": "James Wilson",
+    "t7Content": "Denerwowałem się podróżą za granicę na leczenie dentystyczne, ale DentLuna sprawiła, że wszystko było bardzo łatwe. Efekty są zachwycające.",
+    "t8Name": "Laura Müller",
+    "t8Content": "Absolutnie światowy poziom obsługi. Klinika jest nieskazitelna, personel serdeczny, a efekty mówią same za siebie.",
+    "t9Name": "Ahmed Hassan",
+    "t9Content": "Przeszedłem pełną metamorfozę uśmiechu i zaoszczędziłem tysiące w porównaniu z kosztami w kraju. Żałuję tylko, że nie zrobiłem tego wcześniej."
+  },
+  "ctaHome": {
+    "tagline": "Gotowy, aby zacząć?",
+    "heading": "Rozpocznij metamorfozę swojego uśmiechu już dziś",
+    "description": "Uzyskaj bezpłatną konsultację i sprawdź, która opcja leczenia będzie dla Ciebie najlepsza.",
+    "ctaBtn": "Zacznij",
+    "learnMore": "Dowiedz się więcej"
+  },
+  "aboutHero": {
+    "label": "O Dent Luna",
+    "heading": "Premium opieka stomatologiczna w Izmirze dla pacjentów międzynarodowych",
+    "description": "Pomagamy Ci osiągnąć zdrowy, naturalny uśmiech dzięki eksperckiemu leczeniu i starannie zorganizowanemu doświadczeniu od początku do końca.",
+    "ctaBtn": "Skontaktuj się z nami"
+  },
+  "aboutContent": {
+    "whoWeAre": "KIM JESTEŚMY",
+    "intro1": "Dent Luna to wyspecjalizowany dostawca zaawansowanych zabiegów stomatologicznych dla pacjentów międzynarodowych.",
+    "intro2": "Działając w Izmirze, współpracujemy z doświadczonymi dentystami i nowoczesnymi klinikami, aby zapewniać wysokiej jakości, niezawodne i estetyczne rezultaty.",
+    "mission": "Sprawić, aby leczenie stomatologiczne za granicą było jasne, bezpieczne i bezstresowe.",
+    "ourApproach": "NASZE PODEJŚCIE",
+    "approachText": "Wierzymy, że świetne efekty wynikają z właściwego planowania i uczciwej komunikacji.",
+    "processLabel": "Każdy pacjent przechodzi uporządkowany proces:",
+    "process1": "Ocena na podstawie zdjęć lub RTG",
+    "process2": "Spersonalizowany plan leczenia przygotowany przez dentystów",
+    "process3": "Jasne wyjaśnienie procedur, czasu i kosztów",
+    "process4": "Sprawna organizacja, aby skrócić Twój pobyt",
+    "process5": "Wsparcie po leczeniu",
+    "processOutro": "Takie podejście zapewnia przewidywalne efekty i płynne doświadczenie."
+  },
+  "qualityMaterials": {
+    "heading": "JAKOŚĆ I MATERIAŁY",
+    "text1": "Używamy wyłącznie wysokiej jakości materiałów od uznanych międzynarodowo producentów, spełniających rygorystyczne normy europejskie i światowe.",
+    "text2": "Współpracujemy z czołowymi markami stomatologicznymi z Niemiec, Szwajcarii, Stanów Zjednoczonych i Korei Południowej, co pozwala nam dobrać najbardziej odpowiednie rozwiązanie dla każdego pacjenta.",
+    "text3": "Każdy materiał jest <bold>w pełni identyfikowalny</bold>, co zapewnia bezpieczeństwo, spójność i długotrwały sukces."
+  },
+  "whyIzmir": {
+    "heading": "DLACZEGO IZMIR?",
+    "intro": "Izmir to jedno z najczęściej wybieranych miast do leczenia stomatologicznego, oferujące:",
+    "item1": "Kliniki stomatologiczne światowej klasy z najnowocześniejszą technologią.",
+    "item2": "Wysoko wykwalifikowanych dentystów z międzynarodowym doświadczeniem.",
+    "item3": "Przystępne cenowo opcje leczenia bez kompromisów jakościowych.",
+    "item4": "Tętniące życiem miasto z bogatą kulturą i pięknymi widokami na wybrzeże.",
+    "outro": "Doświadcz opieki stomatologicznej najwyższej klasy w mieście, które łączy medyczną doskonałość z niezapomnianą podróżą."
+  },
+  "whyChooseUs": {
+    "heading": "DLACZEGO PACJENCI WYBIERAJĄ NAS",
+    "description": "W DentLuna jesteśmy zaangażowani w zapewnianie wyjątkowej opieki stomatologicznej, która łączy nowoczesną technologię, spersonalizowane plany leczenia i empatyczne podejście. Pacjenci wybierają nas za zaangażowanie w ich zdrowie jamy ustnej, doświadczony zespół specjalistów oraz przyjazne środowisko stawiające na komfort i zaufanie.",
+    "getStarted": "Zacznij",
+    "sat": "85%",
+    "satLabel": "Satysfakcja pacjentów",
+    "patients": "15k+",
+    "patientsLabel": "Zadowolonych pacjentów",
+    "feature1Title": "Zespół ekspertów",
+    "feature1Desc": "Nasz zespół profesjonalistów stomatologicznych jest wysoko wykwalifikowany i doświadczony.",
+    "feature2Title": "Nowoczesna technologia",
+    "feature2Desc": "Korzystamy z najnowszych technologii stomatologicznych, aby zapewnić najlepszą opiekę.",
+    "feature3Title": "Komfortowe otoczenie",
+    "feature3Desc": "Nasze kliniki zostały zaprojektowane tak, aby pacjenci czuli się swobodnie.",
+    "feature4Title": "Spersonalizowana opieka",
+    "feature4Desc": "Zapewniamy indywidualne plany leczenia dopasowane do unikalnych potrzeb każdego pacjenta.",
+    "feature5Title": "Szybko i skutecznie",
+    "feature5Desc": "Zapewniamy terminowe i skuteczne leczenie stomatologiczne.",
+    "feature6Title": "Bezpiecznie i pewnie",
+    "feature6Desc": "Priorytetem jest dla nas bezpieczeństwo pacjenta i przestrzeganie najwyższych standardów opieki stomatologicznej.",
+    "feature7Title": "Długoterminowe wsparcie",
+    "feature7Desc": "Oferujemy kompleksową opiekę pozabiegową i wsparcie dla długotrwałego zdrowia jamy ustnej.",
+    "feature8Title": "Wsparcie językowe",
+    "feature8Desc": "Zapewniamy wielojęzyczne wsparcie pacjentom z różnych krajów."
+  },
+  "contact": {
+    "title": "Porozmawiajmy",
+    "subtitle": "Masz pomysł lub projekt? Chętnie o nim usłyszymy.",
+    "sendMessage": "Wyślij wiadomość",
+    "success": "Dziękujemy! Twoja wiadomość została wysłana.",
+    "nameLabel": "Imię",
+    "nameRequired": "Imię jest wymagane",
+    "namePlaceholder": "Twoje imię",
+    "emailLabel": "Email",
+    "emailRequired": "Email jest wymagany",
+    "emailInvalid": "Wprowadź poprawny adres email",
+    "emailPlaceholder": "you@example.com",
+    "phoneLabel": "Telefon",
+    "phonePlaceholder": "+48 500 000 000",
+    "messageLabel": "Wiadomość",
+    "messageRequired": "Wiadomość jest wymagana",
+    "messagePlaceholder": "Opowiedz nam o swoim projekcie...",
+    "sendBtn": "Wyślij wiadomość",
+    "sendingBtn": "Wysyłanie...",
+    "errorMsg": "Coś poszło nie tak. Spróbuj ponownie."
+  },
+  "consultationForm": {
+    "heading": "Wypełnij formularz, aby uzyskać bezpłatną konsultację",
+    "subheading": "Nasz zespół skontaktuje się z Tobą w ciągu 24 godzin.",
+    "success": "Dziękujemy! Skontaktujemy się z Tobą wkrótce.",
+    "nameLabel": "Wpisz imię i nazwisko",
+    "nameRequired": "Imię i nazwisko jest wymagane",
+    "namePlaceholder": "James Harber",
+    "phoneLabel": "Wpisz numer telefonu (z kodem kraju)",
+    "phoneRequired": "Numer telefonu jest wymagany",
+    "phonePlaceholder": "+48 501 234 567",
+    "emailLabel": "Wpisz email",
+    "emailInvalid": "Wprowadź poprawny adres email",
+    "emailPlaceholder": "jamesharber@domain.com",
+    "categoryLabel": "Wybierz kategorię",
+    "categoryPlaceholder": "Wybierz",
+    "promoLabel": "Twój kod promocyjny",
+    "promoPlaceholder": "",
+    "submitBtn": "Wyślij",
+    "sendingBtn": "Wysyłanie...",
+    "errorMsg": "Coś poszło nie tak. Spróbuj ponownie."
+  },
+  "footer": {
+    "description": "W Dent Luna jesteśmy zaangażowani w zapewnianie wyjątkowej opieki stomatologicznej z osobistym podejściem. Nasz doświadczony zespół dentystów i pracowników współpracuje, aby stworzyć przyjazne środowisko, w którym Twój uśmiech może rozkwitać.",
+    "quickLinks": "Szybkie linki",
+    "about": "O nas",
+    "contact": "Kontakt",
+    "doctors": "Lekarze",
+    "resources": "Zasoby",
+    "blog": "Blog",
+    "faqs": "FAQ",
+    "gallery": "Galeria",
+    "services": "Usługi",
+    "hollywoodSmile": "Hollywood Smile",
+    "allOns": "All-on-4 / All-on-6",
+    "dentalImplants": "Implanty dentystyczne",
+    "crowns": "Korony",
+    "termsAndConditions": "Regulamin",
+    "privacyPolicy": "Polityka prywatności",
+    "copyright": "© {year} Dent Luna. Wszelkie prawa zastrzeżone."
+  }
+}

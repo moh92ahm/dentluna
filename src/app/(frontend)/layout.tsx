@@ -4,13 +4,13 @@ import { getLocale } from 'next-intl/server'
 import './globals.css'
 
 const fontSans = Montserrat({
-  subsets: ['latin'],
+  subsets: ['latin', 'latin-ext', 'cyrillic'],
   variable: '--font-sans',
 })
 
 const fontSerif = Poppins({
   weight: ['400', '500', '600', '700'],
-  subsets: ['latin'],
+  subsets: ['latin', 'latin-ext'],
   variable: '--font-serif',
 })
 

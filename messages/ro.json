@@ -1,0 +1,270 @@
+{
+  "nav": {
+    "home": "Acasă",
+    "about": "Despre",
+    "contact": "Contact",
+    "treatments": "Tratamente",
+    "gallery": "Galerie",
+    "doctors": "Medici",
+    "blog": "Blog",
+    "faq": "Întrebări frecvente"
+  },
+  "common": {
+    "readMore": "Citește mai mult",
+    "viewAll": "Vezi tot",
+    "notFound": "Nu a fost găsit",
+    "backToHome": "Înapoi la pagina principală"
+  },
+  "home": {
+    "title": "Dent Luna - Partenerul tău de încredere pentru îngrijire dentară",
+    "description": "Partenerul tău de încredere pentru îngrijire dentară"
+  },
+  "treatments": {
+    "badge": "Servicii",
+    "heading": "Descoperă gama noastră de servicii",
+    "description": "Explorează serviciile noastre stomatologice complete, concepute pentru toate nevoile tale de sănătate orală. De la controale de rutină la proceduri estetice avansate, oferim îngrijire personalizată pentru un zâmbet sănătos și frumos.",
+    "metaTitle": "Tratamente dentare - Dent Luna",
+    "metaDesc": "Explorează tratamentele noastre dentare complete: fațete, implanturi, coroane și multe altele. Programează consultația gratuită în Izmir."
+  },
+  "blog": {
+    "heading": "Ultimele articole",
+    "metaTitle": "Blog dentar - Dent Luna",
+    "metaDesc": "Citește articole de specialitate despre îngrijirea dentară, sfaturi de estetică dentară și povești ale pacienților de la echipa Dent Luna."
+  },
+  "gallery": {
+    "badge": "Galerie",
+    "heading": "Rezultate reale. Transformări reale.",
+    "description": "Descoperă transformările pacienților noștri după categoria tratamentului.",
+    "metaTitle": "Galerie înainte și după - Dent Luna",
+    "metaDesc": "Vezi transformări reale ale pacienților. Explorează fotografii înainte și după ale tratamentelor noastre dentare din Izmir."
+  },
+  "doctors": {
+    "badge": "Medicii noștri",
+    "heading": "Fă cunoștință cu medicii noștri",
+    "description": "Echipa noastră de medici stomatologi cu experiență este dedicată să ofere îngrijire excepțională și planuri de tratament personalizate pentru sănătatea orală și un zâmbet sigur pe sine.",
+    "metaTitle": "Medicii noștri - Dent Luna",
+    "metaDesc": "Cunoaște specialiștii stomatologi cu experiență de la Dent Luna. Profesioniști calificați dedicați zâmbetului tău."
+  },
+  "faq": {
+    "general": "General",
+    "metaTitle": "Întrebări frecvente - Dent Luna",
+    "metaDesc": "Răspunsuri la cele mai frecvente întrebări despre tratamente dentare în străinătate, costuri, proceduri și la ce să te aștepți la Dent Luna."
+  },
+  "notFound": {
+    "treatment": "Tratamentul nu a fost găsit",
+    "post": "Articolul nu a fost găsit",
+    "doctor": "Medicul nu a fost găsit",
+    "heading": "Pagina nu a fost găsită",
+    "message": "Ne pare rău, pagina pe care o cauți nu există sau a fost mutată.",
+    "backHome": "Înapoi la pagina principală"
+  },
+  "about": {
+    "metaTitle": "Despre Dent Luna - Îngrijire dentară premium în Izmir",
+    "metaDesc": "Află despre misiunea Dent Luna, echipa noastră cu experiență și de ce pacienții internaționali au încredere în noi pentru îngrijirea lor dentară în Turcia."
+  },
+  "contactPage": {
+    "metaTitle": "Contactează-ne - Dent Luna",
+    "metaDesc": "Ia legătura cu Dent Luna. Programează o consultație gratuită sau întreabă-ne orice despre tratamentele dentare din Izmir, Turcia."
+  },
+  "heroCarousel": {
+    "line1": "Tratamente",
+    "line2": "Dentare",
+    "line3": "Premium"
+  },
+  "servicesHome": {
+    "heading": "Tratamentele noastre",
+    "subheading": "Soluții dentare avansate concepute pentru tine",
+    "description": "De la igienizări de rutină la restaurări complexe, serviciile noastre dentare complete sunt adaptate nevoilor tale unice pentru a asigura un zâmbet sănătos și radiant.",
+    "exploreBtn": "Explorează toate tratamentele",
+    "veneersTitle": "Fațete și designul zâmbetului",
+    "veneersDesc": "Obține un zâmbet mai luminos și mai încrezător",
+    "fullMouthTitle": "Restaurare completă a danturii",
+    "fullMouthDesc": "Soluții complete pentru cazuri dentare complexe",
+    "implantsTitle": "Implanturi dentare",
+    "implantsDesc": "Soluție permanentă și sigură pentru dinții lipsă",
+    "zirconiumTitle": "Coroane din zirconiu",
+    "zirconiumDesc": "Restaurări rezistente, estetice și naturale"
+  },
+  "howItWorks": {
+    "badge": "Cum funcționează",
+    "heading": "Proces simplu, rapid și bine organizat",
+    "description": "Platforma noastră intuitivă îți simplifică parcursul și păstrează totul organizat și accesibil într-un singur loc. Bucură-te de ușurința unui proces simplu, rapid și eficient.",
+    "step1Title": "Trimite fotografiile sau radiografia",
+    "step1Desc": "Încarcă ușor fotografiile dentare sau radiografiile prin platforma noastră securizată. Echipa noastră le va analiza pentru a-ți oferi un plan de tratament personalizat și o estimare exactă a costurilor.",
+    "step2Title": "Primește planul de tratament",
+    "step2Desc": "Primește un plan de tratament detaliat, adaptat nevoilor tale, cu pași clari și o estimare transparentă a costurilor.",
+    "step3Title": "Planifică-ți călătoria",
+    "step3Desc": "Organizează-ți cu ușurință călătoria. Platforma noastră te ajută să planifici eficient fiecare etapă pentru o experiență fără griji.",
+    "step4Title": "Primește tratamentul",
+    "step4Desc": "Beneficiezi de tratament cu sprijinul echipei noastre de experți, pentru un proces eficient și confortabil.",
+    "step5Title": "Suport după tratament",
+    "step5Desc": "Primește sprijin și îndrumare continuă pentru succesul pe termen lung al tratamentului tău."
+  },
+  "whyUsHome": {
+    "badge": "De ce să ne alegi",
+    "heading": "Mai mult decât un tratament - o experiență completă",
+    "description": "La Dent Luna, mergem dincolo de îngrijirea dentară tradițională. Oferim o experiență completă care include planuri de tratament personalizate, îndrumare de specialitate și suport continuu, astfel încât transformarea zâmbetului tău să fie nu doar reușită, ci și plăcută.",
+    "feature1": "Medici stomatologi experți",
+    "feature2": "Materiale premium",
+    "feature3": "Îngrijire personalizată",
+    "feature4": "Suport dedicat",
+    "feature5": "Programare eficientă",
+    "feature6": "Monitorizare continuă"
+  },
+  "beforeAfterHome": {
+    "label": "Înainte și după",
+    "heading": "Rezultate reale. Transformări reale.",
+    "viewAllBtn": "Vezi toate transformările"
+  },
+  "testimonialHome": {
+    "label": "Testimoniale",
+    "heading": "Ce spun pacienții noștri",
+    "t1Name": "Alex Johnson",
+    "t1Content": "Am venit din Londra pentru fațete și nu aș putea fi mai mulțumit. Tot procesul a fost impecabil de la început până la sfârșit.",
+    "t2Name": "Maria Garcia",
+    "t2Content": "DentLuna a organizat totul pentru mine - hotel, transferuri, programări. Rezultatul a depășit toate așteptările mele.",
+    "t3Name": "Chris Lee",
+    "t3Content": "Mi-am făcut implanturile aici după ani de căutări. Calitatea și prețul comparativ cu Marea Britanie sunt incredibile.",
+    "t4Name": "Emily Carter",
+    "t4Content": "Medicii au fost extrem de profesioniști și vorbeau engleză perfect. M-am simțit complet în largul meu pe tot parcursul.",
+    "t5Name": "David Kim",
+    "t5Content": "Zâmbetul meu s-a transformat complet. Primesc complimente în fiecare zi și mă bucur enorm că am ales DentLuna.",
+    "t6Name": "Sophia Martinez",
+    "t6Content": "De la prima consultație până la ultima monitorizare, comunicarea a fost excelentă. Recomand cu încredere.",
+    "t7Name": "James Wilson",
+    "t7Content": "Eram emoționat să călătoresc în străinătate pentru tratament dentar, dar DentLuna a făcut totul foarte ușor. Rezultatele sunt superbe.",
+    "t8Name": "Laura Müller",
+    "t8Content": "Servicii absolut de clasă mondială. Clinica este impecabilă, personalul este cald, iar rezultatele vorbesc de la sine.",
+    "t9Name": "Ahmed Hassan",
+    "t9Content": "Am făcut o transformare completă a zâmbetului și am economisit mii față de costurile de acasă. Mi-aș fi dorit să fac asta mai devreme."
+  },
+  "ctaHome": {
+    "tagline": "Ești gata să începi?",
+    "heading": "Începe transformarea zâmbetului tău astăzi",
+    "description": "Obține consultația gratuită și descoperă cea mai bună opțiune de tratament pentru tine.",
+    "ctaBtn": "Începe",
+    "learnMore": "Află mai multe"
+  },
+  "aboutHero": {
+    "label": "Despre Dent Luna",
+    "heading": "Îngrijire dentară premium în Izmir pentru pacienți internaționali",
+    "description": "Te ajutăm să obții un zâmbet sănătos și natural prin tratamente de specialitate și o experiență atent organizată de la început până la sfârșit.",
+    "ctaBtn": "Contactează-ne"
+  },
+  "aboutContent": {
+    "whoWeAre": "CINE SUNTEM",
+    "intro1": "Dent Luna este un furnizor specializat de tratamente dentare avansate pentru pacienți internaționali.",
+    "intro2": "Cu sediul în Izmir, colaborăm cu medici stomatologi cu experiență și clinici moderne pentru a oferi rezultate de înaltă calitate, sigure și estetice.",
+    "mission": "Să facem tratamentul tău dentar în străinătate clar, sigur și fără stres.",
+    "ourApproach": "ABORDAREA NOASTRĂ",
+    "approachText": "Credem că rezultatele excelente apar din planificare corectă și comunicare sinceră.",
+    "processLabel": "Fiecare pacient urmează un proces bine structurat:",
+    "process1": "Evaluare pe baza fotografiilor sau radiografiilor tale",
+    "process2": "Plan de tratament personalizat pregătit de medici stomatologi",
+    "process3": "Explicație clară a procedurilor, duratei și costurilor",
+    "process4": "Programare eficientă pentru a reduce durata șederii",
+    "process5": "Suport după tratament",
+    "processOutro": "Această abordare asigură rezultate previzibile și o experiență fără probleme."
+  },
+  "qualityMaterials": {
+    "heading": "CALITATE ȘI MATERIALE",
+    "text1": "Folosim doar materiale de înaltă calitate de la producători recunoscuți internațional, toate respectând standarde europene și globale stricte.",
+    "text2": "Lucrăm cu branduri dentare de top din Germania, Elveția, Statele Unite și Coreea de Sud, ceea ce ne permite să alegem cea mai potrivită opțiune pentru fiecare pacient.",
+    "text3": "Fiecare material este <bold>complet trasabil</bold>, ceea ce asigură siguranță, consistență și succes pe termen lung."
+  },
+  "whyIzmir": {
+    "heading": "DE CE IZMIR?",
+    "intro": "Izmir este unul dintre cele mai preferate orașe pentru tratamente dentare și oferă:",
+    "item1": "Clinici dentare de clasă mondială, cu tehnologie de ultimă generație.",
+    "item2": "Medici stomatologi foarte bine pregătiți, cu experiență internațională.",
+    "item3": "Opțiuni de tratament accesibile, fără compromisuri privind calitatea.",
+    "item4": "Un oraș vibrant, cu o cultură bogată și priveliști spectaculoase la coastă.",
+    "outro": "Experimentează îngrijire dentară premium într-un oraș care combină excelența medicală cu o experiență de călătorie memorabilă."
+  },
+  "whyChooseUs": {
+    "heading": "DE CE NE ALEG PACIENȚII",
+    "description": "La DentLuna, ne dedicăm oferirii unei îngrijiri dentare excepționale, care combină tehnologia avansată, planuri de tratament personalizate și o abordare empatică. Pacienții ne aleg pentru angajamentul nostru față de sănătatea lor orală, pentru echipa noastră experimentată și pentru mediul primitor care pune pe primul loc confortul și încrederea.",
+    "getStarted": "Începe",
+    "sat": "85%",
+    "satLabel": "Satisfacția pacienților",
+    "patients": "15k+",
+    "patientsLabel": "Pacienți fericiți",
+    "feature1Title": "Echipă de experți",
+    "feature1Desc": "Echipa noastră de profesioniști în stomatologie este foarte calificată și experimentată.",
+    "feature2Title": "Tehnologie de ultimă generație",
+    "feature2Desc": "Folosim cele mai noi tehnologii dentare pentru a oferi cea mai bună îngrijire.",
+    "feature3Title": "Mediu confortabil",
+    "feature3Desc": "Clinicile noastre sunt concepute pentru ca pacienții să se simtă în largul lor.",
+    "feature4Title": "Îngrijire personalizată",
+    "feature4Desc": "Oferim planuri individualizate de tratament pentru nevoile fiecărui pacient.",
+    "feature5Title": "Rapid și eficient",
+    "feature5Desc": "Oferim tratamente dentare eficiente și la timp.",
+    "feature6Title": "Sigur și de încredere",
+    "feature6Desc": "Prioritizăm siguranța pacienților și respectăm cele mai înalte standarde de îngrijire dentară.",
+    "feature7Title": "Suport pe termen lung",
+    "feature7Desc": "Oferim îngrijire ulterioară și suport complet pentru sănătatea dentară pe termen lung.",
+    "feature8Title": "Suport lingvistic",
+    "feature8Desc": "Oferim suport multilingv pentru pacienți din medii diverse."
+  },
+  "contact": {
+    "title": "Hai să vorbim",
+    "subtitle": "Ai un proiect în minte? Ne-ar plăcea să auzim de la tine.",
+    "sendMessage": "Trimite un mesaj",
+    "success": "Mulțumim! Mesajul tău a fost trimis.",
+    "nameLabel": "Nume",
+    "nameRequired": "Numele este obligatoriu",
+    "namePlaceholder": "Numele tău",
+    "emailLabel": "E-mail",
+    "emailRequired": "E-mailul este obligatoriu",
+    "emailInvalid": "Te rugăm să introduci o adresă de e-mail validă",
+    "emailPlaceholder": "tu@exemplu.com",
+    "phoneLabel": "Telefon",
+    "phonePlaceholder": "+40 700 000 000",
+    "messageLabel": "Mesaj",
+    "messageRequired": "Mesajul este obligatoriu",
+    "messagePlaceholder": "Spune-ne despre proiectul tău...",
+    "sendBtn": "Trimite mesajul",
+    "sendingBtn": "Se trimite...",
+    "errorMsg": "A apărut o eroare. Te rugăm să încerci din nou."
+  },
+  "consultationForm": {
+    "heading": "Completează formularul pentru o consultație gratuită",
+    "subheading": "Echipa noastră te va contacta în termen de 24 de ore.",
+    "success": "Mulțumim! Te vom contacta în curând.",
+    "nameLabel": "Introdu numele complet",
+    "nameRequired": "Numele complet este obligatoriu",
+    "namePlaceholder": "James Harber",
+    "phoneLabel": "Introdu numărul de telefon (cu prefixul țării)",
+    "phoneRequired": "Numărul de telefon este obligatoriu",
+    "phonePlaceholder": "+40 712 345 678",
+    "emailLabel": "Introdu adresa de e-mail",
+    "emailInvalid": "Te rugăm să introduci o adresă de e-mail validă",
+    "emailPlaceholder": "jamesharber@domain.com",
+    "categoryLabel": "Alege categoria",
+    "categoryPlaceholder": "Selectează",
+    "promoLabel": "Cod promoțional",
+    "promoPlaceholder": "",
+    "submitBtn": "Trimite",
+    "sendingBtn": "Se trimite...",
+    "errorMsg": "A apărut o eroare. Te rugăm să încerci din nou."
+  },
+  "footer": {
+    "description": "La Dent Luna, ne angajăm să oferim îngrijire dentară excepțională, cu o abordare personală. Echipa noastră experimentată de medici și personal lucrează împreună pentru a crea un mediu primitor în care zâmbetul tău poate prospera.",
+    "quickLinks": "Linkuri rapide",
+    "about": "Despre",
+    "contact": "Contact",
+    "doctors": "Medici",
+    "resources": "Resurse",
+    "blog": "Blog",
+    "faqs": "Întrebări frecvente",
+    "gallery": "Galerie",
+    "services": "Servicii",
+    "hollywoodSmile": "Hollywood Smile",
+    "allOns": "All-on-4 / All-on-6",
+    "dentalImplants": "Implanturi dentare",
+    "crowns": "Coroane",
+    "termsAndConditions": "Termeni și condiții",
+    "privacyPolicy": "Politica de confidențialitate",
+    "copyright": "© {year} Dent Luna. Toate drepturile rezervate."
+  }
+}

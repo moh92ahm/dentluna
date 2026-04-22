@@ -112,14 +112,19 @@ export interface Config {
   db: {
     defaultIDType: number;
   };
-  fallbackLocale: ('false' | 'none' | 'null') | false | null | ('en' | 'de' | 'fr') | ('en' | 'de' | 'fr')[];
+  fallbackLocale:
+    | ('false' | 'none' | 'null')
+    | false
+    | null
+    | ('en' | 'de' | 'fr' | 'tr' | 'ro' | 'ru' | 'uk' | 'pl')
+    | ('en' | 'de' | 'fr' | 'tr' | 'ro' | 'ru' | 'uk' | 'pl')[];
   globals: {
     'crm-settings': CrmSetting;
   };
   globalsSelect: {
     'crm-settings': CrmSettingsSelect<false> | CrmSettingsSelect<true>;
   };
-  locale: 'en' | 'de' | 'fr';
+  locale: 'en' | 'de' | 'fr' | 'tr' | 'ro' | 'ru' | 'uk' | 'pl';
   widgets: {
     collections: CollectionsWidget;
   };
@@ -224,7 +229,6 @@ export interface Media {
     };
     [k: string]: unknown;
   } | null;
-  prefix?: string | null;
   folder?: (number | null) | FolderInterface;
   updatedAt: string;
   createdAt: string;
@@ -924,7 +928,6 @@ export interface UsersSelect<T extends boolean = true> {
 export interface MediaSelect<T extends boolean = true> {
   alt?: T;
   caption?: T;
-  prefix?: T;
   folder?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -1102,7 +1105,7 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
 export interface CrmSetting {
   id: number;
   /**
-   * The URL to send form submissions to (e.g. https://api.elaramedical.com/api/v1/site/webhook/)
+   * The URL to send form submissions to
    */
   webhookUrl: string;
   /**

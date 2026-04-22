@@ -23,6 +23,11 @@ export const locales = [
   { code: 'en', label: 'English', shortLabel: 'EN', flag: '🇬🇧' },
   { code: 'de', label: 'Deutsch', shortLabel: 'DE', flag: '🇩🇪' },
   { code: 'fr', label: 'Français', shortLabel: 'FR', flag: '🇫🇷' },
+  { code: 'tr', label: 'Türkçe', shortLabel: 'TR', flag: '🇹🇷' },
+  { code: 'ro', label: 'Română', shortLabel: 'RO', flag: '🇷🇴' },
+  { code: 'ru', label: 'Русский', shortLabel: 'RU', flag: '🇷🇺' },
+  { code: 'uk', label: 'Українська', shortLabel: 'UK', flag: '🇺🇦' },
+  { code: 'pl', label: 'Polski', shortLabel: 'PL', flag: '🇵🇱' },
 ] as const satisfies readonly LocaleEntry[]
 
 /** Just the codes, e.g. ['en', 'de', 'fr'] */
