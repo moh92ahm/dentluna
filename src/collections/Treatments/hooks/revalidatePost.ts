@@ -13,6 +13,7 @@ export const revalidatePost: CollectionAfterChangeHook<Treatment> = ({
 }) => {
   if (!context.disableRevalidate) {
     try {
+      revalidateTag('treatments_list', 'max')
       revalidatePath(TREATMENTS_LIST_PATH)
 
       if (doc._status === 'published') {
@@ -47,6 +48,7 @@ export const revalidateDelete: CollectionAfterDeleteHook<Treatment> = ({
   if (!context.disableRevalidate) {
     const path = `/treatments/${doc?.slug}`
 
+    revalidateTag('treatments_list', 'max')
     revalidatePath(TREATMENTS_LIST_PATH)
     revalidatePath(path)
     revalidateTag('treatments-sitemap', 'max')

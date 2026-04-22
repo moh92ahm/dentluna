@@ -35,7 +35,7 @@ const TreatmentsArchive = async ({ className, locale = defaultLocale }: Treatmen
   return (
     <div className={cn('grid gap-6 md:grid-cols-2 lg:grid-cols-3', className)}>
       {treatments.map((treatment) => (
-        <div key={treatment.id} className="flex flex-col">
+        <div key={treatment.id} className="flex flex-col border rounded-lg bg-muted/50 transition-all hover:shadow-lg">
           <div className="relative aspect-video overflow-hidden rounded-lg">
             <Image
               src={getImage(treatment)}
@@ -45,15 +45,15 @@ const TreatmentsArchive = async ({ className, locale = defaultLocale }: Treatmen
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
           </div>
-          <div className="flex h-full flex-col justify-between p-4">
-            <h2 className="mb-5 text-xl font-semibold">{treatment.title}</h2>
-            <p className="mb-5 text-sm text-muted-foreground">
+          <div className="flex flex-col justify-between gap-4 p-4">
+            <h2 className="text-xl font-semibold">{treatment.title}</h2>
+            <p className="text-sm text-muted-foreground">
               {treatment.meta?.description || 'Discover this treatment option'}
             </p>
             <div className="flex justify-between gap-6 text-sm">
               <Link
                 href={`/treatments/${treatment.slug}` as any}
-                className="flex items-center gap-1"
+                className="flex items-center gap-1 hover:underline"
               >
                 Read more
                 <ChevronRight className="h-full w-3" />
