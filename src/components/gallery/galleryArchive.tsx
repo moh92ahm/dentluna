@@ -43,7 +43,7 @@ export const GalleryArchive = async ({
     if (image && typeof image === 'object' && 'url' in image) {
       return getMediaUrl((image as any).url)
     }
-    return '/website-template-OG.webp'
+    return 'https://placehold.net/default.png'
   }
 
   // Build comparison items

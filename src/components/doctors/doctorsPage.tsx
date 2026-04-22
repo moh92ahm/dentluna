@@ -28,7 +28,7 @@ const DoctorsPage = async ({ className, locale = defaultLocale }: DoctorsPagePro
     ) {
       return getMediaUrl((doctor.profileImage as any).url)
     }
-    return '/website-template-OG.webp'
+    return 'https://placehold.net/default.png'
   }
 
   return (

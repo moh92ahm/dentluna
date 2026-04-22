@@ -67,6 +67,11 @@ const nextConfig: NextConfig = {
         hostname: 'deifkwefumgah.cloudfront.net',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'placehold.net',
+        pathname: '/**',
+      },
     ],
   },
   webpack: (webpackConfig) => {

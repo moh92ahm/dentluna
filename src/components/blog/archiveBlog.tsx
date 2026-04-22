@@ -40,7 +40,7 @@ const ArchiveBlog = async ({ className, locale = defaultLocale }: ArchiveBlogPro
     if (post.heroImage && typeof post.heroImage === 'object' && 'url' in post.heroImage) {
       return getMediaUrl((post.heroImage as any).url)
     }
-    return '/website-template-OG.webp'
+    return 'https://placehold.net/default.png'
   }
 
   return (

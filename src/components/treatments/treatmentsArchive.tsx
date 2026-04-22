@@ -14,7 +14,7 @@ interface TreatmentsArchiveProps {
 }
 
 const TreatmentsArchive = async ({ className, locale = defaultLocale }: TreatmentsArchiveProps) => {
-  const cachedGetTreatments = getCachedDocuments('treatments', 9, 0, locale)
+  const cachedGetTreatments = getCachedDocuments('treatments', 9, 1, locale)
   const treatments = (await cachedGetTreatments()) as Treatment[]
 
   if (!treatments || treatments.length === 0) {
@@ -29,7 +29,7 @@ const TreatmentsArchive = async ({ className, locale = defaultLocale }: Treatmen
     ) {
       return getMediaUrl((treatment.heroImage as any).url)
     }
-    return '/website-template-OG.webp'
+    return 'https://placehold.net/default.png'
   }
 
   return (
