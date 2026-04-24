@@ -66,6 +66,88 @@
     "metaTitle": "Kontakt – Dent Luna",
     "metaDesc": "Kontaktieren Sie Dent Luna. Vereinbaren Sie eine kostenlose Beratung oder stellen Sie uns Fragen zu Zahnbehandlungen in Izmir, Türkei."
   },
+  "privacyPolicy": {
+    "eyebrow": "Rechtliches",
+    "title": "Datenschutzerklärung",
+    "intro": "Diese Datenschutzerklärung erläutert, wie Dent Luna Informationen erhebt, verwendet, speichert und schützt, wenn Sie unsere Website besuchen oder uns bezüglich zahnärztlicher Leistungen kontaktieren.",
+    "updatedAt": "Zuletzt aktualisiert: 24. April 2026",
+    "metaTitle": "Datenschutzerklärung – Dent Luna",
+    "metaDesc": "Erfahren Sie, wie Dent Luna personenbezogene Daten von Website-Besuchern und Patienten erhebt, nutzt, speichert und schützt.",
+    "sections": {
+      "collect": {
+        "heading": "Welche Informationen wir erfassen",
+        "p1": "Dent Luna kann personenbezogene Informationen erfassen, die Sie uns über Kontaktformulare, Beratungsanfragen, WhatsApp, E-Mail oder andere direkte Kommunikationskanäle freiwillig mitteilen.",
+        "i1": "Ihren Namen, Ihre Telefonnummer und Ihre E-Mail-Adresse",
+        "i2": "Behandlungsinteressen, Reisepräferenzen und Termindetails",
+        "i3": "Medizinische oder zahnmedizinische Informationen, die Sie freiwillig für Beratungszwecke bereitstellen",
+        "i4": "Grundlegende Website-Nutzungsdaten wie Gerät, Browser und Analyseinformationen"
+      },
+      "use": {
+        "heading": "Wie wir Ihre Informationen verwenden",
+        "p1": "Wir verwenden die erhobenen Informationen, um auf Ihre Anfragen zu antworten, Beratungen zu organisieren, Behandlungsplanungen zu koordinieren und unsere Dienstleistungen zu verbessern.",
+        "i1": "Um Sie bezüglich Ihrer Anfrage oder Ihres Termins zu kontaktieren",
+        "i2": "Um Behandlungsempfehlungen und Kostenvoranschläge vorzubereiten",
+        "i3": "Um den Website-Betrieb, Analysen und Servicequalität zu verwalten",
+        "i4": "Um rechtliche, steuerliche, medizinische oder regulatorische Verpflichtungen zu erfüllen"
+      },
+      "share": {
+        "heading": "Weitergabe von Daten",
+        "p1": "Wir verkaufen Ihre personenbezogenen Daten nicht. Wir geben Informationen nur weiter, wenn dies für den Geschäftsbetrieb und die von Ihnen angeforderten Leistungen erforderlich ist.",
+        "i1": "An Zahnärzte, Kliniken, Labore oder Betreuungskoordinatoren, die an Ihrer Behandlung beteiligt sind",
+        "i2": "An vertrauenswürdige Dienstleister wie CRM-, Hosting-, Analyse- oder E-Mail-Plattformen",
+        "i3": "An Behörden, wenn eine Offenlegung gesetzlich erforderlich ist oder rechtliche Ansprüche geschützt werden müssen"
+      },
+      "retain": {
+        "heading": "Datenspeicherung und Sicherheit",
+        "p1": "Wir speichern personenbezogene Daten nur so lange, wie es für Beratungsmanagement, Behandlungskoordination, gesetzliche Pflichten und Geschäftsunterlagen vernünftigerweise erforderlich ist.",
+        "p2": "Dent Luna setzt angemessene technische und organisatorische Maßnahmen ein, um Ihre Informationen zu schützen. Dennoch kann keine Speicher- oder Übertragungsmethode als vollständig sicher garantiert werden."
+      },
+      "rights": {
+        "heading": "Ihre Rechte",
+        "p1": "Je nach Ihrem Standort haben Sie möglicherweise das Recht, Zugang zu Ihren personenbezogenen Daten zu verlangen, diese berichtigen oder löschen zu lassen oder bestimmten Nutzungen zu widersprechen.",
+        "p2": "Wenn Sie eine datenschutzbezogene Anfrage stellen möchten, kontaktieren Sie uns bitte über die auf dieser Website veröffentlichten Kontaktdaten."
+      }
+    }
+  },
+  "termsAndConditions": {
+    "eyebrow": "Rechtliches",
+    "title": "Allgemeine Geschäftsbedingungen",
+    "intro": "Diese Allgemeinen Geschäftsbedingungen regeln Ihre Nutzung der Dent Luna Website und Ihre Interaktion mit uns über Online-Formulare, Anfragen und Beratungswünsche.",
+    "updatedAt": "Zuletzt aktualisiert: 24. April 2026",
+    "metaTitle": "Allgemeine Geschäftsbedingungen – Dent Luna",
+    "metaDesc": "Prüfen Sie die Bedingungen, die die Nutzung der Dent Luna Website und Serviceanfragen regeln.",
+    "sections": {
+      "website": {
+        "heading": "Nutzung dieser Website",
+        "p1": "Diese Website dient der allgemeinen Information über Dent Luna, unsere Leistungen und die Kontaktaufnahme für potenzielle Patienten. Die Inhalte dieser Website stellen keine medizinische Beratung, Diagnose oder Garantie für ein Behandlungsergebnis dar.",
+        "p2": "Mit der Nutzung dieser Website erklären Sie sich damit einverstanden, sie rechtmäßig zu verwenden und ihren Betrieb, ihre Sicherheit oder Verfügbarkeit nicht zu beeinträchtigen."
+      },
+      "consultation": {
+        "heading": "Beratungen und Behandlungsinformationen",
+        "p1": "Erste Informationen, Behandlungsvorschläge und Preisangaben, die über die Website, Formulare, E-Mail oder Nachrichtenplattformen geteilt werden, dienen nur der Orientierung und können sich nach klinischer Prüfung, Bildgebung, Untersuchung oder aktualisierter Behandlungsplanung ändern.",
+        "i1": "Behandlungspläne hängen von der medizinischen Eignung und professionellen Beurteilung ab",
+        "i2": "Angegebene Preise können sich ändern, wenn sich Umfang, Materialien oder Behandlungszeitraum ändern",
+        "i3": "Reise-, Unterkunfts- und Behandlungstermine unterliegen der Verfügbarkeit"
+      },
+      "thirdParty": {
+        "heading": "Termine, Reisen und Dritte",
+        "p1": "Wenn Dent Luna bei der Koordination von Terminen, Reiseplanung, Transfers, Unterkünften oder ähnlichen Leistungen unterstützt, können daran Drittanbieter beteiligt sein. Dent Luna ist nicht verantwortlich für Handlungen, Unterlassungen, Verzögerungen, Preise oder Richtlinien unabhängiger Drittanbieter."
+      },
+      "ip": {
+        "heading": "Geistiges Eigentum",
+        "p1": "Soweit nicht anders angegeben, sind Texte, Marken, Designelemente und Inhalte dieser Website Eigentum von Dent Luna oder werden mit Genehmigung verwendet. Sie dürfen keinen Teil der Website ohne vorherige schriftliche Zustimmung vervielfältigen, erneut veröffentlichen, verbreiten oder kommerziell nutzen."
+      },
+      "liability": {
+        "heading": "Haftung",
+        "p1": "Dent Luna bemüht sich in angemessenem Umfang, die Informationen auf der Website korrekt und aktuell zu halten, übernimmt jedoch keine Gewähr für Vollständigkeit, Verfügbarkeit oder Fehlerfreiheit.",
+        "p2": "Soweit gesetzlich zulässig, haftet Dent Luna nicht für indirekte, zufällige oder Folgeschäden, die aus der Nutzung dieser Website oder dem Vertrauen auf deren Inhalte entstehen."
+      },
+      "changes": {
+        "heading": "Änderungen dieser Bedingungen",
+        "p1": "Wir können diese Allgemeinen Geschäftsbedingungen von Zeit zu Zeit aktualisieren, um geschäftliche, rechtliche oder betriebliche Änderungen zu berücksichtigen. Wenn Sie die Website nach Veröffentlichung der Änderungen weiterhin nutzen, akzeptieren Sie die aktualisierten Bedingungen."
+      }
+    }
+  },
   "heroCarousel": {
     "line1": "Premium",
     "line2": "Zahn",

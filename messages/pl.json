@@ -66,6 +66,88 @@
     "metaTitle": "Skontaktuj się z nami - Dent Luna",
     "metaDesc": "Skontaktuj się z Dent Luna. Umów bezpłatną konsultację lub zapytaj o wszystko, co dotyczy leczenia stomatologicznego w Izmirze w Turcji."
   },
+  "privacyPolicy": {
+    "eyebrow": "Informacje prawne",
+    "title": "Polityka prywatności",
+    "intro": "Niniejsza Polityka prywatności wyjaśnia, w jaki sposób Dent Luna zbiera, wykorzystuje, przechowuje i chroni informacje, gdy odwiedzasz naszą stronę internetową lub kontaktujesz się z nami w sprawie usług stomatologicznych.",
+    "updatedAt": "Ostatnia aktualizacja: 24 kwietnia 2026 r.",
+    "metaTitle": "Polityka prywatności - Dent Luna",
+    "metaDesc": "Dowiedz się, jak Dent Luna zbiera, wykorzystuje, przechowuje i chroni dane osobowe odwiedzających stronę i pacjentów.",
+    "sections": {
+      "collect": {
+        "heading": "Jakie dane zbieramy",
+        "p1": "Dent Luna może zbierać dane osobowe, które dobrowolnie przekazujesz nam poprzez formularze kontaktowe, prośby o konsultację, WhatsApp, e-mail lub inne bezpośrednie kanały komunikacji.",
+        "i1": "Twoje imię i nazwisko, numer telefonu oraz adres e-mail",
+        "i2": "Zainteresowania dotyczące leczenia, preferencje podróży i szczegóły wizyt",
+        "i3": "Informacje medyczne lub stomatologiczne, które dobrowolnie przekazujesz w celu konsultacji",
+        "i4": "Podstawowe dane dotyczące korzystania ze strony, takie jak urządzenie, przeglądarka i informacje analityczne"
+      },
+      "use": {
+        "heading": "Jak wykorzystujemy Twoje dane",
+        "p1": "Wykorzystujemy zebrane informacje, aby odpowiadać na Twoje zapytania, organizować konsultacje, koordynować plany leczenia i ulepszać nasze usługi.",
+        "i1": "Aby skontaktować się z Tobą w sprawie Twojego zapytania lub wizyty",
+        "i2": "Aby przygotować rekomendacje leczenia i wyceny",
+        "i3": "Aby zarządzać działaniem strony, analityką i jakością usług",
+        "i4": "Aby spełniać obowiązujące wymogi prawne, podatkowe, medyczne lub regulacyjne"
+      },
+      "share": {
+        "heading": "Udostępnianie danych",
+        "p1": "Nie sprzedajemy Twoich danych osobowych. Udostępniamy informacje wyłącznie wtedy, gdy jest to niezbędne do prowadzenia działalności i realizacji usług, o które prosisz.",
+        "i1": "Dentystom, klinikom, laboratoriom lub koordynatorom zaangażowanym w Twoje leczenie",
+        "i2": "Zaufanym dostawcom usług, takim jak platformy CRM, hostingowe, analityczne lub e-mailowe",
+        "i3": "Organom państwowym, jeśli ujawnienie jest wymagane prawem lub konieczne dla ochrony praw"
+      },
+      "retain": {
+        "heading": "Przechowywanie i bezpieczeństwo danych",
+        "p1": "Przechowujemy dane osobowe tylko tak długo, jak jest to racjonalnie konieczne do zarządzania konsultacjami, koordynacji leczenia, spełniania obowiązków prawnych i prowadzenia dokumentacji firmowej.",
+        "p2": "Dent Luna stosuje rozsądne środki techniczne i organizacyjne w celu ochrony Twoich danych, jednak żadna metoda przechowywania ani przesyłania danych nie może być uznana za całkowicie bezpieczną."
+      },
+      "rights": {
+        "heading": "Twoje prawa",
+        "p1": "W zależności od miejsca zamieszkania możesz mieć prawo do żądania dostępu do swoich danych osobowych, ich poprawienia lub usunięcia, a także do sprzeciwu wobec określonych sposobów ich wykorzystania.",
+        "p2": "Aby złożyć wniosek dotyczący prywatności, skontaktuj się z nami bezpośrednio, korzystając z danych kontaktowych opublikowanych na tej stronie."
+      }
+    }
+  },
+  "termsAndConditions": {
+    "eyebrow": "Informacje prawne",
+    "title": "Regulamin i warunki",
+    "intro": "Niniejszy Regulamin i warunki określają zasady korzystania ze strony Dent Luna oraz Twojej interakcji z nami poprzez formularze online, zapytania i prośby o konsultację.",
+    "updatedAt": "Ostatnia aktualizacja: 24 kwietnia 2026 r.",
+    "metaTitle": "Regulamin i warunki - Dent Luna",
+    "metaDesc": "Zapoznaj się z warunkami regulującymi korzystanie ze strony Dent Luna i składanie zapytań o usługi.",
+    "sections": {
+      "website": {
+        "heading": "Korzystanie z tej strony",
+        "p1": "Ta strona internetowa służy do przekazywania ogólnych informacji o Dent Luna, naszych usługach oraz sposobach kontaktu dla potencjalnych pacjentów. Treści zamieszczone na stronie nie stanowią porady medycznej, diagnozy ani gwarancji rezultatu leczenia.",
+        "p2": "Korzystając z tej strony, zgadzasz się używać jej zgodnie z prawem i nie zakłócać jej działania, bezpieczeństwa ani dostępności."
+      },
+      "consultation": {
+        "heading": "Konsultacje i informacje o leczeniu",
+        "p1": "Wstępne informacje, sugestie leczenia i orientacyjne ceny przekazywane za pośrednictwem strony, formularzy, e-maila lub komunikatorów mają charakter informacyjny i mogą ulec zmianie po ocenie klinicznej, badaniach obrazowych, badaniu lub aktualizacji planu leczenia.",
+        "i1": "Plany leczenia zależą od kwalifikacji medycznej i profesjonalnej oceny",
+        "i2": "Podane ceny mogą ulec zmianie, jeśli zmieni się zakres przypadku, materiały lub harmonogram leczenia",
+        "i3": "Podróże, zakwaterowanie i terminy leczenia pozostają zależne od dostępności"
+      },
+      "thirdParty": {
+        "heading": "Wizyty, podróże i strony trzecie",
+        "p1": "Jeśli Dent Luna pomaga koordynować wizyty, planowanie podróży, transfery, zakwaterowanie lub usługi powiązane, takie ustalenia mogą obejmować zewnętrznych dostawców. Dent Luna nie ponosi odpowiedzialności za działania, zaniechania, opóźnienia, ceny ani zasady niezależnych podmiotów trzecich."
+      },
+      "ip": {
+        "heading": "Własność intelektualna",
+        "p1": "O ile nie wskazano inaczej, teksty, elementy marki, projekt graficzny i treści na tej stronie stanowią własność Dent Luna lub są wykorzystywane za zgodą. Nie wolno reprodukować, ponownie publikować, rozpowszechniać ani komercyjnie wykorzystywać żadnej części strony bez uprzedniej pisemnej zgody."
+      },
+      "liability": {
+        "heading": "Odpowiedzialność",
+        "p1": "Dent Luna dokłada rozsądnych starań, aby informacje na stronie były dokładne i aktualne, ale nie gwarantuje ich kompletności, dostępności ani braku błędów.",
+        "p2": "W maksymalnym zakresie dozwolonym przez prawo Dent Luna nie ponosi odpowiedzialności za pośrednie, incydentalne ani następcze straty wynikające z korzystania z tej strony lub polegania na jej treściach."
+      },
+      "changes": {
+        "heading": "Zmiany niniejszych warunków",
+        "p1": "Możemy okresowo aktualizować niniejszy Regulamin i warunki, aby odzwierciedlić zmiany biznesowe, prawne lub operacyjne. Dalsze korzystanie ze strony po opublikowaniu zmian oznacza akceptację zaktualizowanych warunków."
+      }
+    }
+  },
   "heroCarousel": {
     "line1": "Premium",
     "line2": "Leczenie",

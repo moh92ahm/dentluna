@@ -120,9 +120,11 @@ export interface Config {
     | ('en' | 'de' | 'fr' | 'ro' | 'ru' | 'uk' | 'pl')[];
   globals: {
     'crm-settings': CrmSetting;
+    'footer-settings': FooterSetting;
   };
   globalsSelect: {
     'crm-settings': CrmSettingsSelect<false> | CrmSettingsSelect<true>;
+    'footer-settings': FooterSettingsSelect<false> | FooterSettingsSelect<true>;
   };
   locale: 'en' | 'de' | 'fr' | 'ro' | 'ru' | 'uk' | 'pl';
   widgets: {
@@ -1121,12 +1123,115 @@ export interface CrmSetting {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "footer-settings".
+ */
+export interface FooterSetting {
+  id: number;
+  /**
+   * Short description shown below the logo
+   */
+  description?: string | null;
+  socialLinks?:
+    | {
+        platform: 'instagram' | 'facebook' | 'linkedin' | 'twitter' | 'youtube' | 'tiktok';
+        url: string;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Add up to 3 link column sections (shown in a 3-column grid)
+   */
+  linkSections?:
+    | {
+        heading: string;
+        links?:
+          | {
+              linkType: 'custom' | 'treatment' | 'post';
+              /**
+               * Required for Custom URL. For Treatment/Post this overrides the document title.
+               */
+              label?: string | null;
+              /**
+               * Use /about for internal pages or https://... for external links.
+               */
+              url?: string | null;
+              treatment?: (number | null) | Treatment;
+              post?: (number | null) | Post;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Use {year} as a placeholder for the current year
+   */
+  copyrightText?: string | null;
+  /**
+   * Links shown at the bottom right (e.g. Terms & Conditions, Privacy Policy)
+   */
+  legalLinks?:
+    | {
+        label: string;
+        /**
+         * Use /privacy-policy for internal pages or https://... for external links.
+         */
+        url: string;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "crm-settings_select".
  */
 export interface CrmSettingsSelect<T extends boolean = true> {
   webhookUrl?: T;
   fromWebsite?: T;
   enabled?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "footer-settings_select".
+ */
+export interface FooterSettingsSelect<T extends boolean = true> {
+  description?: T;
+  socialLinks?:
+    | T
+    | {
+        platform?: T;
+        url?: T;
+        id?: T;
+      };
+  linkSections?:
+    | T
+    | {
+        heading?: T;
+        links?:
+          | T
+          | {
+              linkType?: T;
+              label?: T;
+              url?: T;
+              treatment?: T;
+              post?: T;
+              id?: T;
+            };
+        id?: T;
+      };
+  copyrightText?: T;
+  legalLinks?:
+    | T
+    | {
+        label?: T;
+        url?: T;
+        id?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

@@ -66,6 +66,88 @@
     "metaTitle": "Contactez-nous – Dent Luna",
     "metaDesc": "Contactez Dent Luna. Réservez une consultation gratuite ou posez-nous toutes vos questions sur les traitements dentaires à Izmir, Turquie."
   },
+  "privacyPolicy": {
+    "eyebrow": "Mentions légales",
+    "title": "Politique de confidentialité",
+    "intro": "Cette politique de confidentialité explique comment Dent Luna collecte, utilise, stocke et protège les informations lorsque vous visitez notre site web ou nous contactez au sujet de soins dentaires.",
+    "updatedAt": "Dernière mise à jour : 24 avril 2026",
+    "metaTitle": "Politique de confidentialité – Dent Luna",
+    "metaDesc": "Découvrez comment Dent Luna collecte, utilise, stocke et protège les données personnelles des visiteurs du site et des patients.",
+    "sections": {
+      "collect": {
+        "heading": "Informations que nous collectons",
+        "p1": "Dent Luna peut collecter des informations personnelles que vous choisissez de partager avec nous via les formulaires de contact, les demandes de consultation, WhatsApp, e-mail ou d'autres canaux de communication directe.",
+        "i1": "Votre nom, numéro de téléphone et adresse e-mail",
+        "i2": "Vos intérêts en matière de traitement, préférences de voyage et détails de rendez-vous",
+        "i3": "Les informations médicales ou dentaires que vous fournissez volontairement à des fins de consultation",
+        "i4": "Des données de base sur l'utilisation du site telles que l'appareil, le navigateur et les données analytiques"
+      },
+      "use": {
+        "heading": "Comment nous utilisons vos informations",
+        "p1": "Nous utilisons les informations collectées pour répondre à vos demandes, organiser des consultations, coordonner les plans de traitement et améliorer nos services.",
+        "i1": "Pour vous contacter à propos de votre demande ou rendez-vous",
+        "i2": "Pour préparer des recommandations de traitement et des devis",
+        "i3": "Pour gérer l'exploitation du site, les analyses et la qualité du service",
+        "i4": "Pour respecter les obligations légales, fiscales, médicales ou réglementaires applicables"
+      },
+      "share": {
+        "heading": "Partage des données",
+        "p1": "Nous ne vendons pas vos données personnelles. Nous partageons uniquement les informations lorsque cela est nécessaire au fonctionnement de l'activité et à la prestation des services que vous avez demandés.",
+        "i1": "Avec les dentistes, cliniques, laboratoires ou coordinateurs de soins impliqués dans votre parcours de traitement",
+        "i2": "Avec des prestataires de confiance tels que les plateformes CRM, d'hébergement, d'analyse ou d'e-mail",
+        "i3": "Avec les autorités lorsque la divulgation est requise par la loi ou pour protéger des droits légaux"
+      },
+      "retain": {
+        "heading": "Conservation et sécurité des données",
+        "p1": "Nous conservons les informations personnelles uniquement pendant la durée raisonnablement nécessaire à la gestion des consultations, à la coordination des traitements, au respect des obligations légales et à la tenue des dossiers de l'entreprise.",
+        "p2": "Dent Luna applique des mesures techniques et organisationnelles raisonnables pour protéger vos informations, mais aucun mode de stockage ou de transmission ne peut être garanti comme totalement sécurisé."
+      },
+      "rights": {
+        "heading": "Vos droits",
+        "p1": "Selon votre lieu de résidence, vous pouvez avoir le droit de demander l'accès à vos données personnelles, leur rectification ou leur suppression, ou de vous opposer à certaines utilisations de ces données.",
+        "p2": "Pour effectuer une demande liée à la confidentialité, veuillez nous contacter directement via les coordonnées publiées sur ce site web."
+      }
+    }
+  },
+  "termsAndConditions": {
+    "eyebrow": "Mentions légales",
+    "title": "Conditions générales",
+    "intro": "Ces conditions générales régissent votre utilisation du site web Dent Luna ainsi que vos interactions avec nous via les formulaires en ligne, les demandes de renseignements et les demandes de consultation.",
+    "updatedAt": "Dernière mise à jour : 24 avril 2026",
+    "metaTitle": "Conditions générales – Dent Luna",
+    "metaDesc": "Consultez les conditions qui régissent l'utilisation du site web Dent Luna et les demandes de services.",
+    "sections": {
+      "website": {
+        "heading": "Utilisation de ce site web",
+        "p1": "Ce site web fournit des informations générales sur Dent Luna, nos services et la manière dont les patients potentiels peuvent nous contacter. Son contenu ne constitue ni un avis médical, ni un diagnostic, ni une garantie de résultat de traitement.",
+        "p2": "En utilisant ce site web, vous acceptez de l'utiliser légalement et de ne pas perturber son fonctionnement, sa sécurité ou sa disponibilité."
+      },
+      "consultation": {
+        "heading": "Consultations et informations sur les traitements",
+        "p1": "Les premières informations, suggestions de traitement et estimations de prix partagées via le site web, les formulaires, l'e-mail ou les plateformes de messagerie sont indicatives et peuvent évoluer après examen clinique, imagerie, examen ou mise à jour du plan de traitement.",
+        "i1": "Les plans de traitement dépendent de l'adéquation médicale et de l'évaluation professionnelle",
+        "i2": "Les prix communiqués peuvent changer si le périmètre du cas, les matériaux ou le calendrier du traitement évoluent",
+        "i3": "Les voyages, hébergements et calendriers de traitement restent soumis à disponibilité"
+      },
+      "thirdParty": {
+        "heading": "Rendez-vous, voyages et tiers",
+        "p1": "Lorsque Dent Luna aide à coordonner les rendez-vous, les déplacements, les transferts, l'hébergement ou des services connexes, ces arrangements peuvent impliquer des prestataires tiers. Dent Luna n'est pas responsable des actes, omissions, retards, tarifs ou politiques des tiers indépendants."
+      },
+      "ip": {
+        "heading": "Propriété intellectuelle",
+        "p1": "Sauf indication contraire, les textes, éléments de marque, éléments de design et contenus de ce site web appartiennent à Dent Luna ou sont utilisés avec autorisation. Vous ne pouvez reproduire, republier, distribuer ou exploiter commercialement une partie du site sans autorisation écrite préalable."
+      },
+      "liability": {
+        "heading": "Responsabilité",
+        "p1": "Dent Luna déploie des efforts raisonnables pour maintenir les informations du site web exactes et à jour, mais ne garantit ni leur exhaustivité, ni leur disponibilité, ni l'absence d'erreurs.",
+        "p2": "Dans toute la mesure permise par la loi, Dent Luna n'est pas responsable des pertes indirectes, accessoires ou consécutives résultant de l'utilisation de ce site web ou de la confiance accordée à son contenu."
+      },
+      "changes": {
+        "heading": "Modification des présentes conditions",
+        "p1": "Nous pouvons mettre à jour ces conditions générales de temps à autre afin de refléter des changements commerciaux, juridiques ou opérationnels. En continuant à utiliser le site après la publication des modifications, vous acceptez les conditions mises à jour."
+      }
+    }
+  },
   "heroCarousel": {
     "line1": "Soins",
     "line2": "Dentaires",

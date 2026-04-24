@@ -66,6 +66,88 @@
     "metaTitle": "Contact Us – Dent Luna",
     "metaDesc": "Get in touch with Dent Luna. Book a free consultation or ask us anything about dental treatments in Izmir, Turkey."
   },
+  "privacyPolicy": {
+    "eyebrow": "Legal",
+    "title": "Privacy Policy",
+    "intro": "This Privacy Policy explains how Dent Luna collects, uses, stores, and protects information when you visit our website or contact us about dental services.",
+    "updatedAt": "Last updated: April 24, 2026",
+    "metaTitle": "Privacy Policy - Dent Luna",
+    "metaDesc": "Read how Dent Luna collects, uses, stores, and protects personal information for website visitors and patients.",
+    "sections": {
+      "collect": {
+        "heading": "Information We Collect",
+        "p1": "Dent Luna may collect personal information that you choose to share with us through contact forms, consultation requests, WhatsApp, email, or other direct communication channels.",
+        "i1": "Your name, phone number, and email address",
+        "i2": "Treatment interests, travel preferences, and appointment details",
+        "i3": "Medical or dental information you voluntarily provide for consultation purposes",
+        "i4": "Basic website usage data such as device, browser, and analytics information"
+      },
+      "use": {
+        "heading": "How We Use Your Information",
+        "p1": "We use the information we collect to respond to your inquiries, organize consultations, coordinate treatment planning, and improve our services.",
+        "i1": "To contact you about your request or appointment",
+        "i2": "To prepare treatment recommendations and quotations",
+        "i3": "To manage website operations, analytics, and service quality",
+        "i4": "To comply with legal, tax, medical, or regulatory obligations where applicable"
+      },
+      "share": {
+        "heading": "Sharing of Data",
+        "p1": "We do not sell your personal data. We only share information when it is necessary to operate the business and deliver the services you requested.",
+        "i1": "With dentists, clinics, laboratories, or care coordinators involved in your treatment journey",
+        "i2": "With trusted service providers such as CRM, hosting, analytics, or email platforms",
+        "i3": "With authorities when disclosure is required by law or to protect legal rights"
+      },
+      "retain": {
+        "heading": "Data Retention and Security",
+        "p1": "We retain personal information only for as long as reasonably necessary for consultation management, treatment coordination, legal compliance, and business recordkeeping.",
+        "p2": "Dent Luna uses reasonable technical and organizational measures to protect your information, but no method of storage or transmission can be guaranteed as completely secure."
+      },
+      "rights": {
+        "heading": "Your Rights",
+        "p1": "Depending on your location, you may have rights to request access to, correction of, or deletion of your personal data, or to object to certain uses of that data.",
+        "p2": "To make a privacy-related request, please contact us directly through the contact details published on this website."
+      }
+    }
+  },
+  "termsAndConditions": {
+    "eyebrow": "Legal",
+    "title": "Terms and Conditions",
+    "intro": "These Terms and Conditions govern your use of the Dent Luna website and your interaction with us through online forms, inquiries, and consultation requests.",
+    "updatedAt": "Last updated: April 24, 2026",
+    "metaTitle": "Terms and Conditions - Dent Luna",
+    "metaDesc": "Review the terms that govern the use of the Dent Luna website and service inquiries.",
+    "sections": {
+      "website": {
+        "heading": "Use of This Website",
+        "p1": "This website is provided for general information about Dent Luna, our services, and how prospective patients may contact us. The content on this website does not constitute medical advice, diagnosis, or a guaranteed treatment outcome.",
+        "p2": "By using this website, you agree to use it lawfully and not to interfere with its operation, security, or availability."
+      },
+      "consultation": {
+        "heading": "Consultations and Treatment Information",
+        "p1": "Initial information, treatment suggestions, and price estimates shared through the website, forms, email, or messaging platforms are indicative only and may change after clinical review, imaging, examination, or updated treatment planning.",
+        "i1": "Treatment plans are subject to medical suitability and professional evaluation",
+        "i2": "Quoted prices may change if case scope, materials, or treatment timing changes",
+        "i3": "Travel, accommodation, and treatment schedules remain subject to availability"
+      },
+      "thirdParty": {
+        "heading": "Appointments, Travel, and Third Parties",
+        "p1": "Where Dent Luna helps coordinate appointments, travel planning, transfers, accommodation, or related services, those arrangements may involve third-party providers. Dent Luna is not responsible for the acts, omissions, delays, pricing, or policies of independent third parties."
+      },
+      "ip": {
+        "heading": "Intellectual Property",
+        "p1": "Unless otherwise stated, the text, branding, design elements, and content on this website are the property of Dent Luna or used with permission. You may not reproduce, republish, distribute, or commercially exploit any part of the site without prior written consent."
+      },
+      "liability": {
+        "heading": "Liability",
+        "p1": "Dent Luna makes reasonable efforts to keep website information accurate and up to date, but does not guarantee completeness, availability, or error-free operation.",
+        "p2": "To the fullest extent permitted by law, Dent Luna is not liable for indirect, incidental, or consequential loss arising from use of this website or reliance on website content."
+      },
+      "changes": {
+        "heading": "Changes to These Terms",
+        "p1": "We may update these Terms and Conditions from time to time to reflect business, legal, or operational changes. Continued use of the website after changes are published means you accept the updated terms."
+      }
+    }
+  },
   "heroCarousel": {
     "line1": "Premium",
     "line2": "Dental",

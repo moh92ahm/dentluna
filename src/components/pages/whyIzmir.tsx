@@ -17,7 +17,7 @@ const WhyIzmir = async ({ className }: WhyIzmirProps) => {
           <div className="order-2 lg:order-1">
             <AspectRatio ratio={1.5} className="overflow-hidden rounded-2xl">
               <video
-                src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/video-8.mp4"
+                src="https://www.youtube.com/watch?v=VbdV9LF5Guk&list=PPSV"
                 className="block size-full object-cover object-center"
                 loop
                 autoPlay

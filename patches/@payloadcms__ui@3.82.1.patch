@@ -1,0 +1,13 @@
+diff --git a/dist/utilities/copyDataFromLocale.js b/dist/utilities/copyDataFromLocale.js
+index a038ed715b50d5245f9deb90343ecebe834248d3..482ad010ba8cd0f1bc864815221dfa071236515d 100644
+--- a/dist/utilities/copyDataFromLocale.js
++++ b/dist/utilities/copyDataFromLocale.js
+@@ -205,7 +205,7 @@ export const copyDataFromLocale = async args => {
+   if (toLocaleData.status === 'rejected') {
+     throw new Error(`Error fetching data from locale "${toLocale}"`);
+   }
+-  const fields = globalSlug ? globals[globalSlug].config.fields : collections[collectionSlug].config.fields;
++  const fields = globalSlug ? payload.config.globals.find(g => g.slug === globalSlug).fields : collections[collectionSlug].config.fields;
+   const fromLocaleDataWithoutID = fromLocaleData.value;
+   const toLocaleDataWithoutID = toLocaleData.value;
+   const dataWithID = overrideData ? fromLocaleDataWithoutID : mergeData(fromLocaleDataWithoutID, toLocaleDataWithoutID, fields, req, false);

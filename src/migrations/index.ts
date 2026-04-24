@@ -3,6 +3,8 @@ import * as migration_20260417_085353_add_faq_collections from './20260417_08535
 import * as migration_20260417_133043_localized from './20260417_133043_localized';
 import * as migration_20260420_142342 from './20260420_142342';
 import * as migration_20260422_090119_other_languages_added from './20260422_090119_other_languages_added';
+import * as migration_20260424_075901 from './20260424_075901';
+import * as migration_20260424_083953 from './20260424_083953';
 
 export const migrations = [
   {
@@ -29,5 +31,15 @@ export const migrations = [
     up: migration_20260422_090119_other_languages_added.up,
     down: migration_20260422_090119_other_languages_added.down,
     name: '20260422_090119_other_languages_added',
+  },
+  {
+    up: migration_20260424_075901.up,
+    down: migration_20260424_075901.down,
+    name: '20260424_075901',
+  },
+  {
+    up: migration_20260424_083953.up,
+    down: migration_20260424_083953.down,
+    name: '20260424_083953'
   },
 ];
