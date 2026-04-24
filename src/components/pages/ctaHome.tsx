@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
+import { Link } from '@/i18n/navigation'
 import { cn } from '@/lib/utils'
 
 interface CtaHomeProps {
@@ -18,8 +19,12 @@ const CtaHome = async ({ className }: CtaHomeProps) => {
             <h2 className="mb-6 text-4xl font-bold md:text-5xl">{t('heading')}</h2>
             <p className="text-lg text-muted-foreground">{t('description')}</p>
             <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
-              <Button>{t('ctaBtn')}</Button>
-              <Button variant="outline">{t('learnMore')}</Button>
+              <Button asChild>
+                <Link href="/contact">{t('ctaBtn')}</Link>
+              </Button>
+              <Button variant="outline" asChild>
+                <Link href="/treatments">{t('learnMore')}</Link>
+              </Button>
             </div>
           </div>
           <div className="relative w-full overflow-hidden rounded-tl-2xl rounded-br-2xl pl-4 sm:pl-0">

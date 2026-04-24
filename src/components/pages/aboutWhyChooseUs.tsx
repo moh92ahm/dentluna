@@ -17,6 +17,7 @@ import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
 import { cn } from '@/lib/utils'
+import Link from 'next/link'
 
 interface WhyChooseUsProps {
   className?: string
@@ -75,9 +76,11 @@ const WhyChooseUs = ({ className }: WhyChooseUsProps) => {
           <div className="flex flex-col items-center gap-5 text-center md:items-start md:text-left">
             <h1 className="text-3xl font-semibold md:text-5xl">{t('heading')}</h1>
             <p className="text-muted-foreground md:text-lg">{t('description')}</p>
-            <Button size="lg" className="w-fit gap-2">
-              {t('getStarted')} <MoveRight className="h-auto w-5" />
-            </Button>
+            <Link href="/contact">
+              <Button size="lg" className="w-fit gap-2 cursor-pointer">
+                {t('getStarted')} <MoveRight className="h-auto w-5" />
+              </Button>
+            </Link>
             <div className="grid grid-cols-2 justify-between gap-4 pt-10 text-left md:gap-20">
               <div className="flex flex-col gap-1">
                 <h2 className="text-3xl font-semibold md:text-5xl">{t('sat')}</h2>

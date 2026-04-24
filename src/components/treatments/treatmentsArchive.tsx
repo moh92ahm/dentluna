@@ -35,7 +35,7 @@ const TreatmentsArchive = async ({ className, locale = defaultLocale }: Treatmen
   return (
     <div className={cn('grid gap-6 md:grid-cols-2 lg:grid-cols-3', className)}>
       {treatments.map((treatment) => (
-        <div key={treatment.id} className="flex flex-col border rounded-lg bg-muted/50 transition-all hover:shadow-lg">
+        <Link key={treatment.id} href={`/treatments/${treatment.slug}`} className="flex flex-col border rounded-lg bg-muted/50 transition-all hover:shadow-lg">
           <div className="relative aspect-video overflow-hidden rounded-lg">
             <Image
               src={getImage(treatment)}
@@ -60,7 +60,7 @@ const TreatmentsArchive = async ({ className, locale = defaultLocale }: Treatmen
               </Link>
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   )
