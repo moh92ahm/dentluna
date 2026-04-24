@@ -11,6 +11,7 @@ WORKDIR /app
 
 # Install dependencies with pnpm lockfile
 COPY package.json pnpm-lock.yaml ./
+COPY patches/ ./patches/
 RUN corepack enable pnpm && pnpm i --frozen-lockfile
 
 
