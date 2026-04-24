@@ -24,7 +24,9 @@
     "heading": "Descoperă gama noastră de servicii",
     "description": "Explorează serviciile noastre stomatologice complete, concepute pentru toate nevoile tale de sănătate orală. De la controale de rutină la proceduri estetice avansate, oferim îngrijire personalizată pentru un zâmbet sănătos și frumos.",
     "metaTitle": "Tratamente dentare - Dent Luna",
-    "metaDesc": "Explorează tratamentele noastre dentare complete: fațete, implanturi, coroane și multe altele. Programează consultația gratuită în Izmir."
+    "metaDesc": "Explorează tratamentele noastre dentare complete: fațete, implanturi, coroane și multe altele. Programează consultația gratuită în Izmir.",
+    "shareArticle": "Distribuie acest articol:",
+    "onThisPage": "Pe această pagină"
   },
   "blog": {
     "heading": "Ultimele articole",
@@ -340,7 +342,7 @@
     "blog": "Blog",
     "faqs": "Întrebări frecvente",
     "gallery": "Galerie",
-    "services": "Servicii",
+    "treatments": "Tratamente",
     "hollywoodSmile": "Hollywood Smile",
     "allOns": "All-on-4 / All-on-6",
     "dentalImplants": "Implanturi dentare",

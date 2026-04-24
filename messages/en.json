@@ -24,7 +24,9 @@
     "heading": "Discover our range of treatments",
     "description": "Explore our comprehensive dental treatments designed to meet all your oral health needs. From routine check-ups to advanced cosmetic procedures, we offer personalized care for a healthy and beautiful smile.",
     "metaTitle": "Dental Treatments – Dent Luna",
-    "metaDesc": "Explore our comprehensive dental treatments: veneers, implants, crowns, and more. Book your free consultation in Izmir."
+    "metaDesc": "Explore our comprehensive dental treatments: veneers, implants, crowns, and more. Book your free consultation in Izmir.",
+    "shareArticle": "Share this article:",
+    "onThisPage": "On this page"
   },
   "blog": {
     "heading": "Latest Blog",
@@ -55,7 +57,7 @@
     "post": "Post not found",
     "doctor": "Doctor not found",
     "heading": "Page Not Found",
-    "message": "Sorry, the page you are looking for doesn\u2019t exist or has been moved.",
+    "message": "Sorry, the page you are looking for doesn’t exist or has been moved.",
     "backHome": "Back to Home"
   },
   "about": {
@@ -87,7 +89,7 @@
         "p1": "We use the information we collect to respond to your inquiries, organize consultations, coordinate treatment planning, and improve our treatments.",
         "i1": "To contact you about your request or appointment",
         "i2": "To prepare treatment recommendations and quotations",
-        "i3": "To manage website operations, analytics, and service quality",
+        "i3": "To manage website operations, analytics, and quality of care",
         "i4": "To comply with legal, tax, medical, or regulatory obligations where applicable"
       },
       "share": {
@@ -115,7 +117,7 @@
     "intro": "These Terms and Conditions govern your use of the Dent Luna website and your interaction with us through online forms, inquiries, and consultation requests.",
     "updatedAt": "Last updated: April 24, 2026",
     "metaTitle": "Terms and Conditions - Dent Luna",
-    "metaDesc": "Review the terms that govern the use of the Dent Luna website and service inquiries.",
+    "metaDesc": "Review the terms that govern the use of the Dent Luna website and treatment inquiries.",
     "sections": {
       "website": {
         "heading": "Use of This Website",
@@ -201,7 +203,6 @@
   "testimonialHome": {
     "label": "Testimonials",
     "heading": "What Our Patients Say",
-
     "t1Name": "Alex Johnson",
     "t1Content": "I came from London for veneers and couldn't be happier. The whole process was seamless from start to finish.",
     "t2Name": "Maria Garcia",
@@ -217,7 +218,7 @@
     "t7Name": "James Wilson",
     "t7Content": "I was nervous about travelling abroad for dental work but DentLuna made everything so easy. The results are stunning.",
     "t8Name": "Laura Müller",
-    "t8Content": "Absolutely world-class service. The clinic is spotless, the staff are warm and the results speak for themselves.",
+    "t8Content": "Absolutely world-class care. The clinic is spotless, the staff are warm and the results speak for themselves.",
     "t9Name": "Ahmed Hassan",
     "t9Content": "I had a full smile makeover and saved thousands compared to back home. I wish I had done this sooner."
   },
@@ -348,6 +349,6 @@
     "crowns": "Crowns",
     "termsAndConditions": "Terms and Conditions",
     "privacyPolicy": "Privacy Policy",
-    "copyright": "\u00a9 {year} Dent Luna. All rights reserved."
+    "copyright": "© {year} Dent Luna. All rights reserved."
   }
 }

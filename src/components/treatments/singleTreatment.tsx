@@ -5,6 +5,7 @@ import { Home, MessageCircle, Send, Share2 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 import RichText from '@/components/RichText'
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
@@ -68,6 +69,7 @@ const getHeroImageUrl = (heroImage: Treatment['heroImage']) => {
 }
 
 const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
+  const t = useTranslations('treatments')
   const [activeSection, setActiveSection] = useState<string | null>(null)
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({})
 
@@ -227,7 +229,7 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
           </div>
           <div className="order-1 flex h-fit flex-col text-sm lg:sticky lg:top-8 lg:order-none lg:col-span-3 lg:col-start-10 lg:text-xs">
             <div className="order-3 lg:order-none">
-              <span className="text-xs font-medium">ON THIS PAGE</span>
+              <span className="text-xs font-medium">{t('onThisPage')}</span>
               <nav className="mt-2 lg:mt-4">
                 <ul className="space-y-1">
                   {sections.map((section) => (
@@ -250,12 +252,12 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
             </div>
             <Separator className="order-2 mt-8 mb-11 lg:hidden" />
             <div className="order-1 flex flex-col gap-2 lg:order-none lg:mt-9">
-              <p className="font-medium text-muted-foreground">Share this article:</p>
+              <p className="font-medium text-foreground">{t('shareArticle')}</p>
               <ul className="flex gap-2">
                 <li>
                   <Button asChild variant="secondary" size="icon" className="group rounded-full">
                     <a href={pageUrl}>
-                      <Share2 className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-primary" />
+                      <Share2 className="h-4 w-4 text-foreground transition-colors group-hover:text-primary" />
                     </a>
                   </Button>
                 </li>
@@ -266,7 +268,7 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <MessageCircle className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-primary" />
+                      <MessageCircle className="h-4 w-4 text-foreground transition-colors group-hover:text-primary" />
                     </a>
                   </Button>
                 </li>
@@ -275,7 +277,7 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
                     <a
                       href={`mailto:?subject=${encodeURIComponent(treatment.title)}&body=${encodeURIComponent(pageUrl)}`}
                     >
-                      <Send className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-primary" />
+                      <Send className="h-4 w-4 text-foreground transition-colors group-hover:text-primary" />
                     </a>
                   </Button>
                 </li>

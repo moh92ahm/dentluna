@@ -24,7 +24,9 @@
     "heading": "Poznaj naszą ofertę usług",
     "description": "Poznaj nasze kompleksowe usługi stomatologiczne zaprojektowane z myślą o wszystkich potrzebach związanych ze zdrowiem jamy ustnej. Od rutynowych kontroli po zaawansowane zabiegi estetyczne - oferujemy spersonalizowaną opiekę dla zdrowego i pięknego uśmiechu.",
     "metaTitle": "Leczenie stomatologiczne - Dent Luna",
-    "metaDesc": "Poznaj nasze kompleksowe zabiegi stomatologiczne: licówki, implanty, korony i wiele więcej. Umów bezpłatną konsultację w Izmirze."
+    "metaDesc": "Poznaj nasze kompleksowe zabiegi stomatologiczne: licówki, implanty, korony i wiele więcej. Umów bezpłatną konsultację w Izmirze.",
+    "shareArticle": "Udostępnij ten artykuł:",
+    "onThisPage": "Na tej stronie"
   },
   "blog": {
     "heading": "Najnowsze wpisy",
@@ -340,7 +342,7 @@
     "blog": "Blog",
     "faqs": "FAQ",
     "gallery": "Galeria",
-    "services": "Usługi",
+    "treatments": "Leczenie",
     "hollywoodSmile": "Hollywood Smile",
     "allOns": "All-on-4 / All-on-6",
     "dentalImplants": "Implanty dentystyczne",

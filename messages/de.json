@@ -24,7 +24,9 @@
     "heading": "Entdecken Sie unser Leistungsangebot",
     "description": "Erkunden Sie unsere umfassenden Zahnpflegedienste, die auf alle Ihre Bedürfnisse zugeschnitten sind. Von Routineuntersuchungen bis hin zu fortgeschrittenen kosmetischen Eingriffen bieten wir individuelle Pflege für ein gesundes und schönes Lächeln.",
     "metaTitle": "Zahnbehandlungen – Dent Luna",
-    "metaDesc": "Entdecken Sie unsere umfassenden Zahnbehandlungen: Veneers, Implantate, Kronen und mehr. Kostenloses Erstgespräch in Izmir."
+    "metaDesc": "Entdecken Sie unsere umfassenden Zahnbehandlungen: Veneers, Implantate, Kronen und mehr. Kostenloses Erstgespräch in Izmir.",
+    "shareArticle": "Diesen Artikel teilen:",
+    "onThisPage": "Auf dieser Seite"
   },
   "blog": {
     "heading": "Neueste Beiträge",
@@ -87,7 +89,7 @@
         "p1": "Wir verwenden die erhobenen Informationen, um auf Ihre Anfragen zu antworten, Beratungen zu organisieren, Behandlungsplanungen zu koordinieren und unsere Dienstleistungen zu verbessern.",
         "i1": "Um Sie bezüglich Ihrer Anfrage oder Ihres Termins zu kontaktieren",
         "i2": "Um Behandlungsempfehlungen und Kostenvoranschläge vorzubereiten",
-        "i3": "Um den Website-Betrieb, Analysen und Servicequalität zu verwalten",
+        "i3": "Um den Website-Betrieb, Analysen und die Behandlungsqualität zu verwalten",
         "i4": "Um rechtliche, steuerliche, medizinische oder regulatorische Verpflichtungen zu erfüllen"
       },
       "share": {
@@ -115,7 +117,7 @@
     "intro": "Diese Allgemeinen Geschäftsbedingungen regeln Ihre Nutzung der Dent Luna Website und Ihre Interaktion mit uns über Online-Formulare, Anfragen und Beratungswünsche.",
     "updatedAt": "Zuletzt aktualisiert: 24. April 2026",
     "metaTitle": "Allgemeine Geschäftsbedingungen – Dent Luna",
-    "metaDesc": "Prüfen Sie die Bedingungen, die die Nutzung der Dent Luna Website und Serviceanfragen regeln.",
+    "metaDesc": "Prüfen Sie die Bedingungen, die die Nutzung der Dent Luna Website und Behandlungsanfragen regeln.",
     "sections": {
       "website": {
         "heading": "Nutzung dieser Website",
@@ -201,7 +203,6 @@
   "testimonialHome": {
     "label": "Erfahrungsberichte",
     "heading": "Was unsere Patienten sagen",
-
     "t1Name": "Alex Johnson",
     "t1Content": "Ich bin aus London für Veneers gekommen und kann nicht glücklicher sein. Der gesamte Prozess verlief von Anfang bis Ende reibungslos.",
     "t2Name": "Maria Garcia",
@@ -217,7 +218,7 @@
     "t7Name": "James Wilson",
     "t7Content": "Ich war nervös wegen einer Zahnbehandlung im Ausland, aber DentLuna hat alles so einfach gemacht. Die Ergebnisse sind atemberaubend.",
     "t8Name": "Laura Müller",
-    "t8Content": "Absolut erstklassiger Service. Die Klinik ist makellos, das Personal ist herzlich und die Ergebnisse sprechen für sich.",
+    "t8Content": "Absolut erstklassige Betreuung. Die Klinik ist makellos, das Personal ist herzlich und die Ergebnisse sprechen für sich.",
     "t9Name": "Ahmed Hassan",
     "t9Content": "Ich hatte eine komplette Lächeln-Verwandlung und habe im Vergleich zu zu Hause Tausende gespart. Ich wünschte, ich hätte das früher gemacht."
   },
@@ -341,13 +342,13 @@
     "blog": "Blog",
     "faqs": "Häufige Fragen",
     "gallery": "Galerie",
-    "services": "Leistungen",
+    "treatments": "Behandlungen",
     "hollywoodSmile": "Hollywood Smile",
     "allOns": "All-on-4 / All-on-6",
     "dentalImplants": "Zahnimplantate",
     "crowns": "Zahnkronen",
     "termsAndConditions": "Allgemeine Geschäftsbedingungen",
     "privacyPolicy": "Datenschutzrichtlinie",
-    "copyright": "\u00a9 {year} Dent Luna. Alle Rechte vorbehalten."
+    "copyright": "© {year} Dent Luna. Alle Rechte vorbehalten."
   }
 }
