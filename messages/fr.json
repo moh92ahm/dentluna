@@ -1,14 +1,4 @@
 {
-  "nav": {
-    "home": "Accueil",
-    "about": "À propos",
-    "contact": "Contact",
-    "treatments": "Traitements",
-    "gallery": "Galerie",
-    "doctors": "Médecins",
-    "blog": "Blog",
-    "faq": "FAQ"
-  },
   "common": {
     "readMore": "Lire la suite",
     "viewAll": "Voir tout",
@@ -155,7 +145,7 @@
     "line2": "Dentaires",
     "line3": "Premium"
   },
-  "servicesHome": {
+  "treatmentsHome": {
     "heading": "Nos Traitements",
     "subheading": "Des solutions dentaires avancées conçues pour vous",
     "description": "Des nettoyages de routine aux restaurations complexes, nos traitements dentaires complets sont adaptés à vos besoins uniques pour un sourire sain et radieux.",
@@ -331,24 +321,5 @@
     "submitBtn": "Soumettre",
     "sendingBtn": "Envoi en cours...",
     "errorMsg": "Une erreur s'est produite. Veuillez réessayer."
-  },
-  "footer": {
-    "description": "Chez Dent Luna, nous nous engageons à fournir des soins dentaires exceptionnels avec une touche personnelle. Notre équipe expérimentée de dentistes et de personnel travaille ensemble pour créer un environnement accueillant où votre sourire peut s'épanouir.",
-    "quickLinks": "Liens rapides",
-    "about": "À propos",
-    "contact": "Contact",
-    "doctors": "Médecins",
-    "resources": "Ressources",
-    "blog": "Blog",
-    "faqs": "FAQ",
-    "gallery": "Galerie",
-    "treatments": "Traitements",
-    "hollywoodSmile": "Hollywood Smile",
-    "allOns": "All-on-4 / All-on-6",
-    "dentalImplants": "Implants dentaires",
-    "crowns": "Couronnes dentaires",
-    "termsAndConditions": "Conditions générales",
-    "privacyPolicy": "Politique de confidentialité",
-    "copyright": "© {year} Dent Luna. Tous droits réservés."
   }
 }

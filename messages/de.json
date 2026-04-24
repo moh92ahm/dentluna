@@ -1,14 +1,4 @@
 {
-  "nav": {
-    "home": "Startseite",
-    "about": "Über uns",
-    "contact": "Kontakt",
-    "treatments": "Behandlungen",
-    "gallery": "Galerie",
-    "doctors": "Ärzte",
-    "blog": "Blog",
-    "faq": "FAQ"
-  },
   "common": {
     "readMore": "Mehr lesen",
     "viewAll": "Alle anzeigen",
@@ -20,9 +10,9 @@
     "description": "Ihr vertrauenswürdiger Partner für Zahngesundheit"
   },
   "treatments": {
-    "badge": "Leistungen",
-    "heading": "Entdecken Sie unser Leistungsangebot",
-    "description": "Erkunden Sie unsere umfassenden Zahnpflegedienste, die auf alle Ihre Bedürfnisse zugeschnitten sind. Von Routineuntersuchungen bis hin zu fortgeschrittenen kosmetischen Eingriffen bieten wir individuelle Pflege für ein gesundes und schönes Lächeln.",
+    "badge": "Behandlungen",
+    "heading": "Entdecken Sie unser Behandlungsangebot",
+    "description": "Erkunden Sie unsere umfassenden Zahnbehandlungen, die auf alle Ihre Bedürfnisse zugeschnitten sind. Von Routineuntersuchungen bis hin zu fortgeschrittenen kosmetischen Eingriffen bieten wir individuelle Pflege für ein gesundes und schönes Lächeln.",
     "metaTitle": "Zahnbehandlungen – Dent Luna",
     "metaDesc": "Entdecken Sie unsere umfassenden Zahnbehandlungen: Veneers, Implantate, Kronen und mehr. Kostenloses Erstgespräch in Izmir.",
     "shareArticle": "Diesen Artikel teilen:",
@@ -71,7 +61,7 @@
   "privacyPolicy": {
     "eyebrow": "Rechtliches",
     "title": "Datenschutzerklärung",
-    "intro": "Diese Datenschutzerklärung erläutert, wie Dent Luna Informationen erhebt, verwendet, speichert und schützt, wenn Sie unsere Website besuchen oder uns bezüglich zahnärztlicher Leistungen kontaktieren.",
+    "intro": "Diese Datenschutzerklärung erläutert, wie Dent Luna Informationen erhebt, verwendet, speichert und schützt, wenn Sie unsere Website besuchen oder uns bezüglich zahnärztlicher Behandlungen kontaktieren.",
     "updatedAt": "Zuletzt aktualisiert: 24. April 2026",
     "metaTitle": "Datenschutzerklärung – Dent Luna",
     "metaDesc": "Erfahren Sie, wie Dent Luna personenbezogene Daten von Website-Besuchern und Patienten erhebt, nutzt, speichert und schützt.",
@@ -86,7 +76,7 @@
       },
       "use": {
         "heading": "Wie wir Ihre Informationen verwenden",
-        "p1": "Wir verwenden die erhobenen Informationen, um auf Ihre Anfragen zu antworten, Beratungen zu organisieren, Behandlungsplanungen zu koordinieren und unsere Dienstleistungen zu verbessern.",
+        "p1": "Wir verwenden die erhobenen Informationen, um auf Ihre Anfragen zu antworten, Beratungen zu organisieren, Behandlungsplanungen zu koordinieren und unsere Behandlungen zu verbessern.",
         "i1": "Um Sie bezüglich Ihrer Anfrage oder Ihres Termins zu kontaktieren",
         "i2": "Um Behandlungsempfehlungen und Kostenvoranschläge vorzubereiten",
         "i3": "Um den Website-Betrieb, Analysen und die Behandlungsqualität zu verwalten",
@@ -94,7 +84,7 @@
       },
       "share": {
         "heading": "Weitergabe von Daten",
-        "p1": "Wir verkaufen Ihre personenbezogenen Daten nicht. Wir geben Informationen nur weiter, wenn dies für den Geschäftsbetrieb und die von Ihnen angeforderten Leistungen erforderlich ist.",
+        "p1": "Wir verkaufen Ihre personenbezogenen Daten nicht. Wir geben Informationen nur weiter, wenn dies für den Geschäftsbetrieb und die von Ihnen angeforderten Behandlungen erforderlich ist.",
         "i1": "An Zahnärzte, Kliniken, Labore oder Betreuungskoordinatoren, die an Ihrer Behandlung beteiligt sind",
         "i2": "An vertrauenswürdige Dienstleister wie CRM-, Hosting-, Analyse- oder E-Mail-Plattformen",
         "i3": "An Behörden, wenn eine Offenlegung gesetzlich erforderlich ist oder rechtliche Ansprüche geschützt werden müssen"
@@ -121,7 +111,7 @@
     "sections": {
       "website": {
         "heading": "Nutzung dieser Website",
-        "p1": "Diese Website dient der allgemeinen Information über Dent Luna, unsere Leistungen und die Kontaktaufnahme für potenzielle Patienten. Die Inhalte dieser Website stellen keine medizinische Beratung, Diagnose oder Garantie für ein Behandlungsergebnis dar.",
+        "p1": "Diese Website dient der allgemeinen Information über Dent Luna, unsere Behandlungen und die Kontaktaufnahme für potenzielle Patienten. Die Inhalte dieser Website stellen keine medizinische Beratung, Diagnose oder Garantie für ein Behandlungsergebnis dar.",
         "p2": "Mit der Nutzung dieser Website erklären Sie sich damit einverstanden, sie rechtmäßig zu verwenden und ihren Betrieb, ihre Sicherheit oder Verfügbarkeit nicht zu beeinträchtigen."
       },
       "consultation": {
@@ -133,7 +123,7 @@
       },
       "thirdParty": {
         "heading": "Termine, Reisen und Dritte",
-        "p1": "Wenn Dent Luna bei der Koordination von Terminen, Reiseplanung, Transfers, Unterkünften oder ähnlichen Leistungen unterstützt, können daran Drittanbieter beteiligt sein. Dent Luna ist nicht verantwortlich für Handlungen, Unterlassungen, Verzögerungen, Preise oder Richtlinien unabhängiger Drittanbieter."
+        "p1": "Wenn Dent Luna bei der Koordination von Terminen, Reiseplanung, Transfers, Unterkünften oder ähnlichen Behandlungen unterstützt, können daran Drittanbieter beteiligt sein. Dent Luna ist nicht verantwortlich für Handlungen, Unterlassungen, Verzögerungen, Preise oder Richtlinien unabhängiger Drittanbieter."
       },
       "ip": {
         "heading": "Geistiges Eigentum",
@@ -155,10 +145,10 @@
     "line2": "Zahn",
     "line3": "Behandlungen"
   },
-  "servicesHome": {
+  "treatmentsHome": {
     "heading": "Unsere Behandlungen",
     "subheading": "Fortschrittliche Zahnlösungen für Sie",
-    "description": "Von Routinereinigungen bis zu komplexen Restaurierungen bieten unsere umfassenden Zahnarztleistungen maßgeschneiderte Lösungen für Ihre individuellen Bedürfnisse.",
+    "description": "Von Routinereinigungen bis zu komplexen Restaurierungen bieten unsere umfassenden Zahnbehandlungen maßgeschneiderte Lösungen für Ihre individuellen Bedürfnisse.",
     "exploreBtn": "Entdecken Sie alle Behandlungen",
     "veneersTitle": "Veneers & Smile Design",
     "veneersDesc": "Erreichen Sie ein helleres, selbstbewussteres Lächeln",
@@ -331,24 +321,5 @@
     "submitBtn": "Absenden",
     "sendingBtn": "Wird gesendet...",
     "errorMsg": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
-  },
-  "footer": {
-    "description": "Bei Dent Luna sind wir bestrebt, eine außergewöhnliche Zahnpflege mit einer persönlichen Note zu bieten. Unser erfahrenes Team aus Zahnärzten und Mitarbeitern arbeitet zusammen, um eine einladende Umgebung zu schaffen, in der Ihr Lächeln aufblühen kann.",
-    "quickLinks": "Schnelllinks",
-    "about": "Über uns",
-    "contact": "Kontakt",
-    "doctors": "Ärzte",
-    "resources": "Ressourcen",
-    "blog": "Blog",
-    "faqs": "Häufige Fragen",
-    "gallery": "Galerie",
-    "treatments": "Behandlungen",
-    "hollywoodSmile": "Hollywood Smile",
-    "allOns": "All-on-4 / All-on-6",
-    "dentalImplants": "Zahnimplantate",
-    "crowns": "Zahnkronen",
-    "termsAndConditions": "Allgemeine Geschäftsbedingungen",
-    "privacyPolicy": "Datenschutzrichtlinie",
-    "copyright": "© {year} Dent Luna. Alle Rechte vorbehalten."
   }
 }

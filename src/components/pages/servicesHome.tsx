@@ -18,7 +18,7 @@ interface ServicesHomeProps {
 }
 
 const ServicesHome = ({ className }: ServicesHomeProps) => {
-  const t = useTranslations('servicesHome')
+  const t = useTranslations('treatmentsHome')
 
   const services = [
     {

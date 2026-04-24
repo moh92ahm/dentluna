@@ -2,7 +2,6 @@
 
 import { Menu, X } from 'lucide-react'
 import React, { useEffect, useRef, useState } from 'react'
-import { useTranslations } from 'next-intl'
 import { usePathname, Link } from '@/i18n/navigation'
 
 import { Logo } from '@/components/global/logo'
@@ -29,21 +28,10 @@ interface HeaderProps {
 }
 
 const Header = ({ className, locale, navLinks: cmsLinks = [] }: HeaderProps) => {
-  const t = useTranslations('nav')
   const pathname = usePathname()
+  const NAV_ITEMS = cmsLinks.filter((item) => item.label && item.url)
 
-  const FALLBACK_ITEMS = [
-    { label: t('home'), url: '/' },
-    { label: t('about'), url: '/about' },
-    { label: t('contact'), url: '/contact' },
-    { label: t('treatments'), url: '/treatments' },
-    { label: t('gallery'), url: '/gallery' },
-    { label: t('doctors'), url: '/doctors' },
-  ]
-
-  const NAV_ITEMS = cmsLinks.length > 0 ? cmsLinks : FALLBACK_ITEMS
-
-  const currentItem = NAV_ITEMS.find((item) => item.url === pathname)?.label ?? NAV_ITEMS[0].label
+  const currentItem = NAV_ITEMS.find((item) => item.url === pathname)?.label ?? NAV_ITEMS[0]?.label ?? ''
   const [activeItem, setActiveItem] = useState(currentItem)
   const [scrolled, setScrolled] = useState(false)
 

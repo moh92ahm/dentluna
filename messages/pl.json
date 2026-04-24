@@ -1,14 +1,4 @@
 {
-  "nav": {
-    "home": "Strona główna",
-    "about": "O nas",
-    "contact": "Kontakt",
-    "treatments": "Leczenie",
-    "gallery": "Galeria",
-    "doctors": "Lekarze",
-    "blog": "Blog",
-    "faq": "FAQ"
-  },
   "common": {
     "readMore": "Czytaj więcej",
     "viewAll": "Zobacz wszystko",
@@ -20,9 +10,9 @@
     "description": "Twój zaufany partner w stomatologii"
   },
   "treatments": {
-    "badge": "Usługi",
-    "heading": "Poznaj naszą ofertę usług",
-    "description": "Poznaj nasze kompleksowe usługi stomatologiczne zaprojektowane z myślą o wszystkich potrzebach związanych ze zdrowiem jamy ustnej. Od rutynowych kontroli po zaawansowane zabiegi estetyczne - oferujemy spersonalizowaną opiekę dla zdrowego i pięknego uśmiechu.",
+    "badge": "Zabiegi",
+    "heading": "Poznaj naszą ofertę zabiegów",
+    "description": "Poznaj nasze kompleksowe zabiegi stomatologiczne zaprojektowane z myślą o wszystkich potrzebach związanych ze zdrowiem jamy ustnej. Od rutynowych kontroli po zaawansowane zabiegi estetyczne - oferujemy spersonalizowaną opiekę dla zdrowego i pięknego uśmiechu.",
     "metaTitle": "Leczenie stomatologiczne - Dent Luna",
     "metaDesc": "Poznaj nasze kompleksowe zabiegi stomatologiczne: licówki, implanty, korony i wiele więcej. Umów bezpłatną konsultację w Izmirze.",
     "shareArticle": "Udostępnij ten artykuł:",
@@ -71,7 +61,7 @@
   "privacyPolicy": {
     "eyebrow": "Informacje prawne",
     "title": "Polityka prywatności",
-    "intro": "Niniejsza Polityka prywatności wyjaśnia, w jaki sposób Dent Luna zbiera, wykorzystuje, przechowuje i chroni informacje, gdy odwiedzasz naszą stronę internetową lub kontaktujesz się z nami w sprawie usług stomatologicznych.",
+    "intro": "Niniejsza Polityka prywatności wyjaśnia, w jaki sposób Dent Luna zbiera, wykorzystuje, przechowuje i chroni informacje, gdy odwiedzasz naszą stronę internetową lub kontaktujesz się z nami w sprawie zabiegów stomatologicznych.",
     "updatedAt": "Ostatnia aktualizacja: 24 kwietnia 2026 r.",
     "metaTitle": "Polityka prywatności - Dent Luna",
     "metaDesc": "Dowiedz się, jak Dent Luna zbiera, wykorzystuje, przechowuje i chroni dane osobowe odwiedzających stronę i pacjentów.",
@@ -86,15 +76,15 @@
       },
       "use": {
         "heading": "Jak wykorzystujemy Twoje dane",
-        "p1": "Wykorzystujemy zebrane informacje, aby odpowiadać na Twoje zapytania, organizować konsultacje, koordynować plany leczenia i ulepszać nasze usługi.",
+        "p1": "Wykorzystujemy zebrane informacje, aby odpowiadać na Twoje zapytania, organizować konsultacje, koordynować plany leczenia i ulepszać nasze zabiegi.",
         "i1": "Aby skontaktować się z Tobą w sprawie Twojego zapytania lub wizyty",
         "i2": "Aby przygotować rekomendacje leczenia i wyceny",
-        "i3": "Aby zarządzać działaniem strony, analityką i jakością usług",
+        "i3": "Aby zarządzać działaniem strony, analityką i jakością opieki",
         "i4": "Aby spełniać obowiązujące wymogi prawne, podatkowe, medyczne lub regulacyjne"
       },
       "share": {
         "heading": "Udostępnianie danych",
-        "p1": "Nie sprzedajemy Twoich danych osobowych. Udostępniamy informacje wyłącznie wtedy, gdy jest to niezbędne do prowadzenia działalności i realizacji usług, o które prosisz.",
+        "p1": "Nie sprzedajemy Twoich danych osobowych. Udostępniamy informacje wyłącznie wtedy, gdy jest to niezbędne do prowadzenia działalności i realizacji zabiegów, o które prosisz.",
         "i1": "Dentystom, klinikom, laboratoriom lub koordynatorom zaangażowanym w Twoje leczenie",
         "i2": "Zaufanym dostawcom usług, takim jak platformy CRM, hostingowe, analityczne lub e-mailowe",
         "i3": "Organom państwowym, jeśli ujawnienie jest wymagane prawem lub konieczne dla ochrony praw"
@@ -117,11 +107,11 @@
     "intro": "Niniejszy Regulamin i warunki określają zasady korzystania ze strony Dent Luna oraz Twojej interakcji z nami poprzez formularze online, zapytania i prośby o konsultację.",
     "updatedAt": "Ostatnia aktualizacja: 24 kwietnia 2026 r.",
     "metaTitle": "Regulamin i warunki - Dent Luna",
-    "metaDesc": "Zapoznaj się z warunkami regulującymi korzystanie ze strony Dent Luna i składanie zapytań o usługi.",
+    "metaDesc": "Zapoznaj się z warunkami regulującymi korzystanie ze strony Dent Luna i składanie zapytań o leczenie.",
     "sections": {
       "website": {
         "heading": "Korzystanie z tej strony",
-        "p1": "Ta strona internetowa służy do przekazywania ogólnych informacji o Dent Luna, naszych usługach oraz sposobach kontaktu dla potencjalnych pacjentów. Treści zamieszczone na stronie nie stanowią porady medycznej, diagnozy ani gwarancji rezultatu leczenia.",
+        "p1": "Ta strona internetowa służy do przekazywania ogólnych informacji o Dent Luna, naszych zabiegach oraz sposobach kontaktu dla potencjalnych pacjentów. Treści zamieszczone na stronie nie stanowią porady medycznej, diagnozy ani gwarancji rezultatu leczenia.",
         "p2": "Korzystając z tej strony, zgadzasz się używać jej zgodnie z prawem i nie zakłócać jej działania, bezpieczeństwa ani dostępności."
       },
       "consultation": {
@@ -133,7 +123,7 @@
       },
       "thirdParty": {
         "heading": "Wizyty, podróże i strony trzecie",
-        "p1": "Jeśli Dent Luna pomaga koordynować wizyty, planowanie podróży, transfery, zakwaterowanie lub usługi powiązane, takie ustalenia mogą obejmować zewnętrznych dostawców. Dent Luna nie ponosi odpowiedzialności za działania, zaniechania, opóźnienia, ceny ani zasady niezależnych podmiotów trzecich."
+        "p1": "Jeśli Dent Luna pomaga koordynować wizyty, planowanie podróży, transfery, zakwaterowanie lub powiązane zabiegi, takie ustalenia mogą obejmować zewnętrznych dostawców. Dent Luna nie ponosi odpowiedzialności za działania, zaniechania, opóźnienia, ceny ani zasady niezależnych podmiotów trzecich."
       },
       "ip": {
         "heading": "Własność intelektualna",
@@ -155,10 +145,10 @@
     "line2": "Leczenie",
     "line3": "Stomatologiczne"
   },
-  "servicesHome": {
+  "treatmentsHome": {
     "heading": "Nasze zabiegi",
     "subheading": "Zaawansowane rozwiązania stomatologiczne stworzone dla Ciebie",
-    "description": "Od rutynowego czyszczenia po złożone odbudowy - nasze kompleksowe usługi stomatologiczne są dopasowane do Twoich indywidualnych potrzeb, aby zapewnić zdrowy i promienny uśmiech.",
+    "description": "Od rutynowego czyszczenia po złożone odbudowy - nasze kompleksowe zabiegi stomatologiczne są dopasowane do Twoich indywidualnych potrzeb, aby zapewnić zdrowy i promienny uśmiech.",
     "exploreBtn": "Poznaj wszystkie zabiegi",
     "veneersTitle": "Licówki i projektowanie uśmiechu",
     "veneersDesc": "Uzyskaj jaśniejszy i bardziej pewny siebie uśmiech",
@@ -331,24 +321,5 @@
     "submitBtn": "Wyślij",
     "sendingBtn": "Wysyłanie...",
     "errorMsg": "Coś poszło nie tak. Spróbuj ponownie."
-  },
-  "footer": {
-    "description": "W Dent Luna jesteśmy zaangażowani w zapewnianie wyjątkowej opieki stomatologicznej z osobistym podejściem. Nasz doświadczony zespół dentystów i pracowników współpracuje, aby stworzyć przyjazne środowisko, w którym Twój uśmiech może rozkwitać.",
-    "quickLinks": "Szybkie linki",
-    "about": "O nas",
-    "contact": "Kontakt",
-    "doctors": "Lekarze",
-    "resources": "Zasoby",
-    "blog": "Blog",
-    "faqs": "FAQ",
-    "gallery": "Galeria",
-    "treatments": "Leczenie",
-    "hollywoodSmile": "Hollywood Smile",
-    "allOns": "All-on-4 / All-on-6",
-    "dentalImplants": "Implanty dentystyczne",
-    "crowns": "Korony",
-    "termsAndConditions": "Regulamin",
-    "privacyPolicy": "Polityka prywatności",
-    "copyright": "© {year} Dent Luna. Wszelkie prawa zastrzeżone."
   }
 }

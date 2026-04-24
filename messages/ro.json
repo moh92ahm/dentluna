@@ -1,14 +1,4 @@
 {
-  "nav": {
-    "home": "Acasă",
-    "about": "Despre",
-    "contact": "Contact",
-    "treatments": "Tratamente",
-    "gallery": "Galerie",
-    "doctors": "Medici",
-    "blog": "Blog",
-    "faq": "Întrebări frecvente"
-  },
   "common": {
     "readMore": "Citește mai mult",
     "viewAll": "Vezi tot",
@@ -20,9 +10,9 @@
     "description": "Partenerul tău de încredere pentru îngrijire dentară"
   },
   "treatments": {
-    "badge": "Servicii",
-    "heading": "Descoperă gama noastră de servicii",
-    "description": "Explorează serviciile noastre stomatologice complete, concepute pentru toate nevoile tale de sănătate orală. De la controale de rutină la proceduri estetice avansate, oferim îngrijire personalizată pentru un zâmbet sănătos și frumos.",
+    "badge": "Tratamente",
+    "heading": "Descoperă gama noastră de tratamente",
+    "description": "Explorează tratamentele noastre stomatologice complete, concepute pentru toate nevoile tale de sănătate orală. De la controale de rutină la proceduri estetice avansate, oferim îngrijire personalizată pentru un zâmbet sănătos și frumos.",
     "metaTitle": "Tratamente dentare - Dent Luna",
     "metaDesc": "Explorează tratamentele noastre dentare complete: fațete, implanturi, coroane și multe altele. Programează consultația gratuită în Izmir.",
     "shareArticle": "Distribuie acest articol:",
@@ -71,7 +61,7 @@
   "privacyPolicy": {
     "eyebrow": "Legal",
     "title": "Politica de confidențialitate",
-    "intro": "Această Politică de confidențialitate explică modul în care Dent Luna colectează, utilizează, stochează și protejează informațiile atunci când vizitezi site-ul nostru sau ne contactezi cu privire la servicii dentare.",
+    "intro": "Această Politică de confidențialitate explică modul în care Dent Luna colectează, utilizează, stochează și protejează informațiile atunci când vizitezi site-ul nostru sau ne contactezi cu privire la tratamente dentare.",
     "updatedAt": "Ultima actualizare: 24 aprilie 2026",
     "metaTitle": "Politica de confidențialitate - Dent Luna",
     "metaDesc": "Află cum colectează, folosește, stochează și protejează Dent Luna datele personale ale vizitatorilor și pacienților.",
@@ -86,15 +76,15 @@
       },
       "use": {
         "heading": "Cum folosim informațiile tale",
-        "p1": "Folosim informațiile colectate pentru a răspunde solicitărilor tale, pentru a organiza consultații, pentru a coordona planuri de tratament și pentru a ne îmbunătăți serviciile.",
+        "p1": "Folosim informațiile colectate pentru a răspunde solicitărilor tale, pentru a organiza consultații, pentru a coordona planuri de tratament și pentru a ne îmbunătăți tratamentele.",
         "i1": "Pentru a te contacta în legătură cu solicitarea sau programarea ta",
         "i2": "Pentru a pregăti recomandări de tratament și estimări de cost",
-        "i3": "Pentru a gestiona funcționarea site-ului, analiza și calitatea serviciilor",
+        "i3": "Pentru a gestiona funcționarea site-ului, analiza și calitatea îngrijirii",
         "i4": "Pentru a respecta obligațiile legale, fiscale, medicale sau de reglementare aplicabile"
       },
       "share": {
         "heading": "Partajarea datelor",
-        "p1": "Nu vindem datele tale personale. Partajăm informații doar atunci când este necesar pentru funcționarea activității și pentru furnizarea serviciilor solicitate de tine.",
+        "p1": "Nu vindem datele tale personale. Partajăm informații doar atunci când este necesar pentru funcționarea activității și pentru furnizarea tratamentelor solicitate de tine.",
         "i1": "Cu medici stomatologi, clinici, laboratoare sau coordonatori implicați în parcursul tău de tratament",
         "i2": "Cu furnizori de încredere, precum platforme CRM, găzduire, analiză sau e-mail",
         "i3": "Cu autorități atunci când divulgarea este cerută de lege sau pentru protejarea unor drepturi legale"
@@ -117,11 +107,11 @@
     "intro": "Acești Termeni și condiții reglementează utilizarea site-ului Dent Luna și interacțiunea ta cu noi prin formulare online, solicitări și cereri de consultație.",
     "updatedAt": "Ultima actualizare: 24 aprilie 2026",
     "metaTitle": "Termeni și condiții - Dent Luna",
-    "metaDesc": "Consultă termenii care reglementează utilizarea site-ului Dent Luna și solicitările de servicii.",
+    "metaDesc": "Consultă termenii care reglementează utilizarea site-ului Dent Luna și solicitările de tratament.",
     "sections": {
       "website": {
         "heading": "Utilizarea acestui site",
-        "p1": "Acest site este oferit pentru informații generale despre Dent Luna, serviciile noastre și modul în care pacienții potențiali ne pot contacta. Conținutul site-ului nu constituie sfat medical, diagnostic sau garanția unui rezultat al tratamentului.",
+        "p1": "Acest site este oferit pentru informații generale despre Dent Luna, tratamentele noastre și modul în care pacienții potențiali ne pot contacta. Conținutul site-ului nu constituie sfat medical, diagnostic sau garanția unui rezultat al tratamentului.",
         "p2": "Prin utilizarea acestui site, ești de acord să îl folosești în mod legal și să nu afectezi funcționarea, securitatea sau disponibilitatea lui."
       },
       "consultation": {
@@ -133,7 +123,7 @@
       },
       "thirdParty": {
         "heading": "Programări, călătorii și terți",
-        "p1": "Atunci când Dent Luna ajută la coordonarea programărilor, planificării călătoriei, transferurilor, cazării sau serviciilor conexe, aceste aranjamente pot implica furnizori terți. Dent Luna nu este responsabilă pentru acțiunile, omisiunile, întârzierile, prețurile sau politicile furnizorilor independenți."
+        "p1": "Atunci când Dent Luna ajută la coordonarea programărilor, planificării călătoriei, transferurilor, cazării sau tratamentelor conexe, aceste aranjamente pot implica furnizori terți. Dent Luna nu este responsabilă pentru acțiunile, omisiunile, întârzierile, prețurile sau politicile furnizorilor independenți."
       },
       "ip": {
         "heading": "Proprietate intelectuală",
@@ -155,10 +145,10 @@
     "line2": "Dentare",
     "line3": "Premium"
   },
-  "servicesHome": {
+  "treatmentsHome": {
     "heading": "Tratamentele noastre",
     "subheading": "Soluții dentare avansate concepute pentru tine",
-    "description": "De la igienizări de rutină la restaurări complexe, serviciile noastre dentare complete sunt adaptate nevoilor tale unice pentru a asigura un zâmbet sănătos și radiant.",
+    "description": "De la igienizări de rutină la restaurări complexe, tratamentele noastre dentare complete sunt adaptate nevoilor tale unice pentru a asigura un zâmbet sănătos și radiant.",
     "exploreBtn": "Explorează toate tratamentele",
     "veneersTitle": "Fațete și designul zâmbetului",
     "veneersDesc": "Obține un zâmbet mai luminos și mai încrezător",
@@ -331,24 +321,5 @@
     "submitBtn": "Trimite",
     "sendingBtn": "Se trimite...",
     "errorMsg": "A apărut o eroare. Te rugăm să încerci din nou."
-  },
-  "footer": {
-    "description": "La Dent Luna, ne angajăm să oferim îngrijire dentară excepțională, cu o abordare personală. Echipa noastră experimentată de medici și personal lucrează împreună pentru a crea un mediu primitor în care zâmbetul tău poate prospera.",
-    "quickLinks": "Linkuri rapide",
-    "about": "Despre",
-    "contact": "Contact",
-    "doctors": "Medici",
-    "resources": "Resurse",
-    "blog": "Blog",
-    "faqs": "Întrebări frecvente",
-    "gallery": "Galerie",
-    "treatments": "Tratamente",
-    "hollywoodSmile": "Hollywood Smile",
-    "allOns": "All-on-4 / All-on-6",
-    "dentalImplants": "Implanturi dentare",
-    "crowns": "Coroane",
-    "termsAndConditions": "Termeni și condiții",
-    "privacyPolicy": "Politica de confidențialitate",
-    "copyright": "© {year} Dent Luna. Toate drepturile rezervate."
   }
 }

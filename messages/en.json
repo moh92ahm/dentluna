@@ -1,14 +1,4 @@
 {
-  "nav": {
-    "home": "Home",
-    "about": "About",
-    "contact": "Contact",
-    "treatments": "Treatments",
-    "gallery": "Gallery",
-    "doctors": "Doctors",
-    "blog": "Blog",
-    "faq": "FAQ"
-  },
   "common": {
     "readMore": "Read More",
     "viewAll": "View All",
@@ -155,7 +145,7 @@
     "line2": "Dental",
     "line3": "Treatments"
   },
-  "servicesHome": {
+  "treatmentsHome": {
     "heading": "Our Treatments",
     "subheading": "Advanced Dental Solutions Designed for You",
     "description": "From routine cleanings to complex restorations, our comprehensive dental treatments are tailored to meet your unique needs and ensure a healthy, radiant smile.",
@@ -331,24 +321,5 @@
     "submitBtn": "Submit",
     "sendingBtn": "Submitting...",
     "errorMsg": "Something went wrong. Please try again."
-  },
-  "footer": {
-    "description": "At Dent Luna, we are committed to providing exceptional dental care with a personal touch. Our experienced team of dentists and staff work together to create a welcoming environment where your smile can thrive.",
-    "quickLinks": "Quick Links",
-    "about": "About",
-    "contact": "Contact",
-    "doctors": "Doctors",
-    "resources": "Resources",
-    "blog": "Blog",
-    "faqs": "FAQs",
-    "gallery": "Gallery",
-    "treatments": "Treatments",
-    "hollywoodSmile": "Hollywood Smile",
-    "allOns": "All-on-4 / All-on-6",
-    "dentalImplants": "Dental Implants",
-    "crowns": "Crowns",
-    "termsAndConditions": "Terms and Conditions",
-    "privacyPolicy": "Privacy Policy",
-    "copyright": "© {year} Dent Luna. All rights reserved."
   }
 }
