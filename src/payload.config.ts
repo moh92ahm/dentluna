@@ -21,6 +21,7 @@ import { FormSubmissions } from './collections/FormSubmissions'
 import { payloadLocales, defaultLocale } from './i18n/locales'
 import { CrmSettings } from './globals/CrmSettings'
 import { FooterSettings } from './globals/FooterSettings'
+import { HeaderSettings } from './globals/HeaderSettings'
 import { migrations } from './migrations'
 
 const filename = fileURLToPath(import.meta.url)
@@ -58,7 +59,7 @@ export default buildConfig({
     Users,
     Media,
   ],
-  globals: [CrmSettings, FooterSettings],
+  globals: [CrmSettings, FooterSettings, HeaderSettings],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

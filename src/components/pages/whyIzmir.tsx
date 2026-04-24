@@ -16,13 +16,11 @@ const WhyIzmir = async ({ className }: WhyIzmirProps) => {
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <div className="order-2 lg:order-1">
             <AspectRatio ratio={1.5} className="overflow-hidden rounded-2xl">
-              <video
-                src="https://www.youtube.com/watch?v=VbdV9LF5Guk&list=PPSV"
+              <iframe
+                src="https://www.youtube.com/embed/VbdV9LF5Guk?autoplay=1&mute=1&loop=1&controls=0&playlist=VbdV9LF5Guk"
                 className="block size-full object-cover object-center"
-                loop
-                autoPlay
-                muted
-                controls={false}
+                allow="autoplay; encrypted-media"
+                allowFullScreen
               />
             </AspectRatio>
           </div>

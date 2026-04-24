@@ -20,9 +20,9 @@
     "description": "Your trusted dental care partner"
   },
   "treatments": {
-    "badge": "Services",
-    "heading": "Discover our range of services",
-    "description": "Explore our comprehensive dental services designed to meet all your oral health needs. From routine check-ups to advanced cosmetic procedures, we offer personalized care for a healthy and beautiful smile.",
+    "badge": "Treatments",
+    "heading": "Discover our range of treatments",
+    "description": "Explore our comprehensive dental treatments designed to meet all your oral health needs. From routine check-ups to advanced cosmetic procedures, we offer personalized care for a healthy and beautiful smile.",
     "metaTitle": "Dental Treatments – Dent Luna",
     "metaDesc": "Explore our comprehensive dental treatments: veneers, implants, crowns, and more. Book your free consultation in Izmir."
   },
@@ -69,7 +69,7 @@
   "privacyPolicy": {
     "eyebrow": "Legal",
     "title": "Privacy Policy",
-    "intro": "This Privacy Policy explains how Dent Luna collects, uses, stores, and protects information when you visit our website or contact us about dental services.",
+    "intro": "This Privacy Policy explains how Dent Luna collects, uses, stores, and protects information when you visit our website or contact us about dental treatments.",
     "updatedAt": "Last updated: April 24, 2026",
     "metaTitle": "Privacy Policy - Dent Luna",
     "metaDesc": "Read how Dent Luna collects, uses, stores, and protects personal information for website visitors and patients.",
@@ -84,7 +84,7 @@
       },
       "use": {
         "heading": "How We Use Your Information",
-        "p1": "We use the information we collect to respond to your inquiries, organize consultations, coordinate treatment planning, and improve our services.",
+        "p1": "We use the information we collect to respond to your inquiries, organize consultations, coordinate treatment planning, and improve our treatments.",
         "i1": "To contact you about your request or appointment",
         "i2": "To prepare treatment recommendations and quotations",
         "i3": "To manage website operations, analytics, and service quality",
@@ -92,7 +92,7 @@
       },
       "share": {
         "heading": "Sharing of Data",
-        "p1": "We do not sell your personal data. We only share information when it is necessary to operate the business and deliver the services you requested.",
+        "p1": "We do not sell your personal data. We only share information when it is necessary to operate the business and deliver the treatments you requested.",
         "i1": "With dentists, clinics, laboratories, or care coordinators involved in your treatment journey",
         "i2": "With trusted service providers such as CRM, hosting, analytics, or email platforms",
         "i3": "With authorities when disclosure is required by law or to protect legal rights"
@@ -119,7 +119,7 @@
     "sections": {
       "website": {
         "heading": "Use of This Website",
-        "p1": "This website is provided for general information about Dent Luna, our services, and how prospective patients may contact us. The content on this website does not constitute medical advice, diagnosis, or a guaranteed treatment outcome.",
+        "p1": "This website is provided for general information about Dent Luna, our treatments, and how prospective patients may contact us. The content on this website does not constitute medical advice, diagnosis, or a guaranteed treatment outcome.",
         "p2": "By using this website, you agree to use it lawfully and not to interfere with its operation, security, or availability."
       },
       "consultation": {
@@ -131,7 +131,7 @@
       },
       "thirdParty": {
         "heading": "Appointments, Travel, and Third Parties",
-        "p1": "Where Dent Luna helps coordinate appointments, travel planning, transfers, accommodation, or related services, those arrangements may involve third-party providers. Dent Luna is not responsible for the acts, omissions, delays, pricing, or policies of independent third parties."
+        "p1": "Where Dent Luna helps coordinate appointments, travel planning, transfers, accommodation, or related treatments, those arrangements may involve third-party providers. Dent Luna is not responsible for the acts, omissions, delays, pricing, or policies of independent third parties."
       },
       "ip": {
         "heading": "Intellectual Property",
@@ -156,7 +156,7 @@
   "servicesHome": {
     "heading": "Our Treatments",
     "subheading": "Advanced Dental Solutions Designed for You",
-    "description": "From routine cleanings to complex restorations, our comprehensive dental services are tailored to meet your unique needs and ensure a healthy, radiant smile.",
+    "description": "From routine cleanings to complex restorations, our comprehensive dental treatments are tailored to meet your unique needs and ensure a healthy, radiant smile.",
     "exploreBtn": "Explore All Treatments",
     "veneersTitle": "Veneers & Smile Design",
     "veneersDesc": "Achieve a brighter, more confident smile",
@@ -341,7 +341,7 @@
     "blog": "Blog",
     "faqs": "FAQs",
     "gallery": "Gallery",
-    "services": "Services",
+    "treatments": "Treatments",
     "hollywoodSmile": "Hollywood Smile",
     "allOns": "All-on-4 / All-on-6",
     "dentalImplants": "Dental Implants",

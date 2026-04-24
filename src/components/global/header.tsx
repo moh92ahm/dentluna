@@ -17,30 +17,45 @@ import {
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { cn } from '@/lib/utils'
 
+interface NavLink {
+  label: string
+  url: string
+}
+
 interface HeaderProps {
   className?: string
   locale: string
+  navLinks?: NavLink[]
 }
 
-const Header = ({ className, locale }: HeaderProps) => {
+const Header = ({ className, locale, navLinks: cmsLinks = [] }: HeaderProps) => {
   const t = useTranslations('nav')
   const pathname = usePathname()
 
-  const NAV_ITEMS = [
-    { name: t('home'), link: '/' as const },
-    { name: t('about'), link: '/about' as const },
-    { name: t('contact'), link: '/contact' as const },
-    { name: t('treatments'), link: '/treatments' as const },
-    { name: t('gallery'), link: '/gallery' as const },
-    { name: t('doctors'), link: '/doctors' as const },
+  const FALLBACK_ITEMS = [
+    { label: t('home'), url: '/' },
+    { label: t('about'), url: '/about' },
+    { label: t('contact'), url: '/contact' },
+    { label: t('treatments'), url: '/treatments' },
+    { label: t('gallery'), url: '/gallery' },
+    { label: t('doctors'), url: '/doctors' },
   ]
 
-  const currentItem = NAV_ITEMS.find((item) => item.link === pathname)?.name ?? NAV_ITEMS[0].name
+  const NAV_ITEMS = cmsLinks.length > 0 ? cmsLinks : FALLBACK_ITEMS
+
+  const currentItem = NAV_ITEMS.find((item) => item.url === pathname)?.label ?? NAV_ITEMS[0].label
   const [activeItem, setActiveItem] = useState(currentItem)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     setActiveItem(currentItem)
   }, [currentItem])
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   const indicatorRef = useRef<HTMLDivElement>(null)
   const menuRef = useRef<HTMLUListElement>(null)
@@ -64,13 +79,26 @@ const Header = ({ className, locale }: HeaderProps) => {
   }, [activeItem])
 
   return (
-    <section className={cn('border-b py-4', className)}>
+    <section
+      className={cn(
+        'fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm transition-[padding] duration-300',
+        scrolled ? 'py-2' : 'py-4',
+        className,
+      )}
+    >
       <nav className="w-full flex justify-center px-4">
         {/* Desktop */}
         <div className="hidden items-center gap-8 lg:flex">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <Logo loading="eager" priority="high" className="w-[9.375rem]" />
+            <div
+              className={cn(
+                'transition-[width] duration-300 overflow-hidden',
+                scrolled ? 'w-28' : 'w-37.5',
+              )}
+            >
+              <Logo loading="eager" priority="high" className="w-full" />
+            </div>
           </Link>
 
           {/* Navigation Menu */}
@@ -80,17 +108,19 @@ const Header = ({ className, locale }: HeaderProps) => {
               className="flex items-center gap-6 rounded-4xl px-8 py-3"
             >
               {NAV_ITEMS.map((item) => (
-                <React.Fragment key={item.name}>
+                <React.Fragment key={item.label}>
                   <NavigationMenuItem>
                     <NavigationMenuLink
                       asChild
-                      data-nav-item={item.name}
-                      onClick={() => setActiveItem(item.name)}
+                      data-nav-item={item.label}
+                      onClick={() => setActiveItem(item.label)}
                       className={`relative cursor-pointer text-sm font-medium hover:bg-transparent ${
-                        activeItem === item.name ? 'text-foreground' : 'text-muted-foreground'
+                        activeItem === item.label ? 'text-foreground' : 'text-muted-foreground'
                       }`}
                     >
-                      <Link href={item.link}>{item.name}</Link>
+                      <Link href={item.url as Parameters<typeof Link>[0]['href']}>
+                        {item.label}
+                      </Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                 </React.Fragment>
@@ -117,7 +147,14 @@ const Header = ({ className, locale }: HeaderProps) => {
         {/* Mobile */}
         <div className="flex w-full items-center justify-between lg:hidden">
           <Link href="/" className="flex items-center gap-2">
-            <Logo loading="eager" priority="high" className="w-[9.375rem]" />
+            <div
+              className={cn(
+                'transition-[width] duration-300 overflow-hidden',
+                scrolled ? 'w-28' : 'w-37.5',
+              )}
+            >
+              <Logo loading="eager" priority="high" className="w-full" />
+            </div>
           </Link>
           <div className="flex items-center gap-2">
             <LanguageSwitcher locale={locale} />
@@ -161,13 +198,12 @@ const MobileNav = ({
 }: {
   activeItem: string
   setActiveItem: (item: string) => void
-  navItems: { name: string; link: string }[]
+  navItems: { label: string; url: string }[]
 }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const t = useTranslations('nav')
 
   return (
-    <div className="block flex h-full items-center lg:hidden">
+    <div className="flex h-full items-center lg:hidden">
       <Popover open={isOpen} onOpenChange={setIsOpen}>
         <PopoverTrigger asChild>
           <Button variant="ghost" size="icon">
@@ -183,15 +219,15 @@ const MobileNav = ({
             {navItems.map((navItem, idx) => (
               <li key={idx}>
                 <Link
-                  href={navItem.link as any}
-                  onClick={() => setActiveItem(navItem.name)}
+                  href={navItem.url as Parameters<typeof Link>[0]['href']}
+                  onClick={() => setActiveItem(navItem.label)}
                   className={`flex items-center border-l-[3px] px-6 py-4 text-sm font-medium text-foreground transition-all duration-75 ${
-                    activeItem === navItem.name
+                    activeItem === navItem.label
                       ? 'border-foreground text-foreground'
                       : 'border-transparent text-muted-foreground hover:text-foreground'
                   }`}
                 >
-                  {navItem.name}
+                  {navItem.label}
                 </Link>
               </li>
             ))}

@@ -22,7 +22,7 @@ export default async function TreatmentsPage({ params }: Props) {
 
   return (
     <main>
-      <section className="py-32 flex justify-center">
+      <section className="pt-14 flex justify-center">
         <div className="container">
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
             <Badge variant="outline">{t('badge')}</Badge>

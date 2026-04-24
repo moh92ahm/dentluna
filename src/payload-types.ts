@@ -121,10 +121,12 @@ export interface Config {
   globals: {
     'crm-settings': CrmSetting;
     'footer-settings': FooterSetting;
+    'header-settings': HeaderSetting;
   };
   globalsSelect: {
     'crm-settings': CrmSettingsSelect<false> | CrmSettingsSelect<true>;
     'footer-settings': FooterSettingsSelect<false> | FooterSettingsSelect<true>;
+    'header-settings': HeaderSettingsSelect<false> | HeaderSettingsSelect<true>;
   };
   locale: 'en' | 'de' | 'fr' | 'ro' | 'ru' | 'uk' | 'pl';
   widgets: {
@@ -1185,6 +1187,28 @@ export interface FooterSetting {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "header-settings".
+ */
+export interface HeaderSetting {
+  id: number;
+  /**
+   * Add up to 6 navigation links shown in the header.
+   */
+  navLinks?:
+    | {
+        label: string;
+        /**
+         * Use relative paths, e.g. /about or /treatments
+         */
+        url: string;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "crm-settings_select".
  */
 export interface CrmSettingsSelect<T extends boolean = true> {
@@ -1226,6 +1250,22 @@ export interface FooterSettingsSelect<T extends boolean = true> {
       };
   copyrightText?: T;
   legalLinks?:
+    | T
+    | {
+        label?: T;
+        url?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "header-settings_select".
+ */
+export interface HeaderSettingsSelect<T extends boolean = true> {
+  navLinks?:
     | T
     | {
         label?: T;

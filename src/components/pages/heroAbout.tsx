@@ -147,7 +147,7 @@ const HeroAbout = ({ className }: HeroAboutProps) => {
   const t = useTranslations('aboutHero')
   return (
     <section
-      className={cn('container max-w-[1536px] py-10 flex justify-center mx-auto', className)}
+      className={cn('container max-w-[1536px] py-18 flex justify-center mx-auto', className)}
     >
       <div className="relative overflow-hidden rounded-2xl bg-card">
         <div className="grid h-full w-full grid-cols-1 lg:max-h-[37.5rem] lg:grid-cols-2">

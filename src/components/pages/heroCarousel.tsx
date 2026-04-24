@@ -34,7 +34,7 @@ const HeroCarousel = ({ className }: HeroCarouselProps) => {
   const t = useTranslations('heroCarousel')
   return (
     <section
-      className={cn('relative h-screen overflow-hidden -ml-[calc(50vw-50%)] w-screen', className)}
+      className={cn('relative overflow-hidden -ml-[calc(50vw-50%)] -mt-20 w-screen', className)}
     >
       <div className="absolute inset-0 flex flex-col justify-center gap-4">
         {galleryImages.map((row, rowIndex) => (
