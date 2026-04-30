@@ -1,6 +1,5 @@
 'use client'
 
-import { Languages } from 'lucide-react'
 import { useRouter, usePathname } from '@/i18n/navigation'
 import { routing } from '@/i18n/routing'
 import { externalLocales, localeFlags, localeFullLabels } from '@/i18n/locales'
