@@ -16,7 +16,13 @@
     "metaTitle": "Leczenie stomatologiczne - Dent Luna",
     "metaDesc": "Poznaj nasze kompleksowe zabiegi stomatologiczne: licówki, implanty, korony i wiele więcej. Umów bezpłatną konsultację w Izmirze.",
     "shareArticle": "Udostępnij ten artykuł:",
-    "onThisPage": "Na tej stronie"
+    "onThisPage": "Na tej stronie",
+    "overview": "Przegląd",
+    "treatmentDetails": "Szczegóły zabiegu",
+    "relatedTreatments": "Powiązane zabiegi",
+    "publishedAt": "Opublikowano",
+    "noTreatmentsAvailable": "Brak dostępnych zabiegów.",
+    "treatmentArchiveFallback": "Poznaj tę opcję zabiegu"
   },
   "blog": {
     "heading": "Najnowsze wpisy",

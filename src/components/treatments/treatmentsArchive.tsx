@@ -5,7 +5,8 @@ import { Link } from '@/i18n/navigation'
 import type { Treatment } from '@/payload-types'
 import Image from 'next/image'
 import { ChevronRight } from 'lucide-react'
-import { Badge } from '@/components/ui/badge'
+import { getTranslations } from 'next-intl/server'
+
 import { defaultLocale } from '@/i18n/locales'
 
 interface TreatmentsArchiveProps {
@@ -14,11 +15,12 @@ interface TreatmentsArchiveProps {
 }
 
 const TreatmentsArchive = async ({ className, locale = defaultLocale }: TreatmentsArchiveProps) => {
+  const t = await getTranslations({ locale, namespace: 'common' })
   const cachedGetTreatments = getCachedDocuments('treatments', 9, 1, locale)
   const treatments = (await cachedGetTreatments()) as Treatment[]
 
   if (!treatments || treatments.length === 0) {
-    return <p className="text-center text-muted-foreground">No treatments available yet.</p>
+    return <p className="text-center text-muted-foreground">{t('noTreatmentsAvailable')}</p>
   }
 
   const getImage = (treatment: Treatment) => {
@@ -27,7 +29,7 @@ const TreatmentsArchive = async ({ className, locale = defaultLocale }: Treatmen
       typeof treatment.heroImage === 'object' &&
       'url' in treatment.heroImage
     ) {
-      return getMediaUrl((treatment.heroImage as any).url)
+      return getMediaUrl((treatment.heroImage as { url: string }).url)
     }
     return 'https://placehold.net/default.png'
   }
@@ -35,7 +37,11 @@ const TreatmentsArchive = async ({ className, locale = defaultLocale }: Treatmen
   return (
     <div className={cn('grid gap-6 md:grid-cols-2 lg:grid-cols-3', className)}>
       {treatments.map((treatment) => (
-        <Link key={treatment.id} href={`/treatments/${treatment.slug}`} className="flex flex-col border rounded-lg bg-muted/50 transition-all hover:shadow-lg">
+        <Link
+          key={treatment.id}
+          href={`/treatments/${treatment.slug}`}
+          className="flex flex-col border rounded-lg bg-muted/50 transition-all hover:shadow-lg"
+        >
           <div className="relative aspect-video overflow-hidden rounded-lg">
             <Image
               src={getImage(treatment)}
@@ -48,16 +54,13 @@ const TreatmentsArchive = async ({ className, locale = defaultLocale }: Treatmen
           <div className="flex flex-col justify-between gap-4 p-4">
             <h2 className="text-xl font-semibold">{treatment.title}</h2>
             <p className="text-sm text-muted-foreground">
-              {treatment.meta?.description || 'Discover this treatment option'}
+              {treatment.excerpt || treatment.meta?.description || t('treatmentArchiveFallback')}
             </p>
             <div className="flex justify-between gap-6 text-sm">
-              <Link
-                href={`/treatments/${treatment.slug}` as any}
-                className="flex items-center gap-1 hover:underline"
-              >
-                Read more
+              <span className="flex items-center gap-1 text-primary font-medium hover:underline">
+                {t('readMore')}
                 <ChevronRight className="h-full w-3" />
-              </Link>
+              </span>
             </div>
           </div>
         </Link>

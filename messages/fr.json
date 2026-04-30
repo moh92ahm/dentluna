@@ -16,7 +16,13 @@
     "metaTitle": "Traitements dentaires – Dent Luna",
     "metaDesc": "Découvrez nos traitements dentaires complets : facettes, implants, couronnes et plus. Réservez votre consultation gratuite à Izmir.",
     "shareArticle": "Partager cet article :",
-    "onThisPage": "Sur cette page"
+    "onThisPage": "Sur cette page",
+    "overview": "Aperçu",
+    "treatmentDetails": "Détails du traitement",
+    "relatedTreatments": "Traitements associés",
+    "publishedAt": "Publié le",
+    "noTreatmentsAvailable": "Aucun traitement n'est disponible pour le moment.",
+    "treatmentArchiveFallback": "Découvrez cette option de traitement"
   },
   "blog": {
     "heading": "Derniers articles",

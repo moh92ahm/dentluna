@@ -169,6 +169,7 @@ export interface UserAuthOperations {
 export interface Treatment {
   id: number;
   title: string;
+  excerpt?: string | null;
   heroImage?: (number | null) | Media;
   content: {
     root: {
@@ -758,6 +759,7 @@ export interface PayloadMigration {
  */
 export interface TreatmentsSelect<T extends boolean = true> {
   title?: T;
+  excerpt?: T;
   heroImage?: T;
   content?: T;
   relatedTreatments?: T;

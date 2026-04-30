@@ -16,7 +16,13 @@
     "metaTitle": "Tratamente dentare - Dent Luna",
     "metaDesc": "Explorează tratamentele noastre dentare complete: fațete, implanturi, coroane și multe altele. Programează consultația gratuită în Izmir.",
     "shareArticle": "Distribuie acest articol:",
-    "onThisPage": "Pe această pagină"
+    "onThisPage": "Pe această pagină",
+    "overview": "Prezentare generală",
+    "treatmentDetails": "Detalii despre tratament",
+    "relatedTreatments": "Tratamente similare",
+    "publishedAt": "Publicat la",
+    "noTreatmentsAvailable": "Nu există încă tratamente disponibile.",
+    "treatmentArchiveFallback": "Descoperă această opțiune de tratament"
   },
   "blog": {
     "heading": "Ultimele articole",

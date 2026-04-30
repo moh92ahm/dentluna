@@ -16,7 +16,13 @@
     "metaTitle": "Dental Treatments – Dent Luna",
     "metaDesc": "Explore our comprehensive dental treatments: veneers, implants, crowns, and more. Book your free consultation in Izmir.",
     "shareArticle": "Share this article:",
-    "onThisPage": "On this page"
+    "onThisPage": "On this page",
+    "overview": "Overview",
+    "treatmentDetails": "Treatment Details",
+    "relatedTreatments": "Related Treatments",
+    "publishedAt": "Published on",
+    "noTreatmentsAvailable": "No treatments available yet.",
+    "treatmentArchiveFallback": "Discover this treatment option"
   },
   "blog": {
     "heading": "Latest Blog",

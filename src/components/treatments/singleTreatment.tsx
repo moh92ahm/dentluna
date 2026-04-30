@@ -1,6 +1,6 @@
 'use client'
 
-import type { Media, Treatment } from '@/payload-types'
+import type { Treatment } from '@/payload-types'
 import { Home, MessageCircle, Send, Share2 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -33,33 +33,6 @@ type TocSection = {
   label: string
 }
 
-const getExcerpt = (content: Treatment['content']) => {
-  const children = content?.root?.children ?? []
-
-  for (const child of children) {
-    if (
-      child &&
-      typeof child === 'object' &&
-      'children' in child &&
-      Array.isArray(child.children)
-    ) {
-      const text = child.children
-        .map((node) => {
-          if (node && typeof node === 'object' && 'text' in node && typeof node.text === 'string') {
-            return node.text
-          }
-          return ''
-        })
-        .join('')
-        .trim()
-
-      if (text) return text
-    }
-  }
-
-  return ''
-}
-
 const getHeroImageUrl = (heroImage: Treatment['heroImage']) => {
   if (heroImage && typeof heroImage === 'object' && 'url' in heroImage) {
     return getMediaUrl(heroImage.url)
@@ -74,7 +47,7 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({})
 
   const heroImageUrl = getHeroImageUrl(treatment.heroImage)
-  const excerpt = useMemo(() => getExcerpt(treatment.content), [treatment.content])
+  const excerpt = treatment.excerpt || ''
   const authors = treatment.populatedAuthors?.filter((author) => author?.name) ?? []
   const authorNames = authors
     .map((author) => author.name)
@@ -86,19 +59,19 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
     const nextSections: TocSection[] = []
 
     if (heroImageUrl || excerpt) {
-      nextSections.push({ id: 'overview', label: 'Overview' })
+      nextSections.push({ id: 'overview', label: t('overview') })
     }
 
     if (treatment.content) {
-      nextSections.push({ id: 'details', label: 'Treatment Details' })
+      nextSections.push({ id: 'details', label: t('treatmentDetails') })
     }
 
     if (treatment.relatedTreatments && treatment.relatedTreatments.length > 0) {
-      nextSections.push({ id: 'related', label: 'Related Treatments' })
+      nextSections.push({ id: 'related', label: t('relatedTreatments') })
     }
 
     return nextSections
-  }, [excerpt, heroImageUrl, treatment.content, treatment.relatedTreatments])
+  }, [excerpt, heroImageUrl, t, treatment.content, treatment.relatedTreatments])
 
   useEffect(() => {
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
@@ -145,7 +118,7 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
             <BreadcrumbSeparator />
             <BreadcrumbItem>
               <BreadcrumbLink asChild>
-                <Link href="/treatments">Treatments</Link>
+                <Link href="/treatments">{t('badge')}</Link>
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
@@ -165,13 +138,13 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
             {authorNames ? <span className="font-medium">{authorNames}</span> : null}
             {treatment.publishedAt ? (
               <span className="ml-1 text-muted-foreground">
-                on {formatDateTime(treatment.publishedAt)}
+                {t('publishedAt')} {formatDateTime(treatment.publishedAt)}
               </span>
             ) : null}
           </span>
         </div>
         <div className="relative mt-12 grid max-w-7xl gap-14 lg:mt-14 lg:grid lg:grid-cols-12 lg:gap-6">
-          <div className="order-2 lg:order-none lg:col-span-8">
+          <div className="order-2 lg:order-0 lg:col-span-8">
             {(heroImageUrl || excerpt) && (
               <section
                 id="overview"
@@ -206,7 +179,7 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
                 ref={(ref) => addSectionRef('related', ref)}
                 className="scroll-mt-24 border-t pt-10"
               >
-                <h2 className="mb-6 text-2xl font-semibold">Related Treatments</h2>
+                <h2 className="mb-6 text-2xl font-semibold">{t('relatedTreatments')}</h2>
                 <div className="grid gap-4 md:grid-cols-2">
                   {treatment.relatedTreatments.map((relatedTreatment) => {
                     if (!relatedTreatment || typeof relatedTreatment !== 'object') {
@@ -227,8 +200,8 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
               </section>
             )}
           </div>
-          <div className="order-1 flex h-fit flex-col text-sm lg:sticky lg:top-8 lg:order-none lg:col-span-3 lg:col-start-10 lg:text-xs">
-            <div className="order-3 lg:order-none">
+          <div className="order-1 flex h-fit flex-col text-sm lg:sticky lg:top-8 lg:order-0 lg:col-span-3 lg:col-start-10 lg:text-xs">
+            <div className="order-3 lg:order-0">
               <span className="text-xs font-medium">{t('onThisPage')}</span>
               <nav className="mt-2 lg:mt-4">
                 <ul className="space-y-1">
@@ -251,7 +224,7 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
               </nav>
             </div>
             <Separator className="order-2 mt-8 mb-11 lg:hidden" />
-            <div className="order-1 flex flex-col gap-2 lg:order-none lg:mt-9">
+            <div className="order-1 flex flex-col gap-2 lg:order-0 lg:mt-9">
               <p className="font-medium text-foreground">{t('shareArticle')}</p>
               <ul className="flex gap-2">
                 <li>

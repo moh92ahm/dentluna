@@ -68,6 +68,13 @@ export const Treatments: CollectionConfig<'treatments'> = {
       localized: true,
     },
     {
+      name: 'excerpt',
+      type: 'textarea',
+      label: 'Excerpt',
+      localized: true,
+      required: false,
+    },
+    {
       type: 'tabs',
       tabs: [
         {

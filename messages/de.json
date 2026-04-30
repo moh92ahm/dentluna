@@ -16,7 +16,13 @@
     "metaTitle": "Zahnbehandlungen – Dent Luna",
     "metaDesc": "Entdecken Sie unsere umfassenden Zahnbehandlungen: Veneers, Implantate, Kronen und mehr. Kostenloses Erstgespräch in Izmir.",
     "shareArticle": "Diesen Artikel teilen:",
-    "onThisPage": "Auf dieser Seite"
+    "onThisPage": "Auf dieser Seite",
+    "overview": "Überblick",
+    "treatmentDetails": "Behandlungsdetails",
+    "relatedTreatments": "Ähnliche Behandlungen",
+    "publishedAt": "Veröffentlicht am",
+    "noTreatmentsAvailable": "Derzeit sind keine Behandlungen verfügbar.",
+    "treatmentArchiveFallback": "Entdecken Sie diese Behandlungsoption"
   },
   "blog": {
     "heading": "Neueste Beiträge",
