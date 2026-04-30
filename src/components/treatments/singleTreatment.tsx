@@ -198,7 +198,7 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
               ref={(ref) => addSectionRef('details', ref)}
               className="my-8 scroll-mt-24"
             >
-              <RichText data={treatment.content} />
+              <RichText data={treatment.content} enableGutter={false} />
             </section>
             {treatment.relatedTreatments && treatment.relatedTreatments.length > 0 && (
               <section

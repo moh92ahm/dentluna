@@ -55,9 +55,7 @@ const SingleDoctor = ({ className, doctor }: SingleDoctorProps) => {
           {/* Biography */}
           {doctor.biography && (
             <section className="border-t pt-12">
-              <div className="prose max-w-none dark:prose-invert">
-                <RichText data={doctor.biography} />
-              </div>
+              <RichText data={doctor.biography} enableGutter={false} />
             </section>
           )}
         </div>
