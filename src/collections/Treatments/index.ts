@@ -5,6 +5,7 @@ import {
   HeadingFeature,
   HorizontalRuleFeature,
   InlineToolbarFeature,
+  EXPERIMENTAL_TableFeature,
   lexicalEditor,
 } from '@payloadcms/richtext-lexical'
 
@@ -88,6 +89,7 @@ export const Treatments: CollectionConfig<'treatments'> = {
                     FixedToolbarFeature(),
                     InlineToolbarFeature(),
                     HorizontalRuleFeature(),
+                    EXPERIMENTAL_TableFeature(),
                   ]
                 },
               }),
