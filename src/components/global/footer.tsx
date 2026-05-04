@@ -8,6 +8,7 @@ import { FaXTwitter, FaTiktok } from 'react-icons/fa6'
 import { Logo } from '@/components/global/logo'
 import { LanguageSwitcher } from '@/components/global/language-switcher'
 import { Link } from '@/i18n/navigation'
+import { isPathHiddenForLocale } from '@/i18n/localePolicy'
 import { cn } from '@/lib/utils'
 import type { Treatment, Post } from '@/payload-types'
 
@@ -113,6 +114,7 @@ const Footer = async ({ className }: FooterProps) => {
                       {section.links.map((link, linkIdx) => {
                         const resolved = resolveLink(link as any)
                         if (!resolved) return null
+                        if (isPathHiddenForLocale(locale, resolved.href)) return null
                         return (
                           <li key={linkIdx} className="font-medium hover:text-primary">
                             <Link href={resolved.href as any}>{resolved.label}</Link>
@@ -134,11 +136,13 @@ const Footer = async ({ className }: FooterProps) => {
             <LanguageSwitcher locale={locale} />
             {footerData.legalLinks && footerData.legalLinks.length > 0 && (
               <ul className="flex gap-2 flex-row">
-                {footerData.legalLinks.map((link, idx) => (
-                  <li key={idx} className="hover:text-primary">
-                    <Link href={normalizeUrl(link.url) as any}>{link.label}</Link>
-                  </li>
-                ))}
+                {footerData.legalLinks.map((link, idx) =>
+                  isPathHiddenForLocale(locale, normalizeUrl(link.url)) ? null : (
+                    <li key={idx} className="hover:text-primary">
+                      <Link href={normalizeUrl(link.url) as any}>{link.label}</Link>
+                    </li>
+                  ),
+                )}
               </ul>
             )}
           </div>

@@ -5,6 +5,7 @@ import config from '@payload-config'
 import { routing } from '@/i18n/routing'
 import { Header } from '@/components/global/header'
 import { Footer } from '@/components/global/footer'
+import { isPathHiddenForLocale } from '@/i18n/localePolicy'
 import { getServerSideURL } from '@/utilities/getURL'
 import type { Metadata } from 'next'
 
@@ -49,10 +50,11 @@ export default async function LocaleLayout({ children, params }: Props) {
     label: link.label ?? '',
     url: link.url,
   }))
+  const filteredNavLinks = navLinks.filter((link) => !isPathHiddenForLocale(locale, link.url))
 
   return (
     <NextIntlClientProvider>
-      <Header locale={locale} navLinks={navLinks} />
+      <Header locale={locale} navLinks={filteredNavLinks} />
       <main className="container mx-auto px-4 pt-20">{children}</main>
       <Footer />
     </NextIntlClientProvider>
