@@ -16,7 +16,7 @@ interface TreatmentsArchiveProps {
 
 const TreatmentsArchive = async ({ className, locale = defaultLocale }: TreatmentsArchiveProps) => {
   const t = await getTranslations({ locale, namespace: 'common' })
-  const cachedGetTreatments = getCachedDocuments('treatments', 9, 1, locale)
+  const cachedGetTreatments = getCachedDocuments('treatments', 12, 1, locale)
   const treatments = (await cachedGetTreatments()) as Treatment[]
 
   if (!treatments || treatments.length === 0) {
