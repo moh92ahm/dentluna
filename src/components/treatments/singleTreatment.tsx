@@ -31,6 +31,14 @@ interface SingleTreatmentProps {
 type TocSection = {
   id: string
   label: string
+  level: 2 | 3
+}
+
+type RichTextNode = {
+  type?: string
+  tag?: string
+  text?: string
+  children?: RichTextNode[]
 }
 
 const getHeroImageUrl = (heroImage: Treatment['heroImage']) => {
@@ -41,10 +49,71 @@ const getHeroImageUrl = (heroImage: Treatment['heroImage']) => {
   return null
 }
 
+const normalizeLabelToId = (value: string) =>
+  value
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+
+const getNodeText = (node: RichTextNode): string => {
+  if (node.type === 'text') {
+    return node.text ?? ''
+  }
+
+  if (!node.children || node.children.length === 0) {
+    return ''
+  }
+
+  return node.children.map(getNodeText).join('')
+}
+
+const getHeadingSectionsFromContent = (content: unknown): TocSection[] => {
+  if (!content || typeof content !== 'object' || !('root' in content)) {
+    return []
+  }
+
+  const rootNode = (content as { root?: RichTextNode }).root
+  if (!rootNode?.children?.length) {
+    return []
+  }
+
+  const sections: TocSection[] = []
+  const idCounts: Record<string, number> = {}
+
+  const visitNode = (node: RichTextNode) => {
+    if (node.type === 'heading' && (node.tag === 'h2' || node.tag === 'h3')) {
+      const label = getNodeText(node).trim()
+
+      if (label) {
+        const baseId = normalizeLabelToId(label) || 'section'
+        const count = idCounts[baseId] ?? 0
+        idCounts[baseId] = count + 1
+
+        const id = count === 0 ? baseId : `${baseId}-${count + 1}`
+
+        sections.push({
+          id,
+          label,
+          level: node.tag === 'h3' ? 3 : 2,
+        })
+      }
+    }
+
+    node.children?.forEach(visitNode)
+  }
+
+  rootNode.children.forEach(visitNode)
+
+  return sections
+}
+
 const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
   const t = useTranslations('treatments')
   const [activeSection, setActiveSection] = useState<string | null>(null)
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({})
+  const detailsSectionRef = useRef<HTMLElement | null>(null)
 
   const heroImageUrl = getHeroImageUrl(treatment.heroImage)
   const excerpt = treatment.excerpt || ''
@@ -55,23 +124,39 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
     .join(', ')
   const pageUrl = `/treatments/${treatment.slug}`
 
-  const sections = useMemo<TocSection[]>(() => {
-    const nextSections: TocSection[] = []
+  const hasRelatedTreatments = Boolean(treatment.relatedTreatments?.length)
 
-    if (heroImageUrl || excerpt) {
-      nextSections.push({ id: 'overview', label: t('overview') })
+  const tocSections = useMemo<TocSection[]>(() => {
+    const sections = getHeadingSectionsFromContent(treatment.content)
+
+    if (hasRelatedTreatments) {
+      sections.push({ id: 'related', label: t('relatedTreatments'), level: 2 })
     }
 
-    if (treatment.content) {
-      nextSections.push({ id: 'details', label: t('treatmentDetails') })
+    return sections
+  }, [hasRelatedTreatments, t, treatment.content])
+
+  useEffect(() => {
+    const detailsSection = detailsSectionRef.current
+    sectionRefs.current = {}
+
+    if (!detailsSection) {
+      return
     }
 
-    if (treatment.relatedTreatments && treatment.relatedTreatments.length > 0) {
-      nextSections.push({ id: 'related', label: t('relatedTreatments') })
-    }
+    const headingElements = Array.from(detailsSection.querySelectorAll<HTMLElement>('h2, h3'))
+    const headingSections = tocSections.filter((section) => section.id !== 'related')
 
-    return nextSections
-  }, [excerpt, heroImageUrl, t, treatment.content, treatment.relatedTreatments])
+    headingSections.forEach((section, index) => {
+      const headingElement = headingElements[index]
+      if (!headingElement) {
+        return
+      }
+
+      headingElement.id = section.id
+      sectionRefs.current[section.id] = headingElement
+    })
+  }, [tocSections])
 
   useEffect(() => {
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
@@ -84,11 +169,11 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
 
     let observer: IntersectionObserver | null = new IntersectionObserver(observerCallback, {
       root: null,
-      rootMargin: '0px',
-      threshold: 1,
+      rootMargin: '-20% 0px -70% 0px',
+      threshold: 0,
     })
 
-    sections.forEach(({ id: sectionId }) => {
+    tocSections.forEach(({ id: sectionId }) => {
       const element = sectionRefs.current[sectionId]
       if (element) {
         observer?.observe(element)
@@ -99,7 +184,7 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
       observer?.disconnect()
       observer = null
     }
-  }, [sections])
+  }, [tocSections])
 
   const addSectionRef = (id: string, ref: HTMLElement | null) => {
     sectionRefs.current[id] = ref
@@ -166,11 +251,7 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
                 {excerpt ? <p className="text-sm text-muted-foreground">{excerpt}</p> : null}
               </section>
             )}
-            <section
-              id="details"
-              ref={(ref) => addSectionRef('details', ref)}
-              className="my-8 scroll-mt-24"
-            >
+            <section ref={detailsSectionRef} className="my-8 scroll-mt-24">
               <RichText data={treatment.content} enableGutter={false} />
             </section>
             {treatment.relatedTreatments && treatment.relatedTreatments.length > 0 && (
@@ -200,17 +281,18 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
               </section>
             )}
           </div>
-          <div className="order-1 flex h-fit flex-col text-sm lg:sticky lg:top-8 lg:order-0 lg:col-span-3 lg:col-start-10 lg:text-xs">
+          <div className="order-1 flex h-fit flex-col text-sm lg:sticky lg:top-20 lg:order-0 lg:col-span-3 lg:col-start-10 lg:text-xs">
             <div className="order-3 lg:order-0">
               <span className="text-xs font-medium">{t('onThisPage')}</span>
               <nav className="mt-2 lg:mt-4">
                 <ul className="space-y-1">
-                  {sections.map((section) => (
+                  {tocSections.map((section) => (
                     <li key={section.id}>
                       <a
                         href={`#${section.id}`}
                         className={cn(
                           'block py-1 transition-colors duration-200',
+                          section.level === 3 && 'pl-3',
                           activeSection === section.id
                             ? 'text-muted-foreground lg:text-primary'
                             : 'text-muted-foreground hover:text-primary',
