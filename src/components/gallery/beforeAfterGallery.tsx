@@ -2,6 +2,7 @@
 
 import { cn } from '@/lib/utils'
 import { Link } from '@/i18n/navigation'
+import { useTranslations } from 'next-intl'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { CompareSlider } from '@/components/ui/CompareSlider'
 
@@ -46,6 +47,8 @@ export const BeforeAfterGalleryClient = ({
   activeTabId,
   currentPage = 1,
 }: BeforeAfterGalleryClientProps) => {
+  const t = useTranslations('common')
+
   if (!categories || categories.length === 0) {
     return <p className="text-center text-muted-foreground">No gallery items available yet.</p>
   }
@@ -92,7 +95,7 @@ export const BeforeAfterGalleryClient = ({
                       : 'hover:bg-muted text-foreground',
                   )}
                 >
-                  Prev
+                  {t('paginationPrevious')}
                 </Link>
 
                 {Array.from({ length: totalPages }, (_, index) => index + 1).map((pageNumber) => (
@@ -121,7 +124,7 @@ export const BeforeAfterGalleryClient = ({
                       : 'hover:bg-muted text-foreground',
                   )}
                 >
-                  Next
+                  {t('paginationNext')}
                 </Link>
               </nav>
             )}

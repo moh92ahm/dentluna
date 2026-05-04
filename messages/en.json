@@ -2,6 +2,8 @@
   "common": {
     "readMore": "Read More",
     "viewAll": "View All",
+    "paginationPrevious": "Prev",
+    "paginationNext": "Next",
     "notFound": "Not Found",
     "backToHome": "Back to Home"
   },

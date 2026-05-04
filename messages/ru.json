@@ -2,6 +2,8 @@
   "common": {
     "readMore": "Читать далее",
     "viewAll": "Смотреть все",
+    "paginationPrevious": "Назад",
+    "paginationNext": "Вперёд",
     "notFound": "Не найдено",
     "backToHome": "Вернуться на главную"
   },

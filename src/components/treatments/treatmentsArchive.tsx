@@ -86,7 +86,7 @@ const TreatmentsArchive = async ({
                 : 'pointer-events-none text-muted-foreground opacity-50',
             )}
           >
-            Prev
+            {t('paginationPrevious')}
           </Link>
 
           {Array.from({ length: treatmentsResult.totalPages }, (_, index) => index + 1).map(
@@ -117,7 +117,7 @@ const TreatmentsArchive = async ({
                 : 'pointer-events-none text-muted-foreground opacity-50',
             )}
           >
-            Next
+            {t('paginationNext')}
           </Link>
         </nav>
       )}
