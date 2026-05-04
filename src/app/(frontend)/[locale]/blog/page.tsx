@@ -4,6 +4,7 @@ import { ArchiveBlog } from '@/components/blog/archiveBlog'
 
 type Props = {
   params: Promise<{ locale: string }>
+  searchParams: Promise<{ page?: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -15,9 +16,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default async function BlogPage({ params }: Props) {
+export default async function BlogPage({ params, searchParams }: Props) {
   const { locale } = await params
+  const { page } = await searchParams
   const t = await getTranslations({ locale, namespace: 'blog' })
+  const pageNumber = Number(page)
+  const currentPage = Number.isInteger(pageNumber) && pageNumber > 0 ? pageNumber : 1
 
   return (
     <main>
@@ -25,7 +29,7 @@ export default async function BlogPage({ params }: Props) {
         <div className="container">
           <h1 className="mb-12 text-center text-4xl font-medium md:text-7xl">{t('heading')}</h1>
           <div className="mt-24">
-            <ArchiveBlog locale={locale} />
+            <ArchiveBlog locale={locale} page={currentPage} />
           </div>
         </div>
       </section>

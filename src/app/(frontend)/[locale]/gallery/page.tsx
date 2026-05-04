@@ -6,6 +6,7 @@ import { getLocalePolicy } from '@/i18n/localePolicy'
 
 type Props = {
   params: Promise<{ locale: string }>
+  searchParams: Promise<{ tab?: string; page?: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -17,10 +18,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default async function GalleryPage({ params }: Props) {
+export default async function GalleryPage({ params, searchParams }: Props) {
   const { locale } = await params
+  const { tab, page } = await searchParams
   const t = await getTranslations({ locale, namespace: 'gallery' })
   const localePolicy = getLocalePolicy(locale)
+  const pageNumber = Number(page)
+  const currentPage = Number.isInteger(pageNumber) && pageNumber > 0 ? pageNumber : 1
 
   return (
     <main>
@@ -33,7 +37,7 @@ export default async function GalleryPage({ params }: Props) {
           </div>
 
           {localePolicy.showGalleryBeforeAfter ? (
-            <GalleryArchive locale={locale} />
+            <GalleryArchive locale={locale} activeTabId={tab} currentPage={currentPage} />
           ) : (
             <p className="mx-auto max-w-xl text-center text-muted-foreground">{t('description')}</p>
           )}

@@ -9,11 +9,15 @@ import { defaultLocale } from '@/i18n/locales'
 interface GalleryArchiveProps {
   className?: string
   locale?: string
+  activeTabId?: string
+  currentPage?: number
 }
 
 export const GalleryArchive = async ({
   className,
   locale = defaultLocale,
+  activeTabId,
+  currentPage = 1,
 }: GalleryArchiveProps) => {
   const payload = await getPayload({ config: configPromise })
 
@@ -103,5 +107,12 @@ export const GalleryArchive = async ({
       })),
   ]
 
-  return <BeforeAfterGallery categories={tabCategories} className={className} />
+  return (
+    <BeforeAfterGallery
+      categories={tabCategories}
+      className={className}
+      activeTabId={activeTabId}
+      currentPage={currentPage}
+    />
+  )
 }

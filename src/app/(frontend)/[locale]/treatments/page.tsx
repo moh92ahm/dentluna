@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge'
 
 type Props = {
   params: Promise<{ locale: string }>
+  searchParams: Promise<{ page?: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -16,9 +17,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default async function TreatmentsPage({ params }: Props) {
+export default async function TreatmentsPage({ params, searchParams }: Props) {
   const { locale } = await params
+  const { page } = await searchParams
   const t = await getTranslations({ locale, namespace: 'treatments' })
+  const pageNumber = Number(page)
+  const currentPage = Number.isInteger(pageNumber) && pageNumber > 0 ? pageNumber : 1
 
   return (
     <main>
@@ -30,7 +34,7 @@ export default async function TreatmentsPage({ params }: Props) {
             <p className="text-muted-foreground">{t('description')}</p>
           </div>
           <div className="mt-20">
-            <TreatmentsArchive locale={locale} />
+            <TreatmentsArchive locale={locale} page={currentPage} />
           </div>
         </div>
       </section>

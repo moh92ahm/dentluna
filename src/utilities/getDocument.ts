@@ -73,6 +73,43 @@ async function getDocuments(collection: Collection, limit = 10, depth = 0, local
   return docs.docs
 }
 
+async function getDocumentsPaginated(
+  collection: Collection,
+  limit = 10,
+  page = 1,
+  depth = 0,
+  locale = defaultLocale,
+) {
+  const payload = await getPayload({ config: configPromise })
+
+  return payload.find({
+    collection,
+    depth,
+    limit,
+    page,
+    locale: locale as LocaleCode,
+    sort: '-createdAt',
+    overrideAccess: false,
+  })
+}
+
+async function getAllDocuments(collection: Collection, depth = 0, locale = defaultLocale) {
+  const pageSize = 100
+  const firstPage = await getDocumentsPaginated(collection, pageSize, 1, depth, locale)
+
+  if (firstPage.totalPages <= 1) {
+    return firstPage.docs
+  }
+
+  const remainingPages = await Promise.all(
+    Array.from({ length: firstPage.totalPages - 1 }, (_, index) =>
+      getDocumentsPaginated(collection, pageSize, index + 2, depth, locale),
+    ),
+  )
+
+  return [firstPage.docs, ...remainingPages.map((page) => page.docs)].flat()
+}
+
 /**
  * Returns a cached function for fetching multiple documents.
  * Cache is disabled in development so changes are reflected immediately.
@@ -91,6 +128,52 @@ export const getCachedDocuments = (
     [collection, String(limit), String(depth), locale],
     {
       tags: [`${collection}_list`],
+    },
+  )
+}
+
+/**
+ * Returns a cached function for fetching paginated documents.
+ * Cache is disabled in development so changes are reflected immediately.
+ */
+export const getCachedDocumentsPaginated = (
+  collection: Collection,
+  limit = 10,
+  page = 1,
+  depth = 0,
+  locale = defaultLocale,
+) => {
+  if (process.env.NODE_ENV === 'development') {
+    return () => getDocumentsPaginated(collection, limit, page, depth, locale)
+  }
+
+  return unstable_cache(
+    async () => getDocumentsPaginated(collection, limit, page, depth, locale),
+    [collection, String(limit), String(page), String(depth), locale],
+    {
+      tags: [`${collection}_list_page_${page}`],
+    },
+  )
+}
+
+/**
+ * Returns a cached function for fetching all documents from a collection.
+ * Cache is disabled in development so changes are reflected immediately.
+ */
+export const getCachedAllDocuments = (
+  collection: Collection,
+  depth = 0,
+  locale = defaultLocale,
+) => {
+  if (process.env.NODE_ENV === 'development') {
+    return () => getAllDocuments(collection, depth, locale)
+  }
+
+  return unstable_cache(
+    async () => getAllDocuments(collection, depth, locale),
+    [collection, 'all', String(depth), locale],
+    {
+      tags: [`${collection}_list_all`],
     },
   )
 }

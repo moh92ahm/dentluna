@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import { getCachedDocuments } from '@/utilities/getDocument'
+import { getCachedAllDocuments } from '@/utilities/getDocument'
 import { getMediaUrl } from '@/utilities/getMediaUrl'
 import { Link } from '@/i18n/navigation'
 import type { Doctor } from '@/payload-types'
@@ -13,7 +13,7 @@ interface DoctorsPageProps {
 }
 
 const DoctorsPage = async ({ className, locale = defaultLocale }: DoctorsPageProps) => {
-  const cachedGetDoctors = getCachedDocuments('doctors', 12, 1, locale)
+  const cachedGetDoctors = getCachedAllDocuments('doctors', 1, locale)
   const doctors = (await cachedGetDoctors()) as Doctor[]
 
   if (!doctors || doctors.length === 0) {
@@ -43,7 +43,7 @@ const DoctorsPage = async ({ className, locale = defaultLocale }: DoctorsPagePro
               </CardDescription>
             </CardHeader>
             <CardContent className="px-7 pb-7">
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl">
+              <div className="relative aspect-4/5 w-full overflow-hidden rounded-xl">
                 <Image
                   src={getImage(doctor)}
                   alt={doctor.name}

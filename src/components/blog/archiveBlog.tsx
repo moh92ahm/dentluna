@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import { getCachedDocuments } from '@/utilities/getDocument'
+import { getCachedDocumentsPaginated } from '@/utilities/getDocument'
 import { getMediaUrl } from '@/utilities/getMediaUrl'
 import { Link } from '@/i18n/navigation'
 import type { Post } from '@/payload-types'
@@ -9,6 +9,7 @@ import { defaultLocale } from '@/i18n/locales'
 interface ArchiveBlogProps {
   className?: string
   locale?: string
+  page?: number
 }
 
 const formatDate = (dateString: string | undefined) => {
@@ -25,9 +26,10 @@ const getAuthorNames = (populatedAuthors: any[] | undefined) => {
   return populatedAuthors.map((a) => a.name).join(', ')
 }
 
-const ArchiveBlog = async ({ className, locale = defaultLocale }: ArchiveBlogProps) => {
-  const cachedGetPosts = getCachedDocuments('posts', 10, 1, locale)
-  const posts = (await cachedGetPosts()) as Post[]
+const ArchiveBlog = async ({ className, locale = defaultLocale, page = 1 }: ArchiveBlogProps) => {
+  const cachedGetPosts = getCachedDocumentsPaginated('posts', 10, page, 1, locale)
+  const postsResult = await cachedGetPosts()
+  const posts = postsResult.docs as Post[]
 
   if (!posts || posts.length === 0) {
     return <p className="text-center text-muted-foreground">No posts available yet.</p>
@@ -44,53 +46,103 @@ const ArchiveBlog = async ({ className, locale = defaultLocale }: ArchiveBlogPro
   }
 
   return (
-    <div className={cn('xs:grid-cols-1 grid gap-4 sm:grid-cols-2 lg:grid-cols-4', className)}>
-      <div className="relative md:row-span-2 lg:col-span-2">
-        <Link
-          href={`/blog/${firstPost.slug}` as any}
-          className="block h-fit rounded-lg p-3 md:top-0"
-        >
-          <div className="relative h-48 w-full overflow-hidden rounded-lg md:h-80 lg:h-96">
-            <Image
-              src={getImage(firstPost)}
-              alt={firstPost.title}
-              fill
-              className="object-cover hover:opacity-80"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-          </div>
-          <div className="mt-5">
-            <div className="mb-2.5 flex items-center gap-1 text-sm text-muted-foreground">
-              <time>{formatDate(firstPost.publishedAt as string)}</time>·
-              <span>{getAuthorNames(firstPost.populatedAuthors as any[])}</span>
+    <div className={cn('space-y-8', className)}>
+      <div className="xs:grid-cols-1 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="relative md:row-span-2 lg:col-span-2">
+          <Link
+            href={`/blog/${firstPost.slug}` as any}
+            className="block h-fit rounded-lg p-3 md:top-0"
+          >
+            <div className="relative h-48 w-full overflow-hidden rounded-lg md:h-80 lg:h-96">
+              <Image
+                src={getImage(firstPost)}
+                alt={firstPost.title}
+                fill
+                className="object-cover hover:opacity-80"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
-            <h3 className="text-lg md:text-3xl lg:text-4xl">{firstPost.title}</h3>
-            <p className="mt-4 text-muted-foreground">
-              {firstPost.meta?.description || 'Read more...'}
-            </p>
-          </div>
-        </Link>
+            <div className="mt-5">
+              <div className="mb-2.5 flex items-center gap-1 text-sm text-muted-foreground">
+                <time>{formatDate(firstPost.publishedAt as string)}</time>·
+                <span>{getAuthorNames(firstPost.populatedAuthors as any[])}</span>
+              </div>
+              <h3 className="text-lg md:text-3xl lg:text-4xl">{firstPost.title}</h3>
+              <p className="mt-4 text-muted-foreground">
+                {firstPost.meta?.description || 'Read more...'}
+              </p>
+            </div>
+          </Link>
+        </div>
+        {restPosts.map((post) => (
+          <Link key={post.id} href={`/blog/${post.slug}` as any} className="rounded-lg p-3">
+            <div className="relative h-48 w-full overflow-hidden rounded-lg">
+              <Image
+                src={getImage(post)}
+                alt={post.title}
+                fill
+                className="object-cover hover:opacity-80"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              />
+            </div>
+            <div className="mt-5">
+              <div className="mb-2.5 flex items-center gap-1 text-sm text-muted-foreground">
+                <time>{formatDate(post.publishedAt as string)}</time>·
+                <span>{getAuthorNames(post.populatedAuthors as any[])}</span>
+              </div>
+              <h3 className="text-lg">{post.title}</h3>
+            </div>
+          </Link>
+        ))}
       </div>
-      {restPosts.map((post) => (
-        <Link key={post.id} href={`/blog/${post.slug}` as any} className="rounded-lg p-3">
-          <div className="relative h-48 w-full overflow-hidden rounded-lg">
-            <Image
-              src={getImage(post)}
-              alt={post.title}
-              fill
-              className="object-cover hover:opacity-80"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-            />
-          </div>
-          <div className="mt-5">
-            <div className="mb-2.5 flex items-center gap-1 text-sm text-muted-foreground">
-              <time>{formatDate(post.publishedAt as string)}</time>·
-              <span>{getAuthorNames(post.populatedAuthors as any[])}</span>
-            </div>
-            <h3 className="text-lg">{post.title}</h3>
-          </div>
-        </Link>
-      ))}
+
+      {postsResult.totalPages > 1 && (
+        <nav className="flex items-center justify-center gap-2" aria-label="Blog pagination">
+          <Link
+            href={`/blog?page=${Math.max(page - 1, 1)}` as any}
+            aria-disabled={!postsResult.hasPrevPage}
+            className={cn(
+              'rounded-md border px-3 py-2 text-sm transition-colors',
+              postsResult.hasPrevPage
+                ? 'hover:bg-muted text-foreground'
+                : 'pointer-events-none text-muted-foreground opacity-50',
+            )}
+          >
+            Prev
+          </Link>
+
+          {Array.from({ length: postsResult.totalPages }, (_, index) => index + 1).map(
+            (pageNumber) => (
+              <Link
+                key={pageNumber}
+                href={`/blog?page=${pageNumber}` as any}
+                aria-current={pageNumber === page ? 'page' : undefined}
+                className={cn(
+                  'rounded-md border px-3 py-2 text-sm transition-colors',
+                  pageNumber === page
+                    ? 'bg-primary text-primary-foreground border-primary'
+                    : 'hover:bg-muted text-foreground',
+                )}
+              >
+                {pageNumber}
+              </Link>
+            ),
+          )}
+
+          <Link
+            href={`/blog?page=${Math.min(page + 1, postsResult.totalPages)}` as any}
+            aria-disabled={!postsResult.hasNextPage}
+            className={cn(
+              'rounded-md border px-3 py-2 text-sm transition-colors',
+              postsResult.hasNextPage
+                ? 'hover:bg-muted text-foreground'
+                : 'pointer-events-none text-muted-foreground opacity-50',
+            )}
+          >
+            Next
+          </Link>
+        </nav>
+      )}
     </div>
   )
 }
