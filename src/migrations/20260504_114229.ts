@@ -2,10 +2,10 @@ import { MigrateUpArgs, MigrateDownArgs, sql } from '@payloadcms/db-postgres'
 
 export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   await db.execute(sql`
-   ALTER TYPE "public"."_locales" ADD VALUE 'tr';
-  ALTER TYPE "public"."enum__treatments_v_published_locale" ADD VALUE 'tr';
-  ALTER TYPE "public"."enum__doctors_v_published_locale" ADD VALUE 'tr';
-  ALTER TYPE "public"."enum__posts_v_published_locale" ADD VALUE 'tr';`)
+   ALTER TYPE "public"."_locales" ADD VALUE IF NOT EXISTS 'tr';
+  ALTER TYPE "public"."enum__treatments_v_published_locale" ADD VALUE IF NOT EXISTS 'tr';
+  ALTER TYPE "public"."enum__doctors_v_published_locale" ADD VALUE IF NOT EXISTS 'tr';
+  ALTER TYPE "public"."enum__posts_v_published_locale" ADD VALUE IF NOT EXISTS 'tr';`)
 }
 
 export async function down({ db, payload, req }: MigrateDownArgs): Promise<void> {
