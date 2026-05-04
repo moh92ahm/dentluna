@@ -116,8 +116,8 @@ export interface Config {
     | ('false' | 'none' | 'null')
     | false
     | null
-    | ('en' | 'de' | 'fr' | 'ro' | 'ru' | 'uk' | 'pl')
-    | ('en' | 'de' | 'fr' | 'ro' | 'ru' | 'uk' | 'pl')[];
+    | ('en' | 'de' | 'fr' | 'tr' | 'ro' | 'ru' | 'uk' | 'pl')
+    | ('en' | 'de' | 'fr' | 'tr' | 'ro' | 'ru' | 'uk' | 'pl')[];
   globals: {
     'crm-settings': CrmSetting;
     'footer-settings': FooterSetting;
@@ -128,7 +128,7 @@ export interface Config {
     'footer-settings': FooterSettingsSelect<false> | FooterSettingsSelect<true>;
     'header-settings': HeaderSettingsSelect<false> | HeaderSettingsSelect<true>;
   };
-  locale: 'en' | 'de' | 'fr' | 'ro' | 'ru' | 'uk' | 'pl';
+  locale: 'en' | 'de' | 'fr' | 'tr' | 'ro' | 'ru' | 'uk' | 'pl';
   widgets: {
     collections: CollectionsWidget;
   };

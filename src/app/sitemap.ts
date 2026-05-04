@@ -19,14 +19,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = []
 
   // Static routes for all locales
+  // Turkish locale excludes /gallery for legal compliance
+  const trRestrictedRoutes = new Set(['/gallery'])
+
   for (const locale of routing.locales) {
     for (const route of staticRoutes) {
+      if (locale === 'tr' && trRestrictedRoutes.has(route)) continue
+
       entries.push({
         url: `${baseUrl}/${locale}${route}`,
         lastModified: new Date(),
         alternates: {
           languages: Object.fromEntries(
-            routing.locales.map((loc) => [loc, `${baseUrl}/${loc}${route}`]),
+            routing.locales
+              .filter((loc) => !(loc === 'tr' && trRestrictedRoutes.has(route)))
+              .map((loc) => [loc, `${baseUrl}/${loc}${route}`]),
           ),
         },
       })

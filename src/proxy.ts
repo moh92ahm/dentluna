@@ -5,6 +5,16 @@ import { routing } from './i18n/routing'
 const handleLocale = createMiddleware(routing)
 
 export function proxy(request: NextRequest) {
+  const { pathname } = request.nextUrl
+
+  // Turkish locale: permanently redirect /tr/gallery (and any sub-paths) to /tr.
+  // Keeps the gallery non-existent for bots and crawlers per Turkish regulations.
+  if (pathname === '/tr/gallery' || pathname.startsWith('/tr/gallery/')) {
+    const url = request.nextUrl.clone()
+    url.pathname = '/tr'
+    return Response.redirect(url, 301)
+  }
+
   return handleLocale(request)
 }
 

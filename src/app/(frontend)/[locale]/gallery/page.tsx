@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { GalleryArchive } from '@/components/gallery/galleryArchive'
 import { Badge } from '@/components/ui/badge'
+import { getLocalePolicy } from '@/i18n/localePolicy'
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -19,6 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function GalleryPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'gallery' })
+  const localePolicy = getLocalePolicy(locale)
 
   return (
     <main>
@@ -30,7 +32,11 @@ export default async function GalleryPage({ params }: Props) {
             <p className="max-w-xl text-muted-foreground">{t('description')}</p>
           </div>
 
-          <GalleryArchive locale={locale} />
+          {localePolicy.showGalleryBeforeAfter ? (
+            <GalleryArchive locale={locale} />
+          ) : (
+            <p className="mx-auto max-w-xl text-center text-muted-foreground">{t('description')}</p>
+          )}
         </div>
       </section>
     </main>

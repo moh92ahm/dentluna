@@ -8,6 +8,7 @@ import { WhyUsHome } from '@/components/pages/whyUsHome'
 import { HomeBeforeAfter } from '@/components/pages/beforeAfterHomeBlock'
 import { TestimonialHome } from '@/components/pages/testimonialHome'
 import { CtaHome } from '@/components/pages/ctaHome'
+import { getLocalePolicy } from '@/i18n/localePolicy'
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -23,8 +24,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function HomePage({ params }: Props) {
-  // locale is available for future data-fetching with locale param
-  const { locale: _locale } = await params
+  const { locale } = await params
+  const localePolicy = getLocalePolicy(locale)
 
   return (
     <main>
@@ -32,8 +33,8 @@ export default async function HomePage({ params }: Props) {
       <ServicesHome />
       <HowItWorks />
       <WhyUsHome />
-      <HomeBeforeAfter />
-      <TestimonialHome />
+      {localePolicy.showHomeBeforeAfter && <HomeBeforeAfter />}
+      {localePolicy.showHomeTestimonials && <TestimonialHome />}
       <CtaHome />
     </main>
   )

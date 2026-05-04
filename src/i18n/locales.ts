@@ -31,17 +31,10 @@ export const locales = [
   { code: 'ru', label: 'Русский', shortLabel: 'RU', flag: '🇷🇺' },
   { code: 'uk', label: 'Українська', shortLabel: 'UK', flag: '🇺🇦' },
   { code: 'pl', label: 'Polski', shortLabel: 'PL', flag: '🇵🇱' },
+  { code: 'tr', label: 'Türkçe', shortLabel: 'TR', flag: '🇹🇷' },
 ] as const satisfies readonly LocaleEntry[]
 
-export const externalLocales = [
-  {
-    code: 'tr',
-    label: 'Türkçe',
-    shortLabel: 'TR',
-    flag: '🇹🇷',
-    href: 'https://tr.dentluna.com',
-  },
-] as const satisfies readonly ExternalLocaleEntry[]
+export const externalLocales: readonly ExternalLocaleEntry[] = []
 
 /** Just the codes, e.g. ['en', 'de', 'fr'] */
 export const localeCodes = locales.map((l) => l.code) as unknown as [string, ...string[]]

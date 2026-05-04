@@ -1,0 +1,331 @@
+{
+  "common": {
+    "readMore": "Devamını Oku",
+    "viewAll": "Tümünü Gör",
+    "notFound": "Bulunamadı",
+    "backToHome": "Ana Sayfaya Dön"
+  },
+  "home": {
+    "title": "Dent Luna – Güvenilir Diş Sağlığı Partneriniz",
+    "description": "Güvenilir diş sağlığı partneriniz"
+  },
+  "treatments": {
+    "badge": "Tedaviler",
+    "heading": "Tedavi Yelpazamızı Keşfedin",
+    "description": "Tüm ağız sağlığı ihtiyaçlarınızı karşılamak için tasarlanmış kapsamlı diş tedavilerimizi keşfedin. Rutin kontrollerden ileri estetik prosedürlere kadar sağlıklı ve güzel bir gülüş için kişiselleştirilmiş bakım sunuyoruz.",
+    "metaTitle": "Diş Tedavileri – Dent Luna",
+    "metaDesc": "Kapsamlı diş tedavilerimizi keşfedin: veneer, implant, kron ve daha fazlası. İzmir'de ücretsiz danışmanlığınızı alın.",
+    "shareArticle": "Bu makaleyi paylaş:",
+    "onThisPage": "Bu sayfada",
+    "overview": "Genel Bakış",
+    "treatmentDetails": "Tedavi Detayları",
+    "relatedTreatments": "İlgili Tedaviler",
+    "publishedAt": "Yayınlanma tarihi",
+    "noTreatmentsAvailable": "Henüz tedavi mevcut değil.",
+    "treatmentArchiveFallback": "Bu tedavi seçeneğini keşfedin"
+  },
+  "blog": {
+    "heading": "Son Yazılar",
+    "metaTitle": "Diş Sağlığı Blogu – Dent Luna",
+    "metaDesc": "Dent Luna ekibinden diş bakımı, estetik diş hekimliği ipuçları ve hasta hikâyeleri üzerine uzman makaleler okuyun."
+  },
+  "gallery": {
+    "badge": "Galeri",
+    "heading": "Gerçek Sonuçlar. Gerçek Dönüşümler.",
+    "description": "Hasta dönüşümlerimize göz atın.",
+    "metaTitle": "Öncesi ve Sonrası Galerisi – Dent Luna",
+    "metaDesc": "Gerçek hasta dönüşümlerini görün. İzmir'deki diş tedavilerimizden öncesi ve sonrası fotoğraflara göz atın."
+  },
+  "doctors": {
+    "badge": "Doktorlarımız",
+    "heading": "Doktorlarımızla Tanışın",
+    "description": "Deneyimli diş hekimlerimizden oluşan ekibimiz, ağız sağlığınızı ve özgüvenli gülüşünüzü sağlamak için istisnai bakım ve kişiselleştirilmiş tedavi planları sunmaya kararlıdır.",
+    "metaTitle": "Doktorlarımız – Dent Luna",
+    "metaDesc": "Dent Luna'daki deneyimli diş uzmanlarıyla tanışın. Gülüşünüze adanmış nitelikli profesyoneller."
+  },
+  "faq": {
+    "general": "Genel",
+    "metaTitle": "Sıkça Sorulan Sorular – Dent Luna",
+    "metaDesc": "Yurt dışında diş tedavisi, maliyetler, prosedürler ve Dent Luna'da neler bekleneceği hakkındaki en sık sorulan sorularınızın yanıtları."
+  },
+  "notFound": {
+    "treatment": "Tedavi bulunamadı",
+    "post": "Yazı bulunamadı",
+    "doctor": "Doktor bulunamadı",
+    "heading": "Sayfa Bulunamadı",
+    "message": "Üzgünüz, aradığınız sayfa mevcut değil veya taşınmış.",
+    "backHome": "Ana Sayfaya Dön"
+  },
+  "about": {
+    "metaTitle": "Hakkımızda – Dent Luna – İzmir'de Premium Diş Bakımı",
+    "metaDesc": "Dent Luna'nın misyonunu, deneyimli ekibimizi ve uluslararası hastaların Türkiye'deki diş bakımı için neden bize güvendiğini öğrenin."
+  },
+  "contactPage": {
+    "metaTitle": "Bize Ulaşın – Dent Luna",
+    "metaDesc": "Dent Luna ile iletişime geçin. Ücretsiz danışmanlık alın veya İzmir, Türkiye'deki diş tedavileri hakkında soru sorun."
+  },
+  "privacyPolicy": {
+    "eyebrow": "Hukuki",
+    "title": "Gizlilik Politikası",
+    "intro": "Bu Gizlilik Politikası, web sitemizi ziyaret ettiğinizde veya diş tedavileri hakkında bizimle iletişime geçtiğinizde Dent Luna'nın bilgileri nasıl topladığını, kullandığını, sakladığını ve koruduğunu açıklamaktadır.",
+    "updatedAt": "Son güncelleme: 24 Nisan 2026",
+    "metaTitle": "Gizlilik Politikası - Dent Luna",
+    "metaDesc": "Dent Luna'nın web sitesi ziyaretçileri ve hastalar için kişisel bilgileri nasıl topladığını, kullandığını ve koruduğunu okuyun.",
+    "sections": {
+      "collect": {
+        "heading": "Topladığımız Bilgiler",
+        "p1": "Dent Luna, iletişim formları, danışmanlık talepleri, WhatsApp, e-posta veya diğer doğrudan iletişim kanalları aracılığıyla bizimle paylaşmayı seçtiğiniz kişisel bilgileri toplayabilir.",
+        "i1": "Adınız, telefon numaranız ve e-posta adresiniz",
+        "i2": "Tedavi ilgi alanları, seyahat tercihleri ve randevu bilgileri",
+        "i3": "Danışmanlık amaçlı gönüllü olarak sağladığınız tıbbi veya diş sağlığı bilgileri",
+        "i4": "Cihaz, tarayıcı ve analitik bilgileri gibi temel web sitesi kullanım verileri"
+      },
+      "use": {
+        "heading": "Bilgilerinizi Nasıl Kullanıyoruz",
+        "p1": "Topladığımız bilgileri sorularınızı yanıtlamak, danışmanlık düzenlemek, tedavi planlamasını koordine etmek ve hizmetlerimizi geliştirmek için kullanıyoruz.",
+        "i1": "Talebiniz veya randevunuz hakkında sizinle iletişime geçmek için",
+        "i2": "Tedavi önerileri ve teklifleri hazırlamak için",
+        "i3": "Web sitesi operasyonlarını, analitiği ve hizmet kalitesini yönetmek için",
+        "i4": "Geçerli olduğu durumlarda yasal, vergisel, tıbbi veya düzenleyici yükümlülüklere uymak için"
+      },
+      "share": {
+        "heading": "Verilerin Paylaşımı",
+        "p1": "Kişisel verilerinizi satmıyoruz. Bilgileri yalnızca işletmeyi yürütmek ve talep ettiğiniz hizmetleri sunmak için gerekli olduğunda paylaşıyoruz.",
+        "i1": "Tedavi sürecinizde yer alan diş hekimleri, klinikler, laboratuvarlar veya bakım koordinatörleri ile",
+        "i2": "CRM, barındırma, analitik veya e-posta platformları gibi güvenilir hizmet sağlayıcılar ile",
+        "i3": "Yasaların gerektirdiği veya yasal hakları korumak için gerektiğinde yetkililerle"
+      },
+      "retain": {
+        "heading": "Veri Saklama ve Güvenlik",
+        "p1": "Kişisel bilgileri yalnızca danışmanlık yönetimi, tedavi koordinasyonu, yasal uyum ve işletme kayıt tutma için makul ölçüde gerekli olduğu süre boyunca saklarız.",
+        "p2": "Dent Luna, bilgilerinizi korumak için makul teknik ve organizasyonel önlemler kullanmaktadır; ancak hiçbir depolama veya iletim yönteminin tamamen güvenli olduğu garanti edilemez."
+      },
+      "rights": {
+        "heading": "Haklarınız",
+        "p1": "Bulunduğunuz konuma bağlı olarak, kişisel verilerinize erişim, düzeltme veya silinmesini talep etme ya da belirli kullanımlarına itiraz etme haklarına sahip olabilirsiniz.",
+        "p2": "Gizlilikle ilgili bir talepte bulunmak için lütfen bu web sitesinde yayınlanan iletişim bilgileri aracılığıyla doğrudan bizimle iletişime geçin."
+      }
+    }
+  },
+  "termsAndConditions": {
+    "eyebrow": "Hukuki",
+    "title": "Kullanım Koşulları",
+    "intro": "Bu Kullanım Koşulları, Dent Luna web sitesini kullanımınızı ve çevrimiçi formlar, sorular ve danışmanlık talepleri aracılığıyla bizimle etkileşiminizi yönetmektedir.",
+    "updatedAt": "Son güncelleme: 24 Nisan 2026",
+    "metaTitle": "Kullanım Koşulları - Dent Luna",
+    "metaDesc": "Dent Luna web sitesinin kullanımını ve tedavi taleplerini düzenleyen koşulları inceleyin.",
+    "sections": {
+      "website": {
+        "heading": "Bu Web Sitesinin Kullanımı",
+        "p1": "Bu web sitesi, Dent Luna hakkında, tedavilerimiz hakkında ve olası hastaların bizimle nasıl iletişime geçebileceği hakkında genel bilgi sağlamak amacıyla sunulmaktadır. Web sitesindeki içerik tıbbi tavsiye, teşhis veya garantili tedavi sonucu teşkil etmez.",
+        "p2": "Bu web sitesini kullanarak, yasalara uygun şekilde kullanmayı ve işleyişine, güvenliğine veya kullanılabilirliğine müdahale etmemeyi kabul edersiniz."
+      },
+      "consultation": {
+        "heading": "Danışmanlık ve Tedavi Bilgileri",
+        "p1": "Web sitesi, formlar, e-posta veya mesajlaşma platformları aracılığıyla paylaşılan ilk bilgiler, tedavi önerileri ve fiyat tahminleri yalnızca gösterge niteliğindedir ve klinik inceleme, görüntüleme, muayene veya güncellenmiş tedavi planlamasından sonra değişebilir.",
+        "i1": "Tedavi planları tıbbi uygunluk ve profesyonel değerlendirmeye tabidir",
+        "i2": "Teklif edilen fiyatlar, vaka kapsamı, malzemeler veya tedavi zamanlaması değişirse değişebilir",
+        "i3": "Seyahat, konaklama ve tedavi programları müsaitliğe tabidir"
+      },
+      "thirdParty": {
+        "heading": "Randevular, Seyahat ve Üçüncü Taraflar",
+        "p1": "Dent Luna'nın randevu, seyahat planlama, transfer, konaklama veya ilgili tedavilerin koordinasyonuna yardımcı olduğu durumlarda, bu düzenlemeler üçüncü taraf sağlayıcıları içerebilir. Dent Luna, bağımsız üçüncü tarafların eylemlerinden, ihmallerinden, gecikmelerinden, fiyatlandırmasından veya politikalarından sorumlu değildir."
+      },
+      "ip": {
+        "heading": "Fikri Mülkiyet",
+        "p1": "Aksi belirtilmediği sürece, bu web sitesindeki metin, marka, tasarım öğeleri ve içerik Dent Luna'nın mülkiyetindedir veya izinle kullanılmaktadır. Önceden yazılı izin almadan sitenin herhangi bir bölümünü yeniden üretemez, yayımlayamaz, dağıtamaz veya ticari amaçla kullanamazsınız."
+      },
+      "liability": {
+        "heading": "Sorumluluk",
+        "p1": "Dent Luna, web sitesi bilgilerini doğru ve güncel tutmak için makul çaba göstermektedir; ancak eksiksizlik, kullanılabilirlik veya hatasız çalışmayı garanti etmez.",
+        "p2": "Yasaların izin verdiği azami ölçüde Dent Luna, bu web sitesinin kullanımından veya web sitesi içeriğine dayanılmasından kaynaklanan dolaylı, arızi veya sonuçsal zarardan sorumlu değildir."
+      },
+      "changes": {
+        "heading": "Bu Koşullardaki Değişiklikler",
+        "p1": "Bu Kullanım Koşullarını zaman zaman iş, yasal veya operasyonel değişiklikleri yansıtmak için güncelleyebiliriz. Değişiklikler yayınlandıktan sonra web sitesini kullanmaya devam etmek, güncellenmiş koşulları kabul ettiğiniz anlamına gelir."
+      }
+    }
+  },
+  "heroCarousel": {
+    "line1": "Premium",
+    "line2": "Diş",
+    "line3": "Tedavileri"
+  },
+  "treatmentsHome": {
+    "heading": "Tedavilerimiz",
+    "subheading": "Sizin İçin Tasarlanmış İleri Diş Çözümleri",
+    "description": "Rutin temizliklerden karmaşık restorasyonlara kadar kapsamlı diş tedavilerimiz, benzersiz ihtiyaçlarınızı karşılamak ve sağlıklı, parlak bir gülüş sağlamak için kişiselleştirilmiştir.",
+    "exploreBtn": "Tüm Tedavileri Keşfet",
+    "veneersTitle": "Veneer ve Gülüş Tasarımı",
+    "veneersDesc": "Daha parlak ve özgüvenli bir gülüşe kavuşun",
+    "fullMouthTitle": "Tam Ağız Restorasyonu",
+    "fullMouthDesc": "Karmaşık diş vakaları için kapsamlı çözümler",
+    "implantsTitle": "Diş İmplantları",
+    "implantsDesc": "Eksik dişler için kalıcı ve güvenilir çözüm",
+    "zirconiumTitle": "Zirkonyum Kronlar",
+    "zirconiumDesc": "Güçlü, estetik ve doğal görünümlü restorasyonlar"
+  },
+  "howItWorks": {
+    "badge": "Nasıl Çalışır",
+    "heading": "Basit, Hızlı ve Düzenli Süreç",
+    "description": "Sezgisel platformumuz iş akışınızı kolaylaştırır, her şeyi tek bir yerde düzenli ve erişilebilir tutar. Projelerinizi basit, hızlı ve verimli sürecimizle yönetmenin kolaylığını yaşayın.",
+    "step1Title": "Fotoğraf veya Röntgeninizi Gönderin",
+    "step1Desc": "Diş fotoğraflarınızı veya röntgenlerinizi güvenli platformumuz aracılığıyla kolayca yükleyin. Ekibimiz bunları inceleyerek size kişiselleştirilmiş bir tedavi planı ve doğru maliyet tahmini sunacaktır.",
+    "step2Title": "Tedavi Planınızı Alın",
+    "step2Desc": "İhtiyaçlarınıza özel, adım adım talimatlar ve net maliyet tahmini içeren ayrıntılı bir tedavi planı alın.",
+    "step3Title": "Seyahatinizi Planlayın",
+    "step3Desc": "Seyahat düzenlemelerinizi kolaylıkla koordine edin. Platformumuz seyahatinizi verimli şekilde planlamanıza yardımcı olur.",
+    "step4Title": "Tedavinizi Alın",
+    "step4Desc": "Uzman ekibimizin rehberliğinde sorunsuz ve etkili bir süreçle tedavinizi alın.",
+    "step5Title": "Takip Desteği",
+    "step5Desc": "Tedavinizin uzun vadeli başarısını sağlamak için süregelen destek ve rehberlik alın."
+  },
+  "whyUsHome": {
+    "badge": "Neden Bizi Seçmelisiniz",
+    "heading": "Sadece Tedavi Değil — Eksiksiz Bir Deneyim",
+    "description": "Dent Luna'da geleneksel diş bakımının ötesine geçiyoruz. Gülüş dönüşümünüzün başarılı olmasını sağlamak için kişiselleştirilmiş tedavi planları, uzman rehberlik ve süregelen destek içeren kapsamlı bir deneyim sunuyoruz.",
+    "feature1": "Uzman diş hekimleri",
+    "feature2": "Premium malzemeler",
+    "feature3": "Kişiselleştirilmiş bakım",
+    "feature4": "Özel destek",
+    "feature5": "Verimli planlama",
+    "feature6": "Süregelen takip"
+  },
+  "beforeAfterHome": {
+    "label": "Öncesi ve Sonrası",
+    "heading": "Gerçek Sonuçlar. Gerçek Dönüşümler.",
+    "viewAllBtn": "Tüm Dönüşümleri Gör"
+  },
+  "testimonialHome": {
+    "label": "Hasta Yorumları",
+    "heading": "Hastalarımız Ne Diyor",
+    "t1Name": "Alex Johnson",
+    "t1Content": "Veneer için Londra'dan geldim ve daha mutlu olamazdım. Tüm süreç başından sonuna kadar mükemmeldi.",
+    "t2Name": "Maria Garcia",
+    "t2Content": "DentLuna her şeyi benim için ayarladı — otel, transfer, randevular. Sonuç tüm beklentilerimi aştı.",
+    "t3Name": "Chris Lee",
+    "t3Content": "Yıllarca aradıktan sonra burada implantımı yaptırdım. İngiltere ile kıyaslandığında kalite ve fiyat inanılmaz.",
+    "t4Name": "Emily Carter",
+    "t4Content": "Diş hekimleri son derece profesyoneldi ve mükemmel İngilizce konuşuyordu. Süreç boyunca tamamen rahat hissettim.",
+    "t5Name": "David Kim",
+    "t5Content": "Gülüşüm tamamen değişti. Her gün iltifat alıyorum ve DentLuna'yı seçtiğim için çok mutluyum.",
+    "t6Name": "Sophia Martinez",
+    "t6Content": "İlk danışmanlıktan son takibe kadar iletişim mükemmeldi. Kesinlikle tavsiye ederim.",
+    "t7Name": "James Wilson",
+    "t7Content": "Yurt dışında diş tedavisi olmak konusunda endişeliydim ama DentLuna her şeyi çok kolaylaştırdı. Sonuçlar muhteşem.",
+    "t8Name": "Laura Müller",
+    "t8Content": "Kesinlikle dünya standartlarında bakım. Klinik pırıl pırıl, personel sıcakkanlı ve sonuçlar kendini anlatıyor.",
+    "t9Name": "Ahmed Hassan",
+    "t9Content": "Tam bir gülüş operasyonu geçirdim ve ülkemdekine kıyasla binlerce tasarruf ettim. Keşke daha önce yapsaydım."
+  },
+  "ctaHome": {
+    "tagline": "Başlamaya hazır mısınız?",
+    "heading": "Bugün Gülüş Dönüşümünüze Başlayın",
+    "description": "Ücretsiz danışmanlığınızı alın ve size en uygun tedavi seçeneğini keşfedin.",
+    "ctaBtn": "Başlayın",
+    "learnMore": "Daha Fazla Bilgi"
+  },
+  "aboutHero": {
+    "label": "Dent Luna Hakkında",
+    "heading": "İzmir'de Uluslararası Hastalar İçin Premium Diş Bakımı",
+    "description": "Uzman tedavi ve başından sonuna kadar özenle organize edilmiş bir deneyim aracılığıyla sağlıklı, doğal bir gülüşe kavuşmanıza yardımcı oluyoruz.",
+    "ctaBtn": "Bize Ulaşın"
+  },
+  "aboutContent": {
+    "whoWeAre": "BİZ KİMİZ",
+    "intro1": "Dent Luna, uluslararası hastalar için ileri diş tedavileri konusunda uzmanlaşmış bir sağlayıcıdır.",
+    "intro2": "İzmir merkezli olarak, yüksek kaliteli, güvenilir ve estetik sonuçlar sunmak için deneyimli diş hekimleri ve modern kliniklerle çalışıyoruz.",
+    "mission": "Yurt dışındaki diş tedavinizi açık, güvenli ve stressiz kılmak.",
+    "ourApproach": "YAKLAŞIMIMIZ",
+    "approachText": "Harika sonuçların doğru planlama ve dürüst iletişimden geldiğine inanıyoruz.",
+    "processLabel": "Her hasta yapılandırılmış bir süreci takip eder:",
+    "process1": "Fotoğraf veya röntgenlerinize dayalı değerlendirme",
+    "process2": "Diş hekimleri tarafından hazırlanan kişiselleştirilmiş tedavi planı",
+    "process3": "Prosedürler, zamanlama ve fiyatlandırmanın açık açıklaması",
+    "process4": "Konaklamanızı en aza indirmek için verimli planlama",
+    "process5": "Tedavinizin ardından takip desteği",
+    "processOutro": "Bu yaklaşım tahmin edilebilir sonuçları ve sorunsuz bir deneyimi garanti eder."
+  },
+  "qualityMaterials": {
+    "heading": "KALİTE VE MALZEMELER",
+    "text1": "Yalnızca uluslararası alanda tanınan üreticilerin yüksek kaliteli malzemelerini kullanıyoruz; tümü katı Avrupa ve küresel standartları karşılıyor.",
+    "text2": "Almanya, İsviçre, Amerika Birleşik Devletleri ve Güney Kore'den önde gelen diş marklarıyla çalışıyoruz; bu da her hasta için en uygun seçeneği belirleyebilmemizi sağlıyor.",
+    "text3": "Her malzeme <bold>tam izlenebilir</bold> olup güvenlik, tutarlılık ve uzun vadeli başarı sağlar."
+  },
+  "whyIzmir": {
+    "heading": "NEDEN İZMİR?",
+    "intro": "İzmir, diş tedavileri için en çok tercih edilen şehirlerden biridir ve şunları sunar:",
+    "item1": "Son teknoloji ile donatılmış dünya standartlarında diş klinikleri.",
+    "item2": "Uluslararası deneyime sahip yüksek nitelikli diş hekimleri.",
+    "item3": "Kaliteden ödün vermeden uygun fiyatlı tedavi seçenekleri.",
+    "item4": "Zengin kültürü ve güzel sahil manzaralarıyla canlı bir şehir.",
+    "outro": "Tıbbi mükemmeliyeti unutulmaz bir seyahat deneyimiyle birleştiren bir şehirde birinci sınıf diş bakımının tadını çıkarın."
+  },
+  "whyChooseUs": {
+    "heading": "HASTALARIMIZ NEDEN BİZİ SEÇİYOR",
+    "description": "DentLuna olarak ileri teknoloji, kişiselleştirilmiş tedavi planları ve şefkatli bir yaklaşımı bir araya getiren istisnai diş bakımı sunmaya kararlıyız. Hastalarımız bizi ağız sağlığına olan bağlılığımız, deneyimli diş uzmanları ekibimiz ve konforu ve güveni ön plana çıkaran sıcak ortamımız nedeniyle tercih ediyor.",
+    "getStarted": "Başlayın",
+    "sat": "85%",
+    "satLabel": "Hasta Memnuniyeti",
+    "patients": "15k+",
+    "patientsLabel": "Mutlu Hasta",
+    "feature1Title": "Uzman Ekip",
+    "feature1Desc": "Diş sağlığı profesyonellerimizden oluşan ekibimiz son derece nitelikli ve deneyimlidir.",
+    "feature2Title": "Son Teknoloji",
+    "feature2Desc": "En iyi bakımı sunmak için en son diş teknolojisini kullanıyoruz.",
+    "feature3Title": "Konforlu Ortam",
+    "feature3Desc": "Kliniklerimiz hastaların rahat hissetmesi için tasarlanmıştır.",
+    "feature4Title": "Kişiselleştirilmiş Bakım",
+    "feature4Desc": "Her hastanın benzersiz ihtiyaçlarını karşılamak için bireysel tedavi planları sunuyoruz.",
+    "feature5Title": "Hızlı ve Verimli",
+    "feature5Desc": "Zamanında ve etkili diş tedavileri sağlıyoruz.",
+    "feature6Title": "Güvenli ve Güvenilir",
+    "feature6Desc": "Hasta güvenliğini ön planda tutarak en yüksek diş bakımı standartlarına uyuyoruz.",
+    "feature7Title": "Uzun Vadeli Destek",
+    "feature7Desc": "Uzun vadeli diş sağlığını sağlamak için kapsamlı sonrası bakım ve destek sunuyoruz.",
+    "feature8Title": "Dil Desteği",
+    "feature8Desc": "Farklı kökenlerden gelen hastalara hizmet vermek için çok dilli destek sunuyoruz."
+  },
+  "contact": {
+    "title": "Konuşalım",
+    "subtitle": "Aklınızda bir proje mi var? Sizden haber almayı çok isteriz.",
+    "sendMessage": "Mesaj Gönder",
+    "success": "Teşekkürler! Mesajınız gönderildi.",
+    "nameLabel": "Ad",
+    "nameRequired": "Ad gereklidir",
+    "namePlaceholder": "Adınız",
+    "emailLabel": "E-posta",
+    "emailRequired": "E-posta gereklidir",
+    "emailInvalid": "Lütfen geçerli bir e-posta girin",
+    "emailPlaceholder": "siz@ornek.com",
+    "phoneLabel": "Telefon",
+    "phonePlaceholder": "+90 (555) 000-0000",
+    "messageLabel": "Mesaj",
+    "messageRequired": "Mesaj gereklidir",
+    "messagePlaceholder": "Projeniz hakkında bize bilgi verin...",
+    "sendBtn": "Mesaj Gönder",
+    "sendingBtn": "Gönderiliyor...",
+    "errorMsg": "Bir şeyler ters gitti. Lütfen tekrar deneyin."
+  },
+  "consultationForm": {
+    "heading": "Ücretsiz danışmanlık için formu doldurun",
+    "subheading": "Ekibimiz 24 saat içinde size geri dönecektir.",
+    "success": "Teşekkürler! En kısa sürede sizinle iletişime geçeceğiz.",
+    "nameLabel": "Adınızı ve Soyadınızı Girin",
+    "nameRequired": "Ad soyad gereklidir",
+    "namePlaceholder": "Ali Yılmaz",
+    "phoneLabel": "Telefon Numaranızı Girin (Ülke Kodu ile)",
+    "phoneRequired": "Telefon numarası gereklidir",
+    "phonePlaceholder": "+90 (532) 000 00 00",
+    "emailLabel": "E-posta Adresinizi Girin",
+    "emailInvalid": "Lütfen geçerli bir e-posta girin",
+    "emailPlaceholder": "aliyilmaz@ornek.com",
+    "categoryLabel": "Kategori Seçin",
+    "categoryPlaceholder": "Seçin",
+    "promoLabel": "Promosyon Kodunuz",
+    "promoPlaceholder": "",
+    "submitBtn": "Gönder",
+    "sendingBtn": "Gönderiliyor...",
+    "errorMsg": "Bir şeyler ters gitti. Lütfen tekrar deneyin."
+  }
+}

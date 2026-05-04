@@ -41,7 +41,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  localization: {
+ localization: {
     locales: payloadLocales,
     defaultLocale,
     fallback: true,
