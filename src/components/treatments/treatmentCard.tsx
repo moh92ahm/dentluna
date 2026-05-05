@@ -17,7 +17,11 @@ interface TreatmentCardProps {
 }
 
 const getImageUrl = (treatment: TreatmentCardProps['treatment']) => {
-  if (treatment.heroImage && typeof treatment.heroImage === 'object' && 'url' in treatment.heroImage) {
+  if (
+    treatment.heroImage &&
+    typeof treatment.heroImage === 'object' &&
+    'url' in treatment.heroImage
+  ) {
     return getMediaUrl(treatment.heroImage.url)
   }
 

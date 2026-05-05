@@ -151,7 +151,7 @@ export const getCachedDocumentsPaginated = (
     async () => getDocumentsPaginated(collection, limit, page, depth, locale),
     [collection, String(limit), String(page), String(depth), locale],
     {
-      tags: [`${collection}_list_page_${page}`],
+      tags: [`${collection}_list`, `${collection}_list_page_${page}`],
     },
   )
 }
