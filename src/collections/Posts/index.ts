@@ -1,7 +1,6 @@
 import type { CollectionConfig } from 'payload'
 
 import {
-  BlocksFeature,
   FixedToolbarFeature,
   HeadingFeature,
   HorizontalRuleFeature,
@@ -40,6 +39,7 @@ export const Posts: CollectionConfig<'posts'> = {
     title: true,
     slug: true,
     categories: true,
+    heroImage: true,
     meta: {
       description: true,
     },
@@ -117,6 +117,7 @@ export const Posts: CollectionConfig<'posts'> = {
                 }
               },
               hasMany: true,
+              maxRows: 2,
               relationTo: 'posts',
             },
             {

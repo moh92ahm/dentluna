@@ -13,6 +13,12 @@ interface ArchiveBlogProps {
   page?: number
 }
 
+type RichTextNode = {
+  type?: string
+  text?: string
+  children?: RichTextNode[]
+}
+
 const formatDate = (dateString: string | undefined) => {
   if (!dateString) return ''
   return new Date(dateString).toLocaleDateString('en-US', {
@@ -41,6 +47,45 @@ const getAuthorNames = (populatedAuthors: unknown) => {
   return names.length > 0 ? names.join(', ') : 'Author'
 }
 
+const getNodeText = (node: RichTextNode): string => {
+  if (node.type === 'text') {
+    return node.text ?? ''
+  }
+
+  if (!node.children || node.children.length === 0) {
+    return ''
+  }
+
+  return node.children.map(getNodeText).join('')
+}
+
+const getFirstParagraphExcerpt = (content: Post['content'], maxLength = 100): string => {
+  const children = content?.root?.children
+  if (!Array.isArray(children)) {
+    return ''
+  }
+
+  const firstParagraph = children.find(
+    (node) =>
+      Boolean(node) && typeof node === 'object' && (node as { type?: string }).type === 'paragraph',
+  ) as RichTextNode | undefined
+
+  if (!firstParagraph) {
+    return ''
+  }
+
+  const plainText = getNodeText(firstParagraph).replace(/\s+/g, ' ').trim()
+  if (!plainText) {
+    return ''
+  }
+
+  if (plainText.length <= maxLength) {
+    return plainText
+  }
+
+  return `${plainText.slice(0, maxLength).trimEnd()}...`
+}
+
 const ArchiveBlog = async ({ className, locale = defaultLocale, page = 1 }: ArchiveBlogProps) => {
   const t = await getTranslations({ locale, namespace: 'common' })
   const cachedGetPosts = getCachedDocumentsPaginated('posts', 10, page, 1, locale)
@@ -53,6 +98,7 @@ const ArchiveBlog = async ({ className, locale = defaultLocale, page = 1 }: Arch
 
   const firstPost = posts[0]
   const restPosts = posts.slice(1)
+  const firstPostExcerpt = getFirstParagraphExcerpt(firstPost.content)
 
   const getImage = (post: Post) => {
     if (post.heroImage && typeof post.heroImage === 'object' && 'url' in post.heroImage) {
@@ -81,9 +127,7 @@ const ArchiveBlog = async ({ className, locale = defaultLocale, page = 1 }: Arch
                 <span>{getAuthorNames(firstPost.populatedAuthors)}</span>
               </div>
               <h3 className="text-lg md:text-3xl lg:text-4xl">{firstPost.title}</h3>
-              <p className="mt-4 text-muted-foreground">
-                {firstPost.meta?.description || 'Read more...'}
-              </p>
+              <p className="mt-4 text-muted-foreground">{firstPostExcerpt || 'Read more...'}</p>
             </div>
           </Link>
         </div>

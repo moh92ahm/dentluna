@@ -13,33 +13,6 @@ interface SingleBlogProps {
   post: Post
 }
 
-const getExcerpt = (content: Post['content']) => {
-  const children = content?.root?.children ?? []
-
-  for (const child of children) {
-    if (
-      child &&
-      typeof child === 'object' &&
-      'children' in child &&
-      Array.isArray(child.children)
-    ) {
-      const text = child.children
-        .map((node) => {
-          if (node && typeof node === 'object' && 'text' in node && typeof node.text === 'string') {
-            return node.text
-          }
-          return ''
-        })
-        .join('')
-        .trim()
-
-      if (text) return text
-    }
-  }
-
-  return ''
-}
-
 const getHeroImageUrl = (heroImage: Post['heroImage']) => {
   if (heroImage && typeof heroImage === 'object' && 'url' in heroImage) {
     return getMediaUrl(heroImage.url)
@@ -48,9 +21,10 @@ const getHeroImageUrl = (heroImage: Post['heroImage']) => {
   return null
 }
 
+const getRelatedPostImageUrl = (relatedPost: Post) => getHeroImageUrl(relatedPost.heroImage)
+
 const SingleBlog = ({ className, post }: SingleBlogProps) => {
   const heroImageUrl = getHeroImageUrl(post.heroImage)
-  const excerpt = post.meta?.description || getExcerpt(post.content)
   const authorNames =
     post.populatedAuthors
       ?.map((author) => author.name)
@@ -62,9 +36,6 @@ const SingleBlog = ({ className, post }: SingleBlogProps) => {
       <div className="container">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 text-center">
           <h1 className="max-w-3xl text-5xl font-semibold text-pretty md:text-6xl">{post.title}</h1>
-          {excerpt ? (
-            <h3 className="max-w-3xl text-lg text-muted-foreground md:text-xl">{excerpt}</h3>
-          ) : null}
           <div className="flex flex-col items-center gap-1 text-sm md:flex-row md:gap-2 md:text-base">
             <div className="flex items-center gap-2">
               <Avatar className="h-8 w-8 border">
@@ -99,17 +70,32 @@ const SingleBlog = ({ className, post }: SingleBlogProps) => {
           {post.relatedPosts && post.relatedPosts.length > 0 ? (
             <section className="mt-16 border-t pt-16">
               <h2 className="mb-8 text-3xl font-medium">Related Posts</h2>
-              <div className="grid gap-8 md:grid-cols-2">
-                {post.relatedPosts.map((relatedPost) => {
-                  if (!relatedPost || typeof relatedPost !== 'object') return null
+              <div className="grid gap-6 md:grid-cols-2">
+                {post.relatedPosts.slice(0, 2).map((relatedPost) => {
+                  if (!relatedPost || typeof relatedPost !== 'object' || !relatedPost.slug) {
+                    return null
+                  }
+
+                  const relatedImageUrl = getRelatedPostImageUrl(relatedPost)
 
                   return (
                     <Link
                       key={relatedPost.id}
                       href={`/blog/${relatedPost.slug}`}
-                      className="rounded-lg bg-muted p-4 transition-colors hover:text-primary"
+                      className="overflow-hidden rounded-lg border bg-muted/40 transition-colors hover:shadow-lg"
                     >
-                      <h3 className="font-medium">{relatedPost.title}</h3>
+                      <div className="relative aspect-video w-full bg-muted">
+                        {relatedImageUrl ? (
+                          <Image
+                            src={relatedImageUrl}
+                            alt={relatedPost.title}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
+                        ) : null}
+                      </div>
+                      <h3 className="p-4 text-lg font-medium">{relatedPost.title}</h3>
                     </Link>
                   )
                 })}

@@ -19,6 +19,7 @@ const TreatmentsArchive = async ({
   page = 1,
 }: TreatmentsArchiveProps) => {
   const t = await getTranslations({ locale, namespace: 'common' })
+  const tTreatments = await getTranslations({ locale, namespace: 'treatments' })
   const cachedGetTreatments = getCachedDocumentsPaginated('treatments', 12, page, 1, locale)
   const treatmentsResult = await cachedGetTreatments()
   const treatments = treatmentsResult.docs as Treatment[]
@@ -34,8 +35,8 @@ const TreatmentsArchive = async ({
           <TreatmentCard
             key={treatment.id}
             treatment={treatment}
-            fallbackDescription={t('treatmentArchiveFallback')}
-            readMoreLabel={t('readMore')}
+            fallbackDescription={tTreatments('treatmentArchiveFallback')}
+            readMoreLabel={tTreatments('readMore')}
           />
         ))}
       </div>
