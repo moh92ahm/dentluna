@@ -122,6 +122,7 @@ export const Treatments: CollectionConfig<'treatments'> = {
                 }
               },
               hasMany: true,
+              maxRows: 2,
               relationTo: 'treatments',
             },
           ],

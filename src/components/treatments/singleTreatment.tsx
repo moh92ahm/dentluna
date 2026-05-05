@@ -3,7 +3,7 @@
 import type { Treatment } from '@/payload-types'
 import { Home, MessageCircle, Send, Share2 } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 
@@ -22,6 +22,7 @@ import { Separator } from '@/components/ui/separator'
 import { cn } from '@/lib/utils'
 import { formatDateTime } from '@/utilities/formatDateTime'
 import { getMediaUrl } from '@/utilities/getMediaUrl'
+import { TreatmentCard } from './treatmentCard'
 
 interface SingleTreatmentProps {
   className?: string
@@ -263,18 +264,22 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
                 <h2 className="mb-6 text-2xl font-semibold">{t('relatedTreatments')}</h2>
                 <div className="grid gap-4 md:grid-cols-2">
                   {treatment.relatedTreatments.map((relatedTreatment) => {
-                    if (!relatedTreatment || typeof relatedTreatment !== 'object') {
+                    if (
+                      !relatedTreatment ||
+                      typeof relatedTreatment !== 'object' ||
+                      !relatedTreatment.slug
+                    ) {
                       return null
                     }
 
                     return (
-                      <Link
+                      <TreatmentCard
                         key={relatedTreatment.id}
-                        href={`/treatments/${relatedTreatment.slug}`}
-                        className="rounded-lg border bg-card p-4 transition-colors hover:border-primary/50"
-                      >
-                        <h3 className="font-medium">{relatedTreatment.title}</h3>
-                      </Link>
+                        treatment={relatedTreatment}
+                        fallbackDescription={t('treatmentArchiveFallback')}
+                        readMoreLabel={t('readMore')}
+                        titleTag="h3"
+                      />
                     )
                   })}
                 </div>
