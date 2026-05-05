@@ -68,8 +68,12 @@ const TestimonialHome = ({ className }: TestimonialHomeProps) => {
           <h2 className="mb-2 text-center text-3xl font-semibold lg:text-5xl">{t('heading')}</h2>
 
           <div className="mt-4 flex flex-col items-center gap-4 sm:flex-row">
-            <RewardCard icon="/static/home/trustpilot.png" title="Trustpilot Reviews" />
-            <RewardCard icon="/static/home/google.png" title="Google Reviews" />
+            <a href="https://www.trustpilot.com/review/dentlunaclinic.com" target="_blank" rel="noopener noreferrer">
+              <RewardCard icon="/static/home/trustpilot.png" title="Trustpilot Reviews" />
+            </a>
+            <a href="https://share.google/FcZ07S0I4Vf0fxZIa" target="_blank" rel="noopener noreferrer">
+              <RewardCard icon="/static/home/google.png" title="Google Reviews" />
+            </a>
           </div>
         </div>
 
