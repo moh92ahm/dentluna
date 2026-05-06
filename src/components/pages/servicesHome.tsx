@@ -33,7 +33,7 @@ const ServicesHome = ({ className }: ServicesHomeProps) => {
       title: t('fullMouthTitle'),
       description: t('fullMouthDesc'),
       image: '/static/home/full_restoration.jpg',
-      url: '/treatments/full-mouth-restoration',
+      url: '/treatments/full-mouth-reconstruction',
     },
     {
       title: t('implantsTitle'),

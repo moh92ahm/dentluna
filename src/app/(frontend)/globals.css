@@ -191,3 +191,10 @@
     font-family: var(--font-serif);
   }
 }
+
+@utility scrollbar-hide {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
