@@ -9,6 +9,8 @@ import { Badge } from '@/components/ui/badge'
 
 import { Link } from '@/i18n/navigation'
 
+const MotionLink = motion(Link)
+
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
@@ -25,25 +27,25 @@ const ServicesHome = ({ className }: ServicesHomeProps) => {
       title: t('veneersTitle'),
       description: t('veneersDesc'),
       image: '/static/home/smile_design.jpg',
-      url: '',
+      url: '/treatments/dental-veneers',
     },
     {
       title: t('fullMouthTitle'),
       description: t('fullMouthDesc'),
       image: '/static/home/full_restoration.jpg',
-      url: '',
+      url: '/treatments/full-mouth-restoration',
     },
     {
       title: t('implantsTitle'),
       description: t('implantsDesc'),
       image: '/static/home/dental_implants.jpg',
-      url: '',
+      url: '/treatments/dental-implants',
     },
     {
       title: t('zirconiumTitle'),
       description: t('zirconiumDesc'),
       image: '/static/home/zirconium.jpg',
-      url: '',
+      url: '/treatments/zirconium-crowns',
     },
   ]
 
@@ -71,7 +73,7 @@ const ServicesHome = ({ className }: ServicesHomeProps) => {
 
         <div className="grid grid-cols-2 gap-4">
           {services.map((service, idx) => (
-            <motion.a
+            <MotionLink
               key={idx}
               href={service.url}
               whileHover={{ opacity: 0.8 }}
@@ -94,7 +96,7 @@ const ServicesHome = ({ className }: ServicesHomeProps) => {
                 </CardContent>
                 <ArrowUpRight className="absolute top-4 right-4 h-5 w-5 text-white transition-transform group-hover:scale-110" />
               </Card>
-            </motion.a>
+            </MotionLink>
           ))}
         </div>
       </div>
