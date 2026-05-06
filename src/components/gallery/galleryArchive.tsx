@@ -5,6 +5,7 @@ import type { Gallery, GalleryCategory } from '@/payload-types'
 import { BeforeAfterGallery } from './beforeAfterGallery'
 import type { ComparisonItem, GalleryTabCategory } from './beforeAfterGallery'
 import { defaultLocale } from '@/i18n/locales'
+import { getTranslations } from 'next-intl/server'
 
 interface GalleryArchiveProps {
   className?: string
@@ -20,6 +21,7 @@ export const GalleryArchive = async ({
   currentPage = 1,
 }: GalleryArchiveProps) => {
   const payload = await getPayload({ config: configPromise })
+  const t = await getTranslations({ locale, namespace: 'treatments' })
 
   // Fetch all gallery items and categories
   const [galleryResponse, categoriesResponse] = await Promise.all([
@@ -95,7 +97,7 @@ export const GalleryArchive = async ({
   const tabCategories: GalleryTabCategory[] = [
     {
       id: 'all',
-      label: 'All',
+      label: t('allCategories'),
       items: allItems,
     },
     ...categories
