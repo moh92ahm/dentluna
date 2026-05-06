@@ -118,11 +118,7 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
 
   const heroImageUrl = getHeroImageUrl(treatment.heroImage)
   const excerpt = treatment.excerpt || ''
-  const authors = treatment.populatedAuthors?.filter((author) => author?.name) ?? []
-  const authorNames = authors
-    .map((author) => author.name)
-    .filter(Boolean)
-    .join(', ')
+
   const pageUrl = `/treatments/${treatment.slug}`
 
   const hasRelatedTreatments = Boolean(treatment.relatedTreatments?.length)
@@ -192,7 +188,7 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
   }
 
   return (
-    <section className={cn('py-32', className)}>
+    <section className={cn('py-14 md:py-32', className)}>
       <div className="container">
         <Breadcrumb>
           <BreadcrumbList>
@@ -207,6 +203,22 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
                 <Link href="/treatments">{t('badge')}</Link>
               </BreadcrumbLink>
             </BreadcrumbItem>
+            {(() => {
+              const firstCat = treatment.categories?.[0]
+              if (firstCat && typeof firstCat === 'object') {
+                return (
+                  <>
+                    <BreadcrumbSeparator />
+                    <BreadcrumbItem>
+                      <BreadcrumbLink asChild>
+                        <Link href={`/treatments?category=${firstCat.slug}`}>{firstCat.title}</Link>
+                      </BreadcrumbLink>
+                    </BreadcrumbItem>
+                  </>
+                )
+              }
+              return null
+            })()}
             <BreadcrumbSeparator />
             <BreadcrumbItem>
               <BreadcrumbPage>{treatment.title}</BreadcrumbPage>
@@ -217,11 +229,7 @@ const SingleTreatment = ({ className, treatment }: SingleTreatmentProps) => {
           {treatment.title}
         </h1>
         <div className="flex items-center gap-3 text-sm md:text-base">
-          <Avatar className="h-8 w-8 border">
-            <AvatarFallback>{authorNames ? authorNames.charAt(0) : 'T'}</AvatarFallback>
-          </Avatar>
           <span>
-            {authorNames ? <span className="font-medium">{authorNames}</span> : null}
             {treatment.publishedAt ? (
               <span className="ml-1 text-muted-foreground">
                 {t('publishedAt')} {formatDateTime(treatment.publishedAt)}

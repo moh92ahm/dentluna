@@ -25,24 +25,13 @@ const getRelatedPostImageUrl = (relatedPost: Post) => getHeroImageUrl(relatedPos
 
 const SingleBlog = ({ className, post }: SingleBlogProps) => {
   const heroImageUrl = getHeroImageUrl(post.heroImage)
-  const authorNames =
-    post.populatedAuthors
-      ?.map((author) => author.name)
-      .filter(Boolean)
-      .join(', ') || 'Dent Luna'
 
   return (
-    <section className={cn('py-32', className)}>
+    <section className={cn('py-14 md:py-32', className)}>
       <div className="container">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 text-center">
           <h1 className="max-w-3xl text-5xl font-semibold text-pretty md:text-6xl">{post.title}</h1>
           <div className="flex flex-col items-center gap-1 text-sm md:flex-row md:gap-2 md:text-base">
-            <div className="flex items-center gap-2">
-              <Avatar className="h-8 w-8 border">
-                <AvatarFallback>{authorNames.charAt(0)}</AvatarFallback>
-              </Avatar>
-              <span className="font-semibold">{authorNames}</span>
-            </div>
             {post.publishedAt ? (
               <span className="text-muted-foreground">
                 Published on {formatDateTime(post.publishedAt)}
