@@ -28,25 +28,6 @@ const formatDate = (dateString: string | undefined) => {
   })
 }
 
-const getAuthorNames = (populatedAuthors: unknown) => {
-  if (!Array.isArray(populatedAuthors) || populatedAuthors.length === 0) {
-    return 'Author'
-  }
-
-  const names = populatedAuthors
-    .map((author) => {
-      if (!author || typeof author !== 'object' || !('name' in author)) {
-        return null
-      }
-
-      const { name } = author as { name?: unknown }
-      return typeof name === 'string' ? name : null
-    })
-    .filter((name): name is string => Boolean(name))
-
-  return names.length > 0 ? names.join(', ') : 'Author'
-}
-
 const getNodeText = (node: RichTextNode): string => {
   if (node.type === 'text') {
     return node.text ?? ''
@@ -124,7 +105,6 @@ const ArchiveBlog = async ({ className, locale = defaultLocale, page = 1 }: Arch
             <div className="mt-5">
               <div className="mb-2.5 flex items-center gap-1 text-sm text-muted-foreground">
                 <time>{formatDate(firstPost.publishedAt as string)}</time>·
-                <span>{getAuthorNames(firstPost.populatedAuthors)}</span>
               </div>
               <h3 className="text-lg md:text-3xl lg:text-4xl">{firstPost.title}</h3>
               <p className="mt-4 text-muted-foreground">{firstPostExcerpt || 'Read more...'}</p>
@@ -145,7 +125,6 @@ const ArchiveBlog = async ({ className, locale = defaultLocale, page = 1 }: Arch
             <div className="mt-5">
               <div className="mb-2.5 flex items-center gap-1 text-sm text-muted-foreground">
                 <time>{formatDate(post.publishedAt as string)}</time>·
-                <span>{getAuthorNames(post.populatedAuthors)}</span>
               </div>
               <h3 className="text-lg">{post.title}</h3>
             </div>
