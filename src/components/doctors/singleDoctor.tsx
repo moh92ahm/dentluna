@@ -23,10 +23,10 @@ const SingleDoctor = ({ className, doctor }: SingleDoctorProps) => {
       : null
 
   return (
-    <section className={cn('w-screen overflow-hidden py-32', className)}>
-      <div className="container grid h-full w-full grid-cols-1 gap-12 md:grid-cols-2">
+    <section className={cn('w-full py-12', className)}>
+      <div className="container px-4 grid w-full grid-cols-1 gap-12 md:grid-cols-2 md:items-start">
         <div>
-          <div className="mx-auto flex h-full w-full flex-col gap-4 rounded-lg border border-primary/20 bg-primary p-4 md:max-w-sm">
+          <div className="mx-auto flex w-full flex-col gap-4 rounded-lg border border-border bg-muted/60 p-4 md:max-w-sm">
             {profileImageUrl ? (
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-md bg-background">
                 <Image
@@ -45,16 +45,16 @@ const SingleDoctor = ({ className, doctor }: SingleDoctorProps) => {
                 />
               </div>
             )}
-            <div className="space-y-2 p-4">
-              <p className="font-mono text-sm text-muted-foreground">{doctor.specialty}</p>
-              <h1 className="text-lg font-semibold text-primary-foreground">{doctor.name}</h1>
-            </div>
           </div>
         </div>
         <div>
+          <div className="mb-6 flex flex-col items-center gap-2 text-center md:items-start md:text-left">
+            <h1 className="text-2xl font-semibold text-accent-background">{doctor.name}</h1>
+            <p className="text-md text-accent-background">{doctor.specialty}</p>
+          </div>
           {/* Biography */}
           {doctor.biography && (
-            <section className="border-t pt-12">
+            <section className="pt-6">
               <RichText data={doctor.biography} enableGutter={false} />
             </section>
           )}

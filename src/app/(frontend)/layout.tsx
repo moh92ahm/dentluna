@@ -30,7 +30,9 @@ export default async function RootLayout({
       <head>
         <meta name="apple-mobile-web-app-title" content="Dent Luna" />
       </head>
-      <body className={`${fontSans.variable} ${fontSerif.variable} antialiased`}>{children}</body>
+      <body className={`${fontSans.variable} ${fontSerif.variable} antialiased overflow-x-hidden`}>
+        {children}
+      </body>
     </html>
   )
 }

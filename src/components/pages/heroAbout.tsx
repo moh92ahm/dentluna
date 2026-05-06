@@ -151,7 +151,7 @@ const HeroAbout = ({ className }: HeroAboutProps) => {
     >
       <div className="relative overflow-hidden rounded-2xl bg-card">
         <div className="grid h-full w-full grid-cols-1 lg:max-h-[37.5rem] lg:grid-cols-2">
-          <div className="flex w-full max-w-[90%] flex-col justify-center gap-5 py-16 pr-10 pl-20 md:max-w-[70%] lg:max-w-full lg:py-0">
+          <div className="flex w-full max-w-[90%] flex-col justify-center gap-5 py-8 px-5 md:max-w-[70%] md:pl-10 md:pr-8 lg:max-w-full lg:py-0 lg:pl-20 lg:pr-10">
             <Badge variant="outline" className="w-fit">
               {t('label')}
             </Badge>

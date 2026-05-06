@@ -112,14 +112,14 @@ const HowItWorks = () => {
                   {item.description}
                 </p>
               </div>
-              <div className="z-[-1] size-fit -translate-y-5 bg-background p-4 max-lg:-translate-x-4">
+              <div className="z-[-1] size-fit -translate-y-5 bg-background p-4">
                 <div className="rounded-[10px] border bg-card p-[5px] shadow-md">
                   <div className="size-fit rounded-md border bg-muted p-1">
                     <item.icon className="size-4 shrink-0" />
                   </div>
                 </div>
               </div>
-              <div className="flex-1 max-lg:-translate-x-4">
+              <div className="flex-1">
                 <div className="text-start lg:pointer-events-none lg:hidden">
                   <h3 className="text-2xl tracking-[-0.96px]">{item.title}</h3>
                   <p className="mt-2.5 mb-10 max-w-[300px] tracking-[-0.32px] text-balance text-muted-foreground">

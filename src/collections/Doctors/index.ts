@@ -10,6 +10,7 @@ import {
 import { authenticated } from '@/access/authenticated'
 import { authenticatedOrPublished } from '@/access/authenticatedOrPublished'
 import { revalidateDoctor, revalidateDoctorDelete } from './hooks/revalidateDoctor'
+import { slugField } from 'payload'
 
 export const Doctors: CollectionConfig = {
   slug: 'doctors',
@@ -59,30 +60,7 @@ export const Doctors: CollectionConfig = {
         },
       }),
     },
-    {
-      name: 'slug',
-      type: 'text',
-      admin: {
-        position: 'sidebar',
-      },
-      unique: true,
-      index: true,
-      hooks: {
-        beforeValidate: [
-          ({ value, siblingData }) => {
-            if (!value && typeof siblingData?.name === 'string') {
-              return siblingData.name
-                .toLowerCase()
-                .trim()
-                .replace(/\s+/g, '-')
-                .replace(/[^\w-]/g, '')
-            }
-
-            return value
-          },
-        ],
-      },
-    },
+    slugField({ useAsSlug: 'name' }),
   ],
   hooks: {
     afterChange: [revalidateDoctor],

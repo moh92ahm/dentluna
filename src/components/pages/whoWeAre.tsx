@@ -9,7 +9,7 @@ interface WhoWeAreProps {
 const WhoWeAre = async ({ className }: WhoWeAreProps) => {
   const t = await getTranslations('aboutContent')
   return (
-    <section className={cn('py-32 flex justify-center container mx-auto', className)}>
+    <section className={cn('py-12 lg:py-32 flex justify-center container mx-auto px-4', className)}>
       <div className="container">
         <div className="flex flex-col items-center justify-start gap-6 lg:flex-row">
           <div className="flex w-full flex-col items-start justify-start gap-24 lg:w-1/2">
@@ -66,7 +66,7 @@ const WhoWeAre = async ({ className }: WhoWeAreProps) => {
                 />
               </div>
             </div>
-            <div className="px-8">
+            <div>
               <h1 className="mb-8 text-2xl font-semibold lg:mb-6">{t('ourApproach')}</h1>
               <p className="mb-9 lg:text-xl">{t('approachText')}</p>
               <p className="text-muted-foreground">{t('processLabel')}</p>

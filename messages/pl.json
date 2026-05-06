@@ -13,6 +13,7 @@
   },
   "treatments": {
     "badge": "Zabiegi",
+    "allCategories": "Wszystkie",
     "heading": "Poznaj naszą ofertę zabiegów",
     "description": "Poznaj nasze kompleksowe zabiegi stomatologiczne zaprojektowane z myślą o wszystkich potrzebach związanych ze zdrowiem jamy ustnej. Od rutynowych kontroli po zaawansowane zabiegi estetyczne - oferujemy spersonalizowaną opiekę dla zdrowego i pięknego uśmiechu.",
     "metaTitle": "Leczenie stomatologiczne - Dent Luna",
@@ -25,6 +26,7 @@
     "readMore": "Czytaj więcej",
     "publishedAt": "Opublikowano",
     "noTreatmentsAvailable": "Brak dostępnych zabiegów.",
+    "noTreatmentsInCategory": "W tej kategorii nie ma jeszcze dostępnych zabiegów.",
     "treatmentArchiveFallback": "Poznaj tę opcję zabiegu"
   },
   "blog": {

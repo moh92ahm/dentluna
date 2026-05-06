@@ -13,6 +13,7 @@
   },
   "treatments": {
     "badge": "Traitements",
+    "allCategories": "Tous",
     "heading": "Découvrez notre gamme de traitements",
     "description": "Explorez nos traitements dentaires complets conçus pour répondre à tous vos besoins en santé bucco-dentaire. Des examens de routine aux procédures cosmétiques avancées, nous offrons des soins personnalisés pour un sourire sain et beau.",
     "metaTitle": "Traitements dentaires – Dent Luna",
@@ -25,6 +26,7 @@
     "readMore": "Lire la suite",
     "publishedAt": "Publié le",
     "noTreatmentsAvailable": "Aucun traitement n'est disponible pour le moment.",
+    "noTreatmentsInCategory": "Aucun traitement n'est disponible dans cette catégorie pour le moment.",
     "treatmentArchiveFallback": "Découvrez cette option de traitement"
   },
   "blog": {

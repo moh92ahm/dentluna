@@ -32,6 +32,36 @@ async function getDocument(
 }
 
 /**
+ * Fetch a document with draft: true — always bypasses cache.
+ * Used for the live preview iframe where the latest draft must be shown.
+ * overrideAccess: true matches the official Payload live preview example,
+ * since this is only reachable from within the authenticated admin panel.
+ */
+export async function getDraftDocument(
+  collection: Collection,
+  slug: string,
+  depth = 0,
+  locale = defaultLocale,
+) {
+  const payload = await getPayload({ config: configPromise })
+
+  const page = await payload.find({
+    collection,
+    depth,
+    draft: true,
+    locale: locale as LocaleCode,
+    overrideAccess: true,
+    where: {
+      slug: {
+        equals: slug,
+      },
+    },
+  })
+
+  return page.docs[0]
+}
+
+/**
  * Returns a unstable_cache function mapped with the cache tag for the slug.
  * Cache is disabled in development so changes are reflected immediately.
  */

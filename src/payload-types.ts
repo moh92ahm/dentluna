@@ -68,14 +68,15 @@ export interface Config {
   blocks: {};
   collections: {
     treatments: Treatment;
-    doctors: Doctor;
+    'treatment-categories': TreatmentCategory;
     posts: Post;
-    categories: Category;
+    'post-categories': PostCategory;
     gallery: Gallery;
     'gallery-category': GalleryCategory;
     faqs: Faq;
     'faq-categories': FaqCategory;
     'form-submissions': FormSubmission;
+    doctors: Doctor;
     users: User;
     media: Media;
     'payload-kv': PayloadKv;
@@ -92,14 +93,15 @@ export interface Config {
   };
   collectionsSelect: {
     treatments: TreatmentsSelect<false> | TreatmentsSelect<true>;
-    doctors: DoctorsSelect<false> | DoctorsSelect<true>;
+    'treatment-categories': TreatmentCategoriesSelect<false> | TreatmentCategoriesSelect<true>;
     posts: PostsSelect<false> | PostsSelect<true>;
-    categories: CategoriesSelect<false> | CategoriesSelect<true>;
+    'post-categories': PostCategoriesSelect<false> | PostCategoriesSelect<true>;
     gallery: GallerySelect<false> | GallerySelect<true>;
     'gallery-category': GalleryCategorySelect<false> | GalleryCategorySelect<true>;
     faqs: FaqsSelect<false> | FaqsSelect<true>;
     'faq-categories': FaqCategoriesSelect<false> | FaqCategoriesSelect<true>;
     'form-submissions': FormSubmissionsSelect<false> | FormSubmissionsSelect<true>;
+    doctors: DoctorsSelect<false> | DoctorsSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
@@ -186,6 +188,7 @@ export interface Treatment {
     };
     [k: string]: unknown;
   };
+  categories?: (number | TreatmentCategory)[] | null;
   relatedTreatments?: (number | Treatment)[] | null;
   meta?: {
     title?: string | null;
@@ -333,6 +336,21 @@ export interface FolderInterface {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "treatment-categories".
+ */
+export interface TreatmentCategory {
+  id: number;
+  title: string;
+  /**
+   * When enabled, the slug will auto-generate from the title field on save and autosave.
+   */
+  generateSlug?: boolean | null;
+  slug: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "users".
  */
 export interface User {
@@ -359,35 +377,6 @@ export interface User {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "doctors".
- */
-export interface Doctor {
-  id: number;
-  name: string;
-  specialty: string;
-  profileImage: number | Media;
-  biography: {
-    root: {
-      type: string;
-      children: {
-        type: any;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  };
-  slug?: string | null;
-  updatedAt: string;
-  createdAt: string;
-  _status?: ('draft' | 'published') | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "posts".
  */
 export interface Post {
@@ -410,7 +399,7 @@ export interface Post {
     [k: string]: unknown;
   };
   relatedPosts?: (number | Post)[] | null;
-  categories?: (number | Category)[] | null;
+  categories?: (number | PostCategory)[] | null;
   meta?: {
     title?: string | null;
     /**
@@ -438,9 +427,9 @@ export interface Post {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "categories".
+ * via the `definition` "post-categories".
  */
-export interface Category {
+export interface PostCategory {
   id: number;
   title: string;
   /**
@@ -546,6 +535,39 @@ export interface FormSubmission {
   crmError?: string | null;
   updatedAt: string;
   createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "doctors".
+ */
+export interface Doctor {
+  id: number;
+  name: string;
+  specialty: string;
+  profileImage: number | Media;
+  biography: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
+  /**
+   * When enabled, the slug will auto-generate from the title field on save and autosave.
+   */
+  generateSlug?: boolean | null;
+  slug: string;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -668,16 +690,16 @@ export interface PayloadLockedDocument {
         value: number | Treatment;
       } | null)
     | ({
-        relationTo: 'doctors';
-        value: number | Doctor;
+        relationTo: 'treatment-categories';
+        value: number | TreatmentCategory;
       } | null)
     | ({
         relationTo: 'posts';
         value: number | Post;
       } | null)
     | ({
-        relationTo: 'categories';
-        value: number | Category;
+        relationTo: 'post-categories';
+        value: number | PostCategory;
       } | null)
     | ({
         relationTo: 'gallery';
@@ -698,6 +720,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'form-submissions';
         value: number | FormSubmission;
+      } | null)
+    | ({
+        relationTo: 'doctors';
+        value: number | Doctor;
       } | null)
     | ({
         relationTo: 'users';
@@ -762,6 +788,7 @@ export interface TreatmentsSelect<T extends boolean = true> {
   excerpt?: T;
   heroImage?: T;
   content?: T;
+  categories?: T;
   relatedTreatments?: T;
   meta?:
     | T
@@ -786,17 +813,14 @@ export interface TreatmentsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "doctors_select".
+ * via the `definition` "treatment-categories_select".
  */
-export interface DoctorsSelect<T extends boolean = true> {
-  name?: T;
-  specialty?: T;
-  profileImage?: T;
-  biography?: T;
+export interface TreatmentCategoriesSelect<T extends boolean = true> {
+  title?: T;
+  generateSlug?: T;
   slug?: T;
   updatedAt?: T;
   createdAt?: T;
-  _status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -831,9 +855,9 @@ export interface PostsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "categories_select".
+ * via the `definition` "post-categories_select".
  */
-export interface CategoriesSelect<T extends boolean = true> {
+export interface PostCategoriesSelect<T extends boolean = true> {
   title?: T;
   generateSlug?: T;
   slug?: T;
@@ -903,6 +927,21 @@ export interface FormSubmissionsSelect<T extends boolean = true> {
   crmError?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "doctors_select".
+ */
+export interface DoctorsSelect<T extends boolean = true> {
+  name?: T;
+  specialty?: T;
+  profileImage?: T;
+  biography?: T;
+  generateSlug?: T;
+  slug?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1302,12 +1341,12 @@ export interface TaskSchedulePublish {
           value: number | Treatment;
         } | null)
       | ({
-          relationTo: 'doctors';
-          value: number | Doctor;
-        } | null)
-      | ({
           relationTo: 'posts';
           value: number | Post;
+        } | null)
+      | ({
+          relationTo: 'doctors';
+          value: number | Doctor;
         } | null);
     global?: string | null;
     user?: (number | null) | User;

@@ -12,7 +12,8 @@ import { Media } from './collections/Media'
 import { Treatments } from './collections/Treatments'
 import { Posts } from './collections/Posts'
 import { Doctors } from './collections/Doctors'
-import { Categories } from './collections/Posts/Categories'
+import { Categories } from './collections/Posts/postCategories'
+import { TreatmentCategories } from './collections/Treatments/TreatmentCategories'
 import { Gallery } from './collections/Gallery'
 import { GalleryCategory } from './collections/Gallery/GalleryCategory'
 import { Faqs } from './collections/FAQs/Faqs'
@@ -41,14 +42,14 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
- localization: {
+  localization: {
     locales: payloadLocales,
     defaultLocale,
     fallback: true,
   },
   collections: [
     Treatments,
-    Doctors,
+    TreatmentCategories,
     Posts,
     Categories,
     Gallery,
@@ -56,6 +57,7 @@ export default buildConfig({
     Faqs,
     FaqCategories,
     FormSubmissions,
+    Doctors,
     Users,
     Media,
   ],

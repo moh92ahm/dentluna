@@ -2,11 +2,13 @@ import type { Metadata } from 'next'
 import type { Treatment } from '@/payload-types'
 import { getTranslations } from 'next-intl/server'
 import { SingleTreatment } from '@/components/treatments/singleTreatment'
-import { getCachedDocument } from '@/utilities/getDocument'
+import { LivePreviewListener } from '@/components/LivePreviewListener'
+import { getCachedDocument, getDraftDocument } from '@/utilities/getDocument'
 import { generateMeta } from '@/utilities/generateMeta'
 
 type Props = {
   params: Promise<{ slug: string; locale: string }>
+  searchParams: Promise<{ preview?: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -16,12 +18,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return generateMeta({ doc: treatment })
 }
 
-export default async function TreatmentDetailPage({ params }: Props) {
+export default async function TreatmentDetailPage({ params, searchParams }: Props) {
   const { slug, locale } = await params
+  const { preview } = await searchParams
+  const isPreview = preview === '1'
   const t = await getTranslations({ locale, namespace: 'notFound' })
 
-  const cachedGetTreatment = getCachedDocument('treatments', slug, 2, locale)
-  const treatment = (await cachedGetTreatment()) as Treatment
+  const treatment = isPreview
+    ? ((await getDraftDocument('treatments', slug, 2, locale)) as Treatment)
+    : ((await getCachedDocument('treatments', slug, 2, locale)()) as Treatment)
 
   if (!treatment) {
     return (
@@ -37,6 +42,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
 
   return (
     <main>
+      {isPreview && <LivePreviewListener />}
       <SingleTreatment treatment={treatment} />
     </main>
   )

@@ -10,7 +10,10 @@ const WhyIzmir = async ({ className }: WhyIzmirProps) => {
   const t = await getTranslations('whyIzmir')
   return (
     <section
-      className={cn('bg-card container mx-auto p-20 rounded-2xl justify-center flex', className)}
+      className={cn(
+        'bg-card container mx-auto p-6 lg:p-20 rounded-2xl justify-center flex',
+        className,
+      )}
     >
       <div className="container">
         <div className="grid items-center gap-16 lg:grid-cols-2">

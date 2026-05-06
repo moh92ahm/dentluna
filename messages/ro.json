@@ -13,6 +13,7 @@
   },
   "treatments": {
     "badge": "Tratamente",
+    "allCategories": "Toate",
     "heading": "Descoperă gama noastră de tratamente",
     "description": "Explorează tratamentele noastre stomatologice complete, concepute pentru toate nevoile tale de sănătate orală. De la controale de rutină la proceduri estetice avansate, oferim îngrijire personalizată pentru un zâmbet sănătos și frumos.",
     "metaTitle": "Tratamente dentare - Dent Luna",
@@ -25,6 +26,7 @@
     "readMore": "Citește mai mult",
     "publishedAt": "Publicat la",
     "noTreatmentsAvailable": "Nu există încă tratamente disponibile.",
+    "noTreatmentsInCategory": "Nu există încă tratamente disponibile în această categorie.",
     "treatmentArchiveFallback": "Descoperă această opțiune de tratament"
   },
   "blog": {

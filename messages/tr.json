@@ -11,6 +11,7 @@
   },
   "treatments": {
     "badge": "Tedaviler",
+    "allCategories": "Tümü",
     "heading": "Tedavi Yelpazamızı Keşfedin",
     "description": "Tüm ağız sağlığı ihtiyaçlarınızı karşılamak için tasarlanmış kapsamlı diş tedavilerimizi keşfedin. Rutin kontrollerden ileri estetik prosedürlere kadar sağlıklı ve güzel bir gülüş için kişiselleştirilmiş bakım sunuyoruz.",
     "metaTitle": "Diş Tedavileri – Dent Luna",
@@ -23,6 +24,7 @@
     "readMore": "Devamını Oku",
     "publishedAt": "Yayınlanma tarihi",
     "noTreatmentsAvailable": "Henüz tedavi mevcut değil.",
+    "noTreatmentsInCategory": "Bu kategoride henüz tedavi bulunmuyor.",
     "treatmentArchiveFallback": "Bu tedavi seçeneğini keşfedin"
   },
   "blog": {

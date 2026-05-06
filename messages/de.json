@@ -13,6 +13,7 @@
   },
   "treatments": {
     "badge": "Behandlungen",
+    "allCategories": "Alle",
     "heading": "Entdecken Sie unser Behandlungsangebot",
     "description": "Erkunden Sie unsere umfassenden Zahnbehandlungen, die auf alle Ihre Bedürfnisse zugeschnitten sind. Von Routineuntersuchungen bis hin zu fortgeschrittenen kosmetischen Eingriffen bieten wir individuelle Pflege für ein gesundes und schönes Lächeln.",
     "metaTitle": "Zahnbehandlungen – Dent Luna",
@@ -25,6 +26,7 @@
     "readMore": "Mehr lesen",
     "publishedAt": "Veröffentlicht am",
     "noTreatmentsAvailable": "Derzeit sind keine Behandlungen verfügbar.",
+    "noTreatmentsInCategory": "In dieser Kategorie sind derzeit keine Behandlungen verfügbar.",
     "treatmentArchiveFallback": "Entdecken Sie diese Behandlungsoption"
   },
   "blog": {

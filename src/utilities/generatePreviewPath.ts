@@ -12,26 +12,25 @@ type Props = {
   req: PayloadRequest
 }
 
+/**
+ * Generates a direct page URL with ?preview=1 for both:
+ * - the admin "Preview" button (opens a new tab)
+ * - the live preview iframe
+ *
+ * Using ?preview=1 tells the page to fetch draft content and render LivePreviewListener.
+ */
 export const generatePreviewPath = ({ collection, slug, req }: Props) => {
-  // Allow empty strings, e.g. for the homepage
   if (slug === undefined || slug === null) {
     return null
   }
 
-  // Encode to support slugs with special characters
   const encodedSlug = encodeURIComponent(slug)
-
-  // Read locale from the Payload request context (set when admin switches locale)
   const locale = typeof req.locale === 'string' ? req.locale : defaultLocale
+  const serverURL = process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'
+  const path = `/${locale}${collectionPrefixMap[collection]}/${encodedSlug}`
 
-  const encodedParams = new URLSearchParams({
-    slug: encodedSlug,
-    collection,
-    path: `/${locale}${collectionPrefixMap[collection]}/${encodedSlug}`,
-    previewSecret: process.env.PREVIEW_SECRET || '',
-  })
-
-  const url = `/next/preview?${encodedParams.toString()}`
-
-  return url
+  return `${serverURL}${path}?preview=1`
 }
+
+// Alias — livePreview.url and admin.preview both use the same direct URL
+export const generateLivePreviewURL = generatePreviewPath

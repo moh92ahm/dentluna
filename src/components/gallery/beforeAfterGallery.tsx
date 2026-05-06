@@ -64,9 +64,9 @@ export const BeforeAfterGalleryClient = ({
       <div className="container">
         <Tabs value={activeCategory.id}>
           <div className="flex justify-center">
-            <TabsList className="flex-wrap h-auto gap-1">
+            <TabsList className="flex-wrap h-auto gap-1 rounded-full">
               {categories.map((cat) => (
-                <TabsTrigger key={cat.id} value={cat.id} asChild>
+                <TabsTrigger key={cat.id} value={cat.id} className="rounded-full" asChild>
                   <Link href={getGalleryHref(cat.id, 1)}>{cat.label}</Link>
                 </TabsTrigger>
               ))}

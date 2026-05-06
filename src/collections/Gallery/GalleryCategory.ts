@@ -26,9 +26,7 @@ export const GalleryCategory: CollectionConfig = {
       required: true,
       localized: true,
     },
-    slugField({
-      position: undefined,
-    }),
+    slugField(),
   ],
   hooks: {
     afterChange: [revalidateGalleryPageAfterChange],

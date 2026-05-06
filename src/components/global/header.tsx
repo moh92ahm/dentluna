@@ -31,7 +31,8 @@ const Header = ({ className, locale, navLinks: cmsLinks = [] }: HeaderProps) => 
   const pathname = usePathname()
   const NAV_ITEMS = cmsLinks.filter((item) => item.label && item.url)
 
-  const currentItem = NAV_ITEMS.find((item) => item.url === pathname)?.label ?? NAV_ITEMS[0]?.label ?? ''
+  const currentItem =
+    NAV_ITEMS.find((item) => item.url === pathname)?.label ?? NAV_ITEMS[0]?.label ?? ''
   const [activeItem, setActiveItem] = useState(currentItem)
   const [scrolled, setScrolled] = useState(false)
 
@@ -208,7 +209,10 @@ const MobileNav = ({
               <li key={idx}>
                 <Link
                   href={navItem.url as Parameters<typeof Link>[0]['href']}
-                  onClick={() => setActiveItem(navItem.label)}
+                  onClick={() => {
+                    setActiveItem(navItem.label)
+                    setIsOpen(false)
+                  }}
                   className={`flex items-center border-l-[3px] px-6 py-4 text-sm font-medium text-foreground transition-all duration-75 ${
                     activeItem === navItem.label
                       ? 'border-foreground text-foreground'

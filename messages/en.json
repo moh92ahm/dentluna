@@ -13,6 +13,7 @@
   },
   "treatments": {
     "badge": "Treatments",
+    "allCategories": "All",
     "heading": "Discover our range of treatments",
     "description": "Explore our comprehensive dental treatments designed to meet all your oral health needs. From routine check-ups to advanced cosmetic procedures, we offer personalized care for a healthy and beautiful smile.",
     "metaTitle": "Dental Treatments – Dent Luna",
@@ -25,6 +26,7 @@
     "readMore": "Read More",
     "publishedAt": "Published on",
     "noTreatmentsAvailable": "No treatments available yet.",
+    "noTreatmentsInCategory": "No treatments found in this category yet.",
     "treatmentArchiveFallback": "Discover this treatment option"
   },
   "blog": {
