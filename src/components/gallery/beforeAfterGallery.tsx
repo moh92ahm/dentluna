@@ -63,10 +63,15 @@ export const BeforeAfterGalleryClient = ({
     <div className={cn('flex justify-center', className)}>
       <div className="container">
         <Tabs value={activeCategory.id}>
-          <div className="flex justify-center">
-            <TabsList className="flex-wrap h-auto gap-1 rounded-full">
+          <div className="w-full overflow-x-auto scrollbar-hide flex xl:justify-center">
+            <TabsList className="h-auto w-max gap-1 rounded-full px-2">
               {categories.map((cat) => (
-                <TabsTrigger key={cat.id} value={cat.id} className="rounded-full" asChild>
+                <TabsTrigger
+                  key={cat.id}
+                  value={cat.id}
+                  className="rounded-full whitespace-nowrap"
+                  asChild
+                >
                   <Link href={getGalleryHref(cat.id, 1)}>{cat.label}</Link>
                 </TabsTrigger>
               ))}
