@@ -21,14 +21,19 @@ export function TreatmentCategoryTabs({
   allLabel,
 }: TreatmentCategoryTabsProps) {
   return (
-    <div className="w-full overflow-x-auto scrollbar-hide">
+    <div className="w-full overflow-x-auto scrollbar-hide flex xl:justify-center">
       <Tabs value={selectedValue}>
         <TabsList className="h-auto w-max gap-1 rounded-full px-2">
           <TabsTrigger value="all" className="rounded-full whitespace-nowrap" asChild>
             <Link href="/treatments">{allLabel}</Link>
           </TabsTrigger>
           {categories.map((item) => (
-            <TabsTrigger key={item.id} value={String(item.id)} className="rounded-full whitespace-nowrap" asChild>
+            <TabsTrigger
+              key={item.id}
+              value={String(item.id)}
+              className="rounded-full whitespace-nowrap"
+              asChild
+            >
               <Link href={`/treatments?category=${item.slug}`}>{item.title}</Link>
             </TabsTrigger>
           ))}
