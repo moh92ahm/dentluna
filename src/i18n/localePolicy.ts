@@ -3,6 +3,7 @@ interface LocalePolicy {
   showHomeTestimonials: boolean
   showGalleryBeforeAfter: boolean
   hiddenNavPaths: string[]
+  hiddenHowItWorksSteps: number[]
 }
 
 const defaultPolicy: LocalePolicy = {
@@ -10,6 +11,7 @@ const defaultPolicy: LocalePolicy = {
   showHomeTestimonials: true,
   showGalleryBeforeAfter: true,
   hiddenNavPaths: [],
+  hiddenHowItWorksSteps: [],
 }
 
 const localePolicyOverrides: Partial<Record<string, Partial<LocalePolicy>>> = {
@@ -18,6 +20,7 @@ const localePolicyOverrides: Partial<Record<string, Partial<LocalePolicy>>> = {
     showHomeTestimonials: false,
     showGalleryBeforeAfter: false,
     hiddenNavPaths: ['/gallery'],
+    hiddenHowItWorksSteps: [3],
   },
 }
 

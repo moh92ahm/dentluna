@@ -150,14 +150,14 @@
     }
   },
   "heroCarousel": {
-    "line1": "Premium",
-    "line2": "Diş",
-    "line3": "Tedavileri"
+    "line1": "Sağlığınıza",
+    "line2": "kavuşturacak",
+    "line3": "diş Tedavileri"
   },
   "treatmentsHome": {
     "heading": "Tedavilerimiz",
-    "subheading": "Sizin İçin Tasarlanmış İleri Diş Çözümleri",
-    "description": "Rutin temizliklerden karmaşık restorasyonlara kadar kapsamlı diş tedavilerimiz, benzersiz ihtiyaçlarınızı karşılamak ve sağlıklı, parlak bir gülüş sağlamak için kişiselleştirilmiştir.",
+    "subheading": "Sizin için planlanmış diş tedavileri.",
+    "description": "Diş taşı temizliğinden, implant tedavilerine ya da Ortodontik çözümlere kadar size özel tüm ihtiyaçlarınız için tedavi seçenekleri sunuyoruz.",
     "exploreBtn": "Tüm Tedavileri Keşfet",
     "veneersTitle": "Veneer ve Gülüş Tasarımı",
     "veneersDesc": "Daha parlak ve özgüvenli bir gülüşe kavuşun",
@@ -171,15 +171,15 @@
   "howItWorks": {
     "badge": "Nasıl Çalışır",
     "heading": "Basit, Hızlı ve Düzenli Süreç",
-    "description": "Sezgisel platformumuz iş akışınızı kolaylaştırır, her şeyi tek bir yerde düzenli ve erişilebilir tutar. Projelerinizi basit, hızlı ve verimli sürecimizle yönetmenin kolaylığını yaşayın.",
+    "description": "Sezgisel platformumuz iş akışınızı kolaylaştırır, her şeyi tek bir yerde düzenli ve erişilebilir tutar. Tedavi süreciniz plana uygun, zamanında ve profesyoneller eşliğinde tamamlanır.",
     "step1Title": "Fotoğraf veya Röntgeninizi Gönderin",
-    "step1Desc": "Diş fotoğraflarınızı veya röntgenlerinizi güvenli platformumuz aracılığıyla kolayca yükleyin. Ekibimiz bunları inceleyerek size kişiselleştirilmiş bir tedavi planı ve doğru maliyet tahmini sunacaktır.",
+    "step1Desc": "Uzman Doktorlarımızın elinde muayenenizi gerçekleştirin.\nRöntgen ve Tomografi yardımızla uzman doktorlarımız tedavinizi en ince ayrıntısına kadar planlayarak süreci size anlatır.",
     "step2Title": "Tedavi Planınızı Alın",
     "step2Desc": "İhtiyaçlarınıza özel, adım adım talimatlar ve net maliyet tahmini içeren ayrıntılı bir tedavi planı alın.",
     "step3Title": "Seyahatinizi Planlayın",
     "step3Desc": "Seyahat düzenlemelerinizi kolaylıkla koordine edin. Platformumuz seyahatinizi verimli şekilde planlamanıza yardımcı olur.",
-    "step4Title": "Tedavinizi Alın",
-    "step4Desc": "Uzman ekibimizin rehberliğinde sorunsuz ve etkili bir süreçle tedavinizi alın.",
+    "step4Title": "Tedavi süreciniz emin ellerde",
+    "step4Desc": "Alanlarında uzman hekimlerimiz tedavinizi güven ve profesyonellik odaklı gerçekleştirir.",
     "step5Title": "Takip Desteği",
     "step5Desc": "Tedavinizin uzun vadeli başarısını sağlamak için süregelen destek ve rehberlik alın."
   },

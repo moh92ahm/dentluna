@@ -4,14 +4,18 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { Image, LocateFixed, Phone, Rocket, UserRoundPlus } from 'lucide-react'
 import NextImage from 'next/image'
 import { useRef } from 'react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 
 import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
+import { getLocalePolicy } from '@/i18n/localePolicy'
 
 const HowItWorks = () => {
   const t = useTranslations('howItWorks')
+  const locale = useLocale()
   const ref = useRef<HTMLDivElement>(null)
+
+  const { hiddenHowItWorksSteps } = getLocalePolicy(locale)
 
   const DATA = [
     {
@@ -62,6 +66,8 @@ const HowItWorks = () => {
       },
     },
   ]
+    .filter((_, index) => !hiddenHowItWorksSteps.includes(index + 1))
+    .map((item, index) => ({ ...item, reverse: index % 2 !== 0 }))
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start center', 'end center'],
