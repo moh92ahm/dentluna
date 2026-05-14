@@ -111,7 +111,7 @@ const HeroCarousel = ({ className }: HeroCarouselProps) => {
           >
             <motion.div
               onClick={() => {
-                document.getElementById('treatments')?.scrollIntoView({ behavior: 'smooth' })
+                document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
               }}
               className="cursor-pointer"
               whileHover={{ scale: 1.1 }}

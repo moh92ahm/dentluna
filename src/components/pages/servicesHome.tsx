@@ -50,13 +50,13 @@ const ServicesHome = ({ className }: ServicesHomeProps) => {
   ]
 
   return (
-    <section className={cn('py-32 flex justify-center', className)}>
+    <section id="services" className={cn('py-32 flex justify-center', className)}>
       <div className="container grid grid-cols-1 gap-12 lg:grid-cols-2">
         {/* <section className={cn("flex min-h-screen items-center", className)}>
       <div className="container grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-2"> */}
         <div className="flex flex-col justify-between">
           <div>
-            <Badge variant="outline" className='mb-4'>
+            <Badge variant="outline" className="mb-4">
               {t('heading')}
             </Badge>
             <h2 className="mb-8 text-4xl text-foreground max-w-xl">{t('subheading')}</h2>
